@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const NavBar = () => {
+const NavBar = ({ token, setToken }) => {
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
@@ -15,20 +16,40 @@ const NavBar = () => {
     navigate("/login");
   };
 
+  const handleLogoutClick = () => {
+    localStorage.removeItem("token");
+    setToken(null);
+    navigate("/");
+  };
+
   return (
     <div className="navbar">
       <button onClick={handleHomeClick}>Home</button>
-      <button onClick={handleGuidesClick}>Browse Guides</button>
-      <button onClick={handleLoginClick}>Login</button>
+      {token && <button onClick={handleGuidesClick}>Browse Guides</button>}
+      {token ? (
+        <button onClick={handleLogoutClick}>Logout</button>
+      ) : (
+        <button onClick={handleLoginClick}>Login</button>
+      )}
     </div>
   );
 };
 
-export const Header = () => {
+export const Header = ({ token, setToken }) => {
   return (
     <div className="header">
       <h1>Tidy Guide Web</h1>
-      <NavBar />
+      <NavBar token={token} setToken={setToken} />
     </div>
   );
+};
+
+NavBar.propTypes = {
+  setToken: PropTypes.func.isRequired,
+  token: PropTypes.string,
+};
+
+Header.propTypes = {
+  setToken: PropTypes.func.isRequired,
+  token: PropTypes.string,
 };

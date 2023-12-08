@@ -1,49 +1,31 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./Header";
-
-const Login = () => {
-  return (
-    <div className="login">
-      <h2>Login</h2>
-    </div>
-  );
-};
-
-const Guides = () => {
-  return (
-    <div className="guides">
-      <h2>Guides</h2>
-    </div>
-  );
-};
-
-const Home = () => {
-  return (
-    <div className="home">
-      <h2>Home</h2>
-    </div>
-  );
-};
-
-const Main = () => {
-  return (
-    <div className="main">
-      <Home />
-      <Guides />
-    </div>
-  );
-};
+import { Login } from "./Login";
+import { Home } from "./Home";
+import { Guides } from "./Guides";
 
 function App() {
+  const [token, setToken] = useState(null);
+  const savedToken = localStorage.getItem("token");
+
+  useEffect(() => {
+    if (savedToken) {
+      setToken(savedToken);
+    }
+  }, [token]); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
+        <Header token={token} setToken={setToken} />
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/guides" element={<Guides />} />
+          <Route
+            path="/login"
+            element={<Login setToken={setToken} token={token} />}
+          />
+          <Route path="/guides" element={<Guides token={token} />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
