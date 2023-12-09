@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useState } from "react";
 
 export const VideoDocSection = ({ element, index }) => {
   const [currentMovieLink, setCurrentMovieLink] = useState("");

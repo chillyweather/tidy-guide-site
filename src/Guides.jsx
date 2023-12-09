@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Guides = ({ token }) => {
-  const [documentation, setDocumentation] = useState([]);
-
+export const Guides = ({ token, documentation, setDocumentation }) => {
+  const navigate = useNavigate();
   async function handleGetDocumentation(token) {
     try {
       const response = await getDocumentation(token);
@@ -31,8 +31,17 @@ export const Guides = ({ token }) => {
       <ul className="documentationIndex">
         {documentation.length &&
           documentation.map((guide) => {
-            console.log("guide", guide);
-            return <button key={guide._id}>{guide.docs[0].title}</button>;
+            console.log("guide", guide._id);
+            return (
+              <button
+                key={guide._id}
+                onClick={() => {
+                  navigate(`/guide/${guide._id}`);
+                }}
+              >
+                {guide.docs[0].title}
+              </button>
+            );
           })}
       </ul>
     </div>
@@ -41,6 +50,10 @@ export const Guides = ({ token }) => {
 
 Guides.propTypes = {
   token: PropTypes.string,
+  documentation: PropTypes.array,
+  setDocumentation: PropTypes.func,
+  selectedDocId: PropTypes.string,
+  setSelectedDocId: PropTypes.func,
 };
 
 async function getDocumentation(token) {
