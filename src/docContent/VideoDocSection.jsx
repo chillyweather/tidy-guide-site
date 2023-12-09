@@ -13,7 +13,7 @@ export const VideoDocSection = ({ element, index }) => {
       setCurrentMovieLink(movies[0].video);
       setCurrentMovieName(movies[0].name);
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={"section videoSection"}>
