@@ -1,15 +1,13 @@
-import { h } from "preact";
+import PropTypes from "prop-types";
 
-export const Link = ({ element, index }: any) => {
+export const LinkDocSection = ({ element, index }) => {
   const links = element.content.sources;
   return (
     <div className={"section linkSection"}>
-      <div className={'anchorLink'} id={element.title + index}></div>
+      <div className={"anchorLink"} id={element.title + index}></div>
       {element.title && (
         <div className={"title-row"}>
-          <h3 className={"title"}>
-            {element.title}
-          </h3>
+          <h3 className={"title"}>{element.title}</h3>
           <a href={"#top"} className={"back-link"}>
             ⬆︎
           </a>
@@ -17,9 +15,10 @@ export const Link = ({ element, index }: any) => {
       )}
       <div className={"links-block"}>
         {links.length &&
-          links.map((input: any) => {
+          links.map((input, index) => {
             return (
               <a
+                key={index}
                 href={input.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -32,4 +31,9 @@ export const Link = ({ element, index }: any) => {
       </div>
     </div>
   );
+};
+
+LinkDocSection.propTypes = {
+  element: PropTypes.object,
+  index: PropTypes.number,
 };

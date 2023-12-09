@@ -1,7 +1,8 @@
-import { h } from "preact";
+import PropTypes from "prop-types";
+
 import { useEffect, useState } from "preact/hooks";
 
-export const Video = ({ element, index }: any) => {
+export const VideoDocSection = ({ element, index }) => {
   const [currentMovieLink, setCurrentMovieLink] = useState("");
   const [currentMovieName, setCurrentMovieName] = useState("");
   const [currenMovieIndex, setCurrentMovieIndex] = useState(0);
@@ -38,10 +39,10 @@ export const Video = ({ element, index }: any) => {
         />
         <p>{currentMovieName}</p>
       </div>
-      {movies.map((movie: any, index: number) => {
+      {movies.map((movie, index) => {
         const isCurrent = currenMovieIndex === index;
         return (
-          <div>
+          <div key={index}>
             <button
               className={isCurrent ? "videoSelected" : ""}
               onClick={() => {
@@ -57,4 +58,9 @@ export const Video = ({ element, index }: any) => {
       })}
     </div>
   );
+};
+
+VideoDocSection.propTypes = {
+  element: PropTypes.object,
+  index: PropTypes.number,
 };

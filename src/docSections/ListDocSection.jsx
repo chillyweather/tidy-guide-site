@@ -1,4 +1,5 @@
-import { h } from "preact";
+import PropTypes from "prop-types";
+
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import {
   scrollListPrev,
@@ -6,15 +7,7 @@ import {
 } from "../auxiliaryFunctions/listNavigationFunctions";
 import { chunkArray } from "../auxiliaryFunctions/chunkArray";
 
-export const List = ({
-  element,
-  buildLists,
-  index,
-}: {
-  element: any;
-  buildLists: any;
-  index: number;
-}) => {
+export const ListDocSection = ({ element, buildLists, index }) => {
   const newListArray = chunkArray(element.content.inputs, 5);
   return (
     <div className={"section listSection"}>
@@ -29,9 +22,9 @@ export const List = ({
       )}
       <div className="listWrapper">
         {newListArray.length &&
-          newListArray.map((list: any, i: number) => {
+          newListArray.map((list, i) => {
             return (
-              <div className="listContainer">
+              <div key={i} className="listContainer">
                 <div className="list" id={element.title + i}>
                   {buildLists(list)}
                 </div>
@@ -63,4 +56,10 @@ export const List = ({
       </ol>
     </div>
   );
+};
+
+ListDocSection.propTypes = {
+  element: PropTypes.object,
+  buildLists: PropTypes.func,
+  index: PropTypes.number,
 };

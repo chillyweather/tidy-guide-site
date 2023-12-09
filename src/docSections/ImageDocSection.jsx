@@ -1,18 +1,17 @@
-import { h } from "preact";
-import imgloader from "../images/img-loader.gif";
-import brokenImg from "../images/broken-image.svg";
-import { Button } from "@create-figma-plugin/ui";
+import PropTypes from "prop-types";
+import imgloader from "../assets/img-loader.gif";
+import brokenImg from "../assets/broken-image.svg";
 
-function hideImg(event: any) {
-  event.target.classList.add('broken');
+function hideImg(event) {
+  event.target.classList.add("broken");
 }
 
-export const Image = ({
+export const ImageDocSection = ({
   element,
   setCurrentImage,
   setIsImageOpen,
   index,
-}: any) => (
+}) => (
   <div className={"section imageSection"}>
     <div className={"anchorLink"} id={element.title + index}></div>
     {element.title && (
@@ -24,7 +23,7 @@ export const Image = ({
       </div>
     )}
     {element.content.remoteImageLink.length && (
-      <Button
+      <button
         onClick={() => {
           setCurrentImage(element.content.remoteImageLink);
           setIsImageOpen(true);
@@ -40,8 +39,8 @@ export const Image = ({
           <img
             className={"image"}
             src={element.content.remoteImageLink}
-            onError={() => {
-              hideImg(event);
+            onError={(e) => {
+              hideImg(e);
             }}
           />
           <div className={"invalid-image"}>
@@ -51,7 +50,14 @@ export const Image = ({
           </div>
           <img src={imgloader} className={"img-loader"} />
         </div>
-      </Button>
+      </button>
     )}
   </div>
 );
+
+ImageDocSection.propTypes = {
+  element: PropTypes.object,
+  setCurrentImage: PropTypes.func,
+  setIsImageOpen: PropTypes.func,
+  index: PropTypes.number,
+};

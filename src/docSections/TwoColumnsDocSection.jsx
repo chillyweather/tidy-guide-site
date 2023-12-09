@@ -1,6 +1,6 @@
-import { h } from "preact";
+import PropTypes from "prop-types";
 
-export const TwoColumns = ({ element, buildLists, index }: any) => (
+export const TwoColumnsDocSection = ({ element, buildLists, index }) => (
   <div className={"section twoColumnsSection"}>
     <div className={"anchorLink"} id={element.title + index}></div>
     {element.title && (
@@ -12,7 +12,7 @@ export const TwoColumns = ({ element, buildLists, index }: any) => (
       </div>
     )}
     {Object.keys(element.content).length && (
-      <div class={"two-columns"}>
+      <div className={"two-columns"}>
         <div>
           <strong>
             <h4>{element.content.subtitle1}</h4>
@@ -33,3 +33,9 @@ export const TwoColumns = ({ element, buildLists, index }: any) => (
     )}
   </div>
 );
+
+TwoColumnsDocSection.propTypes = {
+  buildLists: PropTypes.func.isRequired,
+  element: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
+};

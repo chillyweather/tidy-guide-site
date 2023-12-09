@@ -1,6 +1,6 @@
-import { h } from "preact";
+import PropTypes from "prop-types";
 
-export const Text = ({ element, index }: any) => (
+export const TextDocSection = ({ element, index }) => (
   <div className={"section textSection"}>
     <div className={"anchorLink"} id={element.title + index}></div>
     {element.title && (
@@ -14,3 +14,8 @@ export const Text = ({ element, index }: any) => (
     {element.text.length && <p>{element.text}</p>}
   </div>
 );
+
+TextDocSection.propTypes = {
+  element: PropTypes.object,
+  index: PropTypes.number,
+};
