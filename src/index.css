@@ -506,7 +506,7 @@ li {
   user-select: none;
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   padding: 16px 24px;
   gap: 6px;
   background-color: var(--tidy-background);
@@ -1029,6 +1029,7 @@ li::before {
   margin-top: 18px;
   margin-bottom: 40px;
   width: 100%;
+  max-width: 732px;
 }
 
 .section>.listWrapper li::after {
