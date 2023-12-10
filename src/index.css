@@ -193,7 +193,7 @@ body:has(.login) {
   background-color: #ECEBF5;
 }
 
-.componentBTN:active, ..documentationIndex button:active {
+.componentBTN:active, .documentationIndex button:active {
   background-color: #494848;
   color: #ffffff;
 }
