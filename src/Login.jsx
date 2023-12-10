@@ -46,11 +46,11 @@ export const Login = ({ setToken }) => {
       <form onSubmit={handleSubmit}>
         <div>
           <label>Email:</label>
-          <input type="email" ref={emailRef} />
+          <input type="email" placeholder="Email" ref={emailRef} />
         </div>
         <div>
           <label>Password:</label>
-          <input type="password" ref={passwordRef} />
+          <input type="password" placeholder="password" ref={passwordRef} />
         </div>
         <button type="submit">Submit</button>
       </form>
