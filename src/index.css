@@ -167,7 +167,7 @@ body:has(.login) {
   display: none;
 }
 
-.componentBTN {
+.componentBTN, .documentationIndex button {
   position: relative;
   font-family: 'Space Mono', monospace;
   font-size: calc(var(--text-size) - (var(--text-size) / 7));
@@ -180,18 +180,20 @@ body:has(.login) {
   border-radius: 9999px;
   width: 100%;
   height: 36px;
+  background-color: transparent;
+  color: var(--tidy-text);
 }
 
-.componentBTN:hover {
+.componentBTN:hover, .documentationIndex button:hover {
   background-color: #ECEBF5;
 }
 
-.componentBTN:active {
+.componentBTN:active, ..documentationIndex button:active {
   background-color: #494848;
   color: #ffffff;
 }
 
-.componentBTN::after {
+.componentBTN::after, .documentationIndex button::after {
   content: '';
   position: absolute;
   width: calc(100vw - 64px);
@@ -200,7 +202,7 @@ body:has(.login) {
   border-bottom: 1px solid var(--tidy-divider);
 }
 
-.componentBTN:empty {
+.componentBTN:empty, .documentationIndex button:empty {
   display: none;
 }
 
