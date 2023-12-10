@@ -515,7 +515,7 @@ li {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 48px);
+  width: calc(100% - 128px);
   max-width: 800px;
   user-select: none;
   position: fixed;
