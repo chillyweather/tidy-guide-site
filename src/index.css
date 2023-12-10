@@ -1011,7 +1011,7 @@ li::before {
   flex-direction: row;
   gap: 60px;
   width: 100%;
-  max-width: 800px;
+  max-width: 732px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
