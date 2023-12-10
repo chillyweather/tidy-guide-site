@@ -1216,13 +1216,10 @@ input+svg {
   font-size: var(--text-size);
   width: 100%;
   padding: 16px 20px;
-  /* border: none; */
+  border: none;
+  outline: none;
   background-color: transparent;
   color: var(--tidy-text);
-}
-.login input:focus{
-  outline: none;
-  border-color: blue;
 }
 
 .login input::placeholder {

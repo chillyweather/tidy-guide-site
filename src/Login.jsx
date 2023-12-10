@@ -45,7 +45,7 @@ export const Login = ({ setToken }) => {
     <div className="login">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="inputDiv">
           <label>Email:</label>
           <input type="email" placeholder="Email" ref={emailRef} />
           <IconMail
@@ -54,7 +54,7 @@ export const Login = ({ setToken }) => {
           className="icon icon-tabler icon-tabler-mail"
         />
         </div>
-        <div>
+        <div className="inputDiv">
           <label>Password:</label>
           <input type="password" placeholder="password" ref={passwordRef} />
           <IconEye
