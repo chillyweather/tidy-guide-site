@@ -1030,7 +1030,8 @@ li::before {
 }
 
 .section>.listWrapper .listContainer {
-  min-width: calc(100vw - 96px);
+  min-width: 732px;
+  max-width: 732px;
   width: calc(100vw - 96px);
 }
 
