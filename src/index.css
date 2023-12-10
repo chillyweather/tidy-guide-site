@@ -833,26 +833,6 @@ a[href*="figma.com/proto"] {
   color: #ff69b4;
 }
 
-a:hover::after {
-  content: attr(href);
-  position: fixed;
-  background-color: #eeeeee;
-  color: #666666;
-  border-top: 1px solid #dddddd;
-  padding: 8px 24px;
-  bottom: 0;
-  left: 0;
-  width: calc(100% - 48px);
-  word-break: break-all;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  z-index: 999;
-}
-
-a[href^="#"]:hover::after {
-  display: none;
-}
 
 .nav-container .subtitle {
   font-size: calc(var(--text-size) + (var(--text-size) / 7));
