@@ -52,7 +52,7 @@ export const Login = ({ setToken }) => {
           <label>Password:</label>
           <input type="password" placeholder="password" ref={passwordRef} />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
