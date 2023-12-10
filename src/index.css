@@ -597,6 +597,9 @@ form div{
   display: none;
 }
 
+.guides{
+  margin-top: 80px
+}
 .nav-container {
   /* menu */
   padding: 32px 24px;
@@ -1192,7 +1195,8 @@ a:hover {
 }
 
 .inputDiv svg {
-  margin-right: 12px;
+  position: absolute;
+  right: 12px;
 }
 
 .login .inputDiv:focus-within {
