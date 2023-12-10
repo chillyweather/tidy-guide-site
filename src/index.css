@@ -586,8 +586,13 @@ body .nav-wrapper {
   gap: 24px;
   min-width: 320px;
 }
-
+.login form svg{
+  color: var(--tidy-disabled-ic);
+  position: absolute;
+  right: 12px;
+}
 form div{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

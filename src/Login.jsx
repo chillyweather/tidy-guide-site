@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import { IconMail, IconEye } from "@tabler/icons-react";
 
 async function login(email, password) {
   const path = "https://api.tidyframework.com/api/users/login";
@@ -47,10 +48,21 @@ export const Login = ({ setToken }) => {
         <div>
           <label>Email:</label>
           <input type="email" placeholder="Email" ref={emailRef} />
+          <IconMail
+          size={24}
+          stroke={2}
+          className="icon icon-tabler icon-tabler-mail"
+        />
         </div>
         <div>
           <label>Password:</label>
           <input type="password" placeholder="password" ref={passwordRef} />
+          <IconEye
+          size={24}
+          stroke={2}
+          className="icon icon-tabler icon-tabler-eye"
+          onClick={() => setPasswordVisible(!passwordVisible)}
+        />
         </div>
         <button type="submit">Login</button>
       </form>
