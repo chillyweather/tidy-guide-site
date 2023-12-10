@@ -54,7 +54,7 @@ button {
 }
 
 .app {
-  width: 100%;
+  width: calc(100% - 128px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -471,7 +471,8 @@ li {
 }
 
 .videoDiv {
-  width: 100%;
+  /* width: 100%; */
+  width: calc(100% - 10px);
   background-color: #ffffff;
   padding: 12px;
   border-radius: 12px;
