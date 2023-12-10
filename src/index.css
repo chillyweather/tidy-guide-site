@@ -72,6 +72,7 @@ button {
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
+  padding-right: 0;
   gap: 1em;
 }
 
@@ -129,6 +130,7 @@ body:has(.login) {
 
 .section {
   position: relative;
+  max-width: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -136,6 +138,9 @@ body:has(.login) {
   gap: 12px;
   padding-bottom: 16px;
   word-break: break-word;
+}
+.headerSection{
+  margin-top: 100px;
 }
 
 .imageSection::after,
@@ -498,10 +503,11 @@ li {
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 48px);
+  max-width: 800px;
   user-select: none;
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   padding: 16px 24px;
   gap: 6px;
   background-color: var(--tidy-background);
@@ -588,6 +594,7 @@ body .nav-wrapper {
 }
 
 form div{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -596,6 +603,9 @@ form div{
   display: none;
 }
 
+.guides{
+  margin-top: 100px
+}
 .nav-container {
   /* menu */
   padding: 32px 24px;
@@ -915,6 +925,7 @@ a:empty {
   width: 16px;
   height: 16px;
   left: 12px;
+  top: 10px;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>');
   background-size: contain;
   background-repeat: no-repeat;
@@ -1002,6 +1013,7 @@ li::before {
   flex-direction: row;
   gap: 60px;
   width: 100%;
+  max-width: 732px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -1020,6 +1032,7 @@ li::before {
   margin-top: 18px;
   margin-bottom: 40px;
   width: 100%;
+  max-width: 732px;
 }
 
 .section>.listWrapper li::after {
@@ -1056,7 +1069,10 @@ li::before {
 }
 
 .pagination button {
+  display: flex;
   padding: 2px;
+  background-color: transparent;
+  color: var(--tidy-text);
 }
 
 .pagination button svg {
@@ -1191,7 +1207,8 @@ a:hover {
 }
 
 .inputDiv svg {
-  margin-right: 12px;
+  position: absolute;
+  right: 12px;
 }
 
 .login .inputDiv:focus-within {
@@ -1211,7 +1228,8 @@ input+svg {
   font-size: var(--text-size);
   width: 100%;
   padding: 16px 20px;
-  /* border: none; */
+  border: none;
+  outline: none;
   background-color: transparent;
   color: var(--tidy-text);
 }
