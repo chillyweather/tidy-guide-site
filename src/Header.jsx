@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-// import logoTidy from "assets/TidyLogo.svg";
+import logoTidy from "./assets/TidyLogo.svg";
 
 const NavBar = ({ token, setToken }) => {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ export const Header = ({ token, setToken }) => {
   return (
     <div className="header">
       <h1>Tidy Guide Web</h1>
-      <img src="./src/assets/TidyLogo.svg" alt="Tidy Logo" />
+      <img src={logoTidy} alt="Tidy Logo" />
       {/* <img src={logoTidy} /> */}
       <NavBar token={token} setToken={setToken} />
     </div>
