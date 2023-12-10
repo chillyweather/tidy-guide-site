@@ -502,6 +502,7 @@ li {
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 48px);
+  max-width: 800px;
   user-select: none;
   position: fixed;
   top: 0;
