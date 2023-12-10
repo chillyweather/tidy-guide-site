@@ -580,6 +580,12 @@ body .nav-wrapper {
   transition: transform 300ms ease-in-out 0s;
 }
 
+form div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-container {
   /* menu */
   padding: 32px 24px;
