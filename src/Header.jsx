@@ -40,7 +40,7 @@ export const Header = ({ token, setToken }) => {
   return (
     <div className="header">
       <h1>Tidy Guide Web</h1>
-      <img src="/assets/TidyLogo.svg" alt="Tidy Logo" />
+      <img src="./src/assets/TidyLogo.svg" alt="Tidy Logo" />
       {/* <img src={logoTidy} /> */}
       <NavBar token={token} setToken={setToken} />
     </div>
