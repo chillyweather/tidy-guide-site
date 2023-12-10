@@ -266,7 +266,7 @@ li {
 }
 
 .title-wrapper .wip {
-  margin-top: 30px;
+  margin-top: calc(var(--text-size) * 2);
 }
 
 .title-wrapper strong,
