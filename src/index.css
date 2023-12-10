@@ -1215,6 +1215,10 @@ input+svg {
   background-color: transparent;
   color: var(--tidy-text);
 }
+.login input:focus{
+  outline: none;
+  border-color: blue;
+}
 
 .login input::placeholder {
   color: var(--tidy-disabled);
