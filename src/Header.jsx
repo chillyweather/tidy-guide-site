@@ -39,9 +39,8 @@ const NavBar = ({ token, setToken }) => {
 export const Header = ({ token, setToken }) => {
   return (
     <div className="header">
-      <h1>Tidy Guide Web</h1>
+      {/* <h1>Tidy Guide Web</h1> */}
       <img src={logoTidy} alt="Tidy Logo" />
-      {/* <img src={logoTidy} /> */}
       <NavBar token={token} setToken={setToken} />
     </div>
   );
