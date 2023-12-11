@@ -78,6 +78,9 @@ button {
 .logo-div{
   flex-grow: 1;
 }
+.logo-div img{
+  cursor: pointer;
+}
 
 .documentationIndex {
   display: flex;
