@@ -210,7 +210,7 @@ body:has(.login) {
 .componentBTN::after, .documentationIndex button::after {
   content: '';
   position: absolute;
-  width: calc(50vw - 64px);
+  width: calc(100%);
   max-width: 800px;
   left: 0;
   bottom: -12px;
@@ -627,7 +627,7 @@ form div{
 
 .guides{
   margin-top: 100px;
-  width: 50%;
+  width: 100%;
   max-width: 800px;
 }
 .nav-container {
