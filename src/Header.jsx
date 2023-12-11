@@ -25,7 +25,7 @@ const NavBar = ({ token, setToken }) => {
 
   return (
     <div className="navbar">
-      <div class="logo-div">
+      <div className="logo-div">
         <img src={logoTidy} alt="Tidy Logo" onClick={handleHomeClick} />
       </div>
       {token && <button onClick={handleGuidesClick}>Browse Guides</button>}

@@ -49,20 +49,21 @@ export const Login = ({ setToken }) => {
           <label>Email:</label>
           <input type="email" placeholder="Email" ref={emailRef} />
           <IconMail
-          size={24}
-          stroke={2}
-          className="icon icon-tabler icon-tabler-mail"
-        />
+            size={24}
+            stroke={2}
+            className="icon icon-tabler icon-tabler-mail"
+          />
         </div>
         <div className="inputDiv">
           <label>Password:</label>
           <input type="password" placeholder="password" ref={passwordRef} />
           <IconEye
-          size={24}
-          stroke={2}
-          className="icon icon-tabler icon-tabler-eye"
-          onClick={() => setPasswordVisible(!passwordVisible)}
-        />
+            size={24}
+            stroke={2}
+            className="icon icon-tabler icon-tabler-eye"
+
+            // onClick={() => setPasswordVisible(!passwordVisible)}
+          />
         </div>
         <button type="submit">Login</button>
       </form>

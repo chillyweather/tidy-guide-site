@@ -2,7 +2,13 @@ import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Guides = ({ token, documentation, setDocumentation }) => {
+export const Guides = ({
+  token,
+  documentation,
+  setDocumentation,
+  selectedMasterId,
+  setSelectedMasterId,
+}) => {
   const navigate = useNavigate();
   async function handleGetDocumentation(token) {
     try {
@@ -36,6 +42,7 @@ export const Guides = ({ token, documentation, setDocumentation }) => {
               <button
                 key={guide._id}
                 onClick={() => {
+                  setSelectedMasterId(guide._id);
                   navigate(`/guide/${guide._id}`);
                 }}
               >
@@ -53,8 +60,8 @@ Guides.propTypes = {
   token: PropTypes.string,
   documentation: PropTypes.array,
   setDocumentation: PropTypes.func,
-  selectedDocId: PropTypes.string,
-  setSelectedDocId: PropTypes.func,
+  selectedMasterId: PropTypes.string,
+  setSelectedMasterId: PropTypes.func,
 };
 
 async function getDocumentation(token) {

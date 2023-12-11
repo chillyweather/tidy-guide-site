@@ -21,12 +21,35 @@ function App() {
   const [token, setToken] = useState(null);
   const savedToken = localStorage.getItem("token");
   const [documentation, setDocumentation] = useState([]);
+  const [navigationLinks, setNavigationLinks] = useState([]);
+  const [selectedMasterId, setSelectedMasterId] = useState("");
 
   useEffect(() => {
     if (savedToken) {
       setToken(savedToken);
     }
   }, [token]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (documentation.length > 0) {
+      if (selectedMasterId.length > 0) {
+        const data = documentation.find((e) => e._id === selectedMasterId).docs;
+        const keys = Object.keys(data);
+        const newLinks = keys.reduce((links, key, index) => {
+          const element = data[key];
+          if (
+            element.datatype &&
+            element.datatype !== "header" &&
+            element.datatype !== "element"
+          ) {
+            links.push([element.title, index]);
+          }
+          return links;
+        }, []);
+        setNavigationLinks(newLinks);
+      }
+    }
+  }, [documentation, selectedMasterId]);
 
   return (
     <BrowserRouter>
@@ -45,6 +68,8 @@ function App() {
                   token={token}
                   documentation={documentation}
                   setDocumentation={setDocumentation}
+                  selectedMasterId={selectedMasterId}
+                  setSelectedMasterId={setSelectedMasterId}
                 />
               }
             />
@@ -53,7 +78,7 @@ function App() {
               element={
                 <DetailsPage
                   documentation={documentation}
-                  navigationLinks={[]}
+                  navigationLinks={navigationLinks}
                 />
               }
             />
