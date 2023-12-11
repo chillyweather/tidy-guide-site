@@ -603,8 +603,9 @@ body .nav-wrapper {
 
 body .nav-wrapper {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 80px;
+  right: 400px;
+  margin-right: -20%;
   background-color: #ffffff;
   border-radius: 32px;
   z-index: 9999;
