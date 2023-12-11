@@ -609,12 +609,9 @@ body .nav-wrapper {
   z-index: 9999;
   width: 100%;
   max-width: 800px;
-  /* max-width: calc(100% - 48px); */
-  /* max-height: calc(100% - 128px); */
   max-height: 0;
   display: flex;
   justify-content: flex-end;
-  /* transform: translateY(-125%); */
   transition: max-height 300ms ease-in-out 0s;
 }
 
@@ -667,7 +664,6 @@ body:has(.header-menu[open]) .nav-container>* {
 }
 
 body:has(.header-menu[open]) .nav-wrapper {
-  /* transform: translateY(0); */
   max-height: calc(100% - 128px);
 }
 
