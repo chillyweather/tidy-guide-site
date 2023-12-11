@@ -25,7 +25,8 @@ const NavBar = ({ token, setToken }) => {
 
   return (
     <div className="navbar">
-      <button onClick={handleHomeClick}>Home</button>
+      <img src={logoTidy} alt="Tidy Logo" onClick={handleHomeClick} />
+      {/* <button onClick={handleHomeClick}>Home</button> */}
       {token && <button onClick={handleGuidesClick}>Browse Guides</button>}
       {token ? (
         <button onClick={handleLogoutClick}>Logout</button>
@@ -40,7 +41,6 @@ export const Header = ({ token, setToken }) => {
   return (
     <div className="header">
       {/* <h1>Tidy Guide Web</h1> */}
-      <img src={logoTidy} alt="Tidy Logo" />
       <NavBar token={token} setToken={setToken} />
     </div>
   );
