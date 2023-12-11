@@ -39,7 +39,7 @@ export const Guides = ({ token, documentation, setDocumentation }) => {
                   navigate(`/guide/${guide._id}`);
                 }}
               >
-                {guide.docs[0].title}
+                <p>{guide.docs[0].title}</p>
                 {guide.docs[0].inProgress && <div className={"wip"}>WIP</div>}
               </button>
             );
