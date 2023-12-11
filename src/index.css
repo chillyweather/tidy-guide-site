@@ -81,6 +81,9 @@ button {
 .logo-div img{
   cursor: pointer;
 }
+.logo-div img:hover{
+  opacity: .9;
+}
 
 .documentationIndex {
   display: flex;
