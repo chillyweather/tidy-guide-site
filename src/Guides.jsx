@@ -40,6 +40,7 @@ export const Guides = ({ token, documentation, setDocumentation }) => {
                 }}
               >
                 {guide.docs[0].title}
+                {guide.docs[0].inProgress && <div className={"wip"}>WIP</div>}
               </button>
             );
           })}
