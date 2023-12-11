@@ -190,8 +190,9 @@ body:has(.login) {
   width: 100%;
   height: 36px;
   background-color: transparent;
-  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   color: var(--tidy-text);
 }
 
