@@ -881,7 +881,7 @@ a[href*="figma.com/proto"] {
   padding: 8px 16px;
   margin: 4px 0;
   border-radius: 9999px;
-  width: 100%;
+  width: calc(100% - 32px);
 }
 
 .nav-container a::before {
