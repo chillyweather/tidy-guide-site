@@ -192,6 +192,12 @@ body:has(.login) {
   background-color: transparent;
   color: var(--tidy-text);
 }
+.documentationIndex button p{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
 
 .documentationIndex{
   padding: 0;
@@ -210,7 +216,7 @@ body:has(.login) {
 .componentBTN::after, .documentationIndex button::after {
   content: '';
   position: absolute;
-  width: calc(100vw - 64px);
+  width: 100%;
   max-width: 800px;
   left: 0;
   bottom: -12px;
@@ -224,6 +230,7 @@ body:has(.login) {
 h1 {
   font-family: 'DM Serif Text', serif;
   line-height: 120%;
+  min-width: 14ch;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
