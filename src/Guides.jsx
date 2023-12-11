@@ -27,7 +27,7 @@ export const Guides = ({ token, documentation, setDocumentation }) => {
   }, [documentation]);
   return (
     <div className="guides">
-      <h2>Guides</h2>
+      <h1>Guides</h1>
       <ul className="documentationIndex">
         {documentation.length &&
           documentation.map((guide) => {
