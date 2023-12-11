@@ -230,6 +230,7 @@ body:has(.login) {
 h1 {
   font-family: 'DM Serif Text', serif;
   line-height: 120%;
+  min-width: 14ch;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
