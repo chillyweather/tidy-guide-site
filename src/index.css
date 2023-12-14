@@ -539,7 +539,7 @@ li {
   /* left: 0; */
   padding: 16px 24px;
   gap: 6px;
-  background-color: var(--tidy-background);
+  /* background-color: var(--tidy-background); */
   z-index: 998;
 }
 
@@ -1193,7 +1193,7 @@ a:hover {
   color: var(--tidy-text);
   flex-direction: column;
   border: none;
-  height: calc(100% - 84px);
+  height: calc(100% - 144px);
   font-weight: 400;
 }
 
