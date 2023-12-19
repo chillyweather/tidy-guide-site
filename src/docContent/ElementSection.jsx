@@ -22,10 +22,6 @@ const ElementSection = ({ element, index, navigationLinks }) => {
   };
 
   switch (element.datatype) {
-    case "header":
-      return (
-        <HeaderDocSection element={element} navigationLinks={navigationLinks} />
-      );
     case "link":
       return (
         <LinkDocSection
