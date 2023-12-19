@@ -46,8 +46,8 @@ export const Guides = ({
                   navigate(`/guide/${guide._id}`);
                 }}
               >
-                <p>{guide.docs[0].title}</p>
-                {guide.docs[0].inProgress && <div className={"wip"}>WIP</div>}
+                <p>{guide.title}</p>
+                {guide.inProgress && <div className={"wip"}>WIP</div>}
               </button>
             );
           })}
