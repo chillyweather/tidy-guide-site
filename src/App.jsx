@@ -39,8 +39,8 @@ function App() {
           const element = data[key];
           if (
             element.datatype &&
-            element.datatype !== "header" &&
-            element.datatype !== "element"
+            element.publish &&
+            element.datatype !== "header"
           ) {
             links.push([element.title, index]);
           }

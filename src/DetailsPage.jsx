@@ -27,12 +27,14 @@ export const DetailsPage = ({ documentation, navigationLinks }) => {
         </div>
       </div>
       {sectionData.map((element, index) => {
-        return ElementSection({
-          key: index,
-          element,
-          index,
-          navigationLinks,
-        });
+        if (element.publish) {
+          return ElementSection({
+            key: index,
+            element,
+            index,
+            navigationLinks,
+          });
+        }
       })}
     </div>
   );
