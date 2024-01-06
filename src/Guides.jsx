@@ -6,7 +6,7 @@ export const Guides = ({
   token,
   documentation,
   setDocumentation,
-  selectedMasterId,
+  // selectedMasterId,
   setSelectedMasterId,
 }) => {
   const navigate = useNavigate();
@@ -26,18 +26,18 @@ export const Guides = ({
     if (token) {
       handleGetDocumentation(token);
     }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [token]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     console.log("documentation :>> ", documentation);
   }, [documentation]);
+
   return (
     <div className="guides">
       <h1>Guides</h1>
       <ul className="documentationIndex">
-        {documentation.length &&
+        {!!documentation.length &&
           documentation.map((guide) => {
-            console.log("guide", guide._id);
             return (
               <button
                 key={guide._id}

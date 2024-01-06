@@ -1,14 +1,20 @@
 import PropTypes from "prop-types";
 
-import { HeaderDocSection } from "./HeaderDocSection";
 import { VideoDocSection } from "./VideoDocSection";
 import { ImageDocSection } from "./ImageDocSection";
 import { ListDocSection } from "./ListDocSection";
 import { LinkDocSection } from "./LinkDocSection";
 import { TwoColumnsDocSection } from "./TwoColumnsDocSection";
 import { TextDocSection } from "./TextDocSection";
+import { AnatomyDocSection } from "./AnatomyDocSection";
+import { SpacingDocSection } from "./SpacingDocSection";
+import { PropertyDocSection } from "./PropertyDocSection";
+import { VariantsDocSection } from "./VariantsDocSection";
 
 const ElementSection = ({ element, index, navigationLinks }) => {
+  console.log("element", element);
+  console.log("index", index);
+  console.log("navigationLinks", navigationLinks);
   const renderList = (arr) => {
     return (
       <ul className="list">
@@ -59,6 +65,14 @@ const ElementSection = ({ element, index, navigationLinks }) => {
       return <ImageDocSection element={element} index={index} />;
     case "video":
       return <VideoDocSection element={element} index={index} />;
+    case "anatomy":
+      return <AnatomyDocSection element={element} index={index} />;
+    case "spacing":
+      return <SpacingDocSection element={element} index={index} />;
+    case "property":
+      return <PropertyDocSection element={element} index={index} />;
+    case "variants":
+      return <VariantsDocSection element={element} index={index} />;
     default:
       return null;
   }
