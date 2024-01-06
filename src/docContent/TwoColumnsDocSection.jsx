@@ -17,17 +17,14 @@ export const TwoColumnsDocSection = ({ element, buildLists, index }) => (
           <strong>
             <h4>{element.content.subtitle1}</h4>
           </strong>
-          <p style={{ margin: 0 }}>
-            {buildLists(element.content.text1.split("\n"), "unordered")}
-          </p>
+
+          {buildLists(element.content.text1.split("\n"), "unordered")}
         </div>
         <div>
           <strong>
             <h4>{element.content.subtitle2}</h4>
           </strong>
-          <p style={{ margin: 0 }}>
-            {buildLists(element.content.text2.split("\n"), "unordered")}
-          </p>
+          {buildLists(element.content.text2.split("\n"), "unordered")}
         </div>
       </div>
     )}
