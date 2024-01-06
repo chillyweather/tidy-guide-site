@@ -28,6 +28,7 @@ const ElementSection = ({ element, index, navigationLinks }) => {
     case "link":
       return (
         <LinkDocSection
+          key={index}
           element={element}
           index={index}
           headerData={navigationLinks}
@@ -36,6 +37,7 @@ const ElementSection = ({ element, index, navigationLinks }) => {
     case "text":
       return (
         <TextDocSection
+          key={index}
           element={element}
           index={index}
           headerData={navigationLinks}
@@ -44,6 +46,7 @@ const ElementSection = ({ element, index, navigationLinks }) => {
     case "two-columns":
       return (
         <TwoColumnsDocSection
+          key={index}
           element={element}
           buildLists={renderList}
           index={index}
@@ -53,23 +56,24 @@ const ElementSection = ({ element, index, navigationLinks }) => {
     case "list":
       return (
         <ListDocSection
+          key={index}
           element={element}
           buildLists={renderList}
           index={index}
         />
       );
     case "image":
-      return <ImageDocSection element={element} index={index} />;
+      return <ImageDocSection element={element} index={index} key={index} />;
     case "video":
-      return <VideoDocSection element={element} index={index} />;
+      return <VideoDocSection element={element} index={index} key={index} />;
     case "anatomy":
-      return <AnatomyDocSection element={element} index={index} />;
+      return <AnatomyDocSection element={element} index={index} key={index} />;
     case "spacing":
-      return <SpacingDocSection element={element} index={index} />;
+      return <SpacingDocSection element={element} index={index} key={index} />;
     case "property":
-      return <PropertyDocSection element={element} index={index} />;
+      return <PropertyDocSection element={element} index={index} key={index} />;
     case "variants":
-      return <VariantsDocSection element={element} index={index} />;
+      return <VariantsDocSection element={element} index={index} key={index} />;
     default:
       return null;
   }
