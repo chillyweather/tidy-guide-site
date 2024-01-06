@@ -1,14 +1,10 @@
 import PropTypes from "prop-types";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Guides = ({
-  token,
-  documentation,
-  setDocumentation,
-  // selectedMasterId,
-  setSelectedMasterId,
-}) => {
+export const Guides = () => {
+  const token = localStorage.getItem("token");
+  const [documentation, setDocumentation] = useState([]);
   const navigate = useNavigate();
   async function handleGetDocumentation(token) {
     try {
@@ -26,11 +22,7 @@ export const Guides = ({
     if (token) {
       handleGetDocumentation(token);
     }
-  }, [token]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  useEffect(() => {
-    console.log("documentation :>> ", documentation);
-  }, [documentation]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="guides">
@@ -41,10 +33,7 @@ export const Guides = ({
             return (
               <button
                 key={guide._id}
-                onClick={() => {
-                  setSelectedMasterId(guide._id);
-                  navigate(`/guide/${guide._id}`);
-                }}
+                onClick={() => navigate(`/guide/${guide._id}`)}
               >
                 <p>{guide.title}</p>
                 {guide.inProgress && <div className={"wip"}>WIP</div>}

@@ -1,7 +1,7 @@
-const fetchDoc = async ({ queryKey }) => {
+const fetchDocs = async ({ queryKey }) => {
   const id = queryKey[1];
 
-  const path = `https://api.tidyframework.com/api/docs/${id}`;
+  const path = `https://api.tidyframework.com/api/docs`;
   const token = localStorage.getItem("token");
   const response = await fetch(path, {
     method: "GET",
@@ -18,7 +18,7 @@ const fetchDoc = async ({ queryKey }) => {
   return response.json();
 };
 
-export default fetchDoc;
+export default fetchDocs;
 
 // export async function getDocumentation(token, documentId) {
 //   const path = `https://api.tidyframework.com/api/docs/${documentId}`;
