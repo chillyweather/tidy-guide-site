@@ -1,11 +1,17 @@
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import PropTypes from "prop-types";
 import ElementSection from "./docContent/ElementSection";
-export const DetailsPage = ({ documentation, navigationLinks }) => {
+export const DetailsPage = ({ documentation, navigationLinks, token }) => {
+  console.log("token", token);
   const { id } = useParams();
   const section = documentation.find((e) => e._id === id);
   const sectionData = section.docs;
   const status = section.inProgress;
+
+  useEffect(() => {
+    console.log("documentation", documentation);
+  }, [documentation]);
 
   return (
     <div className="doc-wrapper">
@@ -53,4 +59,5 @@ function buildNavigationLinks(arr) {
 DetailsPage.propTypes = {
   documentation: PropTypes.array,
   navigationLinks: PropTypes.array,
+  token: PropTypes.string,
 };

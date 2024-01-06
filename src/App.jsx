@@ -79,6 +79,7 @@ function App() {
                 <DetailsPage
                   documentation={documentation}
                   navigationLinks={navigationLinks}
+                  token={token}
                 />
               }
             />

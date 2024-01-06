@@ -12,9 +12,6 @@ import { PropertyDocSection } from "./PropertyDocSection";
 import { VariantsDocSection } from "./VariantsDocSection";
 
 const ElementSection = ({ element, index, navigationLinks }) => {
-  console.log("element", element);
-  console.log("index", index);
-  console.log("navigationLinks", navigationLinks);
   const renderList = (arr) => {
     return (
       <ul className="list">
