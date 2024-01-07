@@ -14,6 +14,7 @@ async function login(email, password) {
   });
 
   if (!response.ok) {
+    alert("Invalid email or password");
     throw new Error(`HTTP error! status: ${response.status}`);
   }
 
@@ -33,9 +34,11 @@ export const Login = ({ setToken }) => {
 
     const response = await login(email, password);
     const token = response.token;
-    localStorage.setItem("token", token);
-    setToken(token);
-    navigate("/");
+    if (token) {
+      localStorage.setItem("token", token);
+      setToken(token);
+      navigate("/");
+    }
 
     emailRef.current.value = "";
     passwordRef.current.value = "";
