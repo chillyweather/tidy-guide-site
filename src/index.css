@@ -149,7 +149,7 @@ body:has(.login) {
 
 .section {
   position: relative;
-  /* max-width: 800px; */
+  max-width: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -248,7 +248,7 @@ body:has(.documentationIndex) .browseBTN{
   content: '';
   position: absolute;
   width: 100%;
-  /* max-width: 800px; */
+  max-width: 800px;
   left: 0;
   bottom: -12px;
   border-bottom: 1px solid var(--tidy-divider);
@@ -565,7 +565,7 @@ li {
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 128px);
-  /* max-width: 800px; */
+  max-width: 800px;
   user-select: none;
   position: fixed;
   top: 0;
@@ -642,7 +642,7 @@ body .nav-wrapper {
   margin-right: -400px;
   z-index: 9999;
   width: 100%;
-  /* max-width: 800px; */
+  max-width: 800px;
   max-height: 0;
   display: flex;
   justify-content: flex-end;
@@ -670,7 +670,7 @@ form div {
 .guides {
   margin-top: 100px;
   width: 100%;
-  /* max-width: 800px; */
+  max-width: 800px;
 }
 
 .nav-container {
