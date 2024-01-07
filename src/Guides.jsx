@@ -14,7 +14,8 @@ export const Guides = () => {
 
   useEffect(() => {
     if (data) {
-      setDocumentation(data);
+      const sortedData = data.sort((a, b) => a.title.localeCompare(b.title));
+      setDocumentation(sortedData);
     }
   }, [data]);
 
