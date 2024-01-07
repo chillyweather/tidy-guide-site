@@ -149,8 +149,8 @@ body:has(.login) {
 
 .section {
   position: relative;
+  width: calc(100% - 128px);
   max-width: 800px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
