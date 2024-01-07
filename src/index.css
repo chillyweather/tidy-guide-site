@@ -1078,7 +1078,8 @@ li::before {
   /* min-width: calc(100vw - 96px); */
   
   /* width: 800px; */
-  max-width: calc(100vw - 96px);
+  /* max-width: calc(100vw - 96px); */
+  width: 100%;
 }
 
 
