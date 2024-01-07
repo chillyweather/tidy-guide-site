@@ -186,6 +186,9 @@ body:has(.login) {
   text-overflow: ellipsis;
   display: none;
 }
+body:has(.documentationIndex) .browseBTN{
+  display: none;
+}
 
 .componentBTN,
 .documentationIndex button {
