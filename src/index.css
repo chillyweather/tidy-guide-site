@@ -507,7 +507,6 @@ li {
 }
 
 .videoDiv {
-  /* width: 100%; */
   width: calc(100% - 10px);
   background-color: #ffffff;
   padding: 12px;
@@ -557,10 +556,8 @@ li {
   user-select: none;
   position: fixed;
   top: 0;
-  /* left: 0; */
   padding: 16px 24px;
   gap: 6px;
-  /* background-color: var(--tidy-background); */
   background-color: inherit;
   z-index: 998;
 }
@@ -898,7 +895,6 @@ a[href*="figma.com/proto"] {
 }
 
 .nav-container a {
-  /* font-family: 'Space Mono', monospace; */
   position: relative;
   color: var(--tidy-text);
   padding: 8px 16px;
@@ -1060,10 +1056,6 @@ li::before {
 }
 
 .section>.listWrapper .listContainer {
-  /* min-width: calc(100vw - 96px); */
-  
-  /* width: 800px; */
-  /* max-width: calc(100vw - 96px); */
   width: 100%;
 }
 
