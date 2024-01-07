@@ -220,18 +220,6 @@ body:has(.documentationIndex) .browseBTN{
   gap: 24px;
 }
 
-/* .componentBTN:hover,
-.documentationIndex button:hover {
-  background-color: #ECEBF5;
-}
-
-.componentBTN:active,
-.documentationIndex button:active,
-.documentationIndex button:active p {
-  background-color: #494848;
-  color: #ffffff;
-} */
-
 .componentBTN:hover,
 .documentationIndex button:hover {
   background-color: var(--tidy-ec) !important;
