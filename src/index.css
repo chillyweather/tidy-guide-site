@@ -667,6 +667,7 @@ form div {
   border-radius: 12px;
   padding: 24px;
   overflow: auto;
+  min-width: 30vw;
 }
 
 .nav-container>* {
