@@ -631,7 +631,7 @@ li {
 }
 
 body .nav-wrapper {
-  border-radius: 32px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -676,7 +676,7 @@ form div {
 .nav-container {
   /* menu */
   background-color: #ffffff;
-  border-radius: 32px;
+  border-radius: 12px;
   padding: 32px 24px;
   overflow: auto;
 }
