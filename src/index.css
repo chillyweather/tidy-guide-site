@@ -1434,3 +1434,10 @@ summary button {
     width: 50%;
   }
 }
+
+@media screen and (max-width: 940px){
+  body .nav-wrapper {
+    right: 64px;
+    margin-right: 0;
+  }
+}
