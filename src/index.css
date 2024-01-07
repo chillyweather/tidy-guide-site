@@ -926,12 +926,12 @@ a[href*="figma.com/proto"] {
 
 .nav-container a:hover {
   text-decoration: none;
-  background-color: #F2F2F2;
+  background-color: var(--tidy-ec) !important;
 }
 
 .nav-container a:active {
-  color: #FFFFFF;
-  background-color: #323232;
+  background-color: var(--tidy-ec) !important;
+  box-shadow: 0 0 0 1.5px #9C71EF inset !important;
 }
 
 a:empty {
