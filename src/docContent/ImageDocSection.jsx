@@ -30,7 +30,7 @@ export const ImageDocSection = ({
         }}
         style={{
           cursor: "pointer",
-          height: "100%",
+          width: "100%",
           backgroundColor: "transparent",
           padding: 0,
         }}
