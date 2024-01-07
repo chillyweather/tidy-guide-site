@@ -193,8 +193,7 @@ body:has(.documentationIndex) .browseBTN{
 .componentBTN,
 .documentationIndex button {
   position: relative;
-  font-family: 'Space Mono', monospace;
-  font-size: calc(var(--text-size) - (var(--text-size) / 7));
+  font-size: var(--text-size);
   display: flex;
   justify-content: flex-start;
   align-items: center;
