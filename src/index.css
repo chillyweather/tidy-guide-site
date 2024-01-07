@@ -675,14 +675,6 @@ form div {
   transition: visibility 0s linear 300ms;
 }
 
-/* .header-menu[open] button {
-  background-color: transparent;
-} */
-
-/* .header-menu[open] {
-  pointer-events: none;
-} */
-
 body:has(.header-menu[open]) .nav-container>* {
   visibility: visible;
   transition: none;
