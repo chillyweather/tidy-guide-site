@@ -819,6 +819,10 @@ body:has(.login) .header .login-button {
 body .header-menu {
   display: none;
   margin-left: 0;
+  border-radius: 8px;
+}
+.header-menu summary{
+  border-radius: 8px;
 }
 
 body:has(.navigation a) .header-menu {
