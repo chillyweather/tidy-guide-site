@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import logoTidy from "./assets/TidyLogo.svg";
+import { IconList } from "@tabler/icons-react";
 
 const NavBar = ({ token, setToken }) => {
   const navigate = useNavigate();
@@ -48,8 +49,7 @@ const NavBar = ({ token, setToken }) => {
       >
         <summary>
           <button>
-            MENU
-            {/* <IconList /> */}
+            <IconList />
           </button>
         </summary>
       </details>
