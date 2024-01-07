@@ -2,6 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=block');
 
 :root {
+  --tidy-background: #F7F8FB;
+  --tidy-primary: #9C71EF;
+  --tidy-btn-hover: #8C5AEC;
+  --tidy-btn-pressed: #7C4CD7;
+  --tidy-disabled: #8E8F94;
+  --tidy-disabled-btn: #F2F0F6;
+  --tidy-disabled-btn-text: #A6A8AD;
+  --tidy-disabled-ic: #C5C6C8;
+  --tidy-text: #2A2A2A;
+  --tidy-link: #7948D6;
+  --tidy-divider: #EDEDED;
+  --text-size: 14px;
+}
+
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -100,21 +115,6 @@ button {
 /* ----- */
 
 
-
-:root {
-  --tidy-background: #F7F8FB;
-  --tidy-primary: #9C71EF;
-  --tidy-btn-hover: #8C5AEC;
-  --tidy-btn-pressed: #7C4CD7;
-  --tidy-disabled: #8E8F94;
-  --tidy-disabled-btn: #F2F0F6;
-  --tidy-disabled-btn-text: #A6A8AD;
-  --tidy-disabled-ic: #C5C6C8;
-  --tidy-text: #2A2A2A;
-  --tidy-link: #7948D6;
-  --tidy-divider: #EDEDED;
-  --text-size: 14px;
-}
 
 html {
   scroll-behavior: smooth;
