@@ -102,7 +102,7 @@ button {
 
 
 :root {
-  --tidy-background: #F7F6FD;
+  --tidy-background: #F7F8FB;
   --tidy-primary: #9C71EF;
   --tidy-btn-hover: #8C5AEC;
   --tidy-btn-pressed: #7C4CD7;
@@ -128,7 +128,6 @@ a {
 }
 
 body {
-  --tidy-background: #F7F6FD;
   background-color: var(--tidy-background);
 }
 
