@@ -54,7 +54,12 @@ export const VideoDocSection = ({ element, index }) => {
             <button
               className={isCurrent ? "videoSelected" : ""}
               onClick={() => {
-                setCurrentMovieLink(movie.video + "?autoplay=1&enablejsapi=1");
+                if(movie.video.indexOf("&") > 0){
+                  setCurrentMovieLink(movie.video.slice(0, movie.video.indexOf("&")) + "?autoplay=1&enablejsapi=1");
+                }else{
+                  setCurrentMovieLink(movie.video + "?autoplay=1&enablejsapi=1");
+                }
+                // setCurrentMovieLink(movie.video + "?autoplay=1&enablejsapi=1");
                 setCurrentMovieName(movie.name);
                 setCurrentMovieIndex(index);
               }}
