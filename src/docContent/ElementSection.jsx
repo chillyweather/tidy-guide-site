@@ -15,11 +15,14 @@ const ElementSection = ({ element, index, navigationLinks }) => {
   const renderList = (arr) => {
     return (
       <ul className="list">
-        {arr.map((line, i) => (
-          <li key={i} className="list-item">
-            {line}
-          </li>
-        ))}
+        {arr.map(
+          (line, i) =>
+            !!line.length && (
+              <li key={i} className="list-item">
+                {line}
+              </li>
+            )
+        )}
       </ul>
     );
   };
