@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import logoTidy from "./assets/TidyLogo.svg";
+import { IconList } from "@tabler/icons-react";
 
 const NavBar = ({ token, setToken }) => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const NavBar = ({ token, setToken }) => {
       <div className="logo-div">
         <img src={logoTidy} alt="Tidy Logo" onClick={handleHomeClick} />
       </div>
-      {token && <button onClick={handleGuidesClick}>Browse Guides</button>}
+      {token && <button className="browseBTN" onClick={handleGuidesClick}>Browse Guides</button>}
       {token ? (
         <button onClick={handleLogoutClick}>Logout</button>
       ) : (
@@ -48,8 +49,7 @@ const NavBar = ({ token, setToken }) => {
       >
         <summary>
           <button>
-            MENU
-            {/* <IconList /> */}
+            <IconList />
           </button>
         </summary>
       </details>

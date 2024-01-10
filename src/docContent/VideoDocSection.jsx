@@ -37,7 +37,14 @@ export const VideoDocSection = ({ element, index }) => {
           autoPlay
           allowFullScreen
         />
-        <p>{currentMovieName}</p>
+        <p
+        onClick={() => {
+          const videoTemp = currentMovieLink.replace("embed/", "watch?v=");
+          window.open(videoTemp, '_blank');
+        }}
+        >
+        {currentMovieName}
+        </p>
       </div>
       {movies.map((movie, index) => {
         const isCurrent = currenMovieIndex === index;
