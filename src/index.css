@@ -105,6 +105,7 @@ button {
 
 .logo-div img {
   cursor: pointer;
+  width: 60px;
 }
 
 .logo-div img:hover {
