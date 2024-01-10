@@ -168,6 +168,12 @@ body:has(.login) {
 .videoSection::after {
   margin-top: 32px;
 }
+.link-p{
+  cursor: pointer;
+}
+.link-p:hover{
+  text-decoration: underline;
+}
 
 .section:has(.nav-wrapper) {
   /* card */
