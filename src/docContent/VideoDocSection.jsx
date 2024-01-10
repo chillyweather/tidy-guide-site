@@ -10,7 +10,11 @@ export const VideoDocSection = ({ element, index }) => {
 
   useEffect(() => {
     if (movies.length > 0) {
-      setCurrentMovieLink(movies[0].video);
+      if(movies[0].video.indexOf("&") > 0){
+        setCurrentMovieLink(movies[0].video.slice(0,movies[0].video.indexOf("&")));
+      }else{
+        setCurrentMovieLink(movies[0].video);
+      }
       setCurrentMovieName(movies[0].name);
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
