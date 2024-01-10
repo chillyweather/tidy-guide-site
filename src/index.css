@@ -1079,6 +1079,10 @@ li::before {
   max-width: 732px;
 }
 
+li:empty {
+  display: none;
+}
+
 .section>.listWrapper li::after {
   content: '';
   position: absolute;
