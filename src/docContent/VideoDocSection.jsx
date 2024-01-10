@@ -38,6 +38,7 @@ export const VideoDocSection = ({ element, index }) => {
           allowFullScreen
         />
         <p
+        className={"link-p"}
         onClick={() => {
           const videoTemp = currentMovieLink.replace("embed/", "watch?v=");
           window.open(videoTemp, '_blank');
