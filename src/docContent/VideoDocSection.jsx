@@ -10,7 +10,11 @@ export const VideoDocSection = ({ element, index }) => {
 
   useEffect(() => {
     if (movies.length > 0) {
-      setCurrentMovieLink(movies[0].video);
+      if(movies[0].video.indexOf("&") > 0){
+        setCurrentMovieLink(movies[0].video.slice(0,movies[0].video.indexOf("&")));
+      }else{
+        setCurrentMovieLink(movies[0].video);
+      }
       setCurrentMovieName(movies[0].name);
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -38,6 +42,7 @@ export const VideoDocSection = ({ element, index }) => {
           allowFullScreen
         />
         <p
+        className={"link-p"}
         onClick={() => {
           const videoTemp = currentMovieLink.replace("embed/", "watch?v=");
           window.open(videoTemp, '_blank');
@@ -53,7 +58,12 @@ export const VideoDocSection = ({ element, index }) => {
             <button
               className={isCurrent ? "videoSelected" : ""}
               onClick={() => {
-                setCurrentMovieLink(movie.video + "?autoplay=1&enablejsapi=1");
+                if(movie.video.indexOf("&") > 0){
+                  setCurrentMovieLink(movie.video.slice(0, movie.video.indexOf("&")) + "?autoplay=1&enablejsapi=1");
+                }else{
+                  setCurrentMovieLink(movie.video + "?autoplay=1&enablejsapi=1");
+                }
+                // setCurrentMovieLink(movie.video + "?autoplay=1&enablejsapi=1");
                 setCurrentMovieName(movie.name);
                 setCurrentMovieIndex(index);
               }}

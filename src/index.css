@@ -105,6 +105,7 @@ button {
 
 .logo-div img {
   cursor: pointer;
+  width: 60px;
 }
 
 .logo-div img:hover {
@@ -166,6 +167,12 @@ body:has(.login) {
 .imageSection::after,
 .videoSection::after {
   margin-top: 32px;
+}
+.link-p{
+  cursor: pointer;
+}
+.link-p:hover{
+  text-decoration: underline;
 }
 
 .section:has(.nav-wrapper) {
@@ -1070,6 +1077,10 @@ li::before {
   margin-bottom: 40px;
   width: 100%;
   max-width: 732px;
+}
+
+li:empty {
+  display: none;
 }
 
 .section>.listWrapper li::after {
