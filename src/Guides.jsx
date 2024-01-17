@@ -25,6 +25,10 @@ export const Guides = () => {
       <ul className="documentationIndex">
         {!!documentation.length &&
           documentation.map((guide) => {
+            const isDraft = guide.draft;
+            if (isDraft) {
+              return null;
+            }
             return (
               <button
                 key={guide._id}
