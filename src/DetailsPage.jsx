@@ -4,7 +4,6 @@ import { useQuery } from "@tanstack/react-query";
 import fetchDoc from "./fetchDoc";
 import PropTypes from "prop-types";
 import ElementSection from "./docContent/ElementSection";
-// import { title } from "process";
 
 export const DetailsPage = () => {
   const [navigationLinks, setNavigationLinks] = useState([]);
