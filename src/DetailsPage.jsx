@@ -66,7 +66,7 @@ export const DetailsPage = () => {
         </div>
       </div>
       {sectionData.map((element, index) => {
-        if (element.publish) {
+        if (element.publish && !element.hidden) {
           return ElementSection({
             key: index,
             element,
