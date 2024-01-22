@@ -35,6 +35,7 @@ export const DetailsPage = () => {
           if (
             element.datatype &&
             element.publish &&
+            !element.hidden &&
             element.datatype !== "header"
           ) {
             links.push([element.title, index]);
