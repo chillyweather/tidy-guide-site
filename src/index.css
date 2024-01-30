@@ -1182,17 +1182,18 @@ li:empty {
 }
 
 .wip {
-  font-family: 'Space Mono', monospace;
-  background-color: #F0F66E;
-  color: #323232;
-  padding: 4px 6px;
-  border-radius: 9999px;
-  font-weight: bold;
-  font-size: calc(var(--text-size) - (var(--text-size) / 3.5));
+  /* font-family: 'Space Mono', monospace; */
+  background-color: #FFFFAD;
+  color: #7F5415;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-size: calc(var(--text-size) - (var(--text-size) / 7));
   word-break: keep-all;
   white-space: pre;
   pointer-events: none;
   user-select: none;
+  font-weight: 500;
+  padding: 2px 8px;
 }
 
 .wip::before {
