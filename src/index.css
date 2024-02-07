@@ -902,7 +902,7 @@ a[href*="figma.com/proto"] {
 .nav-container a {
   position: relative;
   color: #565E71;
-  padding: 0px 16px;
+  padding: 4px 16px;
   margin: 4px 0;
   border-radius: 8px;
   width: calc(100% - 32px);
@@ -912,7 +912,8 @@ a[href*="figma.com/proto"] {
 
 .nav-container a:hover {
   text-decoration: none;
-  background-color: var(--tidy-ec) !important;
+  font-weight: 600;
+  /* background-color: var(--tidy-ec) !important; */
 }
 
 .nav-container a:active {
@@ -927,7 +928,7 @@ a:empty {
 .navigation {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
   align-items: flex-start;
 }
 
