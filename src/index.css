@@ -670,19 +670,6 @@ form div {
   overflow: auto;
 }
 
-/* .nav-container>* {
-  visibility: hidden;
-  transition: visibility 0s linear 300ms;
-}
-
-body:has(.header-menu[open]) .nav-container>* {
-  visibility: visible;
-  transition: none;
-}
-
-body:has(.header-menu[open]) .nav-wrapper {
-  max-height: calc(100% - 128px);
-} */
 
 body .header-button {
   display: none;
