@@ -627,12 +627,9 @@ body .nav-wrapper {
 body .nav-wrapper {
   position: fixed;
   top: 80px;
-  right: 50%;
-  margin-right: -400px;
+  right: calc(50% - 400px);
+  transform: translateX(100%);
   z-index: 9999;
-  width: 100%;
-  max-width: 800px;
-  max-height: 0;
   display: flex;
   justify-content: flex-end;
   transition: max-height 300ms ease-in-out 0s;
@@ -670,7 +667,7 @@ form div {
   overflow: auto;
 }
 
-.nav-container>* {
+/* .nav-container>* {
   visibility: hidden;
   transition: visibility 0s linear 300ms;
 }
@@ -682,7 +679,7 @@ body:has(.header-menu[open]) .nav-container>* {
 
 body:has(.header-menu[open]) .nav-wrapper {
   max-height: calc(100% - 128px);
-}
+} */
 
 body .header-button {
   display: none;
