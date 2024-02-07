@@ -585,8 +585,8 @@ li {
 }
 
 .header button {
-  color: #323232;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: transparent;
   padding: 8px;
   border-radius: 8px;
 }
@@ -598,7 +598,7 @@ li {
 
 .header button:hover,
 .header summary:hover button {
-  background-color: #FAFAFA;
+  background-color: #ffffff22;
 }
 
 .header button:active,
