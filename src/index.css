@@ -151,7 +151,7 @@ body:has(.login) {
 .section {
   position: relative;
   width: calc(100vw - 128px);
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -242,7 +242,7 @@ body:has(.documentationIndex) .browseBTN{
   content: '';
   position: absolute;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   left: 0;
   bottom: -12px;
   border-bottom: 1px solid var(--tidy-divider);
@@ -631,7 +631,7 @@ body .nav-wrapper {
 body .nav-wrapper {
   position: fixed;
   top: 94px;
-  right: calc(50% - 400px);
+  right: calc(50% - 500px);
   transform: translateX(100%);
   z-index: 9999;
   display: flex;
@@ -660,13 +660,12 @@ form div {
 .guides {
   margin-top: 100px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .nav-container {
   /* menu */
-  background-color: #ffffff;
-  border-radius: 12px;
+  
   padding: 24px;
   overflow: auto;
 }
