@@ -51,7 +51,6 @@ export const DetailsPage = () => {
     <div className="doc-wrapper">
       <div className={"nav-wrapper"}>
           <div className={"nav-container"}>
-            <p>On this page</p>
             <h1 className={"subtitle"}>{title}</h1>
             <nav className={"navigation"}>
               {buildNavigationLinks(navigationLinks)}

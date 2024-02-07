@@ -623,20 +623,22 @@ li {
   color: #000000;
 }
 
-body .nav-wrapper {
-  border-radius: 12px;
-  overflow: hidden;
+.flexRow{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
 }
 
-body .nav-wrapper {
-  position: fixed;
-  top: 94px;
-  right: calc(50% - 500px);
-  transform: translateX(100%);
+.nav-wrapper {
+  position: sticky;
+  top: 130px;
+  /* right: calc(50% - 500px);
+  transform: translateX(100%); */
   z-index: 9999;
   display: flex;
   justify-content: flex-end;
-  transition: max-height 300ms ease-in-out 0s;
+  overflow: visible;
 }
 
 .login form {
@@ -665,7 +667,10 @@ form div {
 
 .nav-container {
   /* menu */
-  
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
   padding: 24px;
   overflow: auto;
 }
