@@ -49,14 +49,7 @@ export const DetailsPage = () => {
 
   return (
     <div className="doc-wrapper">
-      <div className={"section headerSection"}>
-        <div className="title-wrapper">
-          <strong>
-            <h1 id={"sectionHeader"}>{title}</h1>
-          </strong>
-          {status && <div className={"wip"}>WIP</div>}
-        </div>
-        <div className={"nav-wrapper"}>
+      <div className={"nav-wrapper"}>
           <div className={"nav-container"}>
             <p>On this page</p>
             <h1 className={"subtitle"}>{title}</h1>
@@ -64,6 +57,13 @@ export const DetailsPage = () => {
               {buildNavigationLinks(navigationLinks)}
             </nav>
           </div>
+        </div>
+      <div className={"section headerSection"}>
+        <div className="title-wrapper">
+          <strong>
+            <h1 id={"sectionHeader"}>{title}</h1>
+          </strong>
+          {status && <div className={"wip"}>WIP</div>}
         </div>
       </div>
       {sectionData.map((element, index) => {
