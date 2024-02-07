@@ -317,6 +317,10 @@ li {
   flex-grow: 1;
 }
 
+.title-wrapper #sectionHeader{
+  font-size: calc(var(--text-size) * 5.75);
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -603,7 +607,7 @@ li {
 
 .header button:active,
 .header summary:active button {
-  background-color: #EEE8FD;
+  background-color: #ffffff44;
 }
 
 .header .header-button:hover,
@@ -626,7 +630,7 @@ body .nav-wrapper {
 
 body .nav-wrapper {
   position: fixed;
-  top: 80px;
+  top: 94px;
   right: calc(50% - 400px);
   transform: translateX(100%);
   z-index: 9999;
@@ -897,11 +901,13 @@ a[href*="figma.com/proto"] {
 
 .nav-container a {
   position: relative;
-  color: var(--tidy-text);
-  padding: 8px 16px;
+  color: #565E71;
+  padding: 0px 16px;
   margin: 4px 0;
   border-radius: 8px;
   width: calc(100% - 32px);
+  font-size: var(--text-size);
+  font-weight: 400;
 }
 
 .nav-container a:hover {
