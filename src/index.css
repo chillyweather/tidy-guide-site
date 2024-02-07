@@ -160,10 +160,6 @@ body:has(.login) {
   word-break: break-word;
 }
 
-.headerSection {
-  margin-top: 100px;
-}
-
 .imageSection::after,
 .videoSection::after {
   margin-top: 32px;
@@ -303,6 +299,7 @@ li {
   width: 100%;
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
   gap: 0;
   justify-content: space-between;
 }
@@ -319,6 +316,9 @@ li {
 
 .title-wrapper #sectionHeader{
   font-size: calc(var(--text-size) * 5.75);
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 200%;
 }
 
 .container {
@@ -632,10 +632,11 @@ li {
 
 .nav-wrapper {
   position: sticky;
-  top: 130px;
+  top: 80px;
+  margin-top: 150px;
   /* right: calc(50% - 500px);
   transform: translateX(100%); */
-  z-index: 9999;
+  /* z-index: 9999; */
   display: flex;
   justify-content: flex-end;
   overflow: visible;
