@@ -886,6 +886,7 @@ a[href*="figma.com/proto"] {
   margin-bottom: 8px;
   padding-left: 16px;
   border-bottom: 1px solid var(--tidy-divider);
+  display: none;
 }
 
 .nav-container p {
@@ -901,16 +902,6 @@ a[href*="figma.com/proto"] {
   margin: 4px 0;
   border-radius: 8px;
   width: calc(100% - 32px);
-}
-
-.nav-container a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: -10px;
-  height: 1px;
-  border-bottom: 1px solid var(--tidy-divider);
 }
 
 .nav-container a:hover {
