@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import fetchDoc from "./fetchDoc";
 import PropTypes from "prop-types";
-import Guides from "./Guides";
+import { Guides } from "./Guides";
 import ElementSection from "./docContent/ElementSection";
 
 export const DetailsPage = () => {
@@ -50,7 +50,7 @@ export const DetailsPage = () => {
 
   return (
     <div className="doc-wrapper">
-      {/* <Guides /> */}
+      <Guides className={"leftbar"} />
       <div className={"nav-wrapper"}>
           <div className={"nav-container"}>
             <h1 className={"subtitle"}>{title}</h1>
