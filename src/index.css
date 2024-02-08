@@ -351,6 +351,10 @@ li {
 .leftbar button p {
   color: inherit;
 }
+.leftbar button:hover{
+  background-color: transparent !important;
+  font-weight: 600;
+}
 
 .container {
   width: 100%;
