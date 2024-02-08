@@ -164,10 +164,12 @@ body:has(.login) {
 .videoSection::after {
   margin-top: 32px;
 }
-.link-p{
+
+.link-p {
   cursor: pointer;
 }
-.link-p:hover{
+
+.link-p:hover {
   text-decoration: underline;
 }
 
@@ -189,7 +191,8 @@ body:has(.login) {
   text-overflow: ellipsis;
   display: none;
 }
-body:has(.documentationIndex) .browseBTN{
+
+body:has(.documentationIndex) .browseBTN {
   display: none;
 }
 
@@ -314,14 +317,14 @@ li {
   flex-grow: 1;
 }
 
-.title-wrapper #sectionHeader{
+.title-wrapper #sectionHeader {
   font-size: calc(var(--text-size) * 5.75);
   margin-top: 0;
   margin-bottom: 0;
   line-height: 120%;
 }
 
-.leftbar{
+.leftbar {
   position: fixed;
   left: 0;
   top: 74px;
@@ -332,16 +335,21 @@ li {
   border-right: 1px solid #DBDBDB;
 }
 
-.leftbar h1{
+.leftbar h1 {
   display: none;
 }
 
-.leftbar .guides{
+.leftbar .guides {
   margin-top: 40px;
 }
 
-.leftbar button{
+.leftbar button {
   font-weight: 400;
+  color: #565E71;
+}
+
+.leftbar button p {
+  color: inherit;
 }
 
 .container {
@@ -646,7 +654,7 @@ li {
   color: #000000;
 }
 
-.flexRow{
+.flexRow {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -818,7 +826,8 @@ body .header-menu {
   margin-left: 0;
   border-radius: 8px;
 }
-.header-menu summary{
+
+.header-menu summary {
   border-radius: 8px;
 }
 
@@ -827,7 +836,7 @@ body:has(.navigation a) .header-menu {
 }
 
 details summary::-webkit-details-marker {
-  display:none;
+  display: none;
 }
 
 body .header-login,
@@ -1431,7 +1440,7 @@ summary button {
   }
 }
 
-@media screen and (max-width: 940px){
+@media screen and (max-width: 940px) {
   body .nav-wrapper {
     right: 64px;
     margin-right: 0;
