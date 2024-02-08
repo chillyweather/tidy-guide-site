@@ -151,7 +151,7 @@ body:has(.login) {
 .section {
   position: relative;
   width: calc(100vw - 128px);
-  max-width: 1000px;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -238,7 +238,7 @@ body:has(.documentationIndex) .browseBTN{
   content: '';
   position: absolute;
   width: 100%;
-  max-width: 1000px;
+  max-width: 680px;
   left: 0;
   bottom: -12px;
   border-bottom: 1px solid var(--tidy-divider);
@@ -319,6 +319,13 @@ li {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 200%;
+}
+
+.leftbar{
+  position: fixed;
+  left: 0;
+  top: 90px;
+  width: 320px;
 }
 
 .container {
@@ -663,7 +670,7 @@ form div {
 .guides {
   margin-top: 100px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 680px;
 }
 
 .nav-container {
