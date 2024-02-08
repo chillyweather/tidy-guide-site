@@ -150,7 +150,7 @@ body:has(.login) {
 
 .section {
   position: relative;
-  width: calc(100vw - 128px);
+  width: calc(100vw - 448px);
   max-width: 680px;
   display: flex;
   flex-direction: column;
@@ -233,7 +233,7 @@ body:has(.documentationIndex) .browseBTN{
   box-shadow: 0 0 0 1.5px #9C71EF inset !important;
 }
 
-.componentBTN::after,
+/* .componentBTN::after,
 .documentationIndex button::after {
   content: '';
   position: absolute;
@@ -242,7 +242,7 @@ body:has(.documentationIndex) .browseBTN{
   left: 0;
   bottom: -12px;
   border-bottom: 1px solid var(--tidy-divider);
-}
+} */
 
 .componentBTN:empty,
 .documentationIndex button:empty {
@@ -325,7 +325,7 @@ li {
   position: fixed;
   left: 0;
   top: 90px;
-  width: 320px;
+  width: 20vw;
 }
 
 .container {
@@ -715,7 +715,7 @@ body .login-button {
   position: absolute;
   right: 0;
   top: -8px;
-  width: calc(100vw - 128px);
+  width: calc(100vw - 448px);
   padding: 8px;
   border-radius: 8px;
   background-color: #ffffff;
