@@ -318,20 +318,30 @@ li {
   font-size: calc(var(--text-size) * 5.75);
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 200%;
+  line-height: 120%;
 }
 
 .leftbar{
   position: fixed;
   left: 0;
   top: 74px;
-  width: 20vw;
+  width: calc(20vw - 32px);
+  padding-left: 24px;
+  padding-right: 8px;
   height: calc(100vh - 74px);
   border-right: 1px solid #DBDBDB;
 }
 
 .leftbar h1{
   display: none;
+}
+
+.leftbar .guides{
+  margin-top: 40px;
+}
+
+.leftbar button{
+  font-weight: 400;
 }
 
 .container {
