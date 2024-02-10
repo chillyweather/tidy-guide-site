@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { ReactSVG } from "react-svg";
 
 export const AnatomyDocSection = ({ element, index }) => {
   console.log("element", element);
@@ -13,9 +14,16 @@ export const AnatomyDocSection = ({ element, index }) => {
           </a>
         </div>
       )}
-      <div className={"image-wrapper"}>
+      {/* <div className={"image-wrapper"}>
         <img className={"image"} src={element.content.remoteImageLink} />
-      </div>
+      </div> */}
+      {element.content.remoteImageLink && (
+        <ReactSVG
+          src={element.content.remoteImageLink}
+          style={{ width: "300px" }}
+          className="image"
+        />
+      )}
 
       {/* <div style={{ backgroundColor: "#fff", padding: "24px" }}>
         <p style={{ padding: 0, margin: 0 }}>Coming soon...</p>
