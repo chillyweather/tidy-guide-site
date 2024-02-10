@@ -150,8 +150,8 @@ body:has(.login) {
 
 .section {
   position: relative;
-  width: calc(100vw - 128px);
-  max-width: 1000px;
+  width: calc(100vw - 448px);
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -164,10 +164,12 @@ body:has(.login) {
 .videoSection::after {
   margin-top: 32px;
 }
-.link-p{
+
+.link-p {
   cursor: pointer;
 }
-.link-p:hover{
+
+.link-p:hover {
   text-decoration: underline;
 }
 
@@ -189,7 +191,8 @@ body:has(.login) {
   text-overflow: ellipsis;
   display: none;
 }
-body:has(.documentationIndex) .browseBTN{
+
+body:has(.documentationIndex) .browseBTN {
   display: none;
 }
 
@@ -233,16 +236,16 @@ body:has(.documentationIndex) .browseBTN{
   box-shadow: 0 0 0 1.5px #9C71EF inset !important;
 }
 
-.componentBTN::after,
+/* .componentBTN::after,
 .documentationIndex button::after {
   content: '';
   position: absolute;
   width: 100%;
-  max-width: 1000px;
+  max-width: 680px;
   left: 0;
   bottom: -12px;
   border-bottom: 1px solid var(--tidy-divider);
-}
+} */
 
 .componentBTN:empty,
 .documentationIndex button:empty {
@@ -314,11 +317,44 @@ li {
   flex-grow: 1;
 }
 
-.title-wrapper #sectionHeader{
+.title-wrapper #sectionHeader {
   font-size: calc(var(--text-size) * 5.75);
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 200%;
+  line-height: 120%;
+}
+
+.leftbar {
+  position: fixed;
+  left: 0;
+  top: 74px;
+  width: calc(20vw - 32px);
+  padding-left: 24px;
+  padding-right: 8px;
+  height: calc(100vh - 74px);
+  border-right: 1px solid #DBDBDB;
+}
+
+.leftbar h1 {
+  display: none;
+}
+
+.leftbar .guides {
+  margin-top: 40px;
+}
+
+.leftbar button {
+  font-weight: 400;
+  color: #565E71;
+}
+
+.leftbar button p {
+  color: inherit;
+}
+
+.leftbar button:hover {
+  background-color: transparent !important;
+  font-weight: 600;
 }
 
 .container {
@@ -623,7 +659,7 @@ li {
   color: #000000;
 }
 
-.flexRow{
+.flexRow {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -663,7 +699,7 @@ form div {
 .guides {
   margin-top: 100px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 680px;
 }
 
 .nav-container {
@@ -708,7 +744,7 @@ body .login-button {
   position: absolute;
   right: 0;
   top: -8px;
-  width: calc(100vw - 128px);
+  width: calc(100vw - 448px);
   padding: 8px;
   border-radius: 8px;
   background-color: #ffffff;
@@ -795,7 +831,8 @@ body .header-menu {
   margin-left: 0;
   border-radius: 8px;
 }
-.header-menu summary{
+
+.header-menu summary {
   border-radius: 8px;
 }
 
@@ -804,7 +841,7 @@ body:has(.navigation a) .header-menu {
 }
 
 details summary::-webkit-details-marker {
-  display:none;
+  display: none;
 }
 
 body .header-login,
@@ -1408,7 +1445,7 @@ summary button {
   }
 }
 
-@media screen and (max-width: 940px){
+@media screen and (max-width: 940px) {
   body .nav-wrapper {
     right: 64px;
     margin-right: 0;

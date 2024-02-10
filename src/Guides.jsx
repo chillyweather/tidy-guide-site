@@ -32,6 +32,7 @@ export const Guides = () => {
             return (
               <button
                 key={guide._id}
+                id={guide._id}
                 onClick={() => navigate(`/guide/${guide._id}`)}
               >
                 <p>{guide.title}</p>
