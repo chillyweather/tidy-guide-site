@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { ReactSVG } from "react-svg";
 
 export const AnatomyDocSection = ({ element, index }) => {
-  console.log("element", element);
   return (
     <div className={"section textSection"}>
       <div className={"anchorLink"} id={element.title + index}></div>

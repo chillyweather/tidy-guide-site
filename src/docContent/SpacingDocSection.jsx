@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+// import { ReactSVG } from "react-svg";
 
 export const SpacingDocSection = ({ element, index }) => (
   <div className={"section textSection"}>
