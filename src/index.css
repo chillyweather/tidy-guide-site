@@ -704,7 +704,7 @@ form div {
   position: absolute;
   top: 0;
   right: 0;
-  width: 320px;
+  width: 280px;
   transform: translateX(100%);
   padding: 24px;
   overflow: auto;
@@ -1442,5 +1442,11 @@ summary button {
   body .nav-wrapper {
     right: 64px;
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-container {
+    display: none;
   }
 }
