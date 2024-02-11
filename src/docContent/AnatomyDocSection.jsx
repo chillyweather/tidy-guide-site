@@ -24,10 +24,6 @@ export const AnatomyDocSection = ({ element, index }) => {
           className="image"
         />
       )}
-
-      {/* <div style={{ backgroundColor: "#fff", padding: "24px" }}>
-        <p style={{ padding: 0, margin: 0 }}>Coming soon...</p>
-      </div> */}
     </div>
   );
 };
