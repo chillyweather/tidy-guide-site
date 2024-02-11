@@ -151,7 +151,7 @@ body:has(.login) {
 .section {
   position: relative;
   width: calc(100vw - 488px);
-  max-width: 680px;
+  max-width: calc(100vw - 800px);
   min-width: 450px;
   display: flex;
   flex-direction: column;
@@ -237,17 +237,6 @@ body:has(.documentationIndex) .browseBTN {
   box-shadow: 0 0 0 1.5px #9C71EF inset !important;
 }
 
-/* .componentBTN::after,
-.documentationIndex button::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  max-width: 680px;
-  left: 0;
-  bottom: -12px;
-  border-bottom: 1px solid var(--tidy-divider);
-} */
-
 .componentBTN:empty,
 .documentationIndex button:empty {
   display: none;
@@ -331,7 +320,7 @@ li {
   /* position: fixed;
   left: 0;
   top: 74px; */
-  width: calc(20vw - 32px);
+  width: 280px;
   padding-left: 24px;
   padding-right: 8px;
   height: calc(100vh - 74px);
@@ -707,7 +696,7 @@ form div {
 .guides {
   margin-top: 100px;
   width: 100%;
-  max-width: 680px;
+  /* max-width: calc(100vw - 800px); */
 }
 
 .nav-container {
@@ -715,6 +704,7 @@ form div {
   position: absolute;
   top: 0;
   right: 0;
+  width: 280px;
   transform: translateX(100%);
   padding: 24px;
   overflow: auto;
@@ -1452,5 +1442,11 @@ summary button {
   body .nav-wrapper {
     right: 64px;
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-container {
+    display: none;
   }
 }
