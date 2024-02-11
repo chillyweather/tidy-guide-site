@@ -49,8 +49,10 @@ export const DetailsPage = () => {
   }, [sectionData, id]);
 
   return (
-    <div className="doc-wrapper">
+    <div className="wrapper-flex">
       <div className={"leftbar"}><Guides /></div>
+    <div className="doc-wrapper">
+      
       <div className={"nav-wrapper"}>
         <div className={"nav-container"}>
           <h1 className={"subtitle"}>{title}</h1>
@@ -77,6 +79,7 @@ export const DetailsPage = () => {
           });
         }
       })}
+    </div>
     </div>
   );
 };
