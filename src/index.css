@@ -393,6 +393,11 @@ li {
   display: none;
 }
 
+.svg-wrapper svg{
+  width: 100%;
+  height: 100%;
+}
+
 .imageSection div,
 .imageSection button {
   pointer-events: none;

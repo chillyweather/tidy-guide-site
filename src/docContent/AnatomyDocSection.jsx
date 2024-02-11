@@ -20,8 +20,8 @@ export const AnatomyDocSection = ({ element, index }) => {
       {element.content.remoteImageLink && (
         <ReactSVG
           src={element.content.remoteImageLink}
-          style={{ width: "300px" }}
-          className="image"
+          style={{ width: "100%" }}
+          className="svg-wrapper"
         />
       )}
 
