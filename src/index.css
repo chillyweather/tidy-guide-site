@@ -152,6 +152,7 @@ body:has(.login) {
   position: relative;
   width: calc(100vw - 488px);
   max-width: 680px;
+  min-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
