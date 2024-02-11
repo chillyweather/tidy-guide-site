@@ -35,24 +35,6 @@ const NavBar = ({ token, setToken }) => {
       ) : (
         <button onClick={handleLoginClick}>Login</button>
       )}
-      <details
-        className="header-menu"
-        id="headerMenu"
-        onKeyDown={(e) => {
-          if (e.key === "Escape") {
-            // closeMenu();
-          }
-        }}
-        onClick={() => {
-          // closeMenu();
-        }}
-      >
-        <summary>
-          <button>
-            <IconList />
-          </button>
-        </summary>
-      </details>
     </div>
   );
 };
