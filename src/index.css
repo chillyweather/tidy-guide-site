@@ -150,7 +150,7 @@ body:has(.login) {
 
 .section {
   position: relative;
-  width: calc(100vw - 448px);
+  width: calc(100vw - 488px);
   max-width: 680px;
   display: flex;
   flex-direction: column;
@@ -326,7 +326,7 @@ li {
 
 .leftbar {
   position: sticky;
-  top: 0;
+  top: 74px;
   /* position: fixed;
   left: 0;
   top: 74px; */
@@ -751,7 +751,7 @@ body .login-button {
   position: absolute;
   right: 0;
   top: -8px;
-  width: calc(100vw - 448px);
+  width: calc(100vw - 488px);
   padding: 8px;
   border-radius: 8px;
   background-color: #ffffff;
