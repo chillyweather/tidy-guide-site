@@ -45,7 +45,7 @@ export const Guides = () => {
                 id={guide._id}
                 className={location.href.split("/")[4]}
                 onClick={() => navigate(`/guide/${guide._id}`)}
-                onLoad={setTimeout(function(){ highLightBtn() }, 500)}
+                onLoad={setTimeout(function(){ highLightBtn() }, 50)}
               >
                 <p>{guide.title}</p>
                 {guide.inProgress && <div className={"wip"}>WIP</div>}
