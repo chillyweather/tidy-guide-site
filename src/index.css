@@ -150,8 +150,8 @@ body:has(.login) {
 
 .section {
   position: relative;
-  width: calc(100vw - 488px);
-  max-width: calc(100vw - 800px);
+  width: calc(100vw - 388px);
+  max-width: calc(100vw - 600px);
   min-width: 450px;
   display: flex;
   flex-direction: column;
@@ -704,7 +704,7 @@ form div {
   position: absolute;
   top: 0;
   right: 0;
-  width: 280px;
+  width: 180px;
   transform: translateX(100%);
   padding: 24px;
   overflow: auto;
@@ -742,7 +742,7 @@ body .login-button {
   position: absolute;
   right: 0;
   top: -8px;
-  width: calc(100vw - 488px);
+  width: calc(100vw - 388px);
   padding: 8px;
   border-radius: 8px;
   background-color: #ffffff;
