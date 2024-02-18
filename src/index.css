@@ -711,7 +711,7 @@ li {
 .nav-wrapper {
   position: sticky;
   top: 80px;
-  margin-top: 150px;
+  margin-top: 80px;
   /* right: calc(50% - 500px);
   transform: translateX(100%); */
   /* z-index: 9999; */
@@ -919,6 +919,7 @@ button {
   position: absolute;
   width: calc(100% - 60px);
   left: 0;
+  top: 74px;
 }
 
 .title-row {
