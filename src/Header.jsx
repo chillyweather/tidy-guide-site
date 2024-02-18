@@ -1,17 +1,38 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import logoTidy from "./assets/TidyLogo.svg";
-import { IconList } from "@tabler/icons-react";
+import { useQuery } from "@tanstack/react-query";
+import { useState, useEffect } from "react";
+import fetchDocs from "./fetchDocs";
 
 const NavBar = ({ token, setToken }) => {
   const navigate = useNavigate();
+  const [documentation, setDocumentation] = useState([]);
+  const [firstDoc, setFirstDoc] = useState({}); // eslint-disable-line no-unused-vars
+  const { data } = useQuery({
+    queryKey: ["docs"],
+    queryFn: fetchDocs,
+  });
+
+  useEffect(() => {
+    if (data) {
+      const sortedData = data.sort((a, b) => a.title.localeCompare(b.title));
+      setDocumentation(sortedData);
+    }
+  }, [data]);
+
+  useEffect(() => {
+    if (documentation.length) {
+      setFirstDoc(documentation[0]);
+    }
+  }, [documentation]);
 
   const handleHomeClick = () => {
     navigate("/");
   };
 
   const handleGuidesClick = () => {
-    navigate("/guides");
+    navigate(`/guide/${firstDoc._id}`);
   };
 
   const handleLoginClick = () => {
@@ -29,7 +50,11 @@ const NavBar = ({ token, setToken }) => {
       <div className="logo-div">
         <img src={logoTidy} alt="Tidy Logo" onClick={handleHomeClick} />
       </div>
-      {token && <button className="browseBTN" onClick={handleGuidesClick}>Browse Guides</button>}
+      {token && (
+        <button className="browseBTN" onClick={handleGuidesClick}>
+          Browse Guides
+        </button>
+      )}
       {token ? (
         <button onClick={handleLogoutClick}>Logout</button>
       ) : (

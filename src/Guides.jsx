@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import fetchDocs from "./fetchDocs";
 
 export const Guides = () => {
   const [documentation, setDocumentation] = useState([]);
-  const navigate = useNavigate();
   const { data } = useQuery({
     queryKey: ["docs"],
     queryFn: fetchDocs,
@@ -18,6 +17,9 @@ export const Guides = () => {
       setDocumentation(sortedData);
     }
   }, [data]);
+
+  console.log("documentation", documentation);
+  const navigate = useNavigate();
 
   return (
     <div className="guides">
