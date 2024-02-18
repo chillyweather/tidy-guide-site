@@ -33,6 +33,7 @@ export const Guides = () => {
               <button
                 key={guide._id}
                 id={guide._id}
+                className={location.href.split("/")[4]}
                 onClick={() => navigate(`/guide/${guide._id}`)}
               >
                 <p>{guide.title}</p>
