@@ -316,7 +316,8 @@ li {
   width: 100%;
   flex-grow: 1;
 }
-.title-wrapper #sectionHeader{
+
+.title-wrapper #sectionHeader {
   width: calc(100% - 60px);
   display: flex;
 }
@@ -334,20 +335,25 @@ li {
   display: flex;
   height: fit-content;
 }
-#sectionHeader .copyLink.copied{
+
+#sectionHeader .copyLink.copied {
   opacity: 1;
 }
-.copyLink svg{
+
+.copyLink svg {
   width: calc((var(--text-size) * 2) - (var(--text-size) / 3.5));
   height: calc((var(--text-size) * 2) - (var(--text-size) / 3.5));
 }
-#sectionHeader .copyLink:hover{
+
+#sectionHeader .copyLink:hover {
   background-color: #F4F4FB;
 }
-#sectionHeader .copyLink:active{
+
+#sectionHeader .copyLink:active {
   background-color: #E5E5F5;
 }
-#sectionHeader .copyLink::after{
+
+#sectionHeader .copyLink::after {
   content: 'Copied to clipboard!';
   font-size: var(--text-size);
   position: fixed;
@@ -359,11 +365,13 @@ li {
   padding: 12px;
   color: var(--tidy-32);
   border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.04);
   background-color: #DEDEE8;
   z-index: 9999;
   visibility: hidden;
 }
-#sectionHeader .copyLink.copied::after{
+
+#sectionHeader .copyLink.copied::after {
   visibility: visible;
 }
 
