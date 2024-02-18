@@ -231,11 +231,11 @@ body:has(.documentationIndex) .browseBTN {
   background-color: var(--tidy-ec) !important;
 }
 
-.componentBTN:active,
+/* .componentBTN:active,
 .documentationIndex button:active {
   background-color: var(--tidy-ec) !important;
   box-shadow: 0 0 0 1.5px #9C71EF inset !important;
-}
+} */
 
 .componentBTN:empty,
 .documentationIndex button:empty {
@@ -348,6 +348,9 @@ li {
   background-color: transparent !important;
   color: var(--tidy-32);
   /* font-weight: 600; */
+}
+.leftbar button.selected, .leftbar button.selected:hover{
+  background-color: #F4F4FB !important;
 }
 
 .container {
