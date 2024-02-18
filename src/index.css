@@ -329,6 +329,12 @@ li {
   cursor: pointer;
   opacity: 0;
 }
+#sectionHeader .copyLink:hover{
+  background-color: #F4F4FB;
+}
+#sectionHeader .copyLink:active{
+  background-color: #E5E5F5;
+}
 
 #sectionHeader:hover .copyLink {
   opacity: 1;
