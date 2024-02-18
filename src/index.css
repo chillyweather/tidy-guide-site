@@ -288,6 +288,7 @@ li {
   line-height: 160%;
   color: var(--tidy-text);
   margin-top: 0;
+  text-wrap: balance;
 }
 
 .anchorLink {
