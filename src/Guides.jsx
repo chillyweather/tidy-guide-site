@@ -31,11 +31,23 @@ export const Guides = () => {
             if (isDraft) {
               return null;
             }
+
+            const highLightBtn = () => {
+              var x = document.getElementsByClassName("documentationIndex")[0].querySelectorAll("button");
+              var i;
+              for (i = 0; i < x.length; i++) {
+                if (x[i].className == x[i].id) {
+                  x[i].classList.add("selected");
+                }
+              }
+            }
             return (
               <button
                 key={guide._id}
                 id={guide._id}
+                className={location.href.split("/")[4]}
                 onClick={() => navigate(`/guide/${guide._id}`)}
+                onLoad={setTimeout(function(){ highLightBtn() }, 50)}
               >
                 <p>{guide.title}</p>
                 {guide.inProgress && <div className={"wip"}>WIP</div>}

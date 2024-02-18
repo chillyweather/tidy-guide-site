@@ -150,8 +150,8 @@ body:has(.login) {
 
 .section {
   position: relative;
-  width: calc(100vw - 488px);
-  max-width: calc(100vw - 800px);
+  width: calc(100vw - 388px);
+  max-width: calc(100vw - 600px);
   min-width: 450px;
   display: flex;
   flex-direction: column;
@@ -231,11 +231,11 @@ body:has(.documentationIndex) .browseBTN {
   background-color: var(--tidy-ec) !important;
 }
 
-.componentBTN:active,
+/* .componentBTN:active,
 .documentationIndex button:active {
   background-color: var(--tidy-ec) !important;
   box-shadow: 0 0 0 1.5px #9C71EF inset !important;
-}
+} */
 
 .componentBTN:empty,
 .documentationIndex button:empty {
@@ -264,10 +264,17 @@ h3 {
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: calc((var(--text-size) * 2) - (var(--text-size) / 3.5));
+  font-size: calc((var(--text-size) * 4) - (var(--text-size) / 1.75));
   font-weight: normal;
   color: var(--tidy-text);
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid var(--tidy-divider);
 }
+/* h3::after{
+  content: '';
+  position: absolute
+} */
 
 h4 {
   font-size: calc(var(--text-size) + (var(--text-size) / 3.5));
@@ -346,7 +353,11 @@ li {
 
 .leftbar button:hover {
   background-color: transparent !important;
-  font-weight: 600;
+  color: var(--tidy-32);
+  /* font-weight: 600; */
+}
+.leftbar button.selected, .leftbar button.selected:hover{
+  background-color: #F4F4FB !important;
 }
 
 .container {
@@ -704,7 +715,7 @@ form div {
   position: absolute;
   top: 0;
   right: 0;
-  width: 280px;
+  width: 180px;
   transform: translateX(100%);
   padding: 24px;
   overflow: auto;
@@ -742,7 +753,7 @@ body .login-button {
   position: absolute;
   right: 0;
   top: -8px;
-  width: calc(100vw - 488px);
+  width: calc(100vw - 388px);
   padding: 8px;
   border-radius: 8px;
   background-color: #ffffff;
@@ -880,6 +891,7 @@ button {
   display: flex;
   flex-direction: row;
   gap: 4px;
+  width: 100%;
 }
 
 .subtitle {
@@ -926,7 +938,7 @@ a[href*="figma.com/proto"] {
   color: #565E71;
   padding: 4px 16px;
   margin: 4px 0;
-  border-radius: 8px;
+  border-radius: 9999px;
   width: calc(100% - 32px);
   font-size: var(--text-size);
   font-weight: 400;
@@ -934,13 +946,14 @@ a[href*="figma.com/proto"] {
 
 .nav-container a:hover {
   text-decoration: none;
-  font-weight: 600;
-  /* background-color: var(--tidy-ec) !important; */
+  /* font-weight: 600; */
+  background-color: #F7F8F8;
 }
 
 .nav-container a:active {
-  background-color: var(--tidy-ec) !important;
-  box-shadow: 0 0 0 1.5px #9C71EF inset !important;
+  background-color: #F0F0F0;
+  /* background-color: var(--tidy-ec) !important;
+  box-shadow: 0 0 0 1.5px #9C71EF inset !important; */
 }
 
 a:empty {
