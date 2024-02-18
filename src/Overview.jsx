@@ -1,10 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import fetchDocs from "./fetchDocs";
 import PropTypes from "prop-types";
 import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 
 export const Overview = () => {
+  const [copied, setCopied] = useState("");
   const { data } = useQuery({
     queryKey: ["docs"],
     queryFn: fetchDocs,
@@ -30,11 +32,15 @@ export const Overview = () => {
               <h1 id={"sectionHeader"}>
                 Overview
                 <button
-                className={"copyLink"}
-                onClick={() => navigator.clipboard.writeText(location.href)}
+                className={"copyLink " + copied}
+                onClick={() => {
+                  navigator.clipboard.writeText(location.href)
+                  setCopied("copied");
+                  setTimeout(function(){ setCopied(""); }, 2000);
+                }
+              }
                 >
-                <IconLink
-                />
+                <IconLink />
                 </button>
               </h1>
             </strong>
