@@ -151,7 +151,7 @@ body:has(.login) {
 .section {
   position: relative;
   width: calc(100vw - 388px);
-  max-width: calc(100vw - 600px);
+  max-width: calc(100vw - 620px);
   min-width: 450px;
   display: flex;
   flex-direction: column;
@@ -881,9 +881,9 @@ button {
 .wrapper-flex{
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 60px;
   position: absolute;
-  width: calc(100% - 40px);
+  width: calc(100% - 60px);
   left: 0;
 }
 
