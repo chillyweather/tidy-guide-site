@@ -333,7 +333,6 @@ li {
   opacity: 0;
   display: flex;
   height: fit-content;
-  position: relative;
 }
 .copyLink svg{
   width: calc((var(--text-size) * 2) - (var(--text-size) / 3.5));
@@ -346,11 +345,19 @@ li {
   background-color: #E5E5F5;
 }
 #sectionHeader .copyLink::after{
-  /* content: 'Copied to clipboard!'; */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  /* transform: translateX(-50%); */
+  content: 'Copied to clipboard!';
+  font-size: var(--text-size);
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  padding: 12px;
+  color: var(--tidy-32);
+  border-radius: 8px;
+  background-color: #DEDEE8;
+  z-index: 9999;
 }
 
 #sectionHeader:hover .copyLink {
