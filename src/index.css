@@ -319,7 +319,6 @@ li {
 .title-wrapper #sectionHeader{
   width: calc(100% - 60px);
   display: flex;
-  align-items: center;
 }
 
 #sectionHeader .copyLink {
@@ -328,6 +327,7 @@ li {
   box-shadow: 0 0 0 1px #E8E8F7 inset;
   background-color: #F7F7F7;
   margin-left: 16px;
+  margin-top: calc(var(--text-size) * 2.5);
   color: var(--tidy-32);
   cursor: pointer;
   opacity: 0;

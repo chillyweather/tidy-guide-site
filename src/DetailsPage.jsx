@@ -70,10 +70,13 @@ export const DetailsPage = () => {
             <strong>
               <h1 id={"sectionHeader"}>
                 {title}
+                <button
+                className={"copyLink"}
+                onClick={() => navigator.clipboard.writeText(location.href)}
+                >
                 <IconLink
-                  className={"copyLink"}
-                  onClick={() => navigator.clipboard.writeText(location.href)}
                 />
+                </button>
               </h1>
             </strong>
             {status && <div className={"wip"}>WIP</div>}
