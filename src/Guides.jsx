@@ -24,23 +24,23 @@ export const Guides = () => {
     navigate(`/guide/overview`);
   };
 
-  // const highLightBtn = () => {
-  //   var x = document
-  //     .getElementsByClassName("documentationIndex")[0]
-  //     .querySelectorAll("button");
-  //   var i;
-  //   for (i = 0; i < x.length; i++) {
-  //     if (x[i].className == x[i].id) {
-  //       x[i].classList.add("selected");
-  //     }
-  //   }
-  // };
+  const highLightBtn = () => {
+    var x = document
+      .getElementsByClassName("documentationIndex")[0]
+      .querySelectorAll("button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      if (x[i].className == x[i].id) {
+        x[i].classList.add("selected");
+      }
+    }
+  };
 
   return (
     <div className="guides">
       <h1>Guides</h1>
       <ul className="documentationIndex">
-        <button onClick={handleGuidesClick}>
+        <button onClick={handleGuidesClick} id={"overview"} className={location.href.split("/")[4]}>
           <p>Overview</p>
         </button>
         {!!documentation.length &&
@@ -56,7 +56,7 @@ export const Guides = () => {
                 id={guide._id}
                 className={location.href.split("/")[4]}
                 onClick={() => navigate(`/guide/${guide._id}`)}
-                // onLoad={setTimeout(function(){ highLightBtn() }, 50)}
+                onLoad={setTimeout(function(){ highLightBtn() }, 50)}
               >
                 <p>{guide.title}</p>
                 {guide.inProgress && <div className={"wip"}>WIP</div>}
