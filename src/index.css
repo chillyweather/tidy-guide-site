@@ -711,7 +711,7 @@ li {
 .nav-wrapper {
   position: sticky;
   top: 80px;
-  margin-top: 80px;
+  margin-top: 32px;
   /* right: calc(50% - 500px);
   transform: translateX(100%); */
   /* z-index: 9999; */
