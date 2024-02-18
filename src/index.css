@@ -264,10 +264,17 @@ h3 {
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: calc((var(--text-size) * 2) - (var(--text-size) / 3.5));
+  font-size: calc((var(--text-size) * 4) - (var(--text-size) / 1.75));
   font-weight: normal;
   color: var(--tidy-text);
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid var(--tidy-divider);
 }
+/* h3::after{
+  content: '';
+  position: absolute
+} */
 
 h4 {
   font-size: calc(var(--text-size) + (var(--text-size) / 3.5));
@@ -884,6 +891,7 @@ button {
   display: flex;
   flex-direction: row;
   gap: 4px;
+  width: 100%;
 }
 
 .subtitle {
