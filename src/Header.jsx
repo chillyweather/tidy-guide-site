@@ -14,9 +14,13 @@ const NavBar = ({ token, setToken }) => {
     queryFn: fetchDocs,
   });
 
+  console.log("data in header", data);
+
   useEffect(() => {
     if (data) {
-      const sortedData = data.sort((a, b) => a.title.localeCompare(b.title));
+      const sortedData = data.toSorted((a, b) =>
+        a.title.localeCompare(b.title)
+      );
       setDocumentation(sortedData);
     }
   }, [data]);

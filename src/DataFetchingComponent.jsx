@@ -7,6 +7,7 @@ import { Login } from "./Login";
 import { Home } from "./Home";
 import { Guides } from "./Guides";
 import { DetailsPage } from "./DetailsPage";
+import { Overview } from "./Overview";
 
 export default function DataFetchingComponent() {
   const savedToken = localStorage.getItem("token");
@@ -42,6 +43,7 @@ export default function DataFetchingComponent() {
             path="/guides"
             element={<Guides documentation={documentation} />}
           />
+          <Route path="/guide/overview" element={<Overview />} />
           <Route path="/guide/:id" element={<DetailsPage />} />
           <Route path="/" element={<Home />} />
         </Routes>

@@ -13,6 +13,8 @@ export const DetailsPage = () => {
   const [sectionData, setSectionData] = useState([]);
 
   const { id } = useParams();
+  // if (id === "overview") return;
+
   const { data } = useQuery({
     queryKey: ["doc", id],
     queryFn: fetchDoc,
@@ -50,36 +52,37 @@ export const DetailsPage = () => {
 
   return (
     <div className="wrapper-flex">
-      <div className={"leftbar"}><Guides /></div>
-    <div className="doc-wrapper">
-      
-      <div className={"nav-wrapper"}>
-        <div className={"nav-container"}>
-          <h1 className={"subtitle"}>{title}</h1>
-          <nav className={"navigation"}>
-            {buildNavigationLinks(navigationLinks)}
-          </nav>
-        </div>
+      <div className={"leftbar"}>
+        <Guides />
       </div>
-      <div className={"section headerSection"}>
-        <div className="title-wrapper">
-          <strong>
-            <h1 id={"sectionHeader"}>{title}</h1>
-          </strong>
-          {status && <div className={"wip"}>WIP</div>}
+      <div className="doc-wrapper">
+        <div className={"nav-wrapper"}>
+          <div className={"nav-container"}>
+            <h1 className={"subtitle"}>{title}</h1>
+            <nav className={"navigation"}>
+              {buildNavigationLinks(navigationLinks)}
+            </nav>
+          </div>
         </div>
+        <div className={"section headerSection"}>
+          <div className="title-wrapper">
+            <strong>
+              <h1 id={"sectionHeader"}>{title}</h1>
+            </strong>
+            {status && <div className={"wip"}>WIP</div>}
+          </div>
+        </div>
+        {sectionData.map((element, index) => {
+          if (element.publish && !element.hidden) {
+            return ElementSection({
+              key: index,
+              element,
+              index,
+              navigationLinks,
+            });
+          }
+        })}
       </div>
-      {sectionData.map((element, index) => {
-        if (element.publish && !element.hidden) {
-          return ElementSection({
-            key: index,
-            element,
-            index,
-            navigationLinks,
-          });
-        }
-      })}
-    </div>
     </div>
   );
 };
