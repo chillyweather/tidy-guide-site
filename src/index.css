@@ -346,7 +346,8 @@ li {
 
 .leftbar button:hover {
   background-color: transparent !important;
-  font-weight: 600;
+  color: var(--tidy-32);
+  /* font-weight: 600; */
 }
 
 .container {
