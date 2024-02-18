@@ -29,10 +29,13 @@ export const Overview = () => {
             <strong>
               <h1 id={"sectionHeader"}>
                 Overview
+                <button
+                className={"copyLink"}
+                onClick={() => navigator.clipboard.writeText(location.href)}
+                >
                 <IconLink
-                  className={"copyLink"}
-                  onClick={() => navigator.clipboard.writeText(location.href)}
                 />
+                </button>
               </h1>
             </strong>
             
