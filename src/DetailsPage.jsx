@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import fetchDoc from "./fetchDoc";
 import PropTypes from "prop-types";
 import { Guides } from "./Guides";
+import { IconLink } from "@tabler/icons-react";
 import ElementSection from "./docContent/ElementSection";
 
 export const DetailsPage = () => {
@@ -64,7 +65,7 @@ export const DetailsPage = () => {
       <div className={"section headerSection"}>
         <div className="title-wrapper">
           <strong>
-            <h1 id={"sectionHeader"}>{title}</h1>
+            <h1 id={"sectionHeader"}>{title}<IconLink className={"copyLink"} /></h1>
           </strong>
           {status && <div className={"wip"}>WIP</div>}
         </div>
