@@ -334,6 +334,9 @@ li {
   display: flex;
   height: fit-content;
 }
+#sectionHeader .copyLink.copied{
+  opacity: 1;
+}
 .copyLink svg{
   width: calc((var(--text-size) * 2) - (var(--text-size) / 3.5));
   height: calc((var(--text-size) * 2) - (var(--text-size) / 3.5));
@@ -358,6 +361,10 @@ li {
   border-radius: 8px;
   background-color: #DEDEE8;
   z-index: 9999;
+  visibility: hidden;
+}
+#sectionHeader .copyLink.copied::after{
+  visibility: visible;
 }
 
 #sectionHeader:hover .copyLink {
