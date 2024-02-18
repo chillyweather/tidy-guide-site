@@ -65,7 +65,7 @@ export const DetailsPage = () => {
       <div className={"section headerSection"}>
         <div className="title-wrapper">
           <strong>
-            <h1 id={"sectionHeader"}>{title}<IconLink className={"copyLink"} /></h1>
+            <h1 id={"sectionHeader"}>{title}<IconLink className={"copyLink"} onClick={() => navigator.clipboard.writeText(location.href)} /></h1>
           </strong>
           {status && <div className={"wip"}>WIP</div>}
         </div>
