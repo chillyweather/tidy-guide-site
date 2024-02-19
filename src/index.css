@@ -412,6 +412,7 @@ li {
 
 .component-length{
   color: #9DA4B4;
+  font-weight: 400;
   font-size: calc(var(--text-size) - (var(--text-size) / 7));
 }
 .component-length::before{
