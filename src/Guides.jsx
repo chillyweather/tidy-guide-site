@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import fetchDocs from "./fetchDocs";
 
 export const Guides = () => {
   const [documentation, setDocumentation] = useState([]);
-  const [selectedMasterId, setSelectedMasterId] = useState("");
+  const [selectedMasterId, setSelectedMasterId] = useState("overview");
+  const [overviewStyle, setOverviewStyle] = useState("overview selected");
   const { data } = useQuery({
     queryKey: ["docs"],
     queryFn: fetchDocs,
@@ -19,21 +20,25 @@ export const Guides = () => {
     }
   }, [data]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      highLightBtn();
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, [selectedMasterId]);
+
   const navigate = useNavigate();
 
-  const handleGuidesClick = () => {
+  function handleGuidesClick() {
     navigate(`/guide/overview`);
-    setTimeout(function () {
-      highLightBtn();
-    }, 50);
-  };
+    setSelectedMasterId("overview");
+  }
 
-  const handleDocClick = (guide) => {
+  function handleDocClick(guide) {
     navigate(`/guide/${guide._id}`);
-    setTimeout(function () {
-      highLightBtn();
-    }, 50);
-  };
+    setSelectedMasterId(guide._id);
+  }
 
   const highLightBtn = () => {
     var x = document

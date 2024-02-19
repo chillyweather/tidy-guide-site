@@ -14,8 +14,6 @@ const NavBar = ({ token, setToken }) => {
     queryFn: fetchDocs,
   });
 
-  console.log("data in header", data);
-
   useEffect(() => {
     if (data) {
       const sortedData = data.toSorted((a, b) =>

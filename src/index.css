@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=block');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=block');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Rubik+Pixels&display=swap');
 
 :root {
   --tidy-background: #FFFFFF;
@@ -375,11 +376,27 @@ li {
   visibility: visible;
   animation: copiedAnim 2000ms linear forwards;
 }
-@keyframes copiedAnim{
-  0%{transform: translateX(-50%) translateY(16px); opacity: 0;}
-  10%{transform: translateX(-50%) translateY(0); opacity: 1;}
-  90%{transform: translateX(-50%) translateY(0); opacity: 1;}
-  100%{transform: translateX(-50%) translateY(16px); opacity: 0;}
+
+@keyframes copiedAnim {
+  0% {
+    transform: translateX(-50%) translateY(16px);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(16px);
+    opacity: 0;
+  }
 }
 
 #sectionHeader:hover .copyLink {
