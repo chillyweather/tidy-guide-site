@@ -66,7 +66,7 @@ export const Overview = () => {
                       🪣
                     </p>
                   </button>
-                  <p className="element-text">{doc.title}</p>
+                  <p className="element-text" tooltip={doc.title}>{doc.title}</p>
                 </div>
               ))}
           </div>
