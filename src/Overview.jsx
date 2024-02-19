@@ -53,7 +53,7 @@ export const Overview = () => {
             {data &&
               data.length &&
               data.map((doc, index) => (
-                <div key={index} className="element-wrapper">
+                <div key={index} className="element-wrapper" tooltip={doc.title}>
                   <button
                     className="element"
                     onClick={() => navigate(`/guide/${doc._id}`)}
@@ -66,7 +66,7 @@ export const Overview = () => {
                       🪣
                     </p>
                   </button>
-                  <p className="element-text" tooltip={doc.title}>{doc.title}</p>
+                  <p className="element-text">{doc.title}</p>
                 </div>
               ))}
           </div>
