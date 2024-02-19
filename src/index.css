@@ -398,7 +398,7 @@ li {
   position: absolute;
   bottom: calc(100% - 12px);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 16px);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: var(--text-size);
@@ -411,9 +411,13 @@ li {
   z-index: 9999;
   visibility: hidden;
   pointer-events: none;
+  opacity: 0;
+  transition: transform 300ms ease-out 1000ms, opacity 300ms linear 1000ms;
 }
 *[tooltip]:hover::before{
   visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .leftbar {
