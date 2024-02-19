@@ -58,6 +58,7 @@ export const Overview = () => {
                     className="element"
                     onClick={() => navigate(`/guide/${doc._id}`)}
                   >
+                    {doc.inProgress && <div className={"wip"}>WIP</div>}
                     <p
                       className="delete-me"
                       style={{ fontSize: "80px", margin: 0 }}
