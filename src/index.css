@@ -414,8 +414,8 @@ li {
   content: attr(tooltip);
   position: absolute;
   bottom: calc(100% - 12px);
-  left: 50%;
-  transform: translate(-50%, 16px);
+  left: 0;
+  transform: translate(0, 16px);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: var(--text-size);
@@ -434,7 +434,7 @@ li {
 *[tooltip]:hover::before{
   visibility: visible;
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translate(0, 0);
   transition: transform 300ms ease-out 2000ms, opacity 300ms linear 2000ms, visibility 300ms linear 2000ms allow-discrete;
 }
 
