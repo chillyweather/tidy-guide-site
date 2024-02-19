@@ -90,10 +90,12 @@ export const DetailsPage = () => {
               </h1>
             </strong>
             {status && <div className={"wip"}>WIP</div>}
-            <div className="update-wrapper">
-              <IconClock size={18} color="#6C768E" />
-              <p className="last-update">Last update: {updateDate}</p>
-            </div>
+            {updateDate && (
+              <div className="update-wrapper">
+                <IconClock size={18} color="#6C768E" />
+                <p className="last-update">Last update: {updateDate}</p>
+              </div>
+            )}
           </div>
         </div>
         {sectionData.map((element, index) => {
