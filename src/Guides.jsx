@@ -6,6 +6,7 @@ import fetchDocs from "./fetchDocs";
 
 export const Guides = () => {
   const [documentation, setDocumentation] = useState([]);
+  const [selectedMasterId, setSelectedMasterId] = useState("");
   const { data } = useQuery({
     queryKey: ["docs"],
     queryFn: fetchDocs,
@@ -22,6 +23,13 @@ export const Guides = () => {
 
   const handleGuidesClick = () => {
     navigate(`/guide/overview`);
+    setTimeout(function () {
+      highLightBtn();
+    }, 50);
+  };
+
+  const handleDocClick = (guide) => {
+    navigate(`/guide/${guide._id}`);
     setTimeout(function () {
       highLightBtn();
     }, 50);
@@ -62,12 +70,7 @@ export const Guides = () => {
                 key={guide._id}
                 id={guide._id}
                 className={location.href.split("/")[4]}
-                onClick={() => {
-                  navigate(`/guide/${guide._id}`);
-                  setTimeout(function () {
-                    highLightBtn();
-                  }, 50);
-                }}
+                onClick={() => handleDocClick(guide)}
               >
                 <p>{guide.title}</p>
                 {guide.inProgress && <div className={"wip"}>WIP</div>}
