@@ -4,8 +4,9 @@ import { useQuery } from "@tanstack/react-query";
 import fetchDoc from "./fetchDoc";
 import PropTypes from "prop-types";
 import { Guides } from "./Guides";
-import { IconLink } from "@tabler/icons-react";
+import { IconLink, IconClock } from "@tabler/icons-react";
 import ElementSection from "./docContent/ElementSection";
+import "./DetailsPage.css";
 
 export const DetailsPage = () => {
   const [navigationLinks, setNavigationLinks] = useState([]);
@@ -13,6 +14,7 @@ export const DetailsPage = () => {
   const [copied, setCopied] = useState("");
   const [status, setStatus] = useState(false);
   const [sectionData, setSectionData] = useState([]);
+  const [updateDate, setUpdateDate] = useState("");
 
   const { id } = useParams();
   // if (id === "overview") return;
@@ -24,9 +26,11 @@ export const DetailsPage = () => {
 
   useEffect(() => {
     if (data) {
+      console.log("data in effect", data);
       setTitle(data.title);
       setSectionData(data.docs);
       setStatus(data.inProgress);
+      setUpdateDate(formatDate(data.updatedAt));
     }
   }, [data]);
 
@@ -72,19 +76,24 @@ export const DetailsPage = () => {
               <h1 id={"sectionHeader"}>
                 {title}
                 <button
-                className={"copyLink " + copied}
-                onClick={() => {
-                  navigator.clipboard.writeText(location.href)
-                  setCopied("copied");
-                  setTimeout(function(){ setCopied(""); }, 2000);
-                }
-              }
+                  className={"copyLink " + copied}
+                  onClick={() => {
+                    navigator.clipboard.writeText(location.href);
+                    setCopied("copied");
+                    setTimeout(function () {
+                      setCopied("");
+                    }, 2000);
+                  }}
                 >
-                <IconLink />
+                  <IconLink />
                 </button>
               </h1>
             </strong>
             {status && <div className={"wip"}>WIP</div>}
+            <div className="update-wrapper">
+              <IconClock size={18} color="#6C768E" />
+              <p className="last-update">Last update: {updateDate}</p>
+            </div>
           </div>
         </div>
         {sectionData.map((element, index) => {
@@ -101,6 +110,20 @@ export const DetailsPage = () => {
     </div>
   );
 };
+
+function formatDate(dateString) {
+  const options = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  };
+  const date = new Date(dateString);
+
+  return date.toLocaleString("en-US", options).replace(",", "");
+}
 
 function buildNavigationLinks(arr) {
   return arr.map((element, index) => {
