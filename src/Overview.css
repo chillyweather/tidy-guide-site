@@ -39,6 +39,6 @@
   line-height: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 348px;
+  width: 100%;
   text-wrap: nowrap;
 }
