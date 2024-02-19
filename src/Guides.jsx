@@ -40,7 +40,7 @@ export const Guides = () => {
     <div className="guides">
       <h1>Guides</h1>
       <ul className="documentationIndex">
-        <button onClick={handleGuidesClick} id={"overview"} className={location.href.split("/")[4]}>
+        <button onClick={handleGuidesClick} id={"overview"} className={location.href.split("/")[4]} tooltip={"overview"}>
           <p>Overview</p>
         </button>
         {!!documentation.length &&
@@ -54,6 +54,7 @@ export const Guides = () => {
               <button
                 key={guide._id}
                 id={guide._id}
+                tooltip={guide.title}
                 className={location.href.split("/")[4]}
                 onClick={() => navigate(`/guide/${guide._id}`)}
                 onLoad={setTimeout(function(){ highLightBtn() }, 50)}

@@ -393,6 +393,27 @@ li {
   line-height: 120%;
 }
 
+*[tooltip]::before{
+  content: attr(tooltip);
+  position: absolute;
+  bottom: calc(100% - 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  padding: 12px;
+  color: var(--tidy-32);
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.04);
+  background-color: #DEDEE8;
+  z-index: 9999;
+  visibility: hidden;
+  pointer-events: none;
+}
+*[tooltip]:hover::before{
+  visibility: visible;
+}
+
 .leftbar {
   position: sticky;
   top: 74px;
