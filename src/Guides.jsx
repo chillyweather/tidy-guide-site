@@ -60,7 +60,6 @@ export const Guides = () => {
           onClick={handleGuidesClick}
           id={"overview"}
           className={location.href.split("/")[4]}
-          tooltip={"overview"}
         >
           <p>Overview</p>
         </button>
@@ -75,7 +74,7 @@ export const Guides = () => {
               <button
                 key={guide._id}
                 id={guide._id}
-                tooltip={guide.title}
+                // tooltip={guide.title}
                 className={location.href.split("/")[4]}
                 onClick={() => handleDocClick(guide)}
               >
