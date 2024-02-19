@@ -22,7 +22,7 @@ export const Guides = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       highLightBtn();
-    }, 50);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [selectedMasterId]);
