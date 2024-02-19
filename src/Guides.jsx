@@ -7,7 +7,6 @@ import fetchDocs from "./fetchDocs";
 export const Guides = () => {
   const [documentation, setDocumentation] = useState([]);
   const [selectedMasterId, setSelectedMasterId] = useState("overview");
-  const [overviewStyle, setOverviewStyle] = useState("overview selected");
   const { data } = useQuery({
     queryKey: ["docs"],
     queryFn: fetchDocs,

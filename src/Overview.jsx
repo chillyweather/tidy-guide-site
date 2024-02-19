@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
-import "./overview.css";
+import "./Overview.css";
 
 export const Overview = () => {
   const navigate = useNavigate();
