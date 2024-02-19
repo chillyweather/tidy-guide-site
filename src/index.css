@@ -411,7 +411,14 @@ li {
 }
 
 .component-length{
+  color: #9DA4B4;
   font-size: calc(var(--text-size) - (var(--text-size) / 7));
+}
+.component-length::before{
+  content: '(';
+}
+.component-length::after{
+  content: ')';
 }
 
 *[tooltip]::before{
