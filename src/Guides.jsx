@@ -74,7 +74,7 @@ export const Guides = () => {
               <button
                 key={guide._id}
                 id={guide._id}
-                // tooltip={guide.title}
+                tooltip={guide.title}
                 className={location.href.split("/")[4]}
                 onClick={() => handleDocClick(guide)}
               >
