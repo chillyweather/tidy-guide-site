@@ -410,6 +410,10 @@ li {
   line-height: 120%;
 }
 
+.component-length{
+  font-size: calc(var(--text-size) - (var(--text-size) / 7));
+}
+
 *[tooltip]::before{
   content: attr(tooltip);
   position: absolute;
