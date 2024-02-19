@@ -418,7 +418,7 @@ li {
   visibility: visible;
   opacity: 1;
   transform: translate(-50%, 0);
-  transition: transform 300ms ease-out 1000ms, opacity 300ms linear 1000ms, visibility 300ms linear 1000ms allow-discrete;
+  transition: transform 300ms ease-out 2000ms, opacity 300ms linear 2000ms, visibility 300ms linear 2000ms allow-discrete;
 }
 
 .leftbar {
