@@ -53,7 +53,12 @@ export const Overview = () => {
             {data &&
               data.length &&
               data.map((doc, index) => (
-                <div key={index} className="element-wrapper" tooltip={doc.title}>
+                <div
+                  key={index}
+                  className="element-wrapper"
+                  // eslint-disable-next-line react/no-unknown-property
+                  tooltip={doc.title}
+                >
                   <button
                     className="element"
                     onClick={() => navigate(`/guide/${doc._id}`)}
