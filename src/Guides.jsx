@@ -22,6 +22,9 @@ export const Guides = () => {
 
   const handleGuidesClick = () => {
     navigate(`/guide/overview`);
+    setTimeout(function () {
+      highLightBtn();
+    }, 50);
   };
 
   const highLightBtn = () => {
@@ -40,7 +43,11 @@ export const Guides = () => {
     <div className="guides">
       <h1>Guides</h1>
       <ul className="documentationIndex">
-        <button onClick={handleGuidesClick} id={"overview"} className={location.href.split("/")[4]}>
+        <button
+          onClick={handleGuidesClick}
+          id={"overview"}
+          className={location.href.split("/")[4]}
+        >
           <p>Overview</p>
         </button>
         {!!documentation.length &&
@@ -55,8 +62,12 @@ export const Guides = () => {
                 key={guide._id}
                 id={guide._id}
                 className={location.href.split("/")[4]}
-                onClick={() => navigate(`/guide/${guide._id}`)}
-                onLoad={setTimeout(function(){ highLightBtn() }, 50)}
+                onClick={() => {
+                  navigate(`/guide/${guide._id}`);
+                  setTimeout(function () {
+                    highLightBtn();
+                  }, 50);
+                }}
               >
                 <p>{guide.title}</p>
                 {guide.inProgress && <div className={"wip"}>WIP</div>}

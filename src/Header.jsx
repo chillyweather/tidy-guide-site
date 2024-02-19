@@ -36,7 +36,7 @@ const NavBar = ({ token, setToken }) => {
   };
 
   const handleGuidesClick = () => {
-    navigate(`/guide/${firstDoc._id}`);
+    navigate(`/guide/overview`);
   };
 
   const handleLoginClick = () => {
