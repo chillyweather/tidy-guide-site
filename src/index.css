@@ -412,7 +412,7 @@ li {
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-  transition: transform 300ms ease-out 0s, opacity 300ms linear 0s, visibility 300ms linear 0s allow-discrete;
+  transition: transform 300ms ease-in 0s, opacity 300ms linear 0s, visibility 300ms linear 0s allow-discrete;
 }
 *[tooltip]:hover::before{
   visibility: visible;
