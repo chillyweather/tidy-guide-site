@@ -39,10 +39,10 @@ export default function DataFetchingComponent() {
             path="/login"
             element={<Login setToken={setToken} token={token} />}
           />
-          <Route
+          {/* <Route
             path="/guides"
             element={<Guides documentation={documentation} />}
-          />
+          /> */}
           <Route path="/guide/overview" element={<Overview />} />
           <Route path="/guide/:id" element={<DetailsPage />} />
           <Route path="/" element={<Home />} />

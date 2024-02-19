@@ -39,4 +39,6 @@
   line-height: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 348px;
+  text-wrap: nowrap;
 }
