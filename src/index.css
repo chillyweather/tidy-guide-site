@@ -410,19 +410,21 @@ li {
   line-height: 120%;
 }
 
-.component-length{
+.component-length {
   color: #9DA4B4;
   font-weight: 400;
   font-size: calc(var(--text-size) - (var(--text-size) / 7));
 }
-.component-length::before{
+
+.component-length::before {
   content: '(';
 }
-.component-length::after{
+
+.component-length::after {
   content: ')';
 }
 
-*[tooltip]::before{
+*[tooltip]::before {
   content: attr(tooltip);
   position: absolute;
   bottom: calc(100% - 12px);
@@ -444,7 +446,8 @@ li {
   opacity: 0;
   transition: transform 300ms ease-in 0s, opacity 300ms linear 0s, visibility 300ms linear 0s allow-discrete;
 }
-*[tooltip]:hover::before{
+
+*[tooltip]:hover::before {
   visibility: visible;
   opacity: 1;
   transform: translate(0, 0);
@@ -479,6 +482,15 @@ li {
 
 .leftbar button p {
   color: inherit;
+}
+#search {
+  font-family: 'Inter';
+  color: #565E71;
+  padding: 12px 16px;
+}
+
+#search::placeholder {
+  color: #8E8F94;
 }
 
 .leftbar button:hover {
