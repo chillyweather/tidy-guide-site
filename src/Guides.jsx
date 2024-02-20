@@ -70,16 +70,17 @@ export const Guides = () => {
     <div className="guides">
       <h1>Guides</h1>
       <div className="flex-search">
-      <input
-        type="text"
-        id="search"
-        placeholder="Type to search..."
-        value={searchText}
-        onInput={(e) => {
-          setSearchText(e.currentTarget.value);
-        }}
-      />
-      <IconSearch />
+        <input
+          type="text"
+          id="search"
+          autoComplete="off"
+          placeholder="Type to search..."
+          value={searchText}
+          onInput={(e) => {
+            setSearchText(e.currentTarget.value);
+          }}
+        />
+        <IconSearch />
       </div>
       <ul className="documentationIndex">
         <button
