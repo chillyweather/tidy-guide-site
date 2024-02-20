@@ -58,7 +58,7 @@ export const Guides = () => {
       <input
         type="text"
         id="search"
-        placeholder="Search"
+        placeholder="Type to search..."
         value={searchText}
         onInput={(e) => {
           setSearchText(e.currentTarget.value);
