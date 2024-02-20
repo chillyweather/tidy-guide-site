@@ -15,8 +15,7 @@ export const DetailsPage = () => {
   const [copied, setCopied] = useState("");
   const [status, setStatus] = useState(false);
   const [sectionData, setSectionData] = useState([]);
-  const [updateDate, setUpdateDate] = useState("");
-  // const [componentPic, setcomponentPic] = useState({data.componentPic});
+  const [updateDate, setUpdateDate] = useState("");  
 
   const { id } = useParams();
   // if (id === "overview") return;
@@ -99,10 +98,12 @@ export const DetailsPage = () => {
               </div>
 
             )}
+            {data.componentPic && (
             <ReactSVG
               src={data.componentPic}
               className="svg-wrapper"
             />
+            )}
           </div>
         </div>
         {sectionData.map((element, index) => {
