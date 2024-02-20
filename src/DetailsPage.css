@@ -16,3 +16,7 @@
   align-items: center;
   gap: 6px;
 }
+
+.svg-wrapper{
+  margin: 48px 0;
+}

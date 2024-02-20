@@ -100,9 +100,9 @@ export const DetailsPage = () => {
 
             )}
             <ReactSVG
-                        src={data.componentPic}
-                        className="svg-wrapper"
-                      />
+              src={data.componentPic}
+              className="svg-wrapper"
+            />
           </div>
         </div>
         {sectionData.map((element, index) => {
