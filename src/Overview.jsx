@@ -67,7 +67,6 @@ export const Overview = () => {
                     {doc.componentPic ? (
                       <ReactSVG
                         src={doc.componentPic}
-                        style={{ width: "100%" }}
                         className="svg-wrapper"
                       />
                     ) : (

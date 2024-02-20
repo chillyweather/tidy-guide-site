@@ -15,10 +15,12 @@
   width: calc(100% / 3 - 40px);
   position: relative;
 }
-#overview{
+
+#overview {
   margin-bottom: 8px;
 }
-#overview::before{
+
+#overview::before {
   /* Divider */
   content: '';
   position: absolute;
@@ -44,7 +46,8 @@
   padding: 10px;
   position: relative;
 }
-.element .wip{
+
+.element .wip {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -63,13 +66,18 @@
   text-wrap: nowrap;
 }
 
-body{
+.svg-wrapper {
+  width: 100%;
+  max-height: 148px;
+}
+
+body {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 @media screen and (max-width: 1040px) {
-  body{
+  body {
     overflow: auto;
   }
 }
