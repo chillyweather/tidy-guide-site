@@ -485,6 +485,7 @@ li {
 }
 #search {
   font-family: 'Inter';
+  font-size: var(--text-size);
   color: #565E71;
   padding: 12px 16px;
 }
