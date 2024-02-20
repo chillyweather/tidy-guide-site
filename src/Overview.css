@@ -61,3 +61,14 @@
   width: 100%;
   text-wrap: nowrap;
 }
+
+body{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1040px) {
+  body{
+    overflow: auto;
+  }
+}
