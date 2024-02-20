@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
+import { ReactSVG } from "react-svg";
 import "./Overview.css";
 
 export const Overview = () => {
@@ -63,13 +64,21 @@ export const Overview = () => {
                     className="element"
                     onClick={() => navigate(`/guide/${doc._id}`)}
                   >
+                    {doc.componentPic ? (
+                      <ReactSVG
+                        src={doc.componentPic}
+                        style={{ width: "100%" }}
+                        className="svg-wrapper"
+                      />
+                    ) : (
+                      <p
+                        className="delete-me"
+                        style={{ fontSize: "80px", margin: 0 }}
+                      >
+                        🪣
+                      </p>
+                    )}
                     {doc.inProgress && <div className={"wip"}>WIP</div>}
-                    <p
-                      className="delete-me"
-                      style={{ fontSize: "80px", margin: 0 }}
-                    >
-                      🪣
-                    </p>
                   </button>
                   <p className="element-text">{doc.title}</p>
                 </div>
