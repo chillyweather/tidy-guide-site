@@ -16,6 +16,7 @@ export const DetailsPage = () => {
   const [status, setStatus] = useState(false);
   const [sectionData, setSectionData] = useState([]);
   const [updateDate, setUpdateDate] = useState("");  
+  const [componentPic, setComponentPic] = useState("");
 
   const { id } = useParams();
   // if (id === "overview") return;
@@ -31,6 +32,7 @@ export const DetailsPage = () => {
       setTitle(data.title);
       setSectionData(data.docs);
       setStatus(data.inProgress);
+      setComponentPic(data.componentPic);
       setUpdateDate(formatDate(data.updatedAt));
     }
   }, [data]);
@@ -98,9 +100,9 @@ export const DetailsPage = () => {
               </div>
 
             )}
-            {data.componentPic && (
+            {componentPic && (
             <ReactSVG
-              src={data.componentPic}
+              src={componentPic}
               className="svg-wrapper"
             />
             )}
