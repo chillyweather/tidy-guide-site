@@ -483,12 +483,31 @@ li {
 .leftbar button p {
   color: inherit;
 }
+
+.flex-search{
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  outline: 1px solid #E3E3E3;
+}
+.flex-search svg{
+  color: #8E8F94;
+  padding: 0 12px;
+}
 #search {
   font-family: 'Inter';
   font-size: var(--text-size);
   color: #565E71;
   padding: 12px 16px;
   width: calc(100% - 34px);
+  border: none;
+}
+.flex-search:focus-within{
+  outline: 2px solid var(--tidy-primary);
+}
+#search:focus{
+  border: none;
+  outline: none;
 }
 
 #search::placeholder {

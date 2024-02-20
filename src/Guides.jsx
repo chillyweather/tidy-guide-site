@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import fetchDocs from "./fetchDocs";
+import { IconSearch } from "@tabler/icons-react";
 
 export const Guides = () => {
   const [documentation, setDocumentation] = useState([]);
@@ -55,6 +56,7 @@ export const Guides = () => {
   return (
     <div className="guides">
       <h1>Guides</h1>
+      <div className="flex-search">
       <input
         type="text"
         id="search"
@@ -64,6 +66,8 @@ export const Guides = () => {
           setSearchText(e.currentTarget.value);
         }}
       />
+      <IconSearch />
+      </div>
       <ul className="documentationIndex">
         <button
           onClick={handleGuidesClick}
