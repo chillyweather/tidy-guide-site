@@ -69,6 +69,8 @@ export const Guides = () => {
   return (
     <div className="guides">
       <h1>Guides</h1>
+      <form>
+      <input type="text" className="hidden-input" />
       <div className="flex-search">
         <input
           type="text"
@@ -82,6 +84,7 @@ export const Guides = () => {
         />
         <IconSearch />
       </div>
+      </form>
       <ul className="documentationIndex">
         <button
           onClick={handleGuidesClick}

@@ -503,6 +503,9 @@ li {
   width: 100%;
   border: none;
 }
+.hidden-input{
+  display: none;
+}
 .flex-search:focus-within{
   outline: 2px solid var(--tidy-primary);
 }
