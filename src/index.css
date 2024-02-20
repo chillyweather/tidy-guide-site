@@ -254,7 +254,7 @@ h1 {
   text-overflow: ellipsis; */
   font-size: calc(var(--text-size) * 2.25);
   font-weight: normal;
-  color: var(--tidy-text);
+  color: var(--tidy-32);
 }
 
 h3 {
