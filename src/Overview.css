@@ -61,3 +61,8 @@
   width: 100%;
   text-wrap: nowrap;
 }
+
+body{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
