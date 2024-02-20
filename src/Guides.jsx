@@ -23,7 +23,7 @@ export const Guides = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       highLightBtn();
-    }, 50);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [selectedMasterId]);
@@ -90,6 +90,7 @@ export const Guides = () => {
               >
                 <p>{guide.title}</p>
                 {guide.inProgress && <div className={"wip"}>WIP</div>}
+                <div className="component-length">{guide.docs.length}</div>
               </button>
             );
           })}

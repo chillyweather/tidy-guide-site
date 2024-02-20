@@ -203,7 +203,7 @@ body:has(.documentationIndex) .browseBTN {
   position: relative;
   font-size: var(--text-size);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   text-align: left;
   gap: 8px;
@@ -410,12 +410,25 @@ li {
   line-height: 120%;
 }
 
+.component-length{
+  color: #9DA4B4;
+  font-weight: 400;
+  font-size: calc(var(--text-size) - (var(--text-size) / 7));
+}
+.component-length::before{
+  content: '(';
+}
+.component-length::after{
+  content: ')';
+}
+
 *[tooltip]::before{
   content: attr(tooltip);
   position: absolute;
   bottom: calc(100% - 12px);
-  left: 50%;
-  transform: translate(-50%, 16px);
+  left: 8px;
+  width: calc(100% - 40px);
+  transform: translate(0, 16px);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: var(--text-size);
@@ -434,7 +447,7 @@ li {
 *[tooltip]:hover::before{
   visibility: visible;
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translate(0, 0);
   transition: transform 300ms ease-out 2000ms, opacity 300ms linear 2000ms, visibility 300ms linear 2000ms allow-discrete;
 }
 

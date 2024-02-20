@@ -53,11 +53,17 @@ export const Overview = () => {
             {data &&
               data.length &&
               data.map((doc, index) => (
-                <div key={index} className="element-wrapper">
+                <div
+                  key={index}
+                  className="element-wrapper"
+                  // eslint-disable-next-line react/no-unknown-property
+                  tooltip={doc.title}
+                >
                   <button
                     className="element"
                     onClick={() => navigate(`/guide/${doc._id}`)}
                   >
+                    {doc.inProgress && <div className={"wip"}>WIP</div>}
                     <p
                       className="delete-me"
                       style={{ fontSize: "80px", margin: 0 }}
