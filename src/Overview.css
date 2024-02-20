@@ -66,9 +66,12 @@
   text-wrap: nowrap;
 }
 
-.svg-wrapper {
+.element .svg-wrapper {
   width: 100%;
   max-height: 148px;
+}
+.element .svg-wrapper svg{
+  max-height: 166px;
 }
 
 body {
