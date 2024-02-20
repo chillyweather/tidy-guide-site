@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import fetchDocs from "./fetchDocs";
 
 export const Guides = () => {
   const [documentation, setDocumentation] = useState([]);
+  const [searchText, setSearchText] = useState("");
   const [selectedMasterId, setSelectedMasterId] = useState("overview");
   const { data } = useQuery({
     queryKey: ["docs"],
@@ -54,6 +55,15 @@ export const Guides = () => {
   return (
     <div className="guides">
       <h1>Guides</h1>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search"
+        value={searchText}
+        onInput={(e) => {
+          setSearchText(e.currentTarget.value);
+        }}
+      />
       <ul className="documentationIndex">
         <button
           onClick={handleGuidesClick}
