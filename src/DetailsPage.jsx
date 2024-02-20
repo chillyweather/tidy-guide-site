@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import { Guides } from "./Guides";
 import { IconLink, IconClock } from "@tabler/icons-react";
 import ElementSection from "./docContent/ElementSection";
+import { ReactSVG } from "react-svg";
 import "./DetailsPage.css";
 
 export const DetailsPage = () => {
@@ -15,6 +16,7 @@ export const DetailsPage = () => {
   const [status, setStatus] = useState(false);
   const [sectionData, setSectionData] = useState([]);
   const [updateDate, setUpdateDate] = useState("");
+  // const [componentPic, setcomponentPic] = useState({data.componentPic});
 
   const { id } = useParams();
   // if (id === "overview") return;
@@ -95,7 +97,12 @@ export const DetailsPage = () => {
                 <IconClock size={18} color="#6C768E" />
                 <p className="last-update">Last update: {updateDate}</p>
               </div>
+
             )}
+            <ReactSVG
+                        src={data.componentPic}
+                        className="svg-wrapper"
+                      />
           </div>
         </div>
         {sectionData.map((element, index) => {
