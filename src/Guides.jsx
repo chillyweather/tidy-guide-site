@@ -6,6 +6,7 @@ import fetchDocs from "./fetchDocs";
 
 export const Guides = () => {
   const [documentation, setDocumentation] = useState([]);
+  const [filteredDocumentation, setFilteredDocumentation] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [selectedMasterId, setSelectedMasterId] = useState("overview");
   const { data } = useQuery({
@@ -17,8 +18,20 @@ export const Guides = () => {
     if (data) {
       const sortedData = data.sort((a, b) => a.title.localeCompare(b.title));
       setDocumentation(sortedData);
+      setFilteredDocumentation(sortedData);
     }
   }, [data]);
+
+  useEffect(() => {
+    if (searchText.length > 0) {
+      const filteredData = documentation.filter((element) => {
+        return element.title.toLowerCase().includes(searchText.toLowerCase());
+      });
+      setFilteredDocumentation(filteredData);
+    } else {
+      setFilteredDocumentation(documentation);
+    }
+  }, [searchText, documentation]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -72,8 +85,8 @@ export const Guides = () => {
         >
           <p>Overview</p>
         </button>
-        {!!documentation.length &&
-          documentation.map((guide) => {
+        {!!filteredDocumentation.length &&
+          filteredDocumentation.map((guide) => {
             const isDraft = guide.draft;
             if (isDraft) {
               return null;
