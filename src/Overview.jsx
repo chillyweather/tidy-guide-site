@@ -45,7 +45,6 @@ export const Overview = () => {
                 >
                   <IconLink />
                 </button>
-                {console.log(doc)}
               </h1>
             </strong>
           </div>
