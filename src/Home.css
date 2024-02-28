@@ -32,6 +32,10 @@ body:has(.home) .header .logo-div {
     color: #141414;
 }
 
+body:has(.home) {
+    background-color: #F6F6FC;
+}
+
 /* body:has(.home) {
     background-image: url(assets/gradient-min.png);
     background-size: cover;
