@@ -30,7 +30,22 @@ export const Home = () => {
         <h1 className="size-54">Meet Tidy Builder:</h1>
         <h2>Don’t start from scratch, stand on the shoulders of giants 💪</h2>
         <img src={BuilderProduct} className="big-image" />
+        <br />
+        <br />
+        <button>Get started with Builder</button>
       </section>
+
+      <section>
+        <img src={BuilderIcon} />
+        <h1 className="size-54">Meet Tidy Viewer:</h1>
+        <h2>Integrated documentation when needed.<br/>
+          Wave goodbye to content switching  👋</h2>
+        <img src={BuilderProduct} className="big-image" />
+        <br />
+        <br />
+        <button>Get started with Viewer</button>
+      </section>
+
     </div>
   );
 };
