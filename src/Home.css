@@ -141,3 +141,7 @@ body:has(.home) .header button:focus-visible{
 .home .big-image{
     margin-top: 32px;
 }
+.home .product-button{
+    margin-top: 32px;
+    margin-bottom: 32px;
+}

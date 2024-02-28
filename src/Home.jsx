@@ -1,6 +1,8 @@
 import "./Home.css";
 import BuilderIcon from "./assets/builder-icon.svg";
 import BuilderProduct from "./assets/builder-product.png";
+import ViewerIcon from "./assets/viewer-icon.svg";
+import ViewerProduct from "./assets/viewer-product.png";
 
 export const Home = () => {
   return (
@@ -30,20 +32,18 @@ export const Home = () => {
         <h1 className="size-54">Meet Tidy Builder:</h1>
         <h2>Don’t start from scratch, stand on the shoulders of giants 💪</h2>
         <img src={BuilderProduct} className="big-image" />
-        <br />
-        <br />
-        <button>Get started with Builder</button>
+        <br/>
+        <button className="product-button">Get started with Builder</button>
       </section>
 
       <section>
-        <img src={BuilderIcon} />
+        <img src={ViewerIcon} />
         <h1 className="size-54">Meet Tidy Viewer:</h1>
         <h2>Integrated documentation when needed.<br/>
           Wave goodbye to content switching  👋</h2>
-        <img src={BuilderProduct} className="big-image" />
-        <br />
-        <br />
-        <button>Get started with Viewer</button>
+        <img src={ViewerProduct} className="big-image" />
+        <br/>
+        <button className="product-button">Get started with Viewer</button>
       </section>
 
     </div>
