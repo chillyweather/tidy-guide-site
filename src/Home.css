@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "spirit";
+    src: url("assets/NewSpirit-Regular.OTF") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "spirit";
+    src: url("assets/NewSpirit-SemiBold.OTF") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+body{
+    background: radial-gradient(63.67% 63.67% at 48.32% -24.23%, rgba(162, 90, 255, 0.60) 0%, rgba(28, 188, 254, 0.00) 100%);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+section:first-of-type {
+    margin-top: 80px;
+}
+
+section {
+    padding: 40px;
+    width: 100%;
+    max-width: 1400px;
+    color: #141414;
+}
+
+h1 {
+    font-family: 'Spirit', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 5.25em;
+    text-align: center;
+    line-height: 150%;
+    color: inherit;
+}
+h1 b{
+    font-weight: 500;
+}
