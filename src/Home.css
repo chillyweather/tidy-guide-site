@@ -73,7 +73,8 @@ html {
     font-size: 4vw;
     line-height: 120%;
 }
-.home .size-54{
+
+.home .size-54 {
     font-size: 3vw;
     line-height: 120%;
     margin: 2vw 0;
@@ -124,24 +125,39 @@ body:has(.home) .header button {
     user-select: none;
     transition: outline-width 200ms ease-in-out 0s;
 }
-body:has(.home) .header button:hover{
+
+body:has(.home) .header button:hover {
     background-color: #8793FD;
 }
-body:has(.home) .header button:active{
+
+body:has(.home) .header button:active {
     background-color: #5C6CFF;
 }
-body:has(.home) .header button:focus-visible{
+
+body:has(.home) .header button:focus-visible {
     background-color: #6B73FF;
     outline-width: 4px;
 }
 
-.home section img{
+.home section img {
     max-width: 800px;
 }
-.home .big-image{
+
+.home .big-image {
     margin-top: 32px;
 }
-.home .product-button{
+
+.home .product-button {
     margin-top: 32px;
     margin-bottom: 32px;
+}
+
+@media screen and (max-width: 800px) {
+    .home section img {
+        max-width: 90vw;
+    }
+    .home section{
+        padding: 24px;
+        width: calc(100% - 48px);
+    }
 }
