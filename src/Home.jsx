@@ -9,6 +9,7 @@ export const Home = () => {
     <div className="home">
 
       {/* <h2>Home</h2> */}
+      <div className="top-gradient"></div>
       <section>
         <h1 style={{ marginTop: 0 }}>I love spending all day<br />
           documenting my design decisions.<br />

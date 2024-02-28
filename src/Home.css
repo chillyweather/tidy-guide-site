@@ -32,18 +32,25 @@ body:has(.home) .header .logo-div {
     color: #141414;
 }
 
-/* #root:has(.home) {
+/* body:has(.home) {
     background-image: url(assets/gradient-min.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    background-attachment: scroll;
 } */
 
-html {
+.home .top-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 470px;
     background-image: url(assets/gradient-min.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    z-index: -1;
 }
 
 .home section {
