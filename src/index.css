@@ -102,14 +102,15 @@ button {
 
 .logo-div {
   flex-grow: 1;
+  color: #ffffff;
 }
 
-.logo-div img {
+.logo-div img, .logo-div svg {
   cursor: pointer;
   width: 60px;
 }
 
-.logo-div img:hover {
+.logo-div img:hover, .logo-div svg:hover {
   opacity: .9;
 }
 

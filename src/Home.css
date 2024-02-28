@@ -13,14 +13,21 @@
     font-style: normal;
     font-display: block;
 }
-body:has(.home) .header{
+
+body:has(.home) .header {
     background-color: transparent;
 }
-body{
+
+body:has(.home) .header .logo-div {
+    color: #141414;
+}
+
+body {
     background: radial-gradient(63.67% 63.67% at 48.32% -24.23%, rgba(162, 90, 255, 0.60) 0%, rgba(28, 188, 254, 0.00) 100%);
     background-repeat: no-repeat;
     background-position: center top;
 }
+
 section:first-of-type {
     margin-top: 80px;
 }
@@ -40,6 +47,7 @@ h1 {
     line-height: 150%;
     color: inherit;
 }
-h1 b{
+
+h1 b {
     font-weight: 500;
 }
