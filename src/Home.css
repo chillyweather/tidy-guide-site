@@ -121,6 +121,11 @@ body:has(.home) .header .logo-div {
     text-decoration: none;
     outline: none;
 }
+.home .links-wrapper{
+    position: relative;
+    display: flex;
+    gap: 32px;
+}
 
 .home .flex-wrapper a::before {
     content: '';
@@ -158,7 +163,8 @@ body:has(.home) .header .logo-div {
 }
 
 .home video {
-    width: 800px;
+    width: 90vw;
+    max-width: 800px;
     aspect-ratio: 16 / 9;
     background-color: lightgray;
     border-radius: 8px;
@@ -246,5 +252,12 @@ body:has(.home) .header button:focus-visible {
     .home section {
         padding: 24px;
         width: calc(100% - 48px);
+    }
+    .home .flex-wrapper{
+        flex-direction: column;
+        padding: 0;
+    }
+    .home .links-wrapper a:first-of-type::before{
+        display: none;
     }
 }
