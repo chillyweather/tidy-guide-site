@@ -21,7 +21,8 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 95px;
+    top: 0;
+    padding-top: 90px;
 }
 
 body:has(.home) .header {
@@ -32,9 +33,9 @@ body:has(.home) .header .logo-div {
     color: #141414;
 }
 
-body:has(.home) {
+/* body:has(.home) {
     background-color: #F6F6FC;
-}
+} */
 
 /* body:has(.home) {
     background-image: url(assets/gradient-min.png);
@@ -45,11 +46,11 @@ body:has(.home) {
 } */
 
 .home .top-gradient {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 800px;
+    height: 900px;
     background-image: url(assets/gradient-min.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -266,6 +267,11 @@ body:has(.home) .header button:focus-visible {
 }
 
 @media screen and (max-width: 800px) {
+    .home {
+        top: 60px;
+        padding-top: 0;
+    }
+
     .home .top-gradient {
         height: 470px;
     }
@@ -291,6 +297,7 @@ body:has(.home) .header button:focus-visible {
     .home footer {
         margin: 0;
         width: 100%;
+        padding-bottom: 48px;
     }
 
     .home footer .inner-footer {
@@ -307,7 +314,7 @@ body:has(.home) .header button:focus-visible {
     }
 
     .home h1 {
-        font-size: 2.5em;
+        font-size: 2.6em;
     }
 
     .home .size-54 {
@@ -328,10 +335,20 @@ body:has(.home) .header button:focus-visible {
     }
 
     body:has(.home) .header {
-        background-image: url(assets/gradient-min.png);
+        /* background-image: url(assets/gradient-min.png);
         background-size: 250vh;
         background-repeat: no-repeat;
-        background-position: center top;
+        background-position: center top; */
         background-color: #ffffff;
+
+    }
+
+    body:has(.home) .header .logo-div {
+        justify-content: center;
+        display: flex;
+    }
+
+    body:has(.home) .header button {
+        display: none;
     }
 }

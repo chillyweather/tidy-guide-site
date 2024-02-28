@@ -1632,3 +1632,9 @@ summary button {
     display: none;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .navbar{
+    padding: 0 24px;
+  }
+}
