@@ -116,12 +116,15 @@ body:has(.home) .header .logo-div {
     color: #545454;
     text-decoration: none;
 }
-.home .flex-wrapper a:active, .home .flex-wrapper a:focus-visible {
+
+.home .flex-wrapper a:active,
+.home .flex-wrapper a:focus-visible {
     color: #3E1C7D;
     text-decoration: none;
     outline: none;
 }
-.home .links-wrapper{
+
+.home .links-wrapper {
     position: relative;
     display: flex;
     gap: 32px;
@@ -253,36 +256,55 @@ body:has(.home) .header button:focus-visible {
         padding: 24px;
         width: calc(100% - 48px);
     }
-    .home .flex-wrapper{
+
+    .home .flex-wrapper {
         flex-direction: column;
         padding: 0;
     }
-    .home .links-wrapper a:first-of-type::before{
+
+    .home .links-wrapper a:first-of-type::before {
         display: none;
     }
-    .home footer .inner-footer{
+
+    .home footer .inner-footer {
         max-width: 85vw;
     }
-    .home h1, .home h2{
+
+    .home h1,
+    .home h2 {
         min-width: 0;
     }
-    .home footer .inner-footer h1{
+
+    .home footer .inner-footer h1 {
         width: 100%;
     }
-    .home h1{
+
+    .home h1 {
         font-size: 2.5em;
     }
-    .home .size-54{
+
+    .home .size-54 {
         font-size: 2.5em;
     }
-    .home .size-72{
+
+    .home .size-72 {
         font-size: 3em;
     }
-    .home h2{
+
+    .home h2 {
         font-size: 1.25em;
         white-space: normal;
     }
-    .home h2 br{
+
+    .home h2 br {
         display: none;
+    }
+
+    body:has(.home) .header {
+        background-image: url(assets/gradient-min.png);
+        background-size: 250vh;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-color: #ffffff;
     }
 }
