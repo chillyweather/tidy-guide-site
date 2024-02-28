@@ -49,29 +49,35 @@ export const Home = () => {
       </section>
 
       <section className="colored">
-        <h1 className="size-72">How does Tidy work?</h1>
-        <h2>Join teams worldwide who rely on Tidy to streamline their design system <br />
-          documentation process and foster better collaboration!</h2>
-        <video></video>
+        <div className="inner-colored">
+          <h1 className="size-72">How does Tidy work?</h1>
+          <h2>Join teams worldwide who rely on Tidy to streamline their design system <br />
+            documentation process and foster better collaboration!</h2>
+          <video></video>
+        </div>
       </section>
 
       <section className="colored">
-        <footer>
-          <img src={Earlybirds} />
-          <div className="inner-footer">
-            <h1 className="size-54">Join the early birds</h1>
-            <p>Join the Tidy beta waitlist now for early access! Be one of the first to try out our latest features We'll be gradually inviting new teams to the beta over the coming weeks.</p>
-          </div>
-          <button>Join Tidy Guide beta</button>
-        </footer>
+        <div className="inner-colored">
+          <footer>
+            <img src={Earlybirds} />
+            <div className="inner-footer">
+              <h1 className="size-54">Join the early birds</h1>
+              <p>Join the Tidy beta waitlist now for early access! Be one of the first to try out our latest features We'll be gradually inviting new teams to the beta over the coming weeks.</p>
+            </div>
+            <button>Join Tidy Guide beta</button>
+          </footer>
+        </div>
       </section>
 
       <section className="colored">
-        <div className="flex-wrapper">
-          <p>© 2024 Kido. All Rights Reserved</p>
-          <div className="links-wrapper">
-            <a href="">Terms and Conditions</a>
-            <a href="">Privacy Policy</a>
+        <div className="inner-colored">
+          <div className="flex-wrapper">
+            <p>© 2024 Kido. All Rights Reserved</p>
+            <div className="links-wrapper">
+              <a href="">Terms and Conditions</a>
+              <a href="">Privacy Policy</a>
+            </div>
           </div>
         </div>
       </section>

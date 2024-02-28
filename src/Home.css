@@ -45,7 +45,7 @@ body:has(.home) .header .logo-div {
     top: 0;
     left: 0;
     width: 100%;
-    height: 470px;
+    height: 800px;
     background-image: url(assets/gradient-min.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -63,6 +63,14 @@ body:has(.home) .header .logo-div {
 
 .home .colored{
     background-color: #F6F6FC;
+    max-width: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .colored .inner-colored{
+    width: 100%;
+    max-width: 1400px;
 }
 
 .home footer {
@@ -253,6 +261,9 @@ body:has(.home) .header button:focus-visible {
 }
 
 @media screen and (max-width: 800px) {
+    .home .top-gradient{
+        height: 470px;
+    }
     .home section img {
         max-width: 90vw;
     }
