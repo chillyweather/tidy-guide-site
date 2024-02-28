@@ -61,6 +61,27 @@ body:has(.home) .header .logo-div {
     text-align: center;
 }
 
+.home footer{
+    border-radius: 12px;
+    background-color: #323232;
+    color: #ffffff;
+    width: calc(100% - 48px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+.home footer .inner-footer{
+    max-width: 50vw;
+    padding-bottom: 12px;
+}
+.home footer p{
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+}
+
 .home h1 {
     font-family: 'spirit', Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -87,6 +108,13 @@ body:has(.home) .header .logo-div {
     font-size: min(3vw, 3.5em);
     line-height: 120%;
     margin: 2vw 0;
+}
+.home video{
+    width: 800px;
+    aspect-ratio: 16 / 9;
+    background-color: lightgray;
+    border-radius: 8px;
+    margin-top: 24px;
 }
 
 h2 {

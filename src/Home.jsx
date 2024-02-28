@@ -3,6 +3,7 @@ import BuilderIcon from "./assets/builder-icon.svg";
 import BuilderProduct from "./assets/builder-product.png";
 import ViewerIcon from "./assets/viewer-icon.svg";
 import ViewerProduct from "./assets/viewer-product.png";
+import Earlybirds from "./assets/early-birds.svg";
 
 export const Home = () => {
   return (
@@ -51,7 +52,17 @@ export const Home = () => {
         <h1 className="size-72">How does Tidy work?</h1>
         <h2>Join teams worldwide who rely on Tidy to streamline their design system<br />
           documentation process and foster better collaboration!</h2>
+        <video></video>
       </section>
+
+      <footer>
+        <img src={Earlybirds} />
+        <div className="inner-footer">
+          <h1 className="size-54">Join the early birds</h1>
+          <p>Join the Tidy beta waitlist now for early access! Be one of the first to try out our latest features We'll be gradually inviting new teams to the beta over the coming weeks.</p>
+        </div>
+        <button>Join Tidy Guide beta</button>
+      </footer>
 
     </div>
   );
