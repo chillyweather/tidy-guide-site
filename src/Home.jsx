@@ -6,7 +6,8 @@ export const Home = () => {
 
       {/* <h2>Home</h2> */}
       <section>
-        <h1 style={{marginTop: 0}}>I love spending all day documenting my design decisions.<br />
+        <h1 style={{ marginTop: 0 }}>I love spending all day<br />
+          documenting my design decisions.<br />
           <b>Said no one. Ever.</b></h1>
         <h2>
           <b>A new way to generate and discover documentation in Figma</b><br />
