@@ -13,6 +13,9 @@
     font-style: normal;
     font-display: block;
 }
+body:has(.home) .header{
+    background-color: transparent;
+}
 body{
     background: radial-gradient(63.67% 63.67% at 48.32% -24.23%, rgba(162, 90, 255, 0.60) 0%, rgba(28, 188, 254, 0.00) 100%);
     background-repeat: no-repeat;
