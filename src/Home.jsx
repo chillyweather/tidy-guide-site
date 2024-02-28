@@ -33,18 +33,24 @@ export const Home = () => {
         <h1 className="size-54">Meet Tidy Builder:</h1>
         <h2>Don’t start from scratch, stand on the shoulders of giants 💪</h2>
         <img src={BuilderProduct} className="big-image" />
-        <br/>
+        <br />
         <button className="product-button">Get started with Builder</button>
       </section>
 
       <section>
         <img src={ViewerIcon} />
         <h1 className="size-54">Meet Tidy Viewer:</h1>
-        <h2>Integrated documentation when needed.<br/>
+        <h2>Integrated documentation when needed.<br />
           Wave goodbye to content switching  👋</h2>
         <img src={ViewerProduct} className="big-image" />
-        <br/>
+        <br />
         <button className="product-button">Get started with Viewer</button>
+      </section>
+
+      <section>
+        <h1 className="size-72">How does Tidy work?</h1>
+        <h2>Join teams worldwide who rely on Tidy to streamline their design system<br />
+          documentation process and foster better collaboration!</h2>
       </section>
 
     </div>

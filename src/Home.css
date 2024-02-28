@@ -54,7 +54,7 @@ body:has(.home) .header .logo-div {
 }
 
 .home section {
-    padding: 40px;
+    padding: 40px 0;
     width: 100%;
     max-width: 1400px;
     color: #141414;
@@ -77,12 +77,14 @@ body:has(.home) .header .logo-div {
 
 .home .size-72 {
     /* font-size: 4.5em; */
-    font-size: 4vw;
+    /* font-size: 4vw; */
+    font-size: min(4vw, 4.5em);
     line-height: 120%;
 }
 
 .home .size-54 {
-    font-size: 3vw;
+    /* font-size: 3vw; */
+    font-size: min(3vw, 3.5em);
     line-height: 120%;
     margin: 2vw 0;
 }
@@ -97,6 +99,7 @@ h2 {
 
 .home h2 {
     text-align: center;
+    font-size: min(2vw, 1.5em);
 }
 
 .home button {
