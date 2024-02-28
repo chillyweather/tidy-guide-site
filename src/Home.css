@@ -32,12 +32,12 @@ body:has(.home) .header .logo-div {
     color: #141414;
 }
 
-#root:has(.home) {
+/* #root:has(.home) {
     background-image: url(assets/gradient-min.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-}
+} */
 
 html {
     background-image: url(assets/gradient-min.png);
@@ -57,7 +57,7 @@ html {
 .home h1 {
     font-family: 'spirit', Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 4.5vw;
+    font-size: min(4.5vw, 5em);
     /* max-width: 80%; */
     text-align: center;
     line-height: 150%;
@@ -156,7 +156,8 @@ body:has(.home) .header button:focus-visible {
     .home section img {
         max-width: 90vw;
     }
-    .home section{
+
+    .home section {
         padding: 24px;
         width: calc(100% - 48px);
     }
