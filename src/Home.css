@@ -51,6 +51,7 @@ html {
     width: 100%;
     max-width: 1400px;
     color: #141414;
+    text-align: center;
 }
 
 .home h1 {
@@ -74,4 +75,17 @@ h2{
 }
 .home h2{
     text-align: center;
+}
+
+.home button{
+    padding: 16px 24px;
+    background-color: #6B73FF;
+    font-size: 1.125em;
+    font-weight: 600;
+}
+.home button:hover{
+    background-color: #8C5AEC;
+}
+.home button:active{
+    background-color: #7C4CD7;
 }

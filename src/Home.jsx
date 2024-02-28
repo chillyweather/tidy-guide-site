@@ -12,6 +12,7 @@ export const Home = () => {
           <b>A new way to generate and discover documentation in Figma</b><br />
           Meet Tidy — the intuitive documentation builder you’ve been looking for.
         </h2>
+        <button>Get early access to Beta</button>
       </section>
     </div>
   );
