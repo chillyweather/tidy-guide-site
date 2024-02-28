@@ -76,6 +76,7 @@ html {
 .home .size-54{
     font-size: 3vw;
     line-height: 120%;
+    margin: 2vw 0;
 }
 
 h2 {
@@ -132,4 +133,11 @@ body:has(.home) .header button:active{
 body:has(.home) .header button:focus-visible{
     background-color: #6B73FF;
     outline-width: 4px;
+}
+
+.home section img{
+    max-width: 800px;
+}
+.home .big-image{
+    margin-top: 32px;
 }

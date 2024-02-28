@@ -1,4 +1,6 @@
 import "./Home.css";
+import BuilderIcon from "./assets/builder-icon.svg";
+import BuilderProduct from "./assets/builder-product.png";
 
 export const Home = () => {
   return (
@@ -24,8 +26,10 @@ export const Home = () => {
       </section>
 
       <section>
+        <img src={BuilderIcon} />
         <h1 className="size-54">Meet Tidy Builder:</h1>
         <h2>Don’t start from scratch, stand on the shoulders of giants 💪</h2>
+        <img src={BuilderProduct} className="big-image" />
       </section>
     </div>
   );
