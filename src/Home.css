@@ -61,11 +61,16 @@ body:has(.home) .header .logo-div {
     text-align: center;
 }
 
+.home .colored{
+    background-color: #F6F6FC;
+}
+
 .home footer {
     border-radius: 12px;
     background-color: #323232;
     color: #ffffff;
     width: calc(100% - 48px);
+    margin: 0 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,7 +171,7 @@ body:has(.home) .header .logo-div {
 }
 
 .home video {
-    width: 90vw;
+    width: 100%;
     max-width: 800px;
     aspect-ratio: 16 / 9;
     background-color: lightgray;
@@ -264,6 +269,11 @@ body:has(.home) .header button:focus-visible {
 
     .home .links-wrapper a:first-of-type::before {
         display: none;
+    }
+
+    .home footer{
+        margin: 0;
+        width: 100%;
     }
 
     .home footer .inner-footer {
