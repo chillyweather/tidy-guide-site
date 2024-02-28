@@ -64,6 +64,13 @@ export const Home = () => {
         <button>Join Tidy Guide beta</button>
       </footer>
 
+      <section>
+        <div className="flex-wrapper">
+          <p>© 2024 Kido. All Rights Reserved</p>
+          <a href="">Terms and Conditions</a>
+          <a href="">Privacy Policy</a>
+        </div>
+      </section>
     </div>
   );
 };
