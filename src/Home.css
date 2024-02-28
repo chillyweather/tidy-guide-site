@@ -61,14 +61,15 @@ body:has(.home) .header .logo-div {
     text-align: center;
 }
 
-.home .colored{
+.home .colored {
     background-color: #F6F6FC;
     max-width: unset;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.home .colored .inner-colored{
+
+.home .colored .inner-colored {
     width: 100%;
     max-width: 1400px;
 }
@@ -261,9 +262,10 @@ body:has(.home) .header button:focus-visible {
 }
 
 @media screen and (max-width: 800px) {
-    .home .top-gradient{
+    .home .top-gradient {
         height: 470px;
     }
+
     .home section img {
         max-width: 90vw;
     }
@@ -282,7 +284,7 @@ body:has(.home) .header button:focus-visible {
         display: none;
     }
 
-    .home footer{
+    .home footer {
         margin: 0;
         width: 100%;
     }
