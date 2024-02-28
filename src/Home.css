@@ -112,6 +112,16 @@ body:has(.home) .header .logo-div {
     color: #2A2A2A;
 }
 
+.home .flex-wrapper a:hover {
+    color: #545454;
+    text-decoration: none;
+}
+.home .flex-wrapper a:active, .home .flex-wrapper a:focus-visible {
+    color: #3E1C7D;
+    text-decoration: none;
+    outline: none;
+}
+
 .home .flex-wrapper a::before {
     content: '';
     position: absolute;
@@ -125,6 +135,7 @@ body:has(.home) .header .logo-div {
 .home .flex-wrapper p,
 .home .flex-wrapper a {
     margin: 0;
+    font-weight: 500;
 }
 
 .home .flex-wrapper p {
