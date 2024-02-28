@@ -22,6 +22,11 @@ export const Home = () => {
         <h2>Make it easy for designers to create and keep internal documentation up to date.<br />
           By creating centralized knowledge base across design teams.</h2>
       </section>
+
+      <section>
+        <h1 className="size-54">Meet Tidy Builder:</h1>
+        <h2>Don’t start from scratch, stand on the shoulders of giants 💪</h2>
+      </section>
     </div>
   );
 };
