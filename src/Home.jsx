@@ -16,7 +16,7 @@ export const Home = () => {
           documenting my design decisions.<br />
           <b>Said no one. Ever.</b></h1>
         <h2>
-          <b>A new way to generate and discover documentation in Figma</b><br />
+          <b>A new way to generate and discover documentation in Figma </b><br />
           Meet Tidy — the intuitive documentation builder you’ve been looking for.
         </h2>
         <button>Get early access to Beta</button>
@@ -25,7 +25,7 @@ export const Home = () => {
       <section>
         <h1 className="size-72">Built for designers,<br />
           Loved by teams:</h1>
-        <h2>Make it easy for designers to create and keep internal documentation up to date.<br />
+        <h2>Make it easy for designers to create and keep internal documentation up to date. <br />
           By creating centralized knowledge base across design teams.</h2>
       </section>
 
@@ -41,7 +41,7 @@ export const Home = () => {
       <section>
         <img src={ViewerIcon} />
         <h1 className="size-54">Meet Tidy Viewer:</h1>
-        <h2>Integrated documentation when needed.<br />
+        <h2>Integrated documentation when needed. <br />
           Wave goodbye to content switching  👋</h2>
         <img src={ViewerProduct} className="big-image" />
         <br />
@@ -50,7 +50,7 @@ export const Home = () => {
 
       <section>
         <h1 className="size-72">How does Tidy work?</h1>
-        <h2>Join teams worldwide who rely on Tidy to streamline their design system<br />
+        <h2>Join teams worldwide who rely on Tidy to streamline their design system <br />
           documentation process and foster better collaboration!</h2>
         <video></video>
       </section>

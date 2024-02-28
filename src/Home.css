@@ -260,4 +260,29 @@ body:has(.home) .header button:focus-visible {
     .home .links-wrapper a:first-of-type::before{
         display: none;
     }
+    .home footer .inner-footer{
+        max-width: 85vw;
+    }
+    .home h1, .home h2{
+        min-width: 0;
+    }
+    .home footer .inner-footer h1{
+        width: 100%;
+    }
+    .home h1{
+        font-size: 2.5em;
+    }
+    .home .size-54{
+        font-size: 2.5em;
+    }
+    .home .size-72{
+        font-size: 3em;
+    }
+    .home h2{
+        font-size: 1.25em;
+        white-space: normal;
+    }
+    .home h2 br{
+        display: none;
+    }
 }
