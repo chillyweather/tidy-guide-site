@@ -14,6 +14,11 @@ export const Home = () => {
         </h2>
         <button>Get early access to Beta</button>
       </section>
+
+      <section>
+        <h1 className="size-72">Built for designers,<br />
+          Loved by teams:</h1>
+      </section>
     </div>
   );
 };

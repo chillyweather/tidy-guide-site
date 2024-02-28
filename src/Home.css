@@ -66,6 +66,10 @@ html {
 .home h1 b {
     font-weight: 500;
 }
+.home .size-72{
+    font-size: 4.5em;
+    line-height: 120%;
+}
 h2{
     font-weight: 400;
 }
@@ -82,10 +86,17 @@ h2{
     background-color: #6B73FF;
     font-size: 1.125em;
     font-weight: 600;
+    outline: 0 solid #C2DAFE;
+    user-select: none;
+    transition: outline-width 200ms ease-in-out 0s;
 }
 .home button:hover{
-    background-color: #8C5AEC;
+    background-color: #8793FD;
 }
 .home button:active{
-    background-color: #7C4CD7;
+    background-color: #5C6CFF;
+}
+.home button:focus-visible{
+    background-color: #6B73FF;
+    outline-width: 4px;
 }
