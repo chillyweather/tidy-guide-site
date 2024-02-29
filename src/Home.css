@@ -325,7 +325,7 @@ body:has(.home) .header button:focus-visible {
     }
 
     .home .size-72 {
-        font-size: 3em;
+        font-size: 2.3em;
     }
 
     .home h2 {
@@ -335,6 +335,14 @@ body:has(.home) .header button:focus-visible {
 
     .home h2 br {
         display: none;
+    }
+
+    .home .inner-footer .size-54{
+        padding: 0 24px;
+        width: calc(100% - 48px);
+    }
+    .home .inner-colored h2{
+        text-wrap: pretty;
     }
 
     body:has(.home) .header {
