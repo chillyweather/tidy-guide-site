@@ -56,6 +56,7 @@ body:has(.home) .header .logo-div {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    z-index: -1;
 }
 
 .home section {
@@ -345,5 +346,8 @@ body:has(.home) .header button:focus-visible {
 
     body:has(.home) .header button {
         display: none;
+    }
+    .home .top-gradient{
+        z-index: 0;
     }
 }
