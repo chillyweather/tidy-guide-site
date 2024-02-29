@@ -34,18 +34,6 @@ body:has(.home) .header .logo-div {
     color: #141414;
 }
 
-/* body:has(.home) {
-    background-color: #F6F6FC;
-} */
-
-/* body:has(.home) {
-    background-image: url(assets/gradient-min.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: scroll;
-} */
-
 .home .top-gradient {
     position: absolute;
     top: 0;
@@ -346,11 +334,6 @@ body:has(.home) .header button:focus-visible {
     }
 
     body:has(.home) .header {
-        /* background-image: url(assets/gradient-min.png);
-        background-size: 250vh;
-        background-repeat: no-repeat;
-        background-position: center top; */
-        /* background-color: #ffffff; */
         position: relative;
     }
 
