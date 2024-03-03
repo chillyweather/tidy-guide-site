@@ -258,7 +258,11 @@ body:has(.home) .header button:focus-visible {
 }
 
 .home .anim-title {
+    position: relative;
     animation: titleAnim 2000ms linear forwards;
+}
+.home .anim-title::first-line{
+    line-height: 150%;
 }
 
 @keyframes titleAnim {
@@ -286,14 +290,33 @@ body:has(.home) .header button:focus-visible {
         visibility: hidden;
         opacity: 0;
     }
+
     50% {
         visibility: hidden;
         opacity: 0;
     }
+
     100% {
         visibility: visible;
         opacity: 1;
     }
+}
+
+.home .anim-seperator {
+    position: absolute;
+    width: 18ch;
+    top: min(5vw, 5em);
+    left: 50%;
+    height: 48px;
+    background-color: #FFD8FB;
+    opacity: 0.8;
+    margin-left: -9ch;
+    animation: seperatorAnim 2000ms linear forwards;
+}
+@keyframes seperatorAnim {
+    0%{height: 64px;}
+    50%{height: 48px;}
+    50%{height: 48px;}
 }
 
 @media screen and (max-width: 800px) {
