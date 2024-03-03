@@ -12,9 +12,9 @@ export const Home = () => {
       {/* <h2>Home</h2> */}
       <div className="top-gradient"></div>
       <section>
-        <h1 style={{ marginTop: 0 }}>I love spending all day<br />
+        <h1 className="anim-title" style={{ marginTop: 0 }}>I love spending all day<br />
           documenting my design decisions.<br />
-          <b>Said no one. Ever.</b></h1>
+          <b className="anim-bold">Said no one. Ever.</b></h1>
         <h2>
           <b>A new way to generate and discover documentation in Figma </b><br />
           Meet Tidy — the intuitive documentation builder you’ve been looking for.

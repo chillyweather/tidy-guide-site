@@ -54,7 +54,8 @@ body:has(.home) .header .logo-div {
     color: #141414;
     text-align: center;
 }
-.home section:first-of-type{
+
+.home section:first-of-type {
     margin-bottom: 5vh;
 }
 
@@ -256,6 +257,45 @@ body:has(.home) .header button:focus-visible {
     margin-bottom: 64px;
 }
 
+.home .anim-title {
+    animation: titleAnim 2000ms linear forwards;
+}
+
+@keyframes titleAnim {
+    0% {
+        line-height: 200%;
+    }
+
+    50% {
+        line-height: 150%;
+    }
+
+    100% {
+        line-height: 150%;
+    }
+}
+
+.home .anim-bold {
+    visibility: hidden;
+    opacity: 0;
+    animation: boldAnim 2000ms linear forwards;
+}
+
+@keyframes boldAnim {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    50% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .home .top-gradient {
         height: 470px;
@@ -320,11 +360,12 @@ body:has(.home) .header button:focus-visible {
         display: none;
     }
 
-    .home .inner-footer .size-54{
+    .home .inner-footer .size-54 {
         padding: 0 24px;
         width: calc(100% - 48px);
     }
-    .home .inner-colored h2{
+
+    .home .inner-colored h2 {
         text-wrap: pretty;
     }
 
@@ -340,7 +381,8 @@ body:has(.home) .header button:focus-visible {
     body:has(.home) .header button {
         display: none;
     }
-    .home .top-gradient{
+
+    .home .top-gradient {
         z-index: 0;
     }
 }
