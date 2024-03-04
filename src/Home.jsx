@@ -9,7 +9,6 @@ export const Home = () => {
   return (
     <div className="home">
 
-      {/* <h2>Home</h2> */}
       <div className="top-gradient"></div>
       <section>
         <h1 className="anim-title" style={{ marginTop: 0 }}>I love spending all day<br />
