@@ -211,13 +211,13 @@ body:has(.home) .header .logo-div {
 
 .home video {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     border-radius: 8px;
-    margin-top: 24px;
 }
 
 h2 {
     font-weight: 400;
+    margin-bottom: 0;
 }
 
 .home h2 b {
@@ -293,13 +293,12 @@ body:has(.home) .header button:focus-visible {
     max-width: 800px;
 }
 
-.home .big-image {
-    margin-top: 32px;
-}
-
 .home .product-button {
-    margin-top: 32px;
+    /* margin-top: 32px; */
     margin-bottom: 64px;
+}
+.home .first-button{
+    margin-top: 24px;
 }
 
 .home .anim-title {
@@ -325,26 +324,145 @@ body:has(.home) .header button:focus-visible {
     }
 }
 
-.home .anim-bold {
+.home .anim-bold::after {
+    content: '|';
+    font-weight: 400;
     visibility: hidden;
-    opacity: 0;
-    animation: boldAnim 2000ms linear forwards;
+    animation: blinkAnim 500ms linear infinite, showAnim 4000ms linear forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes showAnim {
+    0% {
+        visibility: hidden;
+    }
+
+    49% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: visible;
+    }
+
+    99% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes blinkAnim {
+    0% {
+        opacity: 0;
+    }
+
+    49% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.home .anim-bold::before {
+    animation: boldAnim 4000ms linear forwards;
+    animation-delay: 1000ms;
+    visibility: hidden;
+    content: 'S';
 }
 
 @keyframes boldAnim {
     0% {
         visibility: hidden;
-        opacity: 0;
+        content: 'S';
     }
 
-    50% {
+    62% {
         visibility: hidden;
-        opacity: 0;
+        content: 'S';
+    }
+
+    63% {
+        visibility: visible;
+        content: 'S';
+    }
+
+    65% {
+        visibility: visible;
+        content: 'S';
+    }
+
+    67% {
+        visibility: visible;
+        content: 'Sa';
+    }
+
+    69% {
+        visibility: visible;
+        content: 'Sai';
+    }
+
+    72% {
+        visibility: visible;
+        content: 'Said';
+    }
+
+    75% {
+        visibility: visible;
+        content: 'Said n';
+    }
+
+    79% {
+        visibility: visible;
+        content: 'Said no';
+    }
+
+    81% {
+        visibility: visible;
+        content: 'Said no o';
+    }
+
+    84% {
+        visibility: visible;
+        content: 'Said no on';
+    }
+
+    86% {
+        visibility: visible;
+        content: 'Said no one';
+    }
+
+    89% {
+        visibility: visible;
+        content: 'Said no one. ';
+    }
+
+    91% {
+        visibility: visible;
+        content: 'Said no one. E';
+    }
+
+    94% {
+        visibility: visible;
+        content: 'Said no one. Ev';
+    }
+
+    96% {
+        visibility: visible;
+        content: 'Said no one. Eve';
     }
 
     100% {
         visibility: visible;
-        opacity: 1;
+        content: 'Said no one. Ever';
     }
 }
 
@@ -449,6 +567,7 @@ body:has(.home) .header button:focus-visible {
     visibility: hidden;
     animation-delay: 1000ms;
 }
+
 .home .anim-color-token::before {
     content: '';
     position: absolute;
@@ -459,6 +578,7 @@ body:has(.home) .header button:focus-visible {
     bottom: -40px;
     left: calc(50% - 3px);
 }
+
 .home .anim-color-token::after {
     content: '';
     position: absolute;

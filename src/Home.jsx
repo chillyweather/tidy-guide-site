@@ -18,12 +18,12 @@ export const Home = () => {
             <div className="anim-spacing-token">spacing.xlarge</div>
             <div class="anim-border"></div>
           </div>
-          <b className="anim-bold">Said no one. Ever.</b></h1>
+          <b className="anim-bold"></b></h1>
         <h2>
           <b>A new way to generate and discover documentation in Figma </b><br />
           Meet Tidy — the intuitive documentation builder you’ve been looking for.
         </h2>
-        <button>Get early access to Beta</button>
+        <button className="first-button">Join the early bird</button>
       </section>
 
       <section>
@@ -69,7 +69,7 @@ export const Home = () => {
               <h1 className="size-54">Join the early birds</h1>
               <p>Join the Tidy beta waitlist now for early access! Be one of the first to try out our latest features We'll be gradually inviting new teams to the beta over the coming weeks.</p>
             </div>
-            <button>Join Tidy Guide beta</button>
+            <button>Join the early bird</button>
           </footer>
         </div>
       </section>
