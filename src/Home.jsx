@@ -76,8 +76,8 @@ export const Home = () => {
           <div className="flex-wrapper">
             <p>© 2024 Kido. All Rights Reserved</p>
             <div className="links-wrapper">
-              <a href="">Terms and Conditions</a>
-              <a href="">Privacy Policy</a>
+              <a tooltip="Coming soon">Terms and Conditions</a>
+              <a tooltip="Coming soon">Privacy Policy</a>
             </div>
           </div>
         </div>

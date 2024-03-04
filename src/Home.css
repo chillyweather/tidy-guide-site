@@ -141,6 +141,29 @@ body:has(.home) .header .logo-div {
     gap: 32px;
 }
 
+.home .links-wrapper a::after{
+    position: absolute;
+    content: attr(tooltip);
+    background-color: #2A2A2A;
+    color: #ffffff;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    width: fit-content;
+    white-space: pre;
+    padding: 4px 16px;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 12px);
+    transition: all 200ms ease-in-out 0s;
+    pointer-events: none;
+}
+.home .links-wrapper a:hover::after{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
 .home .flex-wrapper a::before {
     content: '';
     position: absolute;
