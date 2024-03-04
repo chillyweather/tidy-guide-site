@@ -74,10 +74,10 @@ export const Home = () => {
       <section className="colored">
         <div className="inner-colored">
           <div className="flex-wrapper">
-            <p>© 2024 Kido. All Rights Reserved</p>
+            <p>© <a href="https://wearekido.com" target="_blank">2024 Kido. All Rights Reserved</a></p>
             <div className="links-wrapper">
-              <a tooltip="Coming soon">Terms and Conditions</a>
-              <a tooltip="Coming soon">Privacy Policy</a>
+              <a tip="Coming soon">Terms and Conditions</a>
+              <a tip="Coming soon">Privacy Policy</a>
             </div>
           </div>
         </div>
