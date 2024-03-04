@@ -11,9 +11,13 @@ export const Home = () => {
 
       <div className="top-gradient"></div>
       <section>
+      <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>I love spending all day<br />
           documenting my design decisions.<br />
-          <div className="anim-seperator"><div class="anim-border"></div></div>
+          <div className="anim-seperator">
+            <div className="anim-spacing-token">spacing.xlarge</div>
+            <div class="anim-border"></div>
+          </div>
           <b className="anim-bold">Said no one. Ever.</b></h1>
         <h2>
           <b>A new way to generate and discover documentation in Figma </b><br />
@@ -43,7 +47,7 @@ export const Home = () => {
         <h1 className="size-54">Meet Tidy Viewer:</h1>
         <h2>Integrated documentation when needed. <br />
           Wave goodbye to content switching  👋</h2>
-          <video src={ViewerProduct} className="big-image" muted loop autoPlay />
+        <video src={ViewerProduct} className="big-image" muted loop autoPlay />
         <br />
         <button className="product-button">Get started with Viewer</button>
       </section>
