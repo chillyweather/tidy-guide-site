@@ -1,8 +1,8 @@
 import "./Home.css";
 import BuilderIcon from "./assets/builder-icon.svg";
-import BuilderProduct from "./assets/builder-product.png";
+import BuilderProduct from "./assets/video-builder.mp4";
 import ViewerIcon from "./assets/viewer-icon.svg";
-import ViewerProduct from "./assets/viewer-product.png";
+import ViewerProduct from "./assets/video-viewer.mp4";
 import Earlybirds from "./assets/early-birds.svg";
 
 export const Home = () => {
@@ -33,7 +33,7 @@ export const Home = () => {
         <img src={BuilderIcon} />
         <h1 className="size-54">Meet Tidy Builder:</h1>
         <h2>Don’t start from scratch, stand on the shoulders of giants 💪</h2>
-        <img src={BuilderProduct} className="big-image" />
+        <video src={BuilderProduct} className="big-image" muted loop autoPlay />
         <br />
         <button className="product-button">Get started with Builder</button>
       </section>
@@ -43,7 +43,7 @@ export const Home = () => {
         <h1 className="size-54">Meet Tidy Viewer:</h1>
         <h2>Integrated documentation when needed. <br />
           Wave goodbye to content switching  👋</h2>
-        <img src={ViewerProduct} className="big-image" />
+          <video src={ViewerProduct} className="big-image" muted loop autoPlay />
         <br />
         <button className="product-button">Get started with Viewer</button>
       </section>
@@ -53,7 +53,7 @@ export const Home = () => {
           <h1 className="size-72">How does Tidy work?</h1>
           <h2>Join teams worldwide who rely on Tidy to streamline their design system <br />
             documentation process and foster better collaboration!</h2>
-          <video></video>
+          <video className="emptyVideo"></video>
         </div>
       </section>
 

@@ -200,11 +200,17 @@ body:has(.home) .header .logo-div {
     margin-top: 1vw;
 }
 
-.home video {
+.home .emptyVideo {
     width: 100%;
     max-width: 800px;
     aspect-ratio: 16 / 9;
     background-color: lightgray;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+.home video {
+    width: 100%;
+    max-width: 800px;
     border-radius: 8px;
     margin-top: 24px;
 }
