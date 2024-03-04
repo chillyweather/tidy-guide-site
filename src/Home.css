@@ -27,7 +27,10 @@
 
 body:has(.home) .header {
     background-color: transparent;
-    transition: backgroundColor 300ms linear 0s;
+    transition: background-color 100ms linear 0s;
+}
+body:has(.home) .header.top{
+    background-color: #ffffff;
 }
 
 body:has(.home) .header .logo-div {

@@ -84,7 +84,7 @@ const NavBar = ({ token, setToken }) => {
 
 export const Header = ({ token, setToken }) => {
   return (
-    <div className="header">
+    <div className="header" id="top-header">
       <NavBar token={token} setToken={setToken} />
     </div>
   );

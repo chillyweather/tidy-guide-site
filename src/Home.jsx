@@ -6,9 +6,20 @@ import ViewerProduct from "./assets/video-viewer.mp4";
 import Earlybirds from "./assets/early-birds.svg";
 
 export const Home = () => {
+  function testScroll() {
+    // console.log('scroll');
+    if(window.scrollY > 0){
+      document.getElementById("top-header").classList.add("top");
+    }else{
+      document.getElementById("top-header").classList.remove("top");
+    }
+    setTimeout(function () {
+      testScroll();
+    }, 1000);
+  }
   return (
     <div className="home">
-
+      {testScroll()}
       <div className="top-gradient"></div>
       <section>
         <div className="anim-color-token">color.text.primary</div>
