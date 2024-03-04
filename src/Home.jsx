@@ -11,7 +11,7 @@ export const Home = () => {
 
       <div className="top-gradient"></div>
       <section>
-      <div className="anim-color-token">color.text.primary</div>
+        <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>I love spending all day<br />
           documenting my design decisions.<br />
           <div className="anim-seperator">
@@ -23,7 +23,7 @@ export const Home = () => {
           <b>A new way to generate and discover documentation in Figma </b><br />
           Meet Tidy — the intuitive documentation builder you’ve been looking for.
         </h2>
-        <button className="first-button">Join the early bird</button>
+        <button className="first-button">Join Tidy Guide beta</button>
       </section>
 
       <section>
@@ -67,9 +67,10 @@ export const Home = () => {
             <img src={Earlybirds} />
             <div className="inner-footer">
               <h1 className="size-54">Join the early birds</h1>
-              <p>Join the Tidy beta waitlist now for early access! Be one of the first to try out our latest features We'll be gradually inviting new teams to the beta over the coming weeks.</p>
+              <p>Join Tidy’s early access list now to revolutionize your design process.<br />
+                Go to Figma Community now and get started!</p>
             </div>
-            <button>Join the early bird</button>
+            <button>Join Tidy Guide beta</button>
           </footer>
         </div>
       </section>
