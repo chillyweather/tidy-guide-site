@@ -7,12 +7,13 @@ import Earlybirds from "./assets/early-birds.svg";
 
 export const Home = () => {
   function testScroll() {
-    if(window.scrollY > 0){
-      document.getElementById("top-header").classList.add("top");
-    }else{
-      document.getElementById("top-header").classList.remove("top");
-    }
+    
     setTimeout(function () {
+      if(window.scrollY > 0){
+        document.getElementById("top-header").classList.add("top");
+      }else{
+        document.getElementById("top-header").classList.remove("top");
+      }
       testScroll();
     }, 1000);
   }
