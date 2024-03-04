@@ -34,7 +34,7 @@ export const Home = () => {
       </section>
 
       <section>
-        <img src={BuilderIcon} />
+        <img src={BuilderIcon} className="product-icon" />
         <h1 className="size-54">Meet Tidy Builder:</h1>
         <h2>Don’t start from scratch, stand on the shoulders of giants 💪</h2>
         <video src={BuilderProduct} className="big-image" muted loop autoPlay />
@@ -43,7 +43,7 @@ export const Home = () => {
       </section>
 
       <section>
-        <img src={ViewerIcon} />
+        <img src={ViewerIcon} className="product-icon" />
         <h1 className="size-54">Meet Tidy Viewer:</h1>
         <h2>Integrated documentation when needed. <br />
           Wave goodbye to content switching  👋</h2>

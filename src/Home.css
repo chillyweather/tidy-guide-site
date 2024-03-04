@@ -292,6 +292,11 @@ body:has(.home) .header button:focus-visible {
 .home section img {
     max-width: 800px;
 }
+.home .product-icon{
+    height: 80px;
+    width: 80px;
+    border-radius: 12px;
+}
 
 .home .product-button {
     /* margin-top: 32px; */
