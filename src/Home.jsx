@@ -7,7 +7,6 @@ import Earlybirds from "./assets/early-birds.svg";
 
 export const Home = () => {
   function testScroll() {
-    // console.log('scroll');
     if(window.scrollY > 0){
       document.getElementById("top-header").classList.add("top");
     }else{
@@ -15,7 +14,7 @@ export const Home = () => {
     }
     setTimeout(function () {
       testScroll();
-    }, 1000);
+    }, 100);
   }
   return (
     <div className="home">
