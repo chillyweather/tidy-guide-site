@@ -618,10 +618,10 @@ body:has(.home) .header button:focus-visible {
 }
 
 .home .anim-seperator::after {
-    content: '34';
+    content: '34px';
     position: absolute;
     top: -50%;
-    left: -48px;
+    left: -68px;
     font-size: 16px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     animation: seperatorNumAnim 2000ms linear forwards;
@@ -629,111 +629,111 @@ body:has(.home) .header button:focus-visible {
 
 @keyframes seperatorNumAnim {
     0% {
-        content: '64';
+        content: '64px';
     }
 
     2% {
-        content: '63';
+        content: '63px';
     }
 
     4% {
-        content: '62';
+        content: '62px';
     }
 
     6% {
-        content: '61';
+        content: '61px';
     }
 
     8% {
-        content: '59';
+        content: '59px';
     }
 
     10% {
-        content: '58';
+        content: '58px';
     }
 
     12% {
-        content: '57';
+        content: '57px';
     }
 
     14% {
-        content: '55';
+        content: '55px';
     }
 
     16% {
-        content: '54';
+        content: '54px';
     }
 
     18% {
-        content: '53';
+        content: '53px';
     }
 
     20% {
-        content: '52';
+        content: '52px';
     }
 
     22% {
-        content: '50';
+        content: '50px';
     }
 
     24% {
-        content: '49';
+        content: '49px';
     }
 
     26% {
-        content: '48';
+        content: '48px';
     }
 
     28% {
-        content: '47';
+        content: '47px';
     }
 
     30% {
-        content: '45';
+        content: '45px';
     }
 
     32% {
-        content: '44';
+        content: '44px';
     }
 
     34% {
-        content: '43';
+        content: '43px';
     }
 
     36% {
-        content: '42';
+        content: '42px';
     }
 
     38% {
-        content: '40';
+        content: '40px';
     }
 
     40% {
-        content: '39';
+        content: '39px';
     }
 
     42% {
-        content: '38';
+        content: '38px';
     }
 
     44% {
-        content: '37';
+        content: '37px';
     }
 
     46% {
-        content: '36';
+        content: '36px';
     }
 
     48% {
-        content: '35';
+        content: '35px';
     }
 
     50% {
-        content: '34';
+        content: '34px';
     }
 
     100% {
-        content: '34';
+        content: '34px';
     }
 
 }
