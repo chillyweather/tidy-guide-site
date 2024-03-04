@@ -411,6 +411,27 @@ body:has(.home) .header button:focus-visible {
     animation-delay: 500ms;
 }
 
+.home .anim-spacing-token::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #7A7A74;
+    border-radius: 999px;
+    top: calc(50% - 3px);
+    left: -24px;
+}
+
+.home .anim-spacing-token::after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px dashed #9A9A9A;
+    width: 16px;
+    height: 100%;
+    top: -50%;
+    left: -16px;
+}
+
 .home .anim-color-token {
     position: absolute;
     top: 8em;
@@ -446,27 +467,6 @@ body:has(.home) .header button:focus-visible {
     height: 32px;
     bottom: -32px;
     left: 50%;
-}
-
-.home .anim-spacing-token::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: #7A7A74;
-    border-radius: 999px;
-    top: calc(50% - 3px);
-    left: -24px;
-}
-
-.home .anim-spacing-token::after {
-    content: '';
-    position: absolute;
-    border-bottom: 2px dashed #9A9A9A;
-    width: 16px;
-    height: 100%;
-    top: -50%;
-    left: -16px;
 }
 
 @keyframes colorTokenAnim {
