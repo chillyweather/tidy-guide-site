@@ -375,11 +375,19 @@ body:has(.home) .header button:focus-visible {
         height: 0.75em;
     }
 }
+.home .anim-border{
+    position: absolute;
+    border-bottom: 2px dashed #FF85F5;
+    width: 24px;
+    height: 100%;
+    top: -50%;
+    left: -24px;
+}
 .home .anim-seperator::after {
     content: '34';
     position: absolute;
     top: -50%;
-    left: -32px;
+    left: -48px;
     font-size: 16px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     animation: seperatorNumAnim 2000ms linear forwards;
