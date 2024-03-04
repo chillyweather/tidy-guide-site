@@ -14,7 +14,7 @@ export const Home = () => {
     }
     setTimeout(function () {
       testScroll();
-    }, 100);
+    }, 1000);
   }
   return (
     <div className="home">
