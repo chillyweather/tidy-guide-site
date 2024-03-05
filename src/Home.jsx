@@ -27,11 +27,11 @@ export const Home = () => {
             <div class="anim-border"></div>
           </div>
           <b className="anim-bold"></b></h1>
-        <h2>
+        <h2 className="anim-appear">
           <b>A new way to generate and discover documentation in Figma </b><br />
           Meet Tidy — the intuitive documentation builder you’ve been looking for.
         </h2>
-        <button className="first-button">Join Tidy Guide beta</button>
+        <button className="first-button anim-appear">Join Tidy Guide beta</button>
       </section>
 
       <section>

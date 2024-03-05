@@ -29,7 +29,8 @@ body:has(.home) .header {
     background-color: transparent;
     transition: background-color 100ms linear 0s;
 }
-body:has(.home) .header.top{
+
+body:has(.home) .header.top {
     background-color: #ffffff;
 }
 
@@ -313,7 +314,31 @@ body:has(.home) .header button:focus-visible {
 
 .home .anim-title {
     position: relative;
-    animation: titleAnim 2000ms linear forwards;
+    animation: titleAnim 2000ms cubic-bezier(.44, .14, .83, .46) forwards;
+}
+
+.home .anim-appear {
+    visibility: hidden;
+    animation: appearAnim 2000ms linear forwards;
+    animation-delay: 3500ms;
+}
+.home .first-button.anim-appear{
+    animation-delay: 4000ms;
+}
+
+@keyframes appearAnim {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    75% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .home .anim-title::first-line {
@@ -322,7 +347,7 @@ body:has(.home) .header button:focus-visible {
 
 @keyframes titleAnim {
     0% {
-        line-height: 200%;
+        line-height: 300%;
     }
 
     50% {
@@ -339,7 +364,7 @@ body:has(.home) .header button:focus-visible {
     font-weight: 400;
     visibility: hidden;
     animation: blinkAnim 500ms linear infinite, showAnim 4000ms linear forwards;
-    animation-delay: 2000ms;
+    animation-delay: 1000ms;
 }
 
 @keyframes showAnim {
@@ -384,7 +409,7 @@ body:has(.home) .header button:focus-visible {
 
 .home .anim-bold::before {
     animation: boldAnim 4000ms linear forwards;
-    animation-delay: 2000ms;
+    animation-delay: 1000ms;
     visibility: hidden;
     content: 'S';
 }
@@ -486,7 +511,7 @@ body:has(.home) .header button:focus-visible {
     opacity: 0.8;
     margin-left: -9ch;
     z-index: -1;
-    animation: seperatorAnim 2000ms linear forwards;
+    animation: seperatorAnim 2000ms ease-out forwards;
 }
 
 .home .anim-seperator::before {
@@ -513,20 +538,22 @@ body:has(.home) .header button:focus-visible {
         width: 0;
         opacity: 0;
     }
+
     51% {
         height: 0.75em;
         visibility: visible;
         width: 0;
         opacity: 0;
     }
-    60% {
+
+    56% {
         height: 0.75em;
         visibility: visible;
         width: 10%;
         opacity: 1;
     }
 
-    100% {
+    75% {
         height: 0.75em;
         visibility: visible;
         width: 50%;
@@ -546,7 +573,7 @@ body:has(.home) .header button:focus-visible {
 .home .anim-spacing-token {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -12px;
     transform: translate(calc(100% + 24px), -50%);
     padding: 8px 12px;
     line-height: normal;
@@ -558,7 +585,7 @@ body:has(.home) .header button:focus-visible {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     animation: colorTokenAnim 2000ms linear forwards;
     visibility: hidden;
-    animation-delay: 1000ms;
+    animation-delay: 500ms;
 }
 
 .home .anim-spacing-token::before {
@@ -597,7 +624,7 @@ body:has(.home) .header button:focus-visible {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     animation: colorTokenAnim 2000ms linear forwards;
     visibility: hidden;
-    animation-delay: 1500ms;
+    animation-delay: 900ms;
 }
 
 .home .anim-color-token::before {
