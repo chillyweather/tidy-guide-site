@@ -31,7 +31,7 @@ export const Home = () => {
           <b>A new way to generate and discover documentation in Figma </b><br />
           Meet Tidy — the intuitive documentation builder you’ve been looking for.
         </h2>
-        <button className="first-button anim-appear">Join Tidy Guide beta</button>
+        <a href="#bottom"><button className="first-button anim-appear">Join Tidy Guide beta</button></a>
       </section>
 
       <section>
@@ -68,8 +68,7 @@ export const Home = () => {
           <video className="emptyVideo"></video>
         </div>
       </section>
-
-      <section className="colored">
+      <section className="colored" id="bottom">
         <div className="inner-colored">
           <footer>
             <img src={Earlybirds} />

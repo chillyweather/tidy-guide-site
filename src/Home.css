@@ -192,7 +192,7 @@ body:has(.home) .header .logo-div {
     text-align: left;
 }
 
-.home .product-input{
+.home .product-input {
     display: flex;
     align-items: center;
     justify-content: stretch;
@@ -201,14 +201,18 @@ body:has(.home) .header .logo-div {
     padding: 8px;
     border: 1px solid #B8BBC6;
     min-width: 50%;
-    outline: 0 solid #6b72ff7b;
-    transition: outline 100ms linear 0s;
 }
-.home .product-input form{
+
+.home .product-input:focus-within {
+    border-color: #6B73FF;
+}
+
+.home .product-input form {
     width: 100%;
     display: flex;
 }
-.home .product-input input{
+
+.home .product-input input {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 1.125em;
     background-color: transparent;
@@ -219,8 +223,9 @@ body:has(.home) .header .logo-div {
     color: #ffffff;
     outline: none;
 }
-.home .product-input:focus-within{
-    outline-width: 4px;
+
+.home .product-input input::placeholder {
+    color: #9D9D9D;
 }
 
 .home .size-72 {
@@ -355,7 +360,8 @@ body:has(.home) .header button:focus-visible {
     animation: appearAnim 2000ms linear forwards;
     animation-delay: 3500ms;
 }
-.home .first-button.anim-appear{
+
+.home .first-button.anim-appear {
     animation-delay: 4000ms;
 }
 
@@ -364,10 +370,12 @@ body:has(.home) .header button:focus-visible {
         visibility: hidden;
         opacity: 0;
     }
+
     75% {
         visibility: hidden;
         opacity: 0;
     }
+
     100% {
         visibility: visible;
         opacity: 1;
@@ -913,17 +921,25 @@ body:has(.home) .header button:focus-visible {
     .home .top-gradient {
         z-index: 0;
     }
+
     body:has(.home) .header.top {
         background-color: transparent;
     }
-    .home .anim-seperator, .home .anim-spacing-token, .home .anim-color-token{
+
+    .home .anim-seperator,
+    .home .anim-spacing-token,
+    .home .anim-color-token {
         display: none;
     }
-    .home .anim-appear, .home .anim-title{
+
+    .home .anim-appear,
+    .home .anim-title {
         animation: none;
         visibility: visible;
     }
-    .home .anim-bold::after, .home .anim-bold::before{
+
+    .home .anim-bold::after,
+    .home .anim-bold::before {
         animation-delay: -1500ms;
     }
 }
