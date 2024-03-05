@@ -344,6 +344,7 @@ body:has(.home) .header button:focus-visible {
 .home .product-button {
     /* margin-top: 32px; */
     margin-bottom: 64px;
+    display: none;
 }
 
 .home .first-button {
