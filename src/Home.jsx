@@ -6,17 +6,17 @@ import ViewerProduct from "./assets/video-viewer.mp4";
 import Earlybirds from "./assets/early-birds.svg";
 
 export const Home = () => {
-  function scrollTest(){
-    if(window.scrollY > 0){
+  function scrollTest() {
+    if (window.scrollY > 0) {
       document.getElementById("top-header").classList.add("top");
-    }else{
+    } else {
       document.getElementById("top-header").classList.remove("top");
     }
   }
 
   return (
     <div className="home">
-      {addEventListener("scroll", (event) => {scrollTest()})}
+      {addEventListener("scroll", (event) => { scrollTest() })}
       <div className="top-gradient"></div>
       <section>
         <div className="anim-color-token">color.text.primary</div>
@@ -79,10 +79,10 @@ export const Home = () => {
                 Go to Figma Community now and get started!</p>
             </div>
             <div className="product-input">
-            <form>
-            <input type="email" placeholder="Your email" />
-            <button type="submit">Join Tidy Guide beta</button>
-            </form>
+              <form id="email-form">
+                <input type="email" placeholder="Your email" id="user-email" />
+                <button type="submit">Join Beta</button>
+              </form>
             </div>
           </footer>
         </div>
@@ -99,6 +99,24 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* {document
+        .getElementById("email-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          var userEmail = document.getElementById("user-email").value;
+          var url =
+            "https://script.google.com/macros/s/AKfycbz6pKd-_6gTUSWDwOhOiea8bFr-5WI3A4NMLgH2gKzh4JJPKjiN0kCHNC-rDT3iqIEE/exec";
+          document.getElementById("user-email").value = "";
+          fetch(url, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: "email=" + encodeURIComponent(userEmail),
+          });
+        })} */}
     </div>
   );
 };
