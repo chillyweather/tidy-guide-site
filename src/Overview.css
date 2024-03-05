@@ -69,7 +69,12 @@
 .flex-image {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 6px;
+}
+.flex-image img{
+  max-width: 70%;
 }
 
 .flex-image p{
