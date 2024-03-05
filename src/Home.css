@@ -361,7 +361,7 @@ body:has(.home) .header button:focus-visible {
     animation-delay: 3500ms;
 }
 
-.home .first-button.anim-appear {
+.home .anim-appear.join-link {
     animation-delay: 4000ms;
 }
 

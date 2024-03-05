@@ -48,7 +48,7 @@ export const Home = () => {
           <br />
           <div className="anim-seperator">
             <div className="anim-spacing-token">spacing.xlarge</div>
-            <div class="anim-border"></div>
+            <div className="anim-border"></div>
           </div>
           <b className="anim-bold"></b>
         </h1>
@@ -58,9 +58,11 @@ export const Home = () => {
           Meet Tidy — the intuitive documentation builder you’ve been looking
           for.
         </h2>
-        <button className="first-button anim-appear">
-          Join Tidy Guide beta
-        </button>
+        <a href="#join" className="anim-appear join-link">
+          <button className="first-button">
+            Join Tidy Guide beta
+          </button>
+        </a>
       </section>
 
       <section>
@@ -123,7 +125,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="colored">
+      <section className="colored" id="join">
         <div className="inner-colored">
           <footer>
             <img src={Earlybirds} />
@@ -162,24 +164,6 @@ export const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* {document
-        .getElementById("email-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          var userEmail = document.getElementById("user-email").value;
-          var url =
-            "https://script.google.com/macros/s/AKfycbz6pKd-_6gTUSWDwOhOiea8bFr-5WI3A4NMLgH2gKzh4JJPKjiN0kCHNC-rDT3iqIEE/exec";
-          document.getElementById("user-email").value = "";
-          fetch(url, {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: "email=" + encodeURIComponent(userEmail),
-          });
-        })} */}
     </div>
   );
 };
