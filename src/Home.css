@@ -503,7 +503,7 @@ body:has(.home) .header button:focus-visible {
 
 .home .anim-seperator {
     position: absolute;
-    width: 50%;
+    width: 17.5ch;
     top: min(5vw, 5em);
     left: 50%;
     height: 0.75em;
@@ -549,14 +549,14 @@ body:has(.home) .header button:focus-visible {
     56% {
         height: 0.75em;
         visibility: visible;
-        width: 10%;
+        width: 2ch;
         opacity: 1;
     }
 
     75% {
         height: 0.75em;
         visibility: visible;
-        width: 50%;
+        width: 17.5ch;
         opacity: 1;
     }
 }
