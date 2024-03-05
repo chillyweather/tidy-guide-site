@@ -881,4 +881,17 @@ body:has(.home) .header button:focus-visible {
     .home .top-gradient {
         z-index: 0;
     }
+    body:has(.home) .header.top {
+        background-color: transparent;
+    }
+    .home .anim-seperator, .home .anim-spacing-token, .home .anim-color-token{
+        display: none;
+    }
+    .home .anim-appear, .home .anim-title{
+        animation: none;
+        visibility: visible;
+    }
+    .home .anim-bold::after, .home .anim-bold::before{
+        animation-delay: -1500ms;
+    }
 }
