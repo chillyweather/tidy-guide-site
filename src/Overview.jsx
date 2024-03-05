@@ -6,6 +6,7 @@ import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 import { ReactSVG } from "react-svg";
+import noImage from "./assets/no-image.svg";
 import "./Overview.css";
 
 export const Overview = () => {
@@ -74,7 +75,10 @@ export const Overview = () => {
                         className="delete-me"
                         style={{ fontSize: "80px", margin: 0 }}
                       >
-                        🪣
+                        <div className="flex-image">
+                          <img src={noImage} alt="No image found" />
+                          <p>No image found</p>
+                        </div>
                       </p>
                     )}
                     {doc.inProgress && <div className={"wip"}>WIP</div>}

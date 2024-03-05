@@ -66,12 +66,24 @@
   text-wrap: nowrap;
 }
 
+.flex-image {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flex-image p{
+  margin: 0;
+  color: #7F7C7C;
+}
+
 .element .svg-wrapper {
   width: 100%;
   max-height: 148px;
   max-width: 80%;
 }
-.element .svg-wrapper svg{
+
+.element .svg-wrapper svg {
   max-height: 166px;
   max-width: 80%;
 }
