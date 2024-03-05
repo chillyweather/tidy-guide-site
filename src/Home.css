@@ -192,6 +192,23 @@ body:has(.home) .header .logo-div {
     text-align: left;
 }
 
+.home .product-input{
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 8px;
+    border: 1px solid #B8BBC6;
+}
+.home .product-input input{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    background-color: transparent;
+    flex-grow: 1;
+    border: none;
+}
+
 .home .size-72 {
     font-size: min(4vw, 4.5em);
     line-height: 120%;

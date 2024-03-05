@@ -78,7 +78,12 @@ export const Home = () => {
               <p>Join Tidy’s early access list now to revolutionize your design process.<br />
                 Go to Figma Community now and get started!</p>
             </div>
-            <button>Join Tidy Guide beta</button>
+            <div className="product-input">
+            <form>
+            <input type="email" placeholder="Your email" />
+            <button type="submit">Join Tidy Guide beta</button>
+            </form>
+            </div>
           </footer>
         </div>
       </section>
