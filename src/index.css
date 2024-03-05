@@ -224,6 +224,7 @@ body:has(.documentationIndex) .browseBTN {
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
+  width: 100%;
 }
 
 .documentationIndex {
