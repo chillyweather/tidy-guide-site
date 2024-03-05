@@ -6,7 +6,7 @@ import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 import { ReactSVG } from "react-svg";
-import noImage from "./assets/no-image.svg";
+import noImage from "./assets/no-image.png";
 import "./Overview.css";
 
 export const Overview = () => {
