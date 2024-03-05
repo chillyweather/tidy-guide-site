@@ -505,7 +505,7 @@ body:has(.home) .header button:focus-visible {
 .home .anim-seperator {
     position: absolute;
     width: 17.5ch;
-    top: min(5vw, 5em);
+    top: 1.1em;
     left: 50%;
     height: 0.75em;
     background-color: #FFD8FB;
