@@ -19,6 +19,8 @@
   --tidy-f5: #F5F5F5;
   --tidy-ec: #ECEBF5;
   --text-size: 14px;
+
+  color-scheme: light !important;
 }
 
 :root {
