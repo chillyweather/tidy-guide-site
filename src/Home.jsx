@@ -45,7 +45,7 @@ export const Home = () => {
         <img src={BuilderIcon} className="product-icon" />
         <h1 className="size-54">Meet Tidy Builder:</h1>
         <h2>Don’t start from scratch, stand on the shoulders of giants 💪</h2>
-        <video src={BuilderProduct} className="big-image" muted loop autoPlay />
+        <video src={BuilderProduct} className="big-image" muted loop autoPlay playsInline />
         <br />
         <button className="product-button">Get started with Builder</button>
       </section>
@@ -55,7 +55,7 @@ export const Home = () => {
         <h1 className="size-54">Meet Tidy Viewer:</h1>
         <h2>Integrated documentation when needed. <br />
           Wave goodbye to content switching  👋</h2>
-        <video src={ViewerProduct} className="big-image" muted loop autoPlay />
+        <video src={ViewerProduct} className="big-image" muted loop autoPlay playsInline />
         <br />
         <button className="product-button">Get started with Viewer</button>
       </section>
