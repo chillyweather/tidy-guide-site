@@ -597,7 +597,7 @@ body:has(.home) .header button:focus-visible {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     animation: colorTokenAnim 2000ms linear forwards;
     visibility: hidden;
-    animation-delay: 2000ms;
+    animation-delay: 1500ms;
 }
 
 .home .anim-color-token::before {
