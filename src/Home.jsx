@@ -121,7 +121,7 @@ export const Home = () => {
             system <br />
             documentation process and foster better collaboration!
           </h2>
-          <video className="emptyVideo"></video>
+          <iframe className="emptyVideo" src="https://www.youtube.com/embed/TyaGpGDFczw?si=21OIR3JyQUCvKcL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </section>
 
