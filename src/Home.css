@@ -365,7 +365,7 @@ body:has(.home) .header button:focus-visible {
     font-weight: 400;
     visibility: hidden;
     animation: blinkAnim 500ms linear infinite, showAnim 4000ms linear forwards;
-    animation-delay: 1000ms;
+    animation-delay: 500ms;
 }
 
 @keyframes showAnim {
@@ -410,7 +410,7 @@ body:has(.home) .header button:focus-visible {
 
 .home .anim-bold::before {
     animation: boldAnim 4000ms linear forwards;
-    animation-delay: 1000ms;
+    animation-delay: 500ms;
     visibility: hidden;
     content: 'S';
 }
