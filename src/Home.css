@@ -60,6 +60,7 @@ body:has(.home) .header .logo-div {
 }
 
 .home section:first-of-type {
+    position: relative;
     margin-bottom: 5vh;
 }
 
@@ -611,9 +612,9 @@ body:has(.home) .header button:focus-visible {
 
 .home .anim-color-token {
     position: absolute;
-    top: 8em;
-    left: 43%;
-    transform: translate(-50%, 0);
+    top: -1em;
+    left: 50%;
+    transform: translate(-134%, 0);
     padding: 8px 12px;
     line-height: normal;
     border: 1px solid #C9CFE4;
