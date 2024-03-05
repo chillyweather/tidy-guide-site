@@ -550,7 +550,7 @@ body:has(.home) .header button:focus-visible {
     56% {
         height: 0.75em;
         visibility: visible;
-        width: 2ch;
+        width: 3ch;
         opacity: 1;
     }
 
