@@ -65,8 +65,8 @@ export const Overview = () => {
                     className="element"
                     onClick={() => navigate(`/guide/${doc._id}`)}
                   >
-                    {console.log("doc.componentPic", doc.componentPic)}
-                    {doc.componentPic ? (
+                    {doc.componentPic &&
+                    doc.componentPic.split(".").pop() === "png" ? (
                       <img src={doc.componentPic} alt={doc.title} />
                     ) : (
                       <p
