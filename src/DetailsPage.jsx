@@ -15,7 +15,7 @@ export const DetailsPage = () => {
   const [copied, setCopied] = useState("");
   const [status, setStatus] = useState(false);
   const [sectionData, setSectionData] = useState([]);
-  const [updateDate, setUpdateDate] = useState("");  
+  const [updateDate, setUpdateDate] = useState("");
   const [componentPic, setComponentPic] = useState("");
 
   const { id } = useParams();
@@ -98,14 +98,13 @@ export const DetailsPage = () => {
                 <IconClock size={18} color="#6C768E" />
                 <p className="last-update">Last update: {updateDate}</p>
               </div>
-
             )}
-            {componentPic && (
+            {/* {componentPic && (
             <ReactSVG
               src={componentPic}
               className="svg-wrapper"
             />
-            )}
+            )} */}
           </div>
         </div>
         {sectionData.map((element, index) => {
