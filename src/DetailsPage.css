@@ -17,6 +17,11 @@
   gap: 6px;
 }
 
-.element-image{
-  margin: 60px 0;
+.element-span {
+  display: inline-block;
+}
+
+.element-image {
+  margin-top: 60px;
+  width: 50%;
 }

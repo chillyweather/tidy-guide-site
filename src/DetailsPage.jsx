@@ -105,7 +105,9 @@ export const DetailsPage = () => {
               className="svg-wrapper"
             />
             )} */}
-            <img src={componentPic} className="element-image" />
+            <span className="element-span">
+              <img src={componentPic} className="element-image" />
+            </span>
           </div>
         </div>
         {sectionData.map((element, index) => {
