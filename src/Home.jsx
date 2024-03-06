@@ -31,6 +31,7 @@ export const Home = () => {
     });
 
     e.target.elements["user-email"].value = "";
+    document.getElementById("thanks").classList.add("anim");
   };
 
   return (
@@ -125,7 +126,7 @@ export const Home = () => {
           <div id="join"></div>
         </div>
       </section>
-      
+
       <section className="colored">
         <div className="inner-colored">
           <footer>
@@ -145,6 +146,8 @@ export const Home = () => {
                 <button type="submit">Join Beta</button>
               </form>
             </div>
+            <p id="thanks">Thanks for joining Tidy Guide Beta! 🚀 <br />
+              We'll review your details and notify you once approved.</p>
           </footer>
         </div>
       </section>
