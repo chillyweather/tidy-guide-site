@@ -65,11 +65,9 @@ export const Overview = () => {
                     className="element"
                     onClick={() => navigate(`/guide/${doc._id}`)}
                   >
+                    {console.log("doc.componentPic", doc.componentPic)}
                     {doc.componentPic ? (
-                      <ReactSVG
-                        src={doc.componentPic}
-                        className="svg-wrapper"
-                      />
+                      <img src={doc.componentPic} alt={doc.title} />
                     ) : (
                       <p
                         className="delete-me"

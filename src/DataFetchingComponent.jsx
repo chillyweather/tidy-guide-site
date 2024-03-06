@@ -5,14 +5,13 @@ import { Routes, Route } from "react-router-dom";
 import { Header } from "./Header";
 import { Login } from "./Login";
 import { Home } from "./Home";
-import { Guides } from "./Guides";
 import { DetailsPage } from "./DetailsPage";
 import { Overview } from "./Overview";
 
 export default function DataFetchingComponent() {
   const savedToken = localStorage.getItem("token");
   const [token, setToken] = useState(null);
-  const [documentation, setDocumentation] = useState([]);
+  const [, setDocumentation] = useState([]);
   const { data } = useQuery({
     queryKey: ["docs"],
     queryFn: fetchDocs,
