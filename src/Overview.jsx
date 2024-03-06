@@ -67,7 +67,7 @@ export const Overview = () => {
                   >
                     {doc.componentPic &&
                     doc.componentPic.split(".").pop() === "png" ? (
-                      <img src={doc.componentPic} alt={doc.title} />
+                      <img src={doc.componentPic} className="element-image" />
                     ) : (
                       <p
                         className="delete-me"
