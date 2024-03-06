@@ -34,6 +34,10 @@ export const Home = () => {
     document.getElementById("thanks").classList.add("anim");
   };
 
+  const handleChange = (e) => {
+    document.getElementById("thanks").classList.remove("anim");
+  };
+
   return (
     <div className="home">
       {addEventListener("scroll", (event) => {
@@ -141,7 +145,7 @@ export const Home = () => {
               </p>
             </div>
             <div className="product-input">
-              <form id="email-form" onSubmit={handleSubmit}>
+              <form id="email-form" onSubmit={handleSubmit} onChange={handleChange}>
                 <input type="email" placeholder="Your email" id="user-email" />
                 <button type="submit">Join Beta</button>
               </form>
