@@ -104,6 +104,10 @@ body:has(.home) .header .logo-div {
     transform: translateY(0);
 }
 
+.home .disabled{
+    pointer-events: none;
+}
+
 .home footer .inner-footer {
     max-width: 50vw;
     padding-bottom: 12px;

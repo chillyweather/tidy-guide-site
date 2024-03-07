@@ -32,10 +32,12 @@ export const Home = () => {
 
     e.target.elements["user-email"].value = "";
     document.getElementById("thanks").classList.add("anim");
+    document.getElementById("form-button").classList.add("disabled");
   };
 
   const handleChange = (e) => {
     document.getElementById("thanks").classList.remove("anim");
+    document.getElementById("form-button").classList.remove("disabled");
   };
 
   return (
@@ -147,7 +149,7 @@ export const Home = () => {
             <div className="product-input">
               <form id="email-form" onSubmit={handleSubmit} onChange={handleChange}>
                 <input type="email" placeholder="Your email" id="user-email" />
-                <button type="submit">Join Beta</button>
+                <button type="submit" id="form-button">Join Beta</button>
               </form>
             </div>
             <p id="thanks">Thanks for joining Tidy Guide Beta! 🚀 <br />
