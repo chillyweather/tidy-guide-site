@@ -95,13 +95,17 @@ body:has(.home) .header .logo-div {
     opacity: 0;
     visibility: hidden;
     transform: translateY(12px);
-    transition: opacity 300ms linear, transform 300ms ease-out;
+    transition: opacity 300ms linear, visibility 300ms linear, transform 300ms ease-out;
 }
 
 .home #thanks.anim {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+}
+
+.home .disabled{
+    pointer-events: none;
 }
 
 .home footer .inner-footer {
