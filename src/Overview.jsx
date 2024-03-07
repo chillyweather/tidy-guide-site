@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
-import { ReactSVG } from "react-svg";
 import noImage from "./assets/no-image.png";
 import "./Overview.css";
 
@@ -69,15 +68,10 @@ export const Overview = () => {
                     doc.componentPic.split(".").pop() === "png" ? (
                       <img src={doc.componentPic} className="element-image" />
                     ) : (
-                      <p
-                        className="delete-me"
-                        style={{ fontSize: "80px", margin: 0 }}
-                      >
-                        <div className="flex-image">
-                          <img src={noImage} alt="No image found" />
-                          <p>No image found</p>
-                        </div>
-                      </p>
+                      <div className="flex-image">
+                        <img src={noImage} alt="No image found" />
+                        <p>No image found</p>
+                      </div>
                     )}
                     {doc.inProgress && <div className={"wip"}>WIP</div>}
                   </button>

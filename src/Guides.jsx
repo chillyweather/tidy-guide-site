@@ -24,6 +24,7 @@ export const Guides = () => {
   }, [data]);
 
   useEffect(() => {
+    console.log("documentation", documentation);
     if (searchText.length > 0) {
       const filteredData = documentation.filter((element) => {
         return element.title.toLowerCase().includes(searchText.toLowerCase());
@@ -70,20 +71,20 @@ export const Guides = () => {
     <div className="guides">
       <h1>Guides</h1>
       <form>
-      <input type="text" className="hidden-input" />
-      <div className="flex-search">
-        <input
-          type="text"
-          id="search"
-          autoComplete="off"
-          placeholder="Type to search..."
-          value={searchText}
-          onInput={(e) => {
-            setSearchText(e.currentTarget.value);
-          }}
-        />
-        <IconSearch />
-      </div>
+        <input type="text" className="hidden-input" />
+        <div className="flex-search">
+          <input
+            type="text"
+            id="search"
+            autoComplete="off"
+            placeholder="Type to search..."
+            value={searchText}
+            onInput={(e) => {
+              setSearchText(e.currentTarget.value);
+            }}
+          />
+          <IconSearch />
+        </div>
       </form>
       <ul className="documentationIndex">
         <button

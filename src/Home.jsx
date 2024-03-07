@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
 import "./Home.css";
 import BuilderIcon from "./assets/builder-icon.svg";
@@ -60,9 +61,7 @@ export const Home = () => {
           for.
         </h2>
         <a href="#join" className="anim-appear join-link">
-          <button className="first-button">
-            Join Tidy Guide beta
-          </button>
+          <button className="first-button">Join Tidy Guide beta</button>
         </a>
       </section>
 
@@ -122,7 +121,14 @@ export const Home = () => {
             system <br />
             documentation process and foster better collaboration!
           </h2>
-          <iframe className="emptyVideo" src="https://www.youtube.com/embed/kCGNIeoPgY8?si=7V8XUZEfHvAi4FMD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe
+            className="emptyVideo"
+            src="https://www.youtube.com/embed/kCGNIeoPgY8?si=7V8XUZEfHvAi4FMD"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
           <div id="join"></div>
         </div>
       </section>
@@ -146,8 +152,10 @@ export const Home = () => {
                 <button type="submit">Join Beta</button>
               </form>
             </div>
-            <p id="thanks">Thanks for joining Tidy Guide Beta! 🚀 <br />
-              We'll review your details and notify you once approved.</p>
+            <p id="thanks">
+              Thanks for joining Tidy Guide Beta! 🚀 <br />
+              We'll review your details and notify you once approved.
+            </p>
           </footer>
         </div>
       </section>
