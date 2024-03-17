@@ -66,9 +66,9 @@ export const Home = () => {
           Meet Tidy — the intuitive documentation builder you’ve been looking
           for.
         </h2>
-        <a href="#join" className="anim-appear join-link">
-          <button className="first-button">Join Tidy Guide beta</button>
-        </a>
+        {/* <a href="#join" className="anim-appear join-link"> */}
+          <button className="first-button" onClick={() => {window.open("https://www.figma.com/@wearekido", "_blank")}}>Join Tidy Guide Beta</button>
+        {/* </a> */}
       </section>
 
       <section>
@@ -152,12 +152,13 @@ export const Home = () => {
                 Go to Figma Community now and get started!
               </p>
             </div>
-            <div className="product-input">
+            <button onClick={() => {window.open("https://www.figma.com/@wearekido", "_blank")}}>Join Tidy Guide Beta</button>
+            {/* <div className="product-input">
               <form id="email-form" onSubmit={handleSubmit} onChange={handleChange}>
                 <input type="email" placeholder="Your email" id="user-email" />
                 <button type="submit" id="form-button">Join Beta</button>
               </form>
-            </div>
+            </div> */}
             <p id="thanks">
               Thanks for joining Tidy Guide Beta! 🚀 <br />
               We'll review your details and notify you once approved.
