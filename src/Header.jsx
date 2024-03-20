@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import logoTidy from "./assets/TidyLogo.svg";
-import { QueryClient, useQuery, useQueryClient } from "@tanstack/react-query";
+// import logoTidy from "./assets/TidyLogo.svg";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
 import fetchDocs from "./fetchDocs";
 
@@ -9,7 +9,7 @@ const NavBar = ({ token, setToken }) => {
   const navigate = useNavigate();
   const [documentation, setDocumentation] = useState([]);
   const [firstDoc, setFirstDoc] = useState({}); // eslint-disable-line no-unused-vars
-  const { data, remove } = useQuery({
+  const { data } = useQuery({
     queryKey: ["docs"],
     queryFn: fetchDocs,
   });
