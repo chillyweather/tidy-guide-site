@@ -69,6 +69,7 @@ export const DetailsPage = () => {
           <div className={"nav-container"}>
             <h1 className={"subtitle"}>{title}</h1>
             <nav className={"navigation"}>
+              <a className="link hidden">TEST</a>
               {buildNavigationLinks(navigationLinks)}
             </nav>
           </div>
