@@ -1129,6 +1129,10 @@ a[href*="figma.com/proto"] {
   box-shadow: 0 0 0 1.5px #9C71EF inset !important; */
 }
 
+.nav-container a.selected{
+  background-color: #F0F0F0;
+}
+
 a:empty {
   display: none;
 }
