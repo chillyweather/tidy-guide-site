@@ -51,8 +51,9 @@ const NavBar = ({ token, setToken }) => {
 
   return (
     <div className="navbar">
-      <div className="logo-div" onClick={handleHomeClick}>
+      <div className="logo-div">
         <svg
+          onClick={handleHomeClick}
           id="tidyLogo"
           width="101"
           height="61"
