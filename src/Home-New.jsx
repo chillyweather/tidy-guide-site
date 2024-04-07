@@ -44,6 +44,7 @@ export const Home = () => {
   return (
     <div className="home">
       <div className="toggle-section">
+        <div className="cursor-anim"></div>
           <div className="toggle-anim"></div>
         </div>
       <section>

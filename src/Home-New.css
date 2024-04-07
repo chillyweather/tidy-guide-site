@@ -375,6 +375,7 @@ body:has(.home) .navbar button:focus-visible {
     top: 5px;
     animation: toggleAnimAfter 300ms ease-in-out 1000ms forwards;
 }
+
 @keyframes toggleAnimAfter {
     0% {
         left: 5px;
@@ -385,6 +386,17 @@ body:has(.home) .navbar button:focus-visible {
         left: calc(100% - 45px);
         background-color: #9FE870;
     }
+}
+
+.home .cursor-anim {
+    position: absolute;
+    width: 70px;
+    height: 83px;
+    z-index: 9;
+    background-color: #FF8CBF;
+    -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="70" height="84" viewBox="0 0 70 84" fill="none"><path d="M67.4732 44.5274C68.4329 45.1607 68.1745 46.634 67.0565 46.9028L31.9608 55.3438C31.7112 55.4038 31.4846 55.5356 31.3091 55.7229L7.1071 81.5403C6.31797 82.3821 4.9047 81.8716 4.8357 80.7198L0.157163 2.62344C0.0923928 1.54226 1.28954 0.851004 2.19355 1.44758L67.4732 44.5274Z" fill="currentColor"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .home section img {
