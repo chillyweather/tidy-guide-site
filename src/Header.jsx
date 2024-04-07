@@ -91,9 +91,9 @@ const NavBar = ({ token, setToken }) => {
         </button>
       )}
       {token ? (
-        <button onClick={handleLogoutClick}>Logout</button>
+        <button className="secondary" onClick={handleLogoutClick}>Logout</button>
       ) : (
-        <button onClick={handleLoginClick}>Login</button>
+        <button className="secondary" onClick={handleLoginClick}>Login</button>
       )}
     </div>
   );

@@ -296,10 +296,11 @@ h2 {
     font-size: min(1.75vw, 1.25em);
 }
 
-.home button {
+.home button,
+body:has(.home) .navbar button {
     padding: 16px 24px;
     background-color: #1C3F02;
-    font-size: 1.125em;
+    font-size: 1em;
     font-weight: 600;
     white-space: pre;
     color: #9FE870;
@@ -308,53 +309,37 @@ h2 {
     transition: outline-width 200ms ease-in-out 0s;
 }
 
-.home button:hover {
+.home button {
+    font-size: 1.125em;
+}
+
+body:has(.home) .navbar button.secondary {
+    background-color: #FFFFFF;
+    color: #1C3F02;
+}
+
+.home button:hover,
+body:has(.home) .navbar button:hover {
     background-color: #255403;
 }
 
-.home button:active {
+body:has(.home) .navbar button.secondary:hover {
+    background-color: #DCFDD3;
+}
+
+.home button:active,
+body:has(.home) .navbar button:active {
     background-color: #1A3B02;
 }
 
-.home button:focus-visible {
+body:has(.home) .navbar button.secondary:active {
     background-color: #1C3F02;
-    outline-width: 4px;
+    color: #FFFFFF;
 }
 
-body:has(.home) .navbar button:nth-last-of-type(2),
-body:has(.home) .navbar button:nth-last-of-type(2):active {
-    background-color: transparent;
-    border: 1px solid;
-    color: #6B73FF;
-}
-
-body:has(.home) .navbar button:nth-last-of-type(2):hover {
-    background-color: #EBEDFF;
-    border: 1px solid;
-    color: #8793FD;
-}
-
-body:has(.home) .header button {
-    padding: 16px 24px;
-    background-color: #6B73FF;
-    font-size: 0.75em;
-    min-width: 112px;
-    font-weight: 600;
-    outline: 0 solid #C2DAFE;
-    user-select: none;
-    transition: outline-width 200ms ease-in-out 0s;
-}
-
-body:has(.home) .header button:hover {
-    background-color: #8793FD;
-}
-
-body:has(.home) .header button:active {
-    background-color: #5C6CFF;
-}
-
-body:has(.home) .header button:focus-visible {
-    background-color: #6B73FF;
+.home button:focus-visible,
+body:has(.home) .navbar button:focus-visible {
+    /* background-color: #1C3F02; */
     outline-width: 4px;
 }
 
