@@ -28,7 +28,8 @@
 html {
     background-color: #FDF7F2;
 }
-html:has(.doc-wrapper){
+
+html:has(.doc-wrapper) {
     background-color: unset;
 }
 
@@ -297,25 +298,26 @@ h2 {
 
 .home button {
     padding: 16px 24px;
-    background-color: #6B73FF;
+    background-color: #1C3F02;
     font-size: 1.125em;
     font-weight: 600;
     white-space: pre;
-    outline: 0 solid #C2DAFE;
+    color: #9FE870;
+    outline: 0 solid #DCFDD3;
     user-select: none;
     transition: outline-width 200ms ease-in-out 0s;
 }
 
 .home button:hover {
-    background-color: #8793FD;
+    background-color: #255403;
 }
 
 .home button:active {
-    background-color: #5C6CFF;
+    background-color: #1A3B02;
 }
 
 .home button:focus-visible {
-    background-color: #6B73FF;
+    background-color: #1C3F02;
     outline-width: 4px;
 }
 
