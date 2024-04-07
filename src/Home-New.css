@@ -8,8 +8,16 @@
 
 @font-face {
     font-family: "spirit";
-    src: url("assets/NewSpirit-SemiBold.OTF") format("opentype");
+    src: url("assets/NewSpirit-Medium.OTF") format("opentype");
     font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "spirit";
+    src: url("assets/NewSpirit-SemiBold.OTF") format("opentype");
+    font-weight: 600;
     font-style: normal;
     font-display: block;
 }
@@ -149,11 +157,12 @@ body:has(.home) .header .logo-div {
 
 .home h1 {
     font-family: 'spirit', Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: min(4.5vw, 5em);
     text-align: center;
     line-height: 150%;
-    color: inherit;
+    color: #1C3F02;
+    
 }
 
 .home h1 b {

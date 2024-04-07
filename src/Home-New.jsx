@@ -50,25 +50,16 @@ export const Home = () => {
       <section>
         <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>
-          I love spending all day
+          The simplest way
           <br />
-          documenting my design decisions.
+          to create
           <br />
+          documentation
           <div className="anim-seperator">
             <div className="anim-spacing-token">spacing.xlarge</div>
             <div className="anim-border"></div>
           </div>
-          <b className="anim-bold"></b>
         </h1>
-        <h2 className="anim-appear">
-          <b>A new way to generate and discover documentation in Figma </b>
-          <br />
-          Meet Tidy — the intuitive documentation builder you’ve been looking
-          for.
-        </h2>
-        {/* <a href="#join" className="anim-appear join-link"> */}
-        <button className="first-button" onClick={() => { window.open("https://www.figma.com/@wearekido", "_blank") }}>Join Tidy Guide Beta</button>
-        {/* </a> */}
       </section>
 
       <section className="flex-center">
