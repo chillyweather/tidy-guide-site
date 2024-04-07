@@ -162,7 +162,7 @@ body:has(.home) .header .logo-div {
     text-align: center;
     line-height: 150%;
     color: #1C3F02;
-    
+
 }
 
 .home h1 b {
@@ -483,7 +483,8 @@ body:has(.home) .navbar button:focus-visible {
 
 .home .anim-title {
     position: relative;
-    animation: titleAnim 2000ms cubic-bezier(.44, .14, .83, .46) forwards;
+    line-height: 100%;
+    animation: titleAnim 2000ms cubic-bezier(.44, .14, .83, .46) 1500ms forwards;
 }
 
 .home .anim-appear {
@@ -514,12 +515,12 @@ body:has(.home) .navbar button:focus-visible {
 }
 
 .home .anim-title::first-line {
-    line-height: 150%;
+    line-height: 100%;
 }
 
 @keyframes titleAnim {
     0% {
-        line-height: 300%;
+        line-height: 100%;
     }
 
     50% {
@@ -676,14 +677,19 @@ body:has(.home) .navbar button:focus-visible {
 .home .anim-seperator {
     position: absolute;
     width: 17.5ch;
-    top: 1.1em;
+    top: 0.85em;
     left: 50%;
     height: 0.75em;
     background-color: #FFD8FB;
     opacity: 0.8;
     margin-left: -9ch;
     z-index: -1;
-    animation: seperatorAnim 2000ms ease-out forwards;
+    animation: seperatorAnim 2000ms ease-out 1500ms forwards;
+
+    height: 1em;
+    visibility: hidden;
+    width: 0;
+    opacity: 0;
 }
 
 .home .anim-seperator::before {
@@ -726,6 +732,12 @@ body:has(.home) .navbar button:focus-visible {
     }
 
     75% {
+        height: 0.75em;
+        visibility: visible;
+        width: 17.5ch;
+        opacity: 1;
+    }
+    100% {
         height: 0.75em;
         visibility: visible;
         width: 17.5ch;
