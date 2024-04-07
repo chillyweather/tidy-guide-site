@@ -45,8 +45,8 @@ export const Home = () => {
     <div className="home">
       <div className="toggle-section">
         <div className="cursor-anim"></div>
-          <div className="toggle-anim"></div>
-        </div>
+        <div className="toggle-anim"></div>
+      </div>
       <section>
         <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>
@@ -69,6 +69,18 @@ export const Home = () => {
         {/* <a href="#join" className="anim-appear join-link"> */}
         <button className="first-button" onClick={() => { window.open("https://www.figma.com/@wearekido", "_blank") }}>Join Tidy Guide Beta</button>
         {/* </a> */}
+      </section>
+
+      <section className="flex-center">
+        <p className="size-64 spirit left-align max-600">
+          A new way to generate
+          and discover documentation
+          in Figma
+          <br/><br/>
+          Meet Tidy Guide the intuitive documentation builder you've been looking for.
+          <br/><br/>
+          Within minutes you will have comprehensive and up-to-date documentation of your design system.
+        </p>
       </section>
 
       <section>
