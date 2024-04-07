@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
-import "./Home.css";
+import "./Home-New.css";
 import BuilderIcon from "./assets/builder-icon.svg";
 import BuilderProduct from "./assets/video-builder.mp4";
 import ViewerIcon from "./assets/viewer-icon.svg";
