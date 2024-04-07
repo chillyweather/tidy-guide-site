@@ -23,6 +23,7 @@
     left: 0;
     top: 0;
     padding-top: 15vh;
+    overflow: hidden;
 }
 
 html {
@@ -351,7 +352,7 @@ body:has(.home) .navbar button:focus-visible {
     height: 50px;
     background-color: #E8E1DB;
     border-radius: 999px;
-    animation: toggleAnim 300ms linear 1000ms forwards;
+    animation: toggleAnim 300ms linear 1500ms forwards;
 }
 
 @keyframes toggleAnim {
@@ -373,7 +374,7 @@ body:has(.home) .navbar button:focus-visible {
     height: 40px;
     left: 5px;
     top: 5px;
-    animation: toggleAnimAfter 300ms ease-in-out 1000ms forwards;
+    animation: toggleAnimAfter 300ms ease-in-out 1500ms forwards;
 }
 
 @keyframes toggleAnimAfter {
@@ -397,7 +398,16 @@ body:has(.home) .navbar button:focus-visible {
     -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="70" height="84" viewBox="0 0 70 84" fill="none"><path d="M67.4732 44.5274C68.4329 45.1607 68.1745 46.634 67.0565 46.9028L31.9608 55.3438C31.7112 55.4038 31.4846 55.5356 31.3091 55.7229L7.1071 81.5403C6.31797 82.3821 4.9047 81.8716 4.8357 80.7198L0.157163 2.62344C0.0923928 1.54226 1.28954 0.851004 2.19355 1.44758L67.4732 44.5274Z" fill="currentColor"/></svg>');
     background-size: contain;
     background-repeat: no-repeat;
-    transform: translate(20px, 20px);
+    transform: translate(120px, 20px);
+    animation: cursorAnim 2000ms ease-in-out 1000ms forwards;
+}
+
+@keyframes cursorAnim {
+    0%{transform: translate(120px, 20px);}
+    20%{transform: translate(20px, 20px);}
+    35%{transform: translate(20px, 20px);}
+    75%{transform: translate(60vw, 20px);}
+    100%{transform: translate(60vw, 20px);}
 }
 
 .home section img {
