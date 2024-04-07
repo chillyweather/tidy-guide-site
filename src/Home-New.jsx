@@ -10,10 +10,13 @@ import videoImage from "./assets/video-min.png";
 
 export const Home = () => {
   function scrollTest() {
-    if (window.scrollY > 0) {
-      document.getElementById("top-header").classList.add("top");
+    if (window.scrollY > (document.getElementById("animPara").offsetTop - document.getElementById("animPara").offsetHeight * 2)) {
+      window.lessLetter = 1;
+      document.getElementById("animPara").classList.add("top");
+      document.getElementById("animPara").innerText = document.getElementById("animParaRef").innerText.slice(0, Math.floor(window.lessLetter));
+      // console.warn(Math.floor(window.lessLetter))
     } else {
-      document.getElementById("top-header").classList.remove("top");
+      document.getElementById("animPara").classList.remove("top");
     }
   }
 
@@ -44,6 +47,9 @@ export const Home = () => {
 
   return (
     <div className="home">
+      {addEventListener("scroll", (event) => {
+        scrollTest();
+      })}
       <div className="toggle-section">
         <div className="cursor-anim"></div>
         <div className="toggle-anim"></div>
@@ -67,7 +73,16 @@ export const Home = () => {
       </section>
 
       <section className="flex-center">
-        <p className="size-64 spirit left-align max-600">
+        <p id="animPara" className="size-64 spirit left-align max-600">
+          A new way to generate
+          and discover documentation
+          in Figma
+          <br /><br />
+          Meet Tidy Guide the intuitive documentation builder you've been looking for.
+          <br /><br />
+          Within minutes you will have comprehensive and up-to-date documentation of your design system.
+        </p>
+        <p id="animParaRef" className="size-64 spirit left-align max-600">
           A new way to generate
           and discover documentation
           in Figma

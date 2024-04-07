@@ -149,12 +149,25 @@ body:has(.home) .header .logo-div {
 
 .home .max-600 {
     max-width: 650px;
+    width: 650px;
 }
 
 .home .flex-center {
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.home .animPara {
+    position: relative;
+}
+
+.home #animPara {
+    position: absolute;
+    color: #141414;
+}
+
+.home #animParaRef {
+    color: #A4A0A0;
 }
 
 .home h1 {
