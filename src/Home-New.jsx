@@ -6,6 +6,7 @@ import BuilderProduct from "./assets/video-builder.mp4";
 import ViewerIcon from "./assets/viewer-icon.svg";
 import ViewerProduct from "./assets/video-viewer.mp4";
 import Earlybirds from "./assets/early-birds.svg";
+import videoImage from "./assets/video-min.png";
 
 export const Home = () => {
   function scrollTest() {
@@ -61,14 +62,18 @@ export const Home = () => {
         </h1>
       </section>
 
+      <section>
+        <img src={videoImage} alt="" />
+      </section>
+
       <section className="flex-center">
         <p className="size-64 spirit left-align max-600">
           A new way to generate
           and discover documentation
           in Figma
-          <br/><br/>
+          <br /><br />
           Meet Tidy Guide the intuitive documentation builder you've been looking for.
-          <br/><br/>
+          <br /><br />
           Within minutes you will have comprehensive and up-to-date documentation of your design system.
         </p>
       </section>
