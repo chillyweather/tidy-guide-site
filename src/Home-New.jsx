@@ -43,10 +43,6 @@ export const Home = () => {
 
   return (
     <div className="home">
-      {addEventListener("scroll", (event) => {
-        scrollTest();
-      })}
-      <div className="top-gradient"></div>
       <section>
         <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>
