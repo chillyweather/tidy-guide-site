@@ -772,9 +772,8 @@ body:has(.home) .navbar button:focus-visible {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    animation: colorTokenAnim 2000ms linear forwards;
+    animation: colorTokenAnim 2000ms linear 2000ms forwards;
     visibility: hidden;
-    animation-delay: 500ms;
 }
 
 .home .anim-spacing-token::before {
@@ -813,9 +812,8 @@ body:has(.home) .navbar button:focus-visible {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    animation: colorTokenAnim 2000ms linear forwards;
+    animation: colorTokenAnim 2000ms linear 2000ms forwards;
     visibility: hidden;
-    animation-delay: 900ms;
 }
 
 .home .anim-color-token::before {
