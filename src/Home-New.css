@@ -680,7 +680,7 @@ body:has(.home) .navbar button:focus-visible {
     top: 0.85em;
     left: 50%;
     height: 0.75em;
-    background-color: #FFD8FB;
+    background-color: #FAC6DD;
     opacity: 0.8;
     margin-left: -9ch;
     z-index: -1;
@@ -699,7 +699,7 @@ body:has(.home) .navbar button:focus-visible {
     width: 14px;
     left: 0;
     top: 0;
-    background-color: #FF85F5;
+    background-color: #FF7878;
 }
 
 @keyframes seperatorAnim {
@@ -737,6 +737,7 @@ body:has(.home) .navbar button:focus-visible {
         width: 17.5ch;
         opacity: 1;
     }
+
     100% {
         height: 0.75em;
         visibility: visible;
@@ -855,13 +856,13 @@ body:has(.home) .navbar button:focus-visible {
 }
 
 .home .anim-seperator::after {
-    content: '34px';
+    content: '24px';
     position: absolute;
     top: -50%;
-    left: -68px;
+    left: -52px;
     font-size: 16px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    animation: seperatorNumAnim 2000ms linear forwards;
+    /* animation: seperatorNumAnim 2000ms linear forwards; */
 }
 
 @keyframes seperatorNumAnim {

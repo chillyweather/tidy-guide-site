@@ -57,7 +57,6 @@ export const Home = () => {
           documentation
           <div className="anim-seperator">
             <div className="anim-spacing-token">spacing.xlarge</div>
-            <div className="anim-border"></div>
           </div>
         </h1>
       </section>
