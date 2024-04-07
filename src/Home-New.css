@@ -298,19 +298,16 @@ h2 {
 
 .home button,
 body:has(.home) .navbar button {
-    padding: 16px 24px;
+    min-width: 140px;
+    padding: 14px 24px;
     background-color: #1C3F02;
-    font-size: 1em;
+    font-size: 0.875em;
     font-weight: 600;
     white-space: pre;
     color: #9FE870;
     outline: 0 solid #DCFDD3;
     user-select: none;
     transition: outline-width 200ms ease-in-out 0s;
-}
-
-.home button {
-    font-size: 1.125em;
 }
 
 body:has(.home) .navbar button.secondary {
