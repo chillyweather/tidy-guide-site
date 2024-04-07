@@ -43,6 +43,9 @@ export const Home = () => {
 
   return (
     <div className="home">
+      <div className="toggle-section">
+          <div className="toggle-anim"></div>
+        </div>
       <section>
         <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>
@@ -63,7 +66,7 @@ export const Home = () => {
           for.
         </h2>
         {/* <a href="#join" className="anim-appear join-link"> */}
-          <button className="first-button" onClick={() => {window.open("https://www.figma.com/@wearekido", "_blank")}}>Join Tidy Guide Beta</button>
+        <button className="first-button" onClick={() => { window.open("https://www.figma.com/@wearekido", "_blank") }}>Join Tidy Guide Beta</button>
         {/* </a> */}
       </section>
 
@@ -148,7 +151,7 @@ export const Home = () => {
                 Go to Figma Community now and get started!
               </p>
             </div>
-            <button onClick={() => {window.open("https://www.figma.com/@wearekido", "_blank")}}>Join Tidy Guide Beta</button>
+            <button onClick={() => { window.open("https://www.figma.com/@wearekido", "_blank") }}>Join Tidy Guide Beta</button>
             {/* <div className="product-input">
               <form id="email-form" onSubmit={handleSubmit} onChange={handleChange}>
                 <input type="email" placeholder="Your email" id="user-email" />
