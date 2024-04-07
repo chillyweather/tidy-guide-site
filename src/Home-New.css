@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 @font-face {
     font-family: "spirit";
     src: url("assets/NewSpirit-Regular.OTF") format("opentype");
@@ -757,17 +759,19 @@ body:has(.home) .navbar button:focus-visible {
 
 .home .anim-spacing-token {
     position: absolute;
-    top: 50%;
-    right: -12px;
-    transform: translate(calc(100% + 24px), -50%);
-    padding: 8px 12px;
+    top: 135%;
+    right: -18%;
+    transform: translate(-146%, 0);
+    padding: 8px 16px;
     line-height: normal;
-    border: 1px solid #C9CFE4;
-    color: #141414;
-    background-color: #F1F3F8;
-    font-size: 12px;
+    border: 1px solid #1C3F02;
+    color: #1C3F02;
+    background-color: #ffffff;
+    font-size: 14px;
     border-radius: 9999px;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
     animation: colorTokenAnim 2000ms linear forwards;
     visibility: hidden;
     animation-delay: 500ms;
@@ -778,35 +782,37 @@ body:has(.home) .navbar button:focus-visible {
     position: absolute;
     width: 8px;
     height: 8px;
-    background-color: #7A7A74;
+    background-color: #1C3F02;
     border-radius: 999px;
-    top: calc(50% - 3px);
-    left: -28px;
+    top: -40px;
+    left: calc(50% - 3px);
 }
 
 .home .anim-spacing-token::after {
     content: '';
     position: absolute;
-    border-bottom: 1.5px dashed #9A9A9A;
-    width: 12px;
-    height: 100%;
-    top: -50%;
-    left: -16px;
+    border-left: 2.5px dotted #1C3F02;
+    width: 100%;
+    height: 24px;
+    top: -28px;
+    left: calc(50% - 0.5px);
 }
 
 .home .anim-color-token {
     position: absolute;
-    top: -1em;
+    bottom: 4em;
     left: 50%;
-    transform: translate(-134%, 0);
-    padding: 8px 12px;
+    transform: translate(-146%, 0);
+    padding: 8px 16px;
     line-height: normal;
-    border: 1px solid #C9CFE4;
-    color: #141414;
-    background-color: #F1F3F8;
-    font-size: 12px;
+    border: 1px solid #1C3F02;
+    color: #1C3F02;
+    background-color: #ffffff;
+    font-size: 14px;
     border-radius: 9999px;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
     animation: colorTokenAnim 2000ms linear forwards;
     visibility: hidden;
     animation-delay: 900ms;
@@ -817,20 +823,20 @@ body:has(.home) .navbar button:focus-visible {
     position: absolute;
     width: 8px;
     height: 8px;
-    background-color: #7A7A74;
+    background-color: #1C3F02;
     border-radius: 999px;
-    bottom: -48px;
+    top: -40px;
     left: calc(50% - 3px);
 }
 
 .home .anim-color-token::after {
     content: '';
     position: absolute;
-    border-left: 1.5px dashed #9A9A9A;
+    border-left: 2.5px dotted #1C3F02;
     width: 100%;
-    height: 32px;
-    bottom: -36px;
-    left: 50%;
+    height: 24px;
+    top: -28px;
+    left: calc(50% - 0.5px);
 }
 
 @keyframes colorTokenAnim {
@@ -862,118 +868,6 @@ body:has(.home) .navbar button:focus-visible {
     left: -52px;
     font-size: 16px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    /* animation: seperatorNumAnim 2000ms linear forwards; */
-}
-
-@keyframes seperatorNumAnim {
-    0% {
-        content: '64px';
-    }
-
-    2% {
-        content: '63px';
-    }
-
-    4% {
-        content: '62px';
-    }
-
-    6% {
-        content: '61px';
-    }
-
-    8% {
-        content: '59px';
-    }
-
-    10% {
-        content: '58px';
-    }
-
-    12% {
-        content: '57px';
-    }
-
-    14% {
-        content: '55px';
-    }
-
-    16% {
-        content: '54px';
-    }
-
-    18% {
-        content: '53px';
-    }
-
-    20% {
-        content: '52px';
-    }
-
-    22% {
-        content: '50px';
-    }
-
-    24% {
-        content: '49px';
-    }
-
-    26% {
-        content: '48px';
-    }
-
-    28% {
-        content: '47px';
-    }
-
-    30% {
-        content: '45px';
-    }
-
-    32% {
-        content: '44px';
-    }
-
-    34% {
-        content: '43px';
-    }
-
-    36% {
-        content: '42px';
-    }
-
-    38% {
-        content: '40px';
-    }
-
-    40% {
-        content: '39px';
-    }
-
-    42% {
-        content: '38px';
-    }
-
-    44% {
-        content: '37px';
-    }
-
-    46% {
-        content: '36px';
-    }
-
-    48% {
-        content: '35px';
-    }
-
-    50% {
-        content: '34px';
-    }
-
-    100% {
-        content: '34px';
-    }
-
 }
 
 @media screen and (max-width: 800px) {
