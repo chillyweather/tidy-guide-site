@@ -488,6 +488,7 @@ body:has(.home) .navbar button:focus-visible {
 p.edit,
 p.view {
     font-size: min(1.75vw, 1.25em);
+    font-size: 1em;
 }
 
 img.edit,
