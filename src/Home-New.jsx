@@ -1,18 +1,28 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
-import "./Home.css";
+import "./Home-New.css";
 import BuilderIcon from "./assets/builder-icon.svg";
 import BuilderProduct from "./assets/video-builder.mp4";
 import ViewerIcon from "./assets/viewer-icon.svg";
 import ViewerProduct from "./assets/video-viewer.mp4";
 import Earlybirds from "./assets/early-birds.svg";
+import videoImage from "./assets/video-min.png";
 
 export const Home = () => {
+  function calculateElementVisibility(element) {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    const percentageVisible = (visibleHeight / rect.height) * 100;
+    return Math.max(0, Math.min(100, percentageVisible));
+  }
+
   function scrollTest() {
-    if (window.scrollY > 0) {
-      document.getElementById("top-header").classList.add("top");
-    } else {
-      document.getElementById("top-header").classList.remove("top");
+    const element = document.getElementById("animParaRef");
+    const visibilityPercentage = calculateElementVisibility(element);
+    // console.log("Element visibility:", visibilityPercentage + "%");
+    if (visibilityPercentage > 80) {
+      document.getElementById("animPara").classList.add("play");
     }
   }
 
@@ -46,29 +56,59 @@ export const Home = () => {
       {addEventListener("scroll", (event) => {
         scrollTest();
       })}
-      <div className="top-gradient"></div>
+      {/* <div className="toggle-section">
+        <div className="cursor-anim"></div>
+        <div className="toggle-anim"></div>
+      </div> */}
       <section>
         <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>
-          I love spending all day
+          The simplest way
           <br />
-          documenting my design decisions.
+          to create
           <br />
+          documentation
           <div className="anim-seperator">
             <div className="anim-spacing-token">spacing.xlarge</div>
-            <div className="anim-border"></div>
           </div>
-          <b className="anim-bold"></b>
         </h1>
-        <h2 className="anim-appear">
-          <b>A new way to generate and discover documentation in Figma </b>
-          <br />
-          Meet Tidy — the intuitive documentation builder you’ve been looking
-          for.
-        </h2>
-        {/* <a href="#join" className="anim-appear join-link"> */}
-          <button className="first-button" onClick={() => {window.open("https://www.figma.com/@wearekido", "_blank")}}>Join Tidy Guide Beta</button>
-        {/* </a> */}
+      </section>
+
+      <section>
+        <p>
+          A new way to generate and discover documentation in Figma
+          Meet Tidy — the intuitive documentation builder you’ve been looking for.
+        </p>
+        <button onClick={() => {window.open('https://www.figma.com/community/plugin/1346498731777233765/tidy-guide-beta')}}>Get early access to beta</button>
+      </section>
+
+      <section>
+        <img src={videoImage} alt="" />
+      </section>
+
+      <section className="flex-center">
+        <p id="animPara" className="size-64 spirit left-align max-600">
+          A new way to generate and<br />
+          discover documentation in Figma
+          <br /><br />
+          Meet Tidy Guide the intuitive<br />
+          documentation builder you've<br />
+          been looking for.
+          <br /><br />
+          Within minutes you will have<br />
+          comprehensive and up-to-date<br />
+          documentation of your design<br />
+          system.
+        </p>
+        <p id="animParaRef" className="size-64 spirit left-align max-600">
+          A new way to generate
+          and discover documentation
+          in Figma
+          <br /><br />
+          Meet Tidy Guide the intuitive documentation builder you've been looking for.
+          <br /><br />
+          Within minutes you will have comprehensive and up-to-date documentation of your design system.
+        </p>
       </section>
 
       <section>
@@ -152,7 +192,7 @@ export const Home = () => {
                 Go to Figma Community now and get started!
               </p>
             </div>
-            <button onClick={() => {window.open("https://www.figma.com/@wearekido", "_blank")}}>Join Tidy Guide Beta</button>
+            <button onClick={() => { window.open("https://www.figma.com/@wearekido", "_blank") }}>Join Tidy Guide Beta</button>
             {/* <div className="product-input">
               <form id="email-form" onSubmit={handleSubmit} onChange={handleChange}>
                 <input type="email" placeholder="Your email" id="user-email" />

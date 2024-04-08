@@ -276,6 +276,7 @@ h3 {
   position: relative;
   width: 100%;
   padding-bottom: 16px;
+  margin: 16px 0;
   border-bottom: 1px solid var(--tidy-divider);
 }
 
@@ -1126,6 +1127,14 @@ a[href*="figma.com/proto"] {
   background-color: #F0F0F0;
   /* background-color: var(--tidy-ec) !important;
   box-shadow: 0 0 0 1.5px #9C71EF inset !important; */
+}
+
+.nav-container a.selected{
+  background-color: #F0F0F0;
+}
+
+.nav-container a.hidden{
+  display: none;
 }
 
 a:empty {

@@ -19,9 +19,25 @@
 
 </head>
 
-<body>
+<body onscroll="selectScroll();">
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
+
+<script>
+  function selectScroll() {
+    // anchorLink
+    var x = document.getElementsByClassName("section");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      if(x[i].offsetTop < window.pageYOffset + 200 && (x[i].offsetTop + x[i].offsetHeight) > window.pageYOffset + 200){
+        // console.log(i);
+        document.getElementsByClassName("navigation")[0].getElementsByClassName("link")[i].classList.add("selected");
+      }else{
+        document.getElementsByClassName("navigation")[0].getElementsByClassName("link")[i].classList.remove("selected");
+      }
+    }
+  }
+</script>
 
 </html>

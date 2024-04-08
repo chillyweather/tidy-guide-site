@@ -4,7 +4,8 @@ import fetchDocs from "./fetchDocs";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./Header";
 import { Login } from "./Login";
-import { Home } from "./Home";
+// import { Home } from "./Home";
+import { Home } from "./Home-New";
 import { DetailsPage } from "./DetailsPage";
 import { Overview } from "./Overview";
 
