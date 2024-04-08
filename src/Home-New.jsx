@@ -80,13 +80,17 @@ export const Home = () => {
 
       <section className="flex-center">
         <p id="animPara" className="size-64 spirit left-align max-600">
-          A new way to generate
-          and discover documentation
-          in Figma
+          A new way to generate and<br/>
+          discover documentation in Figma
           <br /><br />
-          Meet Tidy Guide the intuitive documentation builder you've been looking for.
+          Meet Tidy Guide the intuitive<br/>
+          documentation builder you've<br/>
+          been looking for.
           <br /><br />
-          Within minutes you will have comprehensive and up-to-date documentation of your design system.
+          Within minutes you will have<br/>
+          comprehensive and up-to-date<br/>
+          documentation of your design<br/>
+          system.
         </p>
         <p id="animParaRef" className="size-64 spirit left-align max-600">
           A new way to generate

@@ -157,16 +157,21 @@ body:has(.home) .header .logo-div {
     justify-content: center;
 }
 
-.home .animPara {
-    position: relative;
-}
-
 .home #animPara {
+    position: relative;
+    color: #A4A0A0;
+}
+.home #animPara::after{
     position: absolute;
+    content: "A new way to generate and\A discover documentation in Figma\A\A Meet Tidy Guide the intuitive\A documentation builder you've\A been looking for.\A\A Within minutes you will have\A comprehensive and up-to-date\A documentation of your design\A system.";
+    top: 0;
+    left: 0;
+    white-space: pre;
     color: #141414;
 }
 
 .home #animParaRef {
+    display: none;
     color: #A4A0A0;
 }
 
