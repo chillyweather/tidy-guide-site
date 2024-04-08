@@ -3,32 +3,36 @@ import PropTypes from "prop-types";
 // import logoTidy from "./assets/TidyLogo.svg";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
-import fetchDocs from "./fetchDocs";
+import { useAtom } from "jotai";
+import { currentDocumentationsAtom } from "./atoms";
+// import fetchDocs from "./fetchDocs";
+import fetchCollections from "./fetchCollections";
 
-const NavBar = ({ token, setToken }) => {
+const NavBar = () => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
   const [documentation, setDocumentation] = useState([]);
   const [firstDoc, setFirstDoc] = useState({}); // eslint-disable-line no-unused-vars
   const { data } = useQuery({
-    queryKey: ["docs"],
-    queryFn: fetchDocs,
+    queryKey: ["collections"],
+    queryFn: fetchCollections,
   });
   const queryClient = useQueryClient();
 
-  useEffect(() => {
-    if (data) {
-      const sortedData = data.toSorted((a, b) =>
-        a.title.localeCompare(b.title)
-      );
-      setDocumentation(sortedData);
-    }
-  }, [data]);
-
-  useEffect(() => {
-    if (documentation.length) {
-      setFirstDoc(documentation[0]);
-    }
-  }, [documentation]);
+  //   useEffect(() => {
+  //     if (data) {
+  //       const sortedData = data.toSorted((a, b) =>
+  //         a.title.localeCompare(b.title)
+  //       );
+  //       setDocumentation(sortedData);
+  //     }
+  //   }, [data]);
+  //
+  //   useEffect(() => {
+  //     if (documentation.length) {
+  //       setFirstDoc(documentation[0]);
+  //     }
+  //   }, [documentation]);
 
   const handleHomeClick = () => {
     navigate("/");
@@ -43,9 +47,9 @@ const NavBar = ({ token, setToken }) => {
   };
 
   const handleLogoutClick = () => {
-    queryClient.removeQueries(["docs"]);
+    queryClient.removeQueries(["collections"]);
     localStorage.removeItem("token");
-    setToken(null);
+    localStorage.removeItem("token");
     navigate("/");
   };
 
@@ -91,7 +95,9 @@ const NavBar = ({ token, setToken }) => {
         </button>
       )}
       {token ? (
-        <button className="secondary" onClick={handleLogoutClick}>Logout</button>
+        <button className="secondary" onClick={handleLogoutClick}>
+          Logout
+        </button>
       ) : (
         <button onClick={handleLoginClick}>Login</button>
       )}
