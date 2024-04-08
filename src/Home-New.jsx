@@ -56,10 +56,10 @@ export const Home = () => {
       {addEventListener("scroll", (event) => {
         scrollTest();
       })}
-      <div className="toggle-section">
+      {/* <div className="toggle-section">
         <div className="cursor-anim"></div>
         <div className="toggle-anim"></div>
-      </div>
+      </div> */}
       <section>
         <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>

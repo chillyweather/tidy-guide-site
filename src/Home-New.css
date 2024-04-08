@@ -777,15 +777,15 @@ body:has(.home) .navbar button:focus-visible {
 
 .home .anim-spacing-token {
     position: absolute;
-    top: 135%;
-    right: -18%;
-    transform: translate(-146%, 0);
+    top: 5vw;
+    right: -4%;
+    /* transform: translate(-146%, 0); */
     padding: 8px 16px;
     line-height: normal;
     border: 1px solid #1C3F02;
     color: #1C3F02;
     background-color: #ffffff;
-    font-size: 14px;
+    font-size: 1vw;
     border-radius: 9999px;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
@@ -817,15 +817,15 @@ body:has(.home) .navbar button:focus-visible {
 
 .home .anim-color-token {
     position: absolute;
-    bottom: 4em;
-    left: 50%;
-    transform: translate(-146%, 0);
+    bottom: 1.5vw;
+    left: 30%;
+    /* transform: translate(-146%, 0); */
     padding: 8px 16px;
     line-height: normal;
     border: 1px solid #1C3F02;
     color: #1C3F02;
     background-color: #ffffff;
-    font-size: 14px;
+    font-size: 1vw;
     border-radius: 9999px;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
