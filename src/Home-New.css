@@ -425,6 +425,11 @@ body:has(.home) .navbar button:focus-visible {
 .home .toggle-section {
     padding: 32px 0;
     padding-bottom: 64px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .home .toggle-anim {
@@ -469,17 +474,53 @@ body:has(.home) .navbar button:focus-visible {
         background-color: #9FE870;
     }
 }
-.toggle-section input{
+
+.toggle-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.toggle-section input {
     visibility: hidden;
 }
+
+p.edit,
+p.view {
+    font-size: min(1.75vw, 1.25em);
+}
+
+.toggle-section input+label {
+    margin-bottom: 32px;
+}
+
 .toggle-section input:checked+label .toggle::before {
     left: 5px;
 }
+
 .toggle-section input:checked+label span:first-of-type {
     filter: invert(1);
 }
-.toggle-section input:checked+label span:nth-of-type(2){
+
+.toggle-section input:checked+label span:nth-of-type(2) {
     filter: invert(0);
+}
+
+.toggle-section input~.view {
+    display: none;
+}
+
+.toggle-section input:checked~.view {
+    display: block;
+}
+
+.toggle-section input~.edit {
+    display: block;
+}
+
+.toggle-section input:checked~.edit {
+    display: none;
 }
 
 .home .toggle {
@@ -487,6 +528,7 @@ body:has(.home) .navbar button:focus-visible {
     padding: 8px 12px;
     background-color: #1C3F02;
     border-radius: 999px;
+    width: fit-content;
     display: flex;
     gap: 4px;
     align-items: center;
@@ -494,16 +536,20 @@ body:has(.home) .navbar button:focus-visible {
     color: #ffffff;
     cursor: pointer;
 }
-.home .toggle span{
+
+.home .toggle span {
     width: 80px;
     text-align: center;
     font-size: 1.5em;
     transition: filter 150ms ease-in-out 150ms;
+    user-select: none;
 }
-.home .toggle span:first-of-type{
+
+.home .toggle span:first-of-type {
     filter: invert(0);
 }
-.home .toggle span:nth-of-type(2){
+
+.home .toggle span:nth-of-type(2) {
     filter: invert(1);
 }
 
@@ -519,9 +565,11 @@ body:has(.home) .navbar button:focus-visible {
     /* mix-blend-mode: lighten; */
     transition: left 300ms ease-in-out 0s;
 }
-.home .toggle:hover{
+
+.home .toggle:hover {
     background-color: #255403;
 }
+
 .home .cursor-anim {
     position: absolute;
     width: 70px;

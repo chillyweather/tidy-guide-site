@@ -89,19 +89,26 @@ export const Home = () => {
           By creating centralized knowledge base across design teams.
         </h2>
       </section>
-      <div>
-        <div className="toggle-section">
-          <input type="checkbox" id="toggle-label"></input>
-          <label for="toggle-label">
-            <div className="toggle">
-              <span>View</span>
-              <span>Edit</span>
-            </div>
-          </label>
-        </div>
-      </div>
-      <section>
 
+      <section>
+        <div className="toggle-flex">
+          <div className="toggle-section">
+            <input type="checkbox" id="toggle-label"></input>
+            <label for="toggle-label">
+              <div className="toggle">
+                <span>View</span>
+                <span>Edit</span>
+              </div>
+            </label>
+            <p className="edit">
+              Don’t start from scratch, stand on the shoulders of giants 💪
+            </p>
+            <p className="view">
+              Integrated documentation when needed.<br />
+              Wave goodbye to content switching  👋
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className="colored">
