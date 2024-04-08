@@ -9,14 +9,20 @@ import Earlybirds from "./assets/early-birds.svg";
 import videoImage from "./assets/video-min.png";
 
 export const Home = () => {
+  function calculateElementVisibility(element) {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    const percentageVisible = (visibleHeight / rect.height) * 100;
+    return Math.max(0, Math.min(100, percentageVisible));
+  }
+
   function scrollTest() {
-    if (window.scrollY > (document.getElementById("animPara").offsetTop - document.getElementById("animPara").offsetHeight * 2)) {
-      window.lessLetter = 1;
-      document.getElementById("animPara").classList.add("top");
-      document.getElementById("animPara").innerText = document.getElementById("animParaRef").innerText.slice(0, Math.floor(window.lessLetter));
-      // console.warn(Math.floor(window.lessLetter))
-    } else {
-      document.getElementById("animPara").classList.remove("top");
+    const element = document.getElementById("animParaRef");
+    const visibilityPercentage = calculateElementVisibility(element);
+    // console.log("Element visibility:", visibilityPercentage + "%");
+    if(visibilityPercentage > 80){
+      document.getElementById("animPara").classList.add("play");
     }
   }
 
