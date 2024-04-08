@@ -535,7 +535,7 @@ img.view {
     border-radius: 999px;
     width: fit-content;
     display: flex;
-    gap: 4px;
+    gap: 12px;
     align-items: center;
     justify-content: space-between;
     color: #ffffff;
@@ -545,7 +545,7 @@ img.view {
 .home .toggle span {
     width: 80px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 24px;
     transition: filter 150ms ease-in-out 150ms;
     user-select: none;
 }
@@ -565,7 +565,7 @@ img.view {
     background-color: #9FE870;
     width: 94px;
     height: calc(100% - 10px);
-    left: calc(50% - 5px);
+    left: calc(50% - 1px);
     top: 5px;
     /* mix-blend-mode: lighten; */
     transition: left 300ms ease-in-out 0s;
