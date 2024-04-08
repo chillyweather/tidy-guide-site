@@ -472,32 +472,51 @@ body:has(.home) .navbar button:focus-visible {
 .toggle-section input{
     visibility: hidden;
 }
-.toggle-section input:checked+label .toggle::after {
-    left: calc(100% - 45px);
+.toggle-section input:checked+label .toggle::before {
+    left: calc(50% - 5px);
+}
+.toggle-section input:checked+label span:first-of-type {
+    filter: invert(0);
+}
+.toggle-section input:checked+label span:nth-of-type(2){
+    filter: invert(1);
 }
 
 .home .toggle {
     position: relative;
-    width: 100px;
-    height: 50px;
+    padding: 8px 12px;
     background-color: #1C3F02;
     border-radius: 999px;
     display: flex;
+    gap: 4px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: #ffffff;
 }
+.home .toggle span{
+    width: 80px;
+    text-align: center;
+    font-size: 1.5em;
+    transition: filter 150ms ease-in-out 150ms;
+}
+.home .toggle span:first-of-type{
+    filter: invert(1);
+}
+.home .toggle span:nth-of-type(2){
+    filter: invert(0);
+}
 
-.home .toggle::after {
+.home .toggle::before {
     content: '';
     position: absolute;
     border-radius: 999px;
     background-color: #9FE870;
-    width: 40px;
-    height: 40px;
+    width: 94px;
+    height: calc(100% - 10px);
     left: 5px;
     top: 5px;
-    transition: left 300ms ease-in-out 0s;;
+    /* mix-blend-mode: lighten; */
+    transition: left 300ms ease-in-out 0s;
 }
 
 .home .cursor-anim {

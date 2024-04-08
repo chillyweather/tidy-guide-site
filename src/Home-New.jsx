@@ -94,7 +94,8 @@ export const Home = () => {
           <input type="checkbox" id="toggle-label"></input>
           <label for="toggle-label">
             <div className="toggle">
-              {/* View Edit */}
+              <span>View</span>
+              <span>Edit</span>
             </div>
           </label>
         </div>
