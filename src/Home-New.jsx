@@ -7,6 +7,8 @@ import ViewerIcon from "./assets/viewer-icon.svg";
 import ViewerProduct from "./assets/video-viewer.mp4";
 import Earlybirds from "./assets/magic-hat.svg";
 import videoImage from "./assets/video-min.png";
+import heroEdit from "./assets/hero-edit-min.png";
+import heroView from "./assets/hero-view-min.png";
 
 export const Home = () => {
   function calculateElementVisibility(element) {
@@ -107,6 +109,8 @@ export const Home = () => {
               Integrated documentation when needed.<br />
               Wave goodbye to content switching  👋
             </p>
+            <img src={heroEdit} className="edit" />
+            <img src={heroView} className="view" />
           </div>
         </div>
       </section>

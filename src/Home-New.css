@@ -84,7 +84,6 @@ body:has(.home) .header .logo-div {
 }
 
 .home .colored {
-    background-color: #F6F6FC;
     max-width: unset;
     display: flex;
     justify-content: center;
@@ -489,6 +488,11 @@ body:has(.home) .navbar button:focus-visible {
 p.edit,
 p.view {
     font-size: min(1.75vw, 1.25em);
+}
+
+img.edit,
+img.view {
+    margin-top: 40px;
 }
 
 .toggle-section input+label {
@@ -1015,6 +1019,10 @@ p.view {
 }
 
 @media screen and (max-width: 800px) {
+    .home #thanks {
+        display: none;
+    }
+
     .home .top-gradient {
         height: 470px;
     }
@@ -1040,7 +1048,7 @@ p.view {
     .home footer {
         margin: 0;
         width: 100%;
-        padding-bottom: 48px;
+        padding-bottom: 80px;
     }
 
     .home footer .inner-footer {
@@ -1089,6 +1097,10 @@ p.view {
 
     body:has(.home) .header {
         position: relative;
+    }
+
+    body:has(.home) {
+        background-color: #FDF7F2;
     }
 
     body:has(.home) .header .logo-div {
