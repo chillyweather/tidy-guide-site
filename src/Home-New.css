@@ -212,6 +212,10 @@ body:has(.home) .header .logo-div {
 
 }
 
+.home footer h1{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+}
+
 .home h1 b {
     font-weight: 500;
 }
