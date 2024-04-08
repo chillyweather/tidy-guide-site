@@ -6,6 +6,7 @@ import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 import noImage from "./assets/no-image.png";
+import { CollectionsDropdown } from "./CollectionsDropdown";
 import "./Overview.css";
 
 export const Overview = () => {
@@ -19,6 +20,7 @@ export const Overview = () => {
   return (
     <div className="wrapper-flex">
       <div className={"leftbar"}>
+        <CollectionsDropdown />
         <Guides />
       </div>
       <div className="doc-wrapper">
