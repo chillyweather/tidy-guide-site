@@ -97,6 +97,9 @@ body:has(.home) .header .logo-div {
     display: flex;
     justify-content: center;
 }
+.home .colored .inner-colored.max-80{
+    display: block;
+}
 
 .home footer {
     border-radius: 80px;

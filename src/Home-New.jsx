@@ -116,7 +116,7 @@ export const Home = () => {
       </section>
 
       <section className="colored">
-        <div className="inner-colored">
+        <div className="inner-colored max-80">
           <div className="flex-wrapper">
             <p>
               ©{" "}
