@@ -89,6 +89,19 @@ export const Home = () => {
           By creating centralized knowledge base across design teams.
         </h2>
       </section>
+      <div>
+        <div className="toggle-section">
+          <input type="checkbox" id="toggle-label"></input>
+          <label for="toggle-label">
+            <div className="toggle">
+              {/* View Edit */}
+            </div>
+          </label>
+        </div>
+      </div>
+      <section>
+
+      </section>
 
       <section className="colored">
         <div className="inner-colored">

@@ -97,7 +97,8 @@ body:has(.home) .header .logo-div {
     display: flex;
     justify-content: center;
 }
-.home .colored .inner-colored.max-80{
+
+.home .colored .inner-colored.max-80 {
     display: block;
 }
 
@@ -114,16 +115,19 @@ body:has(.home) .header .logo-div {
     padding: 0;
     padding-top: 60px;
 }
-.home footer button{
+
+.home footer button {
     background-color: #FFFFFF;
     color: #1C3F02;
     font-size: 1.5em;
 }
-.home footer button:hover{
+
+.home footer button:hover {
     background-color: #DCFDD3;
     color: #1C3F02;
 }
-.home footer button:active{
+
+.home footer button:active {
     background-color: #1C3F02;
     color: #FFFFFF;
 }
@@ -464,6 +468,36 @@ body:has(.home) .navbar button:focus-visible {
         left: calc(100% - 45px);
         background-color: #9FE870;
     }
+}
+.toggle-section input{
+    visibility: hidden;
+}
+.toggle-section input:checked+label .toggle::after {
+    left: calc(100% - 45px);
+}
+
+.home .toggle {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: #1C3F02;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.home .toggle::after {
+    content: '';
+    position: absolute;
+    border-radius: 999px;
+    background-color: #9FE870;
+    width: 40px;
+    height: 40px;
+    left: 5px;
+    top: 5px;
+    transition: left 300ms ease-in-out 0s;;
 }
 
 .home .cursor-anim {
