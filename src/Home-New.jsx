@@ -17,15 +17,6 @@ export const Home = () => {
     return Math.max(0, Math.min(100, percentageVisible));
   }
 
-  function scrollTest() {
-    const element = document.getElementById("animParaRef");
-    const visibilityPercentage = calculateElementVisibility(element);
-    // console.log("Element visibility:", visibilityPercentage + "%");
-    if (visibilityPercentage > 80) {
-      document.getElementById("animPara").classList.add("play");
-    }
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const userEmail = e.target.elements["user-email"].value;
