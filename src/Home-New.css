@@ -543,6 +543,7 @@ img.view {
     justify-content: space-between;
     color: #ffffff;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .home .toggle span {
@@ -1172,6 +1173,7 @@ img.view {
 
     .home button {
         font-size: 1.15em;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .home .hero-para {
