@@ -492,6 +492,7 @@ body:has(.home) .navbar button:focus-visible {
     align-items: center;
     justify-content: space-between;
     color: #ffffff;
+    cursor: pointer;
 }
 .home .toggle span{
     width: 80px;
@@ -518,7 +519,9 @@ body:has(.home) .navbar button:focus-visible {
     /* mix-blend-mode: lighten; */
     transition: left 300ms ease-in-out 0s;
 }
-
+.home .toggle:hover{
+    background-color: #255403;
+}
 .home .cursor-anim {
     position: absolute;
     width: 70px;
