@@ -1151,4 +1151,17 @@ img.view {
         font-size: 1em;
     }
 
+    .home footer{
+        border-radius: 24px;
+        padding-bottom: 24px;
+        padding-top: 24px;
+    }
+    .home .size-54{
+        font-size: 1.15em;
+    }
+    .home footer button{
+        font-size: 1em;
+        width: calc(100% - 48px);
+    }
+
 }
