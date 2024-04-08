@@ -94,19 +94,35 @@ body:has(.home) .header .logo-div {
 .home .colored .inner-colored {
     width: 100%;
     max-width: 1400px;
+    display: flex;
+    justify-content: center;
 }
 
 .home footer {
-    border-radius: 12px;
-    background-color: #323232;
+    border-radius: 80px;
+    background-color: #FF8048;
     color: #ffffff;
-    width: calc(100% - 48px);
+    width: calc(100% - 400px);
     margin: 0 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 0;
+    padding: 0;
+    padding-top: 60px;
+}
+.home footer button{
+    background-color: #FFFFFF;
+    color: #1C3F02;
+    font-size: 1.5em;
+}
+.home footer button:hover{
+    background-color: #DCFDD3;
+    color: #1C3F02;
+}
+.home footer button:active{
+    background-color: #1C3F02;
+    color: #FFFFFF;
 }
 
 .home #thanks {
@@ -157,11 +173,16 @@ body:has(.home) .header .logo-div {
     justify-content: center;
 }
 
+.home .hero-para {
+    font-size: 1.5em;
+}
+
 .home #animPara {
     position: relative;
     color: #A4A0A0;
 }
-.home #animPara::after{
+
+.home #animPara::after {
     position: absolute;
     content: "A new way to generate and\A discover documentation in Figma\A\A Meet Tidy Guide the intuitive\A documentation builder you've\A been looking for.\A\A Within minutes you will have\A comprehensive and up-to-date\A documentation of your design\A system.";
     top: 0;
