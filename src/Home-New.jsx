@@ -47,9 +47,11 @@ export const Home = () => {
       {addEventListener("scroll", (event) => {
         scrollTest();
       })}
-      {/* <div className="toggle-section">
-        <div className="cursor-anim"></div>
-        <div className="toggle-anim"></div>
+      {/* <div style={{marginTop: "80px", marginBottom: "80px"}}>
+        <div className="toggle-section">
+          <div className="cursor-anim"></div>
+          <div className="toggle-anim"></div>
+        </div>
       </div> */}
       <section>
         <div className="anim-color-token">color.text.primary</div>
@@ -94,7 +96,7 @@ export const Home = () => {
             <img src={Earlybirds} />
             <div className="inner-footer">
               <h1 className="size-54">Your knowledge base across design teams</h1>
-              
+
             </div>
             <button onClick={() => { window.open("https://www.figma.com/community/plugin/1346498731777233765/tidy-guide-beta", "_blank") }}>Join Tidy Guide Beta</button>
 
