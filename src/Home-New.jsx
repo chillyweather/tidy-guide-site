@@ -21,7 +21,7 @@ export const Home = () => {
     const element = document.getElementById("animParaRef");
     const visibilityPercentage = calculateElementVisibility(element);
     // console.log("Element visibility:", visibilityPercentage + "%");
-    if(visibilityPercentage > 80){
+    if (visibilityPercentage > 80) {
       document.getElementById("animPara").classList.add("play");
     }
   }
@@ -75,21 +75,29 @@ export const Home = () => {
       </section>
 
       <section>
+        <p>
+          A new way to generate and discover documentation in Figma
+          Meet Tidy — the intuitive documentation builder you’ve been looking for.
+        </p>
+        <button onClick={() => {window.open('https://www.figma.com/community/plugin/1346498731777233765/tidy-guide-beta')}}>Get early access to beta</button>
+      </section>
+
+      <section>
         <img src={videoImage} alt="" />
       </section>
 
       <section className="flex-center">
         <p id="animPara" className="size-64 spirit left-align max-600">
-          A new way to generate and<br/>
+          A new way to generate and<br />
           discover documentation in Figma
           <br /><br />
-          Meet Tidy Guide the intuitive<br/>
-          documentation builder you've<br/>
+          Meet Tidy Guide the intuitive<br />
+          documentation builder you've<br />
           been looking for.
           <br /><br />
-          Within minutes you will have<br/>
-          comprehensive and up-to-date<br/>
-          documentation of your design<br/>
+          Within minutes you will have<br />
+          comprehensive and up-to-date<br />
+          documentation of your design<br />
           system.
         </p>
         <p id="animParaRef" className="size-64 spirit left-align max-600">
