@@ -180,7 +180,8 @@ body:has(.home) .header .logo-div {
 }
 
 .home .hero-para {
-    font-size: 1.5em;
+    /* TODO: appear animation after the hero animation, also the button */
+    font-size: 1.25em;
 }
 
 .home #animPara {
@@ -384,7 +385,7 @@ h2 {
 .home button,
 body:has(.home) .navbar button {
     min-width: 140px;
-    padding: 14px 24px;
+    padding: 18px 24px;
     background-color: #1C3F02;
     font-size: 0.875em;
     font-weight: 600;
@@ -639,6 +640,7 @@ img.view {
 }
 
 .home .anim-title {
+    /* TODO: line-height 120% for last line */
     position: relative;
     line-height: 100%;
     animation: titleAnim 2000ms cubic-bezier(.44, .14, .83, .46) 1500ms forwards;
@@ -913,6 +915,7 @@ img.view {
 }
 
 .home .anim-spacing-token {
+    /* TODO: All tokens: add 2 steps animation: more delight! */
     position: absolute;
     top: 5vw;
     right: -4%;
