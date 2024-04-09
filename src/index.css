@@ -108,7 +108,8 @@ button {
   color: #ffffff;
 }
 
-.logo-div img, .logo-div svg {
+.logo-div img,
+.logo-div svg {
   /* cursor: pointer; */
   width: 60px;
 }
@@ -487,17 +488,19 @@ li {
   color: inherit;
 }
 
-.flex-search{
+.flex-search {
   display: flex;
   align-items: center;
   border-radius: 8px;
   outline: 1px solid #E3E3E3;
 }
-.flex-search svg{
+
+.flex-search svg {
   color: #8E8F94;
   position: absolute;
   right: 16px;
 }
+
 #search {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: var(--text-size);
@@ -506,13 +509,16 @@ li {
   width: 100%;
   border: none;
 }
-.hidden-input{
+
+.hidden-input {
   display: none;
 }
-.flex-search:focus-within{
+
+.flex-search:focus-within {
   outline: 2px solid var(--tidy-primary);
 }
-#search:focus{
+
+#search:focus {
   border: none;
   outline: none;
 }
@@ -1129,11 +1135,11 @@ a[href*="figma.com/proto"] {
   box-shadow: 0 0 0 1.5px #9C71EF inset !important; */
 }
 
-.nav-container a.selected{
+.nav-container a.selected {
   background-color: #F0F0F0;
 }
 
-.nav-container a.hidden{
+.nav-container a.hidden {
   display: none;
 }
 
@@ -1621,6 +1627,33 @@ summary button {
   pointer-events: none;
 }
 
+.dropdown-comp, .dropdown-toggle {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 3em;
+  right: 0;
+  background-color: #474747;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: fit-content;
+}
+.dropdown-menu .dropdown-item{
+  white-space: pre;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px;
+}
+.dropdown-menu .dropdown-item:hover{
+  background-color: #5E5E5E;
+}
+
 @media screen and (min-width: 700px) {
   .two-columns {
     flex-direction: row;
@@ -1646,7 +1679,7 @@ summary button {
 }
 
 @media screen and (max-width: 800px) {
-  .navbar{
+  .navbar {
     padding: 0 24px;
   }
 }
