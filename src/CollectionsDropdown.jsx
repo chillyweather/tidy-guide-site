@@ -40,6 +40,7 @@ export const CollectionsDropdown = ({ options, onSelect }) => {
                 onMouseDown={(e) => {
                   e.preventDefault();
                   selectOption(option);
+                  // setTimeout(function(){ window.open(window.location.origin, "_self") }, 500);
                 }}
               >
                 <div>{option.name}</div>
