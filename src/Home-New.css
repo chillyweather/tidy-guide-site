@@ -196,7 +196,24 @@ body:has(.home) .header .logo-div {
 
 .home .hero-para {
     /* TODO: appear animation after the hero animation, also the button */
+    opacity: 0;
+    animation: opacityAnim 500ms linear 4000ms forwards;
     font-size: 1.25em;
+}
+
+.home .hero-para+button {
+    opacity: 0;
+    animation: opacityAnim 500ms linear 4300ms forwards;
+}
+
+@keyframes opacityAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .home #animPara {
@@ -1079,6 +1096,13 @@ img.view {
 }
 
 @media screen and (max-width: 800px) {
+
+    .home .hero-para+button,
+    .home .hero-para {
+        animation: none;
+        opacity: 1;
+    }
+
     .home .toggle-section {
         padding-top: 0;
     }
