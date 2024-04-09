@@ -1186,6 +1186,10 @@ img.view {
         font-size: 1.15em;
     }
 
+    .home footer img{
+        max-width: 48px;
+    }
+
     .home footer button {
         font-size: 1em;
         width: calc(100% - 48px);
