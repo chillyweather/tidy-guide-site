@@ -64,7 +64,7 @@ export const Home = () => {
         </h1>
       </section>
 
-      <section>
+      <section className="no-top-padding">
 
         <p className="hero-para">
           <b>A new way to generate and discover documentation in Figma</b>

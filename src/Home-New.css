@@ -99,13 +99,14 @@ body:has(.home) .header .logo-div {
 
 .home .colored .inner-colored.max-80 {
     display: block;
+    max-width: 100%;
 }
 
 .home footer {
     border-radius: 80px;
     background-color: #FF8048;
     color: #ffffff;
-    width: calc(100% - 400px);
+    width: calc(100% - 200px);
     margin: 0 24px;
     display: flex;
     flex-direction: column;
@@ -116,9 +117,10 @@ body:has(.home) .header .logo-div {
 }
 
 .home footer button {
+    /* TODO: add arrow icon */
     background-color: #FFFFFF;
     color: #1C3F02;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .home footer button:hover {
@@ -348,6 +350,8 @@ body:has(.home) .header .logo-div {
 
 .home .size-54 {
     font-size: min(3vw, 3.5em);
+    letter-spacing: -0.04em;
+    text-wrap: pretty;
     line-height: 120%;
     margin: 2vw 0;
     margin-top: 1vw;
@@ -644,6 +648,9 @@ img.view {
     position: relative;
     line-height: 100%;
     animation: titleAnim 2000ms cubic-bezier(.44, .14, .83, .46) 1500ms forwards;
+}
+.home .no-top-padding{
+    padding-top: 0;
 }
 
 .home .anim-appear {
