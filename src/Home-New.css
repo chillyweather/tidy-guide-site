@@ -36,7 +36,7 @@
     overflow: hidden;
 }
 
-html {
+html:has(.home) {
     background-color: #FDF7F2;
 }
 
