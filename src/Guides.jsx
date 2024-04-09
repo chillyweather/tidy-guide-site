@@ -77,8 +77,6 @@ export const Guides = () => {
     }
   };
 
-  let counter = 0;
-
   return (
     <div className="guides">
       <h1>Guides</h1>

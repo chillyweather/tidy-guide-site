@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { useNavigate, useLocation } from "react-router-dom";
 
 import PropTypes from "prop-types";
 // import logoTidy from "./assets/TidyLogo.svg";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useAtom } from "jotai";
 import { isBrowseGuidesOpenAtom } from "./atoms";
 // import fetchDocs from "./fetchDocs";
@@ -16,9 +17,7 @@ const NavBar = () => {
   console.log("location", location);
   const token = localStorage.getItem("token");
   // const [documentation, setDocumentation] = useState([]);
-  const [isBrowseGuidesOpen, setIsBrowseGuidesOpen] = useAtom(
-    isBrowseGuidesOpenAtom
-  );
+  const [, setIsBrowseGuidesOpen] = useAtom(isBrowseGuidesOpenAtom);
   const [firstDoc, setFirstDoc] = useState({}); // eslint-disable-line no-unused-vars
   const { data } = useQuery({
     queryKey: ["collections"],
