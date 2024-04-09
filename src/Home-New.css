@@ -1150,6 +1150,7 @@ img.view {
         font-size: 2.2em;
         animation: none;
         visibility: visible;
+        line-height: 120%;
     }
 
     .home .anim-bold::after,
