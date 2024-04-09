@@ -67,7 +67,7 @@ const NavBar = () => {
     <div className="navbar">
       <div className="logo-div">
         <svg
-          onClick={handleHomeClick}
+          // onClick={handleHomeClick}
           id="tidyLogo"
           width="101"
           height="61"
@@ -103,7 +103,8 @@ const NavBar = () => {
         <CollectionsDropdown options={data} onSelect={console.log} />
       )}
       {token && (
-        <button className="browseBTN" onClick={handleGuidesClick}>
+        <button id="browse" className="browseBTN" onClick={handleGuidesClick}>
+          <img onError={handleGuidesClick} src="" />
           Browse Guides
         </button>
       )}

@@ -109,13 +109,13 @@ button {
 }
 
 .logo-div img, .logo-div svg {
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 60px;
 }
 
-.logo-div img:hover, .logo-div svg:hover {
+/* .logo-div img:hover, .logo-div svg:hover {
   opacity: .9;
-}
+} */
 
 .documentationIndex {
   display: flex;
