@@ -1035,6 +1035,9 @@ img.view {
 }
 
 @media screen and (max-width: 800px) {
+    .home .toggle-section {
+        padding-top: 0;
+    }
     .home #thanks {
         display: none;
     }
@@ -1191,7 +1194,7 @@ img.view {
         font-size: 1.15em;
     }
     .home .toggle span{
-        font-size: 1.25em;
+        font-size: 1.35em;
     }
 
 }
