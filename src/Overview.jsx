@@ -63,7 +63,7 @@ export const Overview = () => {
         <section>
           <div className="overview-content">
             {currentDocumentations &&
-              currentDocumentations.length &&
+              !!currentDocumentations.length &&
               currentDocumentations.map((doc, index) => (
                 <div
                   key={index}
