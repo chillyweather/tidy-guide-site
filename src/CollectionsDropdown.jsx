@@ -43,6 +43,7 @@ export const CollectionsDropdown = ({ options, onSelect }) => {
                   // setTimeout(function(){ window.open(window.location.origin, "_self") }, 500);
                 }}
               >
+                <div>{console.warn(option)}</div>
                 <div>{option.name}</div>
               </div>
             );

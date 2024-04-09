@@ -1643,6 +1643,7 @@ summary button {
   flex-direction: column;
   gap: 12px;
   width: fit-content;
+  box-shadow: -109px 0px 44px 0px rgba(143, 143, 143, 0.01), -27px 0px 16px 0px rgba(143, 143, 143, 0.04), -7px 0px 15px 0px rgba(143, 143, 143, 0.10);
 }
 .dropdown-menu .dropdown-item{
   white-space: pre;
