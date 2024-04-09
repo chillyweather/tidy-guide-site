@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
-import { currentDocumentationsAtom } from "./atoms";
+import { currentDocumentationsAtom, isBrowseGuidesOpenAtom } from "./atoms";
 // import fetchDocs from "./fetchDocs";
 // import fetchCollections from "./fetchCollections";
 import PropTypes from "prop-types";
@@ -9,10 +10,11 @@ import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 import noImage from "./assets/no-image.png";
-import { CollectionsDropdown } from "./CollectionsDropdown";
+
 import "./Overview.css";
 
 export const Overview = () => {
+  const [, setIsBrowseGuidesOpen] = useAtom(isBrowseGuidesOpenAtom);
   const [currentDocumentations] = useAtom(currentDocumentationsAtom);
   const navigate = useNavigate();
   const [copied, setCopied] = useState("");
@@ -21,10 +23,13 @@ export const Overview = () => {
   //   queryFn: fetchCollections,
   // });
 
+  useEffect(() => {
+    setIsBrowseGuidesOpen(true);
+  }, []);
+
   return (
     <div className="wrapper-flex">
       <div className={"leftbar"}>
-        <CollectionsDropdown />
         <Guides />
       </div>
       <div className="doc-wrapper">

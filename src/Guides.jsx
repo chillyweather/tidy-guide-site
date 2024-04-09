@@ -77,6 +77,8 @@ export const Guides = () => {
     }
   };
 
+  let counter = 0;
+
   return (
     <div className="guides">
       <h1>Guides</h1>
@@ -106,9 +108,6 @@ export const Guides = () => {
         </button>
         {!!filteredDocumentation.length &&
           filteredDocumentation.map((guide) => {
-            {
-              console.log("filteredDocumentation", filteredDocumentation);
-            }
             const isDraft = guide.draft;
             if (isDraft) {
               return null;

@@ -1,13 +1,12 @@
 import { useState } from "react";
+import { useAtom } from "jotai";
+import { selectedCollectionAtom } from "./atoms";
 import PropTypes from "prop-types";
 
-export const CollectionsDropdown = ({
-  options,
-  onSelect,
-  currentUserId,
-  selectedCollection,
-  setSelectedCollection,
-}) => {
+export const CollectionsDropdown = ({ options, onSelect }) => {
+  const [selectedCollection, setSelectedCollection] = useAtom(
+    selectedCollectionAtom
+  );
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
