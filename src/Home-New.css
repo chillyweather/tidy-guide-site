@@ -1151,6 +1151,10 @@ img.view {
         animation: none;
         visibility: visible;
         line-height: 120%;
+        margin-bottom: 0;
+    }
+    section:first-of-type{
+        padding-bottom: 0;
     }
 
     .home .anim-bold::after,
