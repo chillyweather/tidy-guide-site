@@ -1223,6 +1223,11 @@ img.view {
         margin-bottom: 0;
     }
 
+    .home .anim-title b,
+    .home .anim-title span {
+        animation: none;
+    }
+
     section:first-of-type {
         padding-bottom: 0;
     }
