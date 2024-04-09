@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { IconMail, IconEye } from "@tabler/icons-react";
 import { useQuery } from "@tanstack/react-query";
-import fetchDocs from "./fetchDocs";
+// import fetchDocs from "./fetchDocs";
+import fetchCollections from "./fetchCollections";
 
 async function login(email, password) {
   const path = "https://api.tidyframework.com/api/users/login";
@@ -23,10 +24,10 @@ async function login(email, password) {
   return response.json();
 }
 
-export const Login = ({ setToken }) => {
+export const Login = () => {
   const { refetch } = useQuery({
-    queryKey: ["docs"],
-    queryFn: fetchDocs,
+    queryKey: ["collections"],
+    queryFn: fetchCollections,
   });
 
   const navigate = useNavigate();
@@ -40,11 +41,16 @@ export const Login = ({ setToken }) => {
     const password = passwordRef.current.value;
 
     const response = await login(email, password);
+    console.log("response", response);
     const token = response.token;
+    const userId = response._id;
+    const company = response.company;
     if (token) {
       refetch();
       localStorage.setItem("token", token);
-      setToken(token);
+      localStorage.setItem("userId", userId);
+      localStorage.setItem("company", company);
+      localStorage.setItem("email", email);
       navigate("/");
     }
 

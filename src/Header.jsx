@@ -1,41 +1,54 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 import PropTypes from "prop-types";
 // import logoTidy from "./assets/TidyLogo.svg";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
-import fetchDocs from "./fetchDocs";
+import { useAtom } from "jotai";
+import { isBrowseGuidesOpenAtom } from "./atoms";
+// import fetchDocs from "./fetchDocs";
+import fetchCollections from "./fetchCollections";
+import { CollectionsDropdown } from "./CollectionsDropdown";
 
-const NavBar = ({ token, setToken }) => {
+const NavBar = () => {
   const navigate = useNavigate();
-  const [documentation, setDocumentation] = useState([]);
+  const location = useLocation();
+  console.log("location", location);
+  const token = localStorage.getItem("token");
+  // const [documentation, setDocumentation] = useState([]);
+  const [isBrowseGuidesOpen, setIsBrowseGuidesOpen] = useAtom(
+    isBrowseGuidesOpenAtom
+  );
   const [firstDoc, setFirstDoc] = useState({}); // eslint-disable-line no-unused-vars
   const { data } = useQuery({
-    queryKey: ["docs"],
-    queryFn: fetchDocs,
+    queryKey: ["collections"],
+    queryFn: fetchCollections,
   });
   const queryClient = useQueryClient();
 
-  useEffect(() => {
-    if (data) {
-      const sortedData = data.toSorted((a, b) =>
-        a.title.localeCompare(b.title)
-      );
-      setDocumentation(sortedData);
-    }
-  }, [data]);
-
-  useEffect(() => {
-    if (documentation.length) {
-      setFirstDoc(documentation[0]);
-    }
-  }, [documentation]);
+  //   useEffect(() => {
+  //     if (data) {
+  //       const sortedData = data.toSorted((a, b) =>
+  //         a.title.localeCompare(b.title)
+  //       );
+  //       setDocumentation(sortedData);
+  //     }
+  //   }, [data]);
+  //
+  //   useEffect(() => {
+  //     if (documentation.length) {
+  //       setFirstDoc(documentation[0]);
+  //     }
+  //   }, [documentation]);
 
   const handleHomeClick = () => {
     navigate("/");
+    setIsBrowseGuidesOpen(false);
   };
 
   const handleGuidesClick = () => {
     navigate(`/guide/overview`);
+    setIsBrowseGuidesOpen(true);
   };
 
   const handleLoginClick = () => {
@@ -43,9 +56,10 @@ const NavBar = ({ token, setToken }) => {
   };
 
   const handleLogoutClick = () => {
-    queryClient.removeQueries(["docs"]);
+    queryClient.removeQueries(["collections"]);
     localStorage.removeItem("token");
-    setToken(null);
+    localStorage.removeItem("token");
+    setIsBrowseGuidesOpen(false);
     navigate("/");
   };
 
@@ -85,13 +99,18 @@ const NavBar = ({ token, setToken }) => {
           />
         </svg>
       </div>
+      {location.pathname.startsWith("/guide/") && (
+        <CollectionsDropdown options={data} onSelect={console.log} />
+      )}
       {token && (
         <button className="browseBTN" onClick={handleGuidesClick}>
           Browse Guides
         </button>
       )}
       {token ? (
-        <button className="secondary" onClick={handleLogoutClick}>Logout</button>
+        <button className="secondary" onClick={handleLogoutClick}>
+          Logout
+        </button>
       ) : (
         <button onClick={handleLoginClick}>Login</button>
       )}
