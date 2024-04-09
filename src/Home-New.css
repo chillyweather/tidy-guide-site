@@ -657,7 +657,6 @@ img.view {
 }
 
 .home .anim-title {
-    /* TODO: line-height 120% for last line */
     position: relative;
     line-height: 100%;
 }
@@ -953,7 +952,6 @@ img.view {
 }
 
 .home .anim-spacing-token {
-    /* TODO: All tokens: add 2 steps animation: more delight! */
     position: absolute;
     top: 5vw;
     right: -4%;
