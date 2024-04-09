@@ -117,7 +117,6 @@ body:has(.home) .header .logo-div {
 }
 
 .home footer button {
-    /* TODO: add arrow icon */
     background-color: #FFFFFF;
     color: #1C3F02;
     font-size: 1em;
