@@ -957,7 +957,7 @@ img.view {
 
 .home .anim-color-token {
     position: absolute;
-    bottom: 2.5vw;
+    bottom: 2.7vw;
     left: 31.5%;
     /* transform: translate(-146%, 0); */
     padding: 5px 16px;
@@ -1021,8 +1021,9 @@ img.view {
     content: '24px';
     position: absolute;
     top: -50%;
-    left: -52px;
+    left: -46px;
     font-size: 16px;
+    font-weight: 400;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
