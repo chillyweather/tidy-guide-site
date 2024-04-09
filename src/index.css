@@ -108,6 +108,10 @@ button {
   color: #ffffff;
 }
 
+.navbar:has(.dropdown-comp) .logo-div {
+  flex-grow: 0;
+}
+
 .logo-div img,
 .logo-div svg {
   /* cursor: pointer; */
@@ -1627,6 +1631,10 @@ summary button {
   pointer-events: none;
 }
 
+.dropdown-comp {
+  flex-grow: 1;
+}
+
 .dropdown-comp,
 .dropdown-toggle {
   position: relative;
@@ -1634,8 +1642,8 @@ summary button {
 
 .dropdown-menu {
   position: absolute;
-  top: 3em;
-  right: 0;
+  top: 54px;
+  left: 0;
   background-color: #474747;
   color: #ffffff;
   padding: 8px;
