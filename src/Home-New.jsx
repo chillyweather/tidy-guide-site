@@ -55,9 +55,11 @@ export const Home = () => {
         <h1 className="anim-title" style={{ marginTop: 0 }}>
           The simplest way
           <br />
-          to create
+          <b>to create</b>
           <br />
-          documentation
+          <span>
+            documentation
+          </span>
           <div className="anim-seperator">
             <div className="anim-spacing-token">spacing.xlarge</div>
           </div>

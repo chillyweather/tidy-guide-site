@@ -659,7 +659,12 @@ img.view {
     /* TODO: line-height 120% for last line */
     position: relative;
     line-height: 100%;
+}
+.home .anim-title b{
     animation: titleAnim 2000ms cubic-bezier(.44, .14, .83, .46) 1500ms forwards;
+}
+.home .anim-title span{
+    animation: titleLastAnim 2000ms cubic-bezier(.44, .14, .83, .46) 1500ms forwards;
 }
 
 .home .no-top-padding {
@@ -693,10 +698,6 @@ img.view {
     }
 }
 
-.home .anim-title::first-line {
-    line-height: 100%;
-}
-
 @keyframes titleAnim {
     0% {
         line-height: 100%;
@@ -708,6 +709,20 @@ img.view {
 
     100% {
         line-height: 150%;
+    }
+}
+
+@keyframes titleLastAnim {
+    0% {
+        line-height: 100%;
+    }
+
+    50% {
+        line-height: 120%;
+    }
+
+    100% {
+        line-height: 120%;
     }
 }
 
@@ -856,7 +871,7 @@ img.view {
 .home .anim-seperator {
     position: absolute;
     width: 14.8ch;
-    top: 0.85em;
+    top: 0.84em;
     left: 53%;
     height: 0.75em;
     background-color: #FAC6DD;
