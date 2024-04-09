@@ -1005,8 +1005,8 @@ img.view {
 
 .home .anim-color-token {
     position: absolute;
-    bottom: 2.7vw;
-    left: 31.5%;
+    bottom: 0;
+    left: 50%;
     /* transform: translate(-146%, 0); */
     padding: 5px 16px;
     line-height: normal;
@@ -1020,6 +1020,7 @@ img.view {
     font-style: normal;
     animation: colorTokenAnim 2000ms ease-in-out 2200ms forwards;
     visibility: hidden;
+    transform: translate(-123%, -100%);
 }
 
 .home .anim-color-token::before {
@@ -1047,22 +1048,22 @@ img.view {
 
 @keyframes colorTokenAnim {
     0% {
-        transform: scale(0);
+        opacity: 0;
         visibility: hidden;
     }
 
     50% {
-        transform: scale(0);
+        opacity: 0;
         visibility: hidden;
     }
 
     65% {
-        transform: scale(1);
+        opacity: 1;
         visibility: visible;
     }
 
     100% {
-        transform: scale(1);
+        opacity: 1;
         visibility: visible;
     }
 }
