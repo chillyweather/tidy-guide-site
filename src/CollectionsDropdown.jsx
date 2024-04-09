@@ -8,6 +8,7 @@ export const CollectionsDropdown = ({ options, onSelect }) => {
     selectedCollectionAtom
   );
   const [isOpen, setIsOpen] = useState(false);
+  const userId = localStorage.getItem("userId");
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -36,6 +37,7 @@ export const CollectionsDropdown = ({ options, onSelect }) => {
             return (
               <div
                 key={index}
+                id={userId === option.owner && "admin-item"}
                 className={"dropdown-item"}
                 onMouseDown={(e) => {
                   e.preventDefault();
@@ -43,8 +45,8 @@ export const CollectionsDropdown = ({ options, onSelect }) => {
                   // setTimeout(function(){ window.open(window.location.origin, "_self") }, 500);
                 }}
               >
-                <div>{console.warn(option)}</div>
                 <div>{option.name}</div>
+                {userId === option.owner && <div className="tag admin"></div>}
               </div>
             );
           })}

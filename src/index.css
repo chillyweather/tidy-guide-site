@@ -1627,7 +1627,8 @@ summary button {
   pointer-events: none;
 }
 
-.dropdown-comp, .dropdown-toggle {
+.dropdown-comp,
+.dropdown-toggle {
   position: relative;
 }
 
@@ -1645,14 +1646,64 @@ summary button {
   width: fit-content;
   box-shadow: -109px 0px 44px 0px rgba(143, 143, 143, 0.01), -27px 0px 16px 0px rgba(143, 143, 143, 0.04), -7px 0px 15px 0px rgba(143, 143, 143, 0.10);
 }
-.dropdown-menu .dropdown-item{
+
+.dropdown-menu .dropdown-item {
   white-space: pre;
   cursor: pointer;
   border-radius: 4px;
   padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  order: 2;
 }
-.dropdown-menu .dropdown-item:hover{
+
+.dropdown-menu .dropdown-item:hover {
   background-color: #5E5E5E;
+}
+.dropdown-menu #admin-item{
+  order: 1;
+}
+
+.tag {
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: calc(var(--text-size) - (var(--text-size) / 6));
+  box-shadow: 0 0 0 1px #ffffff;
+  color: var(--tidy-32);
+  background-color: yellow;
+  width: fit-content;
+  height: fit-content;
+}
+
+.tag::after {
+  content: 'Forgot role';
+}
+
+.tag.viewer {
+  background-color: #EEEEEE;
+}
+
+.tag.viewer::after {
+  content: 'Viewer';
+
+}
+
+.tag.editor {
+  background-color: #E8EDFC;
+}
+
+.tag.editor::after {
+  content: 'Editor';
+}
+
+.tag.admin {
+  background-color: #EFE5FF;
+}
+
+.tag.admin::after {
+  content: 'Admin';
 }
 
 @media screen and (min-width: 700px) {
