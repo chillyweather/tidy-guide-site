@@ -131,7 +131,8 @@ body:has(.home) .header .logo-div {
     background-position: center;
     background-repeat: no-repeat;
 }
-.home footer button:active::after{
+
+.home footer button:active::after {
     filter: invert(1);
 }
 
@@ -660,10 +661,12 @@ img.view {
     position: relative;
     line-height: 100%;
 }
-.home .anim-title b{
+
+.home .anim-title b {
     animation: titleAnim 2000ms cubic-bezier(.44, .14, .83, .46) 1500ms forwards;
 }
-.home .anim-title span{
+
+.home .anim-title span {
     animation: titleLastAnim 2000ms cubic-bezier(.44, .14, .83, .46) 1500ms forwards;
 }
 
@@ -965,7 +968,7 @@ img.view {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    animation: colorTokenAnim 2000ms linear 2000ms forwards;
+    animation: colorTokenAnim 2000ms ease-in-out 2000ms forwards;
     visibility: hidden;
 }
 
@@ -978,6 +981,7 @@ img.view {
     border-radius: 999px;
     top: -40px;
     left: calc(50% - 3px);
+    animation: colorTokenAnim 2000ms ease-in-out 2300ms forwards;
 }
 
 .home .anim-spacing-token::after {
@@ -985,9 +989,20 @@ img.view {
     position: absolute;
     border-left: 2.5px dotted #a0ab98;
     width: 100%;
-    height: 24px;
+    height: 0;
     top: -28px;
     left: calc(50% - 0.5px);
+    animation: tokenDrawAnim 500ms linear 3200ms forwards;
+}
+
+@keyframes tokenDrawAnim {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 24px;
+    }
 }
 
 .home .anim-color-token {
@@ -1005,7 +1020,7 @@ img.view {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    animation: colorTokenAnim 2000ms linear 2000ms forwards;
+    animation: colorTokenAnim 2000ms ease-in-out 2200ms forwards;
     visibility: hidden;
 }
 
@@ -1018,6 +1033,7 @@ img.view {
     border-radius: 999px;
     top: -40px;
     left: calc(50% - 3px);
+    animation: colorTokenAnim 2000ms ease-in-out 2500ms forwards;
 }
 
 .home .anim-color-token::after {
@@ -1025,29 +1041,30 @@ img.view {
     position: absolute;
     border-left: 2.5px dotted #a0ab98;
     width: 100%;
-    height: 24px;
+    height: 0;
     top: -28px;
     left: calc(50% - 0.5px);
+    animation: tokenDrawAnim 500ms linear 3500ms forwards;
 }
 
 @keyframes colorTokenAnim {
     0% {
-        opacity: 0;
+        transform: scale(0);
         visibility: hidden;
     }
 
     50% {
-        opacity: 0;
+        transform: scale(0);
         visibility: hidden;
     }
 
     65% {
-        opacity: 1;
+        transform: scale(1);
         visibility: visible;
     }
 
     100% {
-        opacity: 1;
+        transform: scale(1);
         visibility: visible;
     }
 }
