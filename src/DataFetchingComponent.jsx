@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useAtom } from "jotai";
 import { selectedCollectionAtom, currentDocumentationsAtom } from "./atoms";

@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import { Guides } from "./Guides";
 import { IconLink, IconClock } from "@tabler/icons-react";
 import ElementSection from "./docContent/ElementSection";
-import { ReactSVG } from "react-svg";
 import "./DetailsPage.css";
 
 export const DetailsPage = () => {
