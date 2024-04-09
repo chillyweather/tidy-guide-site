@@ -84,7 +84,6 @@ body:has(.home) .header .logo-div {
 }
 
 .home .colored {
-    background-color: #F6F6FC;
     max-width: unset;
     display: flex;
     justify-content: center;
@@ -94,19 +93,42 @@ body:has(.home) .header .logo-div {
 .home .colored .inner-colored {
     width: 100%;
     max-width: 1400px;
+    display: flex;
+    justify-content: center;
+}
+
+.home .colored .inner-colored.max-80 {
+    display: block;
 }
 
 .home footer {
-    border-radius: 12px;
-    background-color: #323232;
+    border-radius: 80px;
+    background-color: #FF8048;
     color: #ffffff;
-    width: calc(100% - 48px);
+    width: calc(100% - 400px);
     margin: 0 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+.home footer button {
+    background-color: #FFFFFF;
+    color: #1C3F02;
+    font-size: 1.5em;
+}
+
+.home footer button:hover {
+    background-color: #DCFDD3;
+    color: #1C3F02;
+}
+
+.home footer button:active {
+    background-color: #1C3F02;
+    color: #FFFFFF;
 }
 
 .home #thanks {
@@ -157,11 +179,16 @@ body:has(.home) .header .logo-div {
     justify-content: center;
 }
 
+.home .hero-para {
+    font-size: 1.5em;
+}
+
 .home #animPara {
     position: relative;
     color: #A4A0A0;
 }
-.home #animPara::after{
+
+.home #animPara::after {
     position: absolute;
     content: "A new way to generate and\A discover documentation in Figma\A\A Meet Tidy Guide the intuitive\A documentation builder you've\A been looking for.\A\A Within minutes you will have\A comprehensive and up-to-date\A documentation of your design\A system.";
     top: 0;
@@ -183,6 +210,10 @@ body:has(.home) .header .logo-div {
     line-height: 150%;
     color: #1C3F02;
 
+}
+
+.home footer h1 {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
 }
 
 .home h1 b {
@@ -397,6 +428,11 @@ body:has(.home) .navbar button:focus-visible {
 .home .toggle-section {
     padding: 32px 0;
     padding-bottom: 64px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .home .toggle-anim {
@@ -440,6 +476,107 @@ body:has(.home) .navbar button:focus-visible {
         left: calc(100% - 45px);
         background-color: #9FE870;
     }
+}
+
+.toggle-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.toggle-section input {
+    visibility: hidden;
+}
+
+p.edit,
+p.view {
+    font-size: min(1.75vw, 1.25em);
+}
+
+img.edit,
+img.view {
+    margin-top: 40px;
+}
+
+.toggle-section input+label {
+    margin-bottom: 32px;
+}
+
+.toggle-section input:checked+label .toggle::before {
+    left: 5px;
+}
+
+.toggle-section input:checked+label span:first-of-type {
+    filter: invert(1);
+}
+
+.toggle-section input:checked+label span:nth-of-type(2) {
+    filter: invert(0);
+}
+
+.toggle-section input~.view {
+    display: none;
+}
+
+.toggle-section input:checked~.view {
+    display: block;
+}
+
+.toggle-section input~.edit {
+    display: block;
+}
+
+.toggle-section input:checked~.edit {
+    display: none;
+}
+
+.home .toggle {
+    position: relative;
+    padding: 8px 12px;
+    background-color: #1C3F02;
+    border-radius: 999px;
+    width: fit-content;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.home .toggle span {
+    width: 80px;
+    text-align: center;
+    font-size: 24px;
+    transition: filter 150ms ease-in-out 150ms;
+    user-select: none;
+}
+
+.home .toggle span:first-of-type {
+    filter: invert(0);
+}
+
+.home .toggle span:nth-of-type(2) {
+    filter: invert(1);
+}
+
+.home .toggle::before {
+    content: '';
+    position: absolute;
+    border-radius: 999px;
+    background-color: #9FE870;
+    width: 94px;
+    height: calc(100% - 10px);
+    left: calc(50% - 1px);
+    top: 5px;
+    /* mix-blend-mode: lighten; */
+    transition: left 300ms ease-in-out 0s;
+}
+
+.home .toggle:hover {
+    background-color: #255403;
 }
 
 .home .cursor-anim {
@@ -887,6 +1024,10 @@ body:has(.home) .navbar button:focus-visible {
 }
 
 @media screen and (max-width: 800px) {
+    .home #thanks {
+        display: none;
+    }
+
     .home .top-gradient {
         height: 470px;
     }
@@ -912,7 +1053,7 @@ body:has(.home) .navbar button:focus-visible {
     .home footer {
         margin: 0;
         width: 100%;
-        padding-bottom: 48px;
+        padding-bottom: 80px;
     }
 
     .home footer .inner-footer {
@@ -938,7 +1079,7 @@ body:has(.home) .navbar button:focus-visible {
     }
 
     .home .size-72 {
-        font-size: 2.3em;
+        font-size: 2.15em;
     }
 
     .home h2 {
@@ -961,6 +1102,10 @@ body:has(.home) .navbar button:focus-visible {
 
     body:has(.home) .header {
         position: relative;
+    }
+
+    body:has(.home) {
+        background-color: #FDF7F2;
     }
 
     body:has(.home) .header .logo-div {
@@ -1004,6 +1149,38 @@ body:has(.home) .navbar button:focus-visible {
     .home .product-input button,
     .home .product-input input {
         font-size: 1em !important;
+    }
+
+    p.edit,
+    p.view {
+        font-size: 1em;
+    }
+
+    .home footer {
+        border-radius: 24px;
+        padding-bottom: 24px;
+        padding-top: 24px;
+    }
+
+    .home .size-54 {
+        font-size: 1.15em;
+    }
+
+    .home footer button {
+        font-size: 1em;
+        width: calc(100% - 48px);
+    }
+
+    .home button {
+        font-size: 1.15em;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .home .hero-para {
+        font-size: 1.15em;
+    }
+    .home .toggle span{
+        font-size: 1.25em;
     }
 
 }
