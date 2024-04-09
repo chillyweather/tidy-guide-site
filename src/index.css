@@ -1641,8 +1641,7 @@ summary button {
 }
 .dropdown-toggle{
   display: flex;
-  gap: 8px;
-  align-items: center;
+  gap: 16px;
 }
 .dropdown-toggle::after{
   content: 'O';
@@ -1652,9 +1651,6 @@ summary button {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .dropdown-menu {
