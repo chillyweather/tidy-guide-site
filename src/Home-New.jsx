@@ -1,12 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
 import "./Home-New.css";
-import BuilderIcon from "./assets/builder-icon.svg";
-import BuilderProduct from "./assets/video-builder.mp4";
-import ViewerIcon from "./assets/viewer-icon.svg";
-import ViewerProduct from "./assets/video-viewer.mp4";
 import Earlybirds from "./assets/magic-hat.svg";
-import videoImage from "./assets/video-min.png";
 import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
 
