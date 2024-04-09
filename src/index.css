@@ -1639,6 +1639,7 @@ summary button {
   background-color: #474747;
   color: #ffffff;
   padding: 8px;
+  padding-top: 32px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -1657,13 +1658,16 @@ summary button {
   align-items: center;
   gap: 8px;
   order: 2;
+  position: relative;
 }
 
 .dropdown-menu .dropdown-item:hover {
   background-color: #5E5E5E;
 }
-.dropdown-menu #admin-item{
+
+.dropdown-menu #admin-item {
   order: 1;
+  margin-bottom: 24px;
 }
 
 .tag {
@@ -1704,6 +1708,32 @@ summary button {
 
 .tag.admin::after {
   content: 'Admin';
+}
+
+.dropdown-menu #admin-item::before {
+  content: 'Shared collections';
+  position: absolute;
+  width: calc(100% - 8px);
+  top: calc(100% + 6px);
+  left: 0;
+  color: #CDCDCD;
+  font-size: calc(var(--text-size) / 6 * 5);
+  padding-left: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #616161;
+  pointer-events: none;
+}
+
+.dropdown-menu #admin-item::after {
+  content: 'Account collections';
+  position: absolute;
+  color: #CDCDCD;
+  font-size: calc(var(--text-size) / 6 * 5);
+  padding-left: 8px;
+  width: 100%;
+  top: -20px;
+  left: 0;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 700px) {
