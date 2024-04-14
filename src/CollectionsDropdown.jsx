@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAtom } from "jotai";
-import { selectedCollectionAtom } from "./atoms";
+import { selectedCollectionAtom, searchTextAtom } from "./atoms";
 import PropTypes from "prop-types";
 
 export const CollectionsDropdown = ({ options, onSelect }) => {
   const [selectedCollection, setSelectedCollection] = useAtom(
     selectedCollectionAtom
   );
+  const [, setSearchText] = useAtom(searchTextAtom);
   const [isOpen, setIsOpen] = useState(false);
   const userId = localStorage.getItem("userId");
 
@@ -16,10 +17,14 @@ export const CollectionsDropdown = ({ options, onSelect }) => {
 
   const selectOption = (option) => {
     setSelectedCollection(option);
+    setSearchText("");
     setIsOpen(false);
     onSelect(option || {});
     setTimeout(function () {
-      document.getElementsByClassName("documentationIndex")[0].getElementsByTagName('button')[0].click();
+      document
+        .getElementsByClassName("documentationIndex")[0]
+        .getElementsByTagName("button")[0]
+        .click();
     }, 300);
   };
 
