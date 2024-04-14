@@ -1,6 +1,5 @@
 const fetchDocs = async ({ queryKey }) => {
   const id = queryKey[1];
-  console.log("id", id);
 
   const path = `https://api.tidyframework.com/api/docs`;
   const token = localStorage.getItem("token");

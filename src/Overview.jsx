@@ -27,6 +27,10 @@ export const Overview = () => {
     setIsBrowseGuidesOpen(true);
   }, []);
 
+  // useEffect(() => {
+  //   console.log("currentDocumentations", currentDocumentations);
+  // }, [currentDocumentations]);
+
   return (
     <div className="wrapper-flex">
       <div className={"leftbar"}>

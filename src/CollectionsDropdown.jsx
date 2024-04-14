@@ -37,7 +37,8 @@ export const CollectionsDropdown = ({ options, onSelect }) => {
             return (
               <div
                 key={index}
-                id={userId === option.owner && "admin-item"}
+                id={userId === option.owner ? "admin-item" : ""}
+                // id={userId === option.owner && "admin-item"}
                 className={"dropdown-item"}
                 onMouseDown={(e) => {
                   e.preventDefault();

@@ -6,50 +6,8 @@ import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
 
 export const Home = () => {
-  function calculateElementVisibility(element) {
-    const rect = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-    const percentageVisible = (visibleHeight / rect.height) * 100;
-    return Math.max(0, Math.min(100, percentageVisible));
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const userEmail = e.target.elements["user-email"].value;
-    const url =
-      "https://script.google.com/macros/s/AKfycbz6pKd-_6gTUSWDwOhOiea8bFr-5WI3A4NMLgH2gKzh4JJPKjiN0kCHNC-rDT3iqIEE/exec";
-
-    fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: "email=" + encodeURIComponent(userEmail),
-    });
-
-    e.target.elements["user-email"].value = "";
-    document.getElementById("thanks").classList.add("anim");
-    document.getElementById("form-button").classList.add("disabled");
-  };
-
-  const handleChange = (e) => {
-    document.getElementById("thanks").classList.remove("anim");
-    document.getElementById("form-button").classList.remove("disabled");
-  };
-
   return (
     <div className="home">
-      {addEventListener("scroll", (event) => {
-        scrollTest();
-      })}
-      {/* <div style={{marginTop: "80px", marginBottom: "80px"}}>
-        <div className="toggle-section">
-          <div className="cursor-anim"></div>
-          <div className="toggle-anim"></div>
-        </div>
-      </div> */}
       <section>
         <div className="anim-color-token">color.text.primary</div>
         <h1 className="anim-title" style={{ marginTop: 0 }}>
@@ -57,9 +15,7 @@ export const Home = () => {
           <br />
           <b>to create</b>
           <br />
-          <span>
-            documentation
-          </span>
+          <span>documentation</span>
           <div className="anim-seperator">
             <div className="anim-spacing-token">spacing.xlarge</div>
           </div>
@@ -67,13 +23,21 @@ export const Home = () => {
       </section>
 
       <section className="no-top-padding">
-
         <p className="hero-para">
           <b>A new way to generate and discover documentation in Figma</b>
           <br />
-          Meet Tidy — the intuitive documentation builder you’ve been looking for.
+          Meet Tidy — the intuitive documentation builder you’ve been looking
+          for.
         </p>
-        <button onClick={() => { window.open('https://www.figma.com/community/plugin/1346498731777233765/tidy-guide-beta') }}>Get early access to beta</button>
+        <button
+          onClick={() => {
+            window.open(
+              "https://www.figma.com/community/plugin/1346498731777233765/tidy-guide-beta"
+            );
+          }}
+        >
+          Get early access to beta
+        </button>
       </section>
 
       <section>
@@ -93,7 +57,8 @@ export const Home = () => {
         <div className="toggle-flex">
           <div className="toggle-section">
             <input type="checkbox" id="toggle-label"></input>
-            <label for="toggle-label">
+            <label htmlFor="toggle-label">
+              {/* <label for="toggle-label"> */}
               <div className="toggle">
                 <span>View</span>
                 <span>Edit</span>
@@ -103,8 +68,9 @@ export const Home = () => {
               Don’t start from scratch, stand on the shoulders of giants 💪
             </p>
             <p className="view">
-              Integrated documentation when needed.<br />
-              Wave goodbye to content switching  👋
+              Integrated documentation when needed.
+              <br />
+              Wave goodbye to content switching 👋
             </p>
             <img src={heroEdit} className="edit" />
             <img src={heroView} className="view" />
@@ -117,10 +83,20 @@ export const Home = () => {
           <footer>
             <img src={Earlybirds} />
             <div className="inner-footer">
-              <h1 className="size-54">Your knowledge base across design teams</h1>
-
+              <h1 className="size-54">
+                Your knowledge base across design teams
+              </h1>
             </div>
-            <button onClick={() => { window.open("https://www.figma.com/community/plugin/1346498731777233765/tidy-guide-beta", "_blank") }}>Join Tidy Guide Beta</button>
+            <button
+              onClick={() => {
+                window.open(
+                  "https://www.figma.com/community/plugin/1346498731777233765/tidy-guide-beta",
+                  "_blank"
+                );
+              }}
+            >
+              Join Tidy Guide Beta
+            </button>
 
             <p id="thanks">
               Thanks for joining Tidy Guide Beta! 🚀 <br />

@@ -16,30 +16,33 @@ import { Overview } from "./Overview";
 
 export default function DataFetchingComponent() {
   const userId = localStorage.getItem("userId");
+  const savedToken = localStorage.getItem("token");
   const [selectedCollection, setSelectedCollection] = useAtom(
     selectedCollectionAtom
   );
   const [, setCurrentDocumentations] = useAtom(currentDocumentationsAtom);
 
-  // const savedToken = localStorage.getItem("token");
-  // const [token, setToken] = useState(null);
-
-  const { data } = useQuery({
+  const collectionsQuery = useQuery({
     queryKey: ["collections"],
     queryFn: fetchCollections,
+    enabled: !!savedToken,
   });
 
   useEffect(() => {
-    if (data && userId) {
-      console.log("data", data);
-      console.log("userId", userId);
-      const ownCollection = data.filter(
+    if (collectionsQuery.data && userId) {
+      const ownCollection = collectionsQuery.data.filter(
         (collection) => collection.owner === userId
       );
-      console.log("ownCollection", ownCollection);
       setSelectedCollection(ownCollection[0]);
     }
-  }, [data, setSelectedCollection, userId]);
+  }, [collectionsQuery.data, setSelectedCollection, userId]);
+
+  useEffect(() => {
+    if (selectedCollection) {
+      const collectionId = selectedCollection._id;
+      getCurrentDocs(collectionId);
+    }
+  }, [selectedCollection]);
 
   async function getCurrentDocs(collectionId) {
     const data = await getCollctionDocs(collectionId);
@@ -49,31 +52,6 @@ export default function DataFetchingComponent() {
     }
   }
 
-  useEffect(() => {
-    if (selectedCollection) {
-      const collectionId = selectedCollection._id;
-      getCurrentDocs(collectionId);
-    }
-  }, [selectedCollection]);
-
-  useEffect(() => {
-    // if (selectedCollection) {
-    console.log("selectedCollection", selectedCollection);
-    // }
-  }, [selectedCollection]);
-
-  // useEffect(() => {
-  //   if (data) {
-  //     const sortedData = data.sort((a, b) => a.title.localeCompare(b.title));
-  //     setDocumentation(sortedData);
-  //   }
-  // }, [data]);
-  //
-  //   useEffect(() => {
-  //     if (savedToken) {
-  //       setToken(savedToken);
-  //     }
-  //   }, [token]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div>
       <div className="app">

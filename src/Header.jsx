@@ -6,7 +6,11 @@ import PropTypes from "prop-types";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { useAtom } from "jotai";
-import { isBrowseGuidesOpenAtom } from "./atoms";
+import {
+  isBrowseGuidesOpenAtom,
+  selectedCollectionAtom,
+  currentDocumentationsAtom,
+} from "./atoms";
 // import fetchDocs from "./fetchDocs";
 import fetchCollections from "./fetchCollections";
 import { CollectionsDropdown } from "./CollectionsDropdown";
@@ -14,14 +18,16 @@ import { CollectionsDropdown } from "./CollectionsDropdown";
 const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log("location", location);
-  const token = localStorage.getItem("token");
+  const savedToken = localStorage.getItem("token");
   // const [documentation, setDocumentation] = useState([]);
   const [, setIsBrowseGuidesOpen] = useAtom(isBrowseGuidesOpenAtom);
+  const [, setSelectedCollection] = useAtom(selectedCollectionAtom);
+  const [, setCurrentDocumentations] = useAtom(currentDocumentationsAtom);
   const [firstDoc, setFirstDoc] = useState({}); // eslint-disable-line no-unused-vars
   const { data } = useQuery({
     queryKey: ["collections"],
     queryFn: fetchCollections,
+    enabled: !!savedToken,
   });
   const queryClient = useQueryClient();
 
@@ -55,8 +61,9 @@ const NavBar = () => {
   };
 
   const handleLogoutClick = () => {
+    setSelectedCollection(null);
+    setCurrentDocumentations([]);
     queryClient.removeQueries(["collections"]);
-    localStorage.removeItem("token");
     localStorage.removeItem("token");
     setIsBrowseGuidesOpen(false);
     navigate("/");
@@ -101,13 +108,13 @@ const NavBar = () => {
       {location.pathname.startsWith("/guide/") && (
         <CollectionsDropdown options={data} onSelect={console.log} />
       )}
-      {token && (
+      {savedToken && (
         <button id="browse" className="browseBTN" onClick={handleGuidesClick}>
           <img onError={handleGuidesClick} src="" />
           Browse Guides
         </button>
       )}
-      {token ? (
+      {savedToken ? (
         <button className="secondary" onClick={handleLogoutClick}>
           Logout
         </button>
@@ -127,11 +134,11 @@ export const Header = ({ token, setToken }) => {
 };
 
 NavBar.propTypes = {
-  setToken: PropTypes.func.isRequired,
+  setToken: PropTypes.func,
   token: PropTypes.string,
 };
 
 Header.propTypes = {
-  setToken: PropTypes.func.isRequired,
+  setToken: PropTypes.func,
   token: PropTypes.string,
 };

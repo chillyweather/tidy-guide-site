@@ -27,7 +27,6 @@ export const DetailsPage = () => {
 
   useEffect(() => {
     if (data) {
-      console.log("data in effect", data);
       setTitle(data.title);
       setSectionData(data.docs);
       setStatus(data.inProgress);

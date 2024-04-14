@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { IconMail, IconEye } from "@tabler/icons-react";
@@ -25,9 +25,11 @@ async function login(email, password) {
 }
 
 export const Login = () => {
+  const [foundToken, setFoundToken] = useState("");
   const { refetch } = useQuery({
     queryKey: ["collections"],
     queryFn: fetchCollections,
+    enabled: !!foundToken,
   });
 
   const navigate = useNavigate();
@@ -41,11 +43,12 @@ export const Login = () => {
     const password = passwordRef.current.value;
 
     const response = await login(email, password);
-    console.log("response", response);
     const token = response.token;
+    setFoundToken(token);
     const userId = response._id;
     const company = response.company;
     if (token) {
+      console.log("something runs");
       refetch();
       localStorage.setItem("token", token);
       localStorage.setItem("userId", userId);
@@ -89,6 +92,6 @@ export const Login = () => {
 };
 
 Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
+  setToken: PropTypes.func,
   token: PropTypes.string,
 };
