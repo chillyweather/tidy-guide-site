@@ -63,7 +63,7 @@ const NavBar = () => {
   const handleLogoutClick = () => {
     setSelectedCollection(null);
     setCurrentDocumentations([]);
-    queryClient.removeQueries(["collections"]);
+    queryClient.removeQueries(["collections", "docs"]);
     localStorage.removeItem("token");
     setIsBrowseGuidesOpen(false);
     navigate("/");
