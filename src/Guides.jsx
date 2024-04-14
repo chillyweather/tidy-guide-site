@@ -57,10 +57,8 @@ export const Guides = () => {
   }
 
   function handleDocClick(guide) {
-    console.log("filteredDocumentation1", filteredDocumentation);
     navigate(`/guide/${guide._id}`);
     setSelectedMasterId(guide._id);
-    console.log("filteredDocumentation2", filteredDocumentation);
   }
 
   const highLightBtn = () => {
@@ -104,7 +102,6 @@ export const Guides = () => {
         </button>
         {!!currentDocumentations.length &&
           filteredDocumentation.map((guide) => {
-            console.log("filteredDocumentation", filteredDocumentation);
             if (guide.draft) {
               return null;
             }

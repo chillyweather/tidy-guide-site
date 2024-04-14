@@ -18,18 +18,10 @@ export const Overview = () => {
   const [currentDocumentations] = useAtom(currentDocumentationsAtom);
   const navigate = useNavigate();
   const [copied, setCopied] = useState("");
-  // const { data } = useQuery({
-  //   queryKey: ["collections"],
-  //   queryFn: fetchCollections,
-  // });
 
   useEffect(() => {
     setIsBrowseGuidesOpen(true);
   }, []);
-
-  // useEffect(() => {
-  //   console.log("currentDocumentations", currentDocumentations);
-  // }, [currentDocumentations]);
 
   return (
     <div className="wrapper-flex">
