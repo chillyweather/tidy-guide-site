@@ -92,7 +92,7 @@ export const Guides = () => {
         >
           <p>Overview</p>
         </button>
-        {!!filteredDocumentation.length &&
+        {!!currentDocumentations.length &&
           filteredDocumentation.map((guide) => {
             const isDraft = guide.draft;
             if (isDraft) {
