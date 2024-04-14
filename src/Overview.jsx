@@ -68,31 +68,34 @@ export const Overview = () => {
           <div className="overview-content">
             {currentDocumentations &&
               !!currentDocumentations.length &&
-              currentDocumentations.map((doc, index) => (
-                <div
-                  key={index}
-                  className="element-wrapper"
-                  // eslint-disable-next-line react/no-unknown-property
-                  tooltip={doc.title}
-                >
-                  <button
-                    className="element"
-                    onClick={() => navigate(`/guide/${doc._id}`)}
+              currentDocumentations.map((doc, index) => {
+                if (doc.draft) return null;
+                return (
+                  <div
+                    key={index}
+                    className="element-wrapper"
+                    // eslint-disable-next-line react/no-unknown-property
+                    tooltip={doc.title}
                   >
-                    {doc.componentPic &&
-                    doc.componentPic.split(".").pop() === "png" ? (
-                      <img src={doc.componentPic} className="element-image" />
-                    ) : (
-                      <div className="flex-image">
-                        <img src={noImage} alt="No image found" />
-                        <p>No image found</p>
-                      </div>
-                    )}
-                    {doc.inProgress && <div className={"wip"}>WIP</div>}
-                  </button>
-                  <p className="element-text">{doc.title}</p>
-                </div>
-              ))}
+                    <button
+                      className="element"
+                      onClick={() => navigate(`/guide/${doc._id}`)}
+                    >
+                      {doc.componentPic &&
+                      doc.componentPic.split(".").pop() === "png" ? (
+                        <img src={doc.componentPic} className="element-image" />
+                      ) : (
+                        <div className="flex-image">
+                          <img src={noImage} alt="No image found" />
+                          <p>No image found</p>
+                        </div>
+                      )}
+                      {doc.inProgress && <div className={"wip"}>WIP</div>}
+                    </button>
+                    <p className="element-text">{doc.title}</p>
+                  </div>
+                );
+              })}
           </div>
         </section>
       </div>
