@@ -18,6 +18,9 @@ export const CollectionsDropdown = ({ options, onSelect }) => {
     setSelectedCollection(option);
     setIsOpen(false);
     onSelect(option || {});
+    setTimeout(function () {
+      document.getElementsByClassName("documentationIndex")[0].getElementsByTagName('button')[0].click();
+    }, 300);
   };
 
   return (
