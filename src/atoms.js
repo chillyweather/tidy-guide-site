@@ -7,4 +7,6 @@ export const emailAtom = atom("");
 
 export const selectedCollectionAtom = atom(null);
 export const currentDocumentationsAtom = atom([]);
+export const filteredDocumentationAtom = atom([]);
+export const searchTextAtom = atom("");
 export const isBrowseGuidesOpenAtom = atom(false);

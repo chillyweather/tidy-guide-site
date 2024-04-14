@@ -3,17 +3,25 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 // import { useQuery } from "@tanstack/react-query";
 import { useAtom } from "jotai";
-import { currentDocumentationsAtom } from "./atoms";
+import {
+  currentDocumentationsAtom,
+  filteredDocumentationAtom,
+  searchTextAtom,
+} from "./atoms";
 // import fetchDocs from "./fetchDocs";
 // import fetchCollections from "./fetchCollections";
 import { IconSearch } from "@tabler/icons-react";
 
 export const Guides = () => {
   const [currentDocumentations] = useAtom(currentDocumentationsAtom);
+  const [filteredDocumentation, setFilteredDocumentation] = useAtom(
+    filteredDocumentationAtom
+  );
+  const [searchText, setSearchText] = useAtom(searchTextAtom);
   const [documentation, setDocumentation] = useState([]);
-  const [filteredDocumentation, setFilteredDocumentation] = useState([]);
-  const [searchText, setSearchText] = useState("");
   const [selectedMasterId, setSelectedMasterId] = useState("overview");
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
     if (currentDocumentations.length) {
@@ -49,8 +57,10 @@ export const Guides = () => {
   }
 
   function handleDocClick(guide) {
+    console.log("filteredDocumentation1", filteredDocumentation);
     navigate(`/guide/${guide._id}`);
     setSelectedMasterId(guide._id);
+    console.log("filteredDocumentation2", filteredDocumentation);
   }
 
   const highLightBtn = () => {
@@ -94,8 +104,8 @@ export const Guides = () => {
         </button>
         {!!currentDocumentations.length &&
           filteredDocumentation.map((guide) => {
-            const isDraft = guide.draft;
-            if (isDraft) {
+            console.log("filteredDocumentation", filteredDocumentation);
+            if (guide.draft) {
               return null;
             }
 
