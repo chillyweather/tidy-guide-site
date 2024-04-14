@@ -14,10 +14,6 @@ export const Guides = () => {
   const [filteredDocumentation, setFilteredDocumentation] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [selectedMasterId, setSelectedMasterId] = useState("overview");
-  // const { data } = useQuery({
-  //   queryKey: ["collections"],
-  //   queryFn: fetchCollections,
-  // });
 
   useEffect(() => {
     if (currentDocumentations.length) {
@@ -25,14 +21,6 @@ export const Guides = () => {
       setFilteredDocumentation(currentDocumentations);
     }
   }, [currentDocumentations]);
-  //
-  //   useEffect(() => {
-  //     if (data) {
-  //       const sortedData = data.sort((a, b) => a.title.localeCompare(b.title));
-  //       setDocumentation(sortedData);
-  //       setFilteredDocumentation(sortedData);
-  //     }
-  //   }, [data]);
 
   useEffect(() => {
     if (searchText.length > 0) {

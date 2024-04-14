@@ -48,7 +48,6 @@ export const Login = () => {
     const userId = response._id;
     const company = response.company;
     if (token) {
-      console.log("something runs");
       refetch();
       localStorage.setItem("token", token);
       localStorage.setItem("userId", userId);

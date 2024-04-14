@@ -5,7 +5,6 @@ import { useAtom } from "jotai";
 import { selectedCollectionAtom, currentDocumentationsAtom } from "./atoms";
 // import fetchDocs from "./fetchDocs";
 import fetchCollections from "./fetchCollections";
-import getCollctionDocs from "./fetchCollectionDocs";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./Header";
 import { Login } from "./Login";
@@ -13,6 +12,7 @@ import { Login } from "./Login";
 import { Home } from "./Home-New";
 import { DetailsPage } from "./DetailsPage";
 import { Overview } from "./Overview";
+import { getSortedDocs } from "./getSortedDocs";
 
 export default function DataFetchingComponent() {
   const userId = localStorage.getItem("userId");
@@ -37,20 +37,17 @@ export default function DataFetchingComponent() {
     }
   }, [collectionsQuery.data, setSelectedCollection, userId]);
 
-  useEffect(() => {
-    if (selectedCollection) {
-      const collectionId = selectedCollection._id;
-      getCurrentDocs(collectionId);
-    }
-  }, [selectedCollection]);
+  const docsQuery = useQuery({
+    queryKey: ["docs", selectedCollection?._id],
+    queryFn: () => getSortedDocs(selectedCollection?._id),
+    enabled: collectionsQuery.isFetched && !!selectedCollection,
+  });
 
-  async function getCurrentDocs(collectionId) {
-    const data = await getCollctionDocs(collectionId);
-    if (data) {
-      const sortedData = data.sort((a, b) => a.title.localeCompare(b.title));
-      setCurrentDocumentations(sortedData);
+  useEffect(() => {
+    if (docsQuery.data) {
+      setCurrentDocumentations(docsQuery.data);
     }
-  }
+  }, [docsQuery.data, setCurrentDocumentations]);
 
   return (
     <div>
@@ -58,10 +55,6 @@ export default function DataFetchingComponent() {
         <Header />
         <Routes>
           <Route path="/login" element={<Login />} />
-          {/* <Route
-            path="/guides"
-            element={<Guides documentation={documentation} />}
-          /> */}
           <Route path="/guide/overview" element={<Overview />} />
           <Route path="/guide/:id" element={<DetailsPage />} />
           <Route path="/" element={<Home />} />
