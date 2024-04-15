@@ -52,6 +52,7 @@ export const Guides = () => {
   const navigate = useNavigate();
 
   function handleGuidesClick() {
+    setSearchText("");
     navigate(`/guide/overview`);
     setSelectedMasterId("overview");
   }
