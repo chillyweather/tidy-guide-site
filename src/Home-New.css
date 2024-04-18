@@ -408,7 +408,7 @@ body:has(.home) .header .logo-div {
     width: 80px;
     height: 80px;
     z-index: 9;
-    transform: translate(-50%, -700%);
+    transform: translate(-50%, -800%);
     pointer-events: none;
 }
 
