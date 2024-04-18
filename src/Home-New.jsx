@@ -5,6 +5,7 @@ import Earlybirds from "./assets/tidy-128.svg";
 import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
 import ExplainerVideo from "./assets/Explainer.mp4";
+import VideoPoster from "./assets/video-poster.png";
 
 function start() {
   document.getElementById("cursor-img").style.display = "block";
@@ -55,7 +56,7 @@ export const Home = () => {
         </p>
         <div className="videoSection" id="video-section" onMouseOver={() => { start() }} onMouseMove={(event) => { drag(event) }} onMouseOut={() => { stop() }} onClick={(event) => { play(event) }}>
           <div className="cursor" id="cursor-img"></div>
-          <video src={ExplainerVideo} playsInline></video>
+          <video src={ExplainerVideo} poster={VideoPoster} playsInline></video>
         </div>
         <br /><br />
         <button
