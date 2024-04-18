@@ -414,6 +414,7 @@ body:has(.home) .header .logo-div {
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none;
+    display: none;
 }
 .home .videoSection .cursor.pause{
     background-image: url(assets/cursor-pause.svg);
