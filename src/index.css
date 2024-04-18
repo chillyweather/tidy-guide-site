@@ -1121,7 +1121,7 @@ a[href*="figma.com/proto"] {
   color: #565E71;
   padding: 4px 16px;
   margin: 4px 0;
-  border-radius: 9999px;
+  border-radius: 16px;
   width: calc(100% - 32px);
   font-size: var(--text-size);
   font-weight: 400;
