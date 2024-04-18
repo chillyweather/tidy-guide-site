@@ -5,7 +5,7 @@ import Earlybirds from "./assets/magic-hat.svg";
 import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
 import ExplainerVideo from "./assets/Explainer.mp4";
-import CursorPlay from "./assets/cursor-play.svg";
+
 function start(e) {
   document.getElementById("cursor-img").style.display = "block";
 }
@@ -20,9 +20,11 @@ function play(e) {
   if (e.target.getElementsByTagName("video")[0].classList.contains('playing')) {
     e.target.getElementsByTagName("video")[0].pause();
     e.target.getElementsByTagName("video")[0].classList.remove('playing');
+    document.getElementById("cursor-img").classList.remove('pause');
   } else {
     e.target.getElementsByTagName("video")[0].play();
     e.target.getElementsByTagName("video")[0].classList.add('playing');
+    document.getElementById("cursor-img").classList.add('pause');
   }
 }
 
@@ -52,7 +54,7 @@ export const Home = () => {
           for.
         </p>
         <div className="videoSection" id="video-section" onMouseOver={(event) => { start(event) }} onMouseMove={(event) => { drag(event) }} onMouseOut={(event) => { stop(event) }} onClick={(event) => { play(event) }}>
-          <img src={CursorPlay} className="cursor" id="cursor-img" />
+          <div className="cursor" id="cursor-img"></div>
           <video src={ExplainerVideo} playsInline></video>
         </div>
         <br /><br />

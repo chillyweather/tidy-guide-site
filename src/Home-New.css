@@ -409,7 +409,14 @@ body:has(.home) .header .logo-div {
     height: 80px;
     z-index: 9;
     transform: translate(-50%, -800%);
+    background-image: url(assets/cursor-play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     pointer-events: none;
+}
+.home .videoSection .cursor.pause{
+    background-image: url(assets/cursor-pause.svg);
 }
 
 .home .videoSection video {
