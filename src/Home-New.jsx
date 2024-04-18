@@ -5,6 +5,7 @@ import Earlybirds from "./assets/magic-hat.svg";
 import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
 import ExplainerVideo from "./assets/Explainer.mp4";
+import CursorPlay from "./assets/cursor-play.svg";
 
 export const Home = () => {
   return (
