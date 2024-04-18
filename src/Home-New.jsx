@@ -6,8 +6,28 @@ import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
 import ExplainerVideo from "./assets/Explainer.mp4";
 import CursorPlay from "./assets/cursor-play.svg";
+function start(e) {
+  document.getElementById("cursor-img").style.display = "block";
+}
+function drag(e) {
+  document.getElementById("cursor-img").style.left = e.clientX + document.getElementById("video-section").offsetLeft + "px";
+  document.getElementById("cursor-img").style.top = e.clientY + document.getElementById("video-section").offsetTop + window.scrollY + "px";
+}
+function stop(e) {
+  document.getElementById("cursor-img").style.display = "none";
+}
+function play(e) {
+  if (e.target.getElementsByTagName("video")[0].classList.contains('playing')) {
+    e.target.getElementsByTagName("video")[0].pause();
+    e.target.getElementsByTagName("video")[0].classList.remove('playing');
+  } else {
+    e.target.getElementsByTagName("video")[0].play();
+    e.target.getElementsByTagName("video")[0].classList.add('playing');
+  }
+}
 
 export const Home = () => {
+
   return (
     <div className="home">
       <section>
@@ -31,8 +51,11 @@ export const Home = () => {
           Meet Tidy — the intuitive documentation builder you’ve been looking
           for.
         </p>
-        <video src={ExplainerVideo} controls playsInline></video>
-        <br/><br/>
+        <div className="videoSection" id="video-section" onMouseOver={(event) => { start(event) }} onMouseMove={(event) => { drag(event) }} onMouseOut={(event) => { stop(event) }} onClick={(event) => { play(event) }}>
+          <img src={CursorPlay} className="cursor" id="cursor-img" />
+          <video src={ExplainerVideo} playsInline></video>
+        </div>
+        <br /><br />
         <button
           onClick={() => {
             window.open(

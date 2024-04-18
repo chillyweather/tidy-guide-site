@@ -395,10 +395,26 @@ body:has(.home) .header .logo-div {
     margin-top: 24px;
 }
 
-.home video {
+.home .videoSection {
     width: 100%;
     max-width: 1220px;
     border: none;
+    overflow: hidden;
+    cursor: none;
+}
+
+.home .videoSection .cursor {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 9;
+    transform: translate(-50%, -700%);
+    pointer-events: none;
+}
+
+.home .videoSection video {
+    pointer-events: none;
+    width: 100%;
     clip-path: polygon(1% 1%, 99% 1%, 99% 99%, 1% 99%);
 }
 
