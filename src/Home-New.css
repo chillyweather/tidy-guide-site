@@ -1137,6 +1137,9 @@ img.view {
         width: 60px !important;
         height: 60px !important;
     }
+    .home .cursor{
+        display: none !important;
+    }
 
     .home .toggle-section {
         padding-top: 0;
