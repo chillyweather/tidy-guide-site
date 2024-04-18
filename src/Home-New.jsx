@@ -4,6 +4,7 @@ import "./Home-New.css";
 import Earlybirds from "./assets/magic-hat.svg";
 import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
+import ExplainerVideo from "./assets/Explainer.mp4";
 
 export const Home = () => {
   return (
@@ -29,6 +30,8 @@ export const Home = () => {
           Meet Tidy — the intuitive documentation builder you’ve been looking
           for.
         </p>
+        <video src={ExplainerVideo} controls playsInline></video>
+        <br/><br/>
         <button
           onClick={() => {
             window.open(
