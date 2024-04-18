@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
 import "./Home-New.css";
-import Earlybirds from "./assets/magic-hat.svg";
+import Earlybirds from "./assets/tidy-128.svg";
 import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
 import ExplainerVideo from "./assets/Explainer.mp4";
@@ -110,7 +110,7 @@ export const Home = () => {
       <section className="colored">
         <div className="inner-colored">
           <footer>
-            <img src={Earlybirds} />
+            <img className="icon-128" src={Earlybirds} />
             <div className="inner-footer">
               <h1 className="size-54">
                 Your knowledge base across design teams
