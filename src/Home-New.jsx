@@ -56,7 +56,7 @@ export const Home = () => {
         <div className="videoSection" id="video-section" onMouseOver={() => { start() }} onMouseMove={(event) => { drag(event) }} onMouseOut={() => { stop() }} onClick={(event) => { play(event) }}>
           <div className="cursor" id="cursor-img"></div>
           {/* <video src={ExplainerVideo} playsInline></video> */}
-          <video playsinline>
+          <video autoplay playsinline>
             <source src={ExplainerVideo} type="video/mp4" />
           </video>
         </div>
