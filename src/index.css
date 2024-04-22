@@ -415,7 +415,7 @@ li {
 }
 
 .title-wrapper #sectionHeader {
-  font-size: calc(var(--text-size) * 5.75);
+  font-size: calc(var(--text-size) * 3.715);
   margin-top: 0;
   margin-bottom: 0;
   line-height: 120%;
