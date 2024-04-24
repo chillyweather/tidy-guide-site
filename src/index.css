@@ -1680,8 +1680,8 @@ summary button {
   background-repeat: no-repeat;
 }
 
-.dropdown-toggle {
-  background-color: #474747 !important;
+.dropdown-comp .dropdown-toggle {
+  background-color: #474747;
   border-radius: 4px !important;
 }
 
