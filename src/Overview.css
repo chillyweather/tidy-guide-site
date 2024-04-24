@@ -1,3 +1,17 @@
+/* TODOS */
+/* [X] 348x162 (32x17) card proportions in Overview */
+/* [ ] Card should break to lines of 2 in 1100px are less */
+/* [ ] Overview leftbar buttons should have less gap between */
+/* [ ] link is in nowhere (in titles) */
+/* [ ] Add recent/ ABC toggle */
+/* [ ] Add more gap between logo and dropdown */
+/* [ ] Dropdown is too big, font should be regular */
+/* [ ] Texts should be smaller, padding should be different (inside collection dropdown) */
+/* [ ] Fixed width to collections dropdown */
+/* [ ] In plugin's component page, link to website comes to Overview, instead of to component */
+/* [ ] Overview leftbar tooltips should be smaller fonts (12px) */
+/* [ ] Search icon should be smaller (18px:18px)*/
+
 .overview-content {
   align-items: center;
   display: flex;
@@ -41,7 +55,7 @@
   flex-direction: column;
   gap: 10px;
   justify-content: center;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 32 / 17;
   width: 100%;
   /* height: 162px; */
   padding: 10px;
