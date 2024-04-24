@@ -236,10 +236,13 @@ body:has(.documentationIndex) .browseBTN {
   margin: 0;
   width: 100%;
 }
+.documentationIndex button:nth-of-type(2){
+  margin-top: 8px;
+}
 
 .documentationIndex {
   padding: 0;
-  gap: 16px;
+  gap: 6px;
 }
 
 .componentBTN:hover,
