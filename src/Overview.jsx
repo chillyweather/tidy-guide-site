@@ -77,7 +77,7 @@ export const Overview = () => {
                       doc.componentPic.split(".").pop() === "png" ? (
                         <img src={doc.componentPic} className="element-image" />
                       ) : (
-                        <div className="flex-image">
+                        <div className="flex-image no-image">
                           <img src={noImage} alt="No image found" className="element-image"/>
                           {/* <p>No image found</p> */}
                         </div>
