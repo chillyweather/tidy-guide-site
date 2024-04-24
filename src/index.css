@@ -511,6 +511,8 @@ li {
   color: #8E8F94;
   position: absolute;
   right: 16px;
+  height: 18px;
+  width: 18px;
 }
 
 #search {
