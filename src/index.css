@@ -1697,7 +1697,7 @@ summary button {
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  /* gap: 12px; */
   min-width: 184px;
   width: fit-content;
   box-shadow: -109px 0px 44px 0px rgba(143, 143, 143, 0.01), -27px 0px 16px 0px rgba(143, 143, 143, 0.04), -7px 0px 15px 0px rgba(143, 143, 143, 0.10);
@@ -1707,7 +1707,7 @@ summary button {
   white-space: pre;
   cursor: pointer;
   border-radius: 4px;
-  padding: 8px;
+  padding: 16px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1723,7 +1723,7 @@ summary button {
 
 .dropdown-menu #admin-item {
   order: 1;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .tag {
@@ -1773,7 +1773,7 @@ summary button {
   top: calc(100% + 6px);
   left: 0;
   color: #CDCDCD;
-  font-size: calc(var(--text-size) / 6 * 5);
+  font-size: calc(var(--text-size) / 7 * 5);
   padding-left: 8px;
   padding-top: 8px;
   border-top: 1px solid #616161;
@@ -1784,7 +1784,7 @@ summary button {
   content: 'Account collections';
   position: absolute;
   color: #CDCDCD;
-  font-size: calc(var(--text-size) / 6 * 5);
+  font-size: calc(var(--text-size) / 7 * 5);
   padding-left: 8px;
   width: 100%;
   top: -20px;
