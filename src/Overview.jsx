@@ -78,8 +78,8 @@ export const Overview = () => {
                         <img src={doc.componentPic} className="element-image" />
                       ) : (
                         <div className="flex-image">
-                          <img src={noImage} alt="No image found" />
-                          <p>No image found</p>
+                          <img src={noImage} alt="No image found" className="element-image"/>
+                          {/* <p>No image found</p> */}
                         </div>
                       )}
                       {doc.inProgress && <div className={"wip"}>WIP</div>}
