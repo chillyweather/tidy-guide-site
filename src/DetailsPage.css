@@ -23,5 +23,7 @@
 
 .element-image {
   margin-top: 60px;
-  width: 50%;
+  transform: scale(.5);
+  transform-origin: top left;
+  max-width: 1000px;
 }
