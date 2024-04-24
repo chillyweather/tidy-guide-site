@@ -236,7 +236,8 @@ body:has(.documentationIndex) .browseBTN {
   margin: 0;
   width: 100%;
 }
-.documentationIndex button:nth-of-type(2){
+
+.documentationIndex button:nth-of-type(2) {
   margin-top: 8px;
 }
 
@@ -1656,11 +1657,22 @@ summary button {
 .dropdown-toggle {
   display: flex;
   gap: 16px;
+  width: 200px;
+  height: 3.6ch;
+  font-size: var(--text-size);
+}
+.dropdown-toggle div{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 160px;
 }
 
 .dropdown-toggle::after {
   content: 'O';
-  position: relative;
+  position: absolute;
+  top: 8px;
+  right: 12px;
   color: transparent;
   background-image: url('data:image/svg+xml,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.34582 1.52708L5.36457 5.34167C5.23124 5.45417 5.10624 5.5 4.99999 5.5C4.89374 5.5 4.75061 5.45377 4.65436 5.36067L0.654361 1.52708C0.454444 1.3375 0.447944 1.00208 0.639361 0.820833C0.829465 0.620313 1.14728 0.613792 1.34582 0.805861L4.99999 4.30833L8.65415 0.808334C8.85207 0.616271 9.17041 0.622792 9.36061 0.823307C9.55207 1.00208 9.54582 1.3375 9.34582 1.52708Z" fill="white"/></svg>');
   background-size: contain;
