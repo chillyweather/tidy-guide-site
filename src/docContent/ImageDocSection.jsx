@@ -23,18 +23,18 @@ export const ImageDocSection = ({
       </div>
     )}
     {element.content.remoteImageLink.length && (
-      <button
-        onClick={() => {
-          setCurrentImage(element.content.remoteImageLink);
-          setIsImageOpen(true);
-        }}
-        style={{
-          cursor: "pointer",
-          width: "100%",
-          backgroundColor: "transparent",
-          padding: 0,
-        }}
-      >
+      // <button
+      //   onClick={() => {
+      //     setCurrentImage(element.content.remoteImageLink);
+      //     setIsImageOpen(true);
+      //   }}
+      //   style={{
+      //     cursor: "pointer",
+      //     width: "100%",
+      //     backgroundColor: "transparent",
+      //     padding: 0,
+      //   }}
+      // >
         <div className={"image-wrapper"}>
           <img
             className={"image"}
@@ -50,7 +50,7 @@ export const ImageDocSection = ({
           </div>
           <img src={imgloader} className={"img-loader"} />
         </div>
-      </button>
+      // </button>
     )}
   </div>
 );
