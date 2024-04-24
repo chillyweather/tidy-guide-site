@@ -99,7 +99,7 @@ button {
   display: flex;
   align-items: center;
   padding: 0px 40px;
-  gap: 1em;
+  gap: 50px;
   width: 100%;
 }
 
