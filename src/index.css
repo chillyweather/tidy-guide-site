@@ -275,7 +275,7 @@ h3 {
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: calc((var(--text-size) * 4) - (var(--text-size) / 1.75));
+  font-size: calc((var(--text-size) * 4) - (var(--text-size) / 0.6));
   font-weight: normal;
   color: var(--tidy-text);
   position: relative;
