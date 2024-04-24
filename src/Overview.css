@@ -12,10 +12,12 @@
 /* [ ] In plugin's component page, link to website comes to Overview, instead of to component */
 /* [ ] Overview leftbar tooltips should be smaller fonts (12px) */
 /* [ ] Search icon should be smaller (18px:18px) */
+/* [ ] Do's and don'ts - make it like in design (new layout + new icons) */
 
 /* TODOS - for DIMA: */
 /* [ ] Check why there's no picture to components like "another one" (in dev team) */
 /* [ ] Component Details page - adding link to Figma + WIP */
+/* [ ] Sandra's QA for SVG in Pre-defined elements */
 
 .overview-content {
   align-items: center;
