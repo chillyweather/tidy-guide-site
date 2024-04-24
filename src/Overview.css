@@ -1,6 +1,6 @@
 /* TODOS */
 /* [X] 348x162 (32x17) card proportions in Overview */
-/* [ ] Card should break to lines of 2 in 1100px are less */
+/* [X] Card should break to lines of 2 in 1100px are less */
 /* [X] Overview leftbar buttons should have less gap between */
 /* [X] Hero image in component's details max-width and width */
 /* [X] link is in nowhere (in titles) */
@@ -13,7 +13,7 @@
 /* [X] Overview leftbar tooltips should be smaller fonts (12px) */
 /* [X] Search icon should be smaller (18px:18px) */
 /* [ ] Do's and don'ts - make it like in design (new layout + new icons) */
-/* [ ] All fonts should be INTER */
+/* [X] All fonts should be INTER */
 /* [ ] Image padding are super weird */
 /* [ ] Image max-width 700px */
 /* [ ] Links should look different - like in design */
@@ -31,6 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  width: 60vw;
   max-width: 900px;
 }
 
@@ -120,9 +121,9 @@
 
 .element .element-image {
   width: 13.2vw;
+  height: 7vw;
   margin: 0;
   transform: none;
-  height: 7vw;
   object-fit: scale-down;
   transform: scale(0.8);
   /* width: 100%;
@@ -161,5 +162,9 @@ body {
 @media screen and (max-width: 1040px) {
   body {
     overflow: auto;
+  }
+  .element .element-image{
+    width: calc(24vw - 24px);
+    height: 12.7vw;
   }
 }
