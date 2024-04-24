@@ -19,6 +19,7 @@
 
 .element-span {
   display: inline-block;
+  pointer-events: none;
 }
 
 .element-span .element-image {
