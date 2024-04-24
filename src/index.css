@@ -1652,6 +1652,10 @@ summary button {
   background-position: center;
   background-repeat: no-repeat;
 }
+.dropdown-toggle{
+  background-color: #474747 !important;
+  border-radius: 4px !important;
+}
 
 .dropdown-menu {
   position: absolute;
