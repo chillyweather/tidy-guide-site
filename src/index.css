@@ -452,7 +452,7 @@ li {
   transform: translate(0, 16px);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: var(--text-size);
+  font-size: calc(var(--text-size) / 7 * 6);
   line-height: 150%;
   padding: 12px;
   color: var(--tidy-32);
