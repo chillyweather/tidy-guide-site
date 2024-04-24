@@ -171,6 +171,11 @@ body:has(.login) {
   word-break: break-word;
 }
 
+.textSection p {
+  font-size: calc(var(--text-size) / 7 * 8);
+  max-width: 600px;
+}
+
 .imageSection::after,
 .videoSection::after {
   margin-top: 32px;
@@ -1639,11 +1644,13 @@ summary button {
 .dropdown-toggle {
   position: relative;
 }
-.dropdown-toggle{
+
+.dropdown-toggle {
   display: flex;
   gap: 16px;
 }
-.dropdown-toggle::after{
+
+.dropdown-toggle::after {
   content: 'O';
   position: relative;
   color: transparent;
@@ -1652,7 +1659,8 @@ summary button {
   background-position: center;
   background-repeat: no-repeat;
 }
-.dropdown-toggle{
+
+.dropdown-toggle {
   background-color: #474747 !important;
   border-radius: 4px !important;
 }
