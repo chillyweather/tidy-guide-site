@@ -10,6 +10,7 @@ import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 import noImage from "./assets/no-image.png";
+import EmptyState from "./assets/empty-state.svg";
 
 import "./Overview.css";
 
@@ -135,7 +136,7 @@ export const Overview = () => {
           </div>
           {currentDocumentations.length == 0 &&
             <div className="empty-index">
-              {/* <img src={EmptyState} className={"empty-index-image"} /> */}
+              <img src={EmptyState} className={"empty-index-image"} />
               <div className="empty-index-flex">
                 <h2>Looks like you don't have any Documentation</h2>
                 <p>Fortunately, it's easy to create documentation</p>
