@@ -295,7 +295,7 @@ h3 {
   /* padding-bottom: 16px; */
   box-shadow: 0 16px 0 0 #ffffff, 0 17px 0 0 var(--tidy-divider);
   margin: 16px 0;
-  
+
 }
 
 h4 {
@@ -1178,7 +1178,7 @@ a:empty {
 
 .resources a,
 .links-block a {
-  font-family: 'Space Mono', monospace;
+  /* font-family: 'Space Mono', monospace; */
   color: var(--tidy-text);
   background-color: #FFFFFF;
   border-radius: 9999px;
@@ -1186,6 +1186,7 @@ a:empty {
   padding-left: 32px;
   position: relative;
   font-size: var(--text-size);
+  border: 1px solid var(--tidy-32);
 }
 
 .resources a::before,
@@ -1227,13 +1228,25 @@ a:empty {
 
 .resources a:hover,
 .links-block a:hover {
-  background-color: #E9E6F9;
+  background-color: #F7F7F7;
   text-decoration: none;
 }
 
 .resources a:active,
 .links-block a:active {
-  background-color: #F1ECFD;
+  background-color: var(--tidy-32);
+  color: #ffffff;
+}
+
+.resources a:focus-visible,
+.links-block a:focus-visible {
+  box-shadow: 0 0 0 3px #C2DAFE;
+  outline: none;
+}
+
+.resources a:active::before,
+.links-block a:active::before {
+  filter: invert(100%);
 }
 
 .back-link {
