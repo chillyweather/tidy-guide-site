@@ -78,18 +78,21 @@ export const Overview = () => {
             </h1>
           </div>
         </div>
-        <input type="checkbox" name="" id="order-check"
-          onClick={(event) => {
-            toggleFunc(event);
-          }}
-        />
-        <label for="order-check">
-          <div className="reorder-toggle">
-            <button className="selected">Alphabetical</button>
-            <button>Recent</button>
-          </div>
-        </label>
-        <br />
+        {currentDocumentations.length > 0 &&
+          <div>
+            <input type="checkbox" name="" id="order-check"
+              onClick={(event) => {
+                toggleFunc(event);
+              }}
+            />
+            <label for="order-check">
+              <div className="reorder-toggle">
+                <button className="selected">Alphabetical</button>
+                <button>Recent</button>
+              </div>
+            </label>
+            <br />
+          </div>}
         <section>
           <div className="overview-content">
             {currentDocumentations &&
