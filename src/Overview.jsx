@@ -133,6 +133,15 @@ export const Overview = () => {
                 );
               })}
           </div>
+          {currentDocumentations.length == 0 &&
+            <div className="empty-index">
+              {/* <img src={EmptyState} className={"empty-index-image"} /> */}
+              <div className="empty-index-flex">
+                <h2>Looks like you don't have any Documentation</h2>
+                <p>Fortunately, it's easy to create documentation</p>
+              </div>
+            </div>
+          }
         </section>
       </div>
     </div>
