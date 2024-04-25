@@ -37,25 +37,46 @@ export const Overview = () => {
         </div>
         <div className={"section headerSection"}>
           <div className="title-wrapper">
-            <strong>
-              <h1 id={"sectionHeader"}>
-                Overview
-                <button
-                  className={"copyLink " + copied}
-                  onClick={() => {
-                    navigator.clipboard.writeText(location.href);
-                    setCopied("copied");
-                    setTimeout(function () {
-                      setCopied("");
-                    }, 2000);
-                  }}
-                >
-                  <IconLink />
-                </button>
-              </h1>
-            </strong>
+            <h1 id={"sectionHeader"}>
+              Overview
+              <button
+                className={"copyLink " + copied}
+                onClick={() => {
+                  navigator.clipboard.writeText(location.href);
+                  setCopied("copied");
+                  setTimeout(function () {
+                    setCopied("");
+                  }, 2000);
+                }}
+              >
+                <IconLink />
+              </button>
+            </h1>
           </div>
         </div>
+        <button
+          onClick={() => {
+            var arrayToSort = new Array();
+            var x = document.getElementsByClassName("element-wrapper");
+            var i;
+            for (i = 0; i < x.length; i++) {
+              arrayToSort.push(x[i].getAttribute("last-updated"));
+              console.log(x[i].getAttribute("last-updated"));
+              // x[i].style.order = Math.floor(x[i].getAttribute("last-updated") / 10000);
+            }
+            arrayToSort.sort();
+            console.log(arrayToSort);
+
+            var x = document.getElementsByClassName("element-wrapper");
+            var i;
+            for (i = 0; i < x.length; i++) {
+              x[i].style.order = arrayToSort.indexOf(x[i].getAttribute("last-updated"));
+            }
+          }}
+        >
+          Reorder
+        </button>
+        <br /><br />
         <section>
           <div className="overview-content">
             {currentDocumentations &&
@@ -66,6 +87,7 @@ export const Overview = () => {
                   <div
                     key={index}
                     className="element-wrapper"
+                    last-updated={(doc.updatedAt.slice(0, 4)) + (doc.updatedAt.slice(6, 7)) + (doc.updatedAt.slice(8, 10)) + (24 - doc.updatedAt.slice(11, 13)) + (60 - doc.updatedAt.slice(14, 16)) + (-60 - doc.updatedAt.slice(17, 19))}
                     // eslint-disable-next-line react/no-unknown-property
                     tooltip={doc.title}
                   >
@@ -74,17 +96,27 @@ export const Overview = () => {
                       onClick={() => navigate(`/guide/${doc._id}`)}
                     >
                       {doc.componentPic &&
-                      doc.componentPic.split(".").pop() === "png" ? (
+                        doc.componentPic.split(".").pop() === "png" ? (
                         <img src={doc.componentPic} className="element-image" />
                       ) : (
                         <div className="flex-image no-image">
-                          <img src={noImage} alt="No image found" className="element-image"/>
+                          <img src={noImage} alt="No image found" className="element-image" />
                           {/* <p>No image found</p> */}
                         </div>
                       )}
                       {doc.inProgress && <div className={"wip"}>WIP</div>}
                     </button>
                     <p className="element-text">{doc.title}</p>
+                    {/* <div>{doc.updatedAt}</div>
+                    <div>{doc.updatedAt.slice(0, 4)}</div>
+                    <div>{doc.updatedAt.slice(6, 7)}</div>
+                    <div>{doc.updatedAt.slice(8, 10)}</div>
+                    <div>{doc.updatedAt.slice(11, 13)}</div>
+                    <div>{doc.updatedAt.slice(14, 16)}</div>
+                    <div>{doc.updatedAt.slice(17, 19)}</div>
+                    <div>
+                      {(doc.updatedAt.slice(0, 4)) + (doc.updatedAt.slice(6, 7)) + (doc.updatedAt.slice(8, 10)) + (24 - doc.updatedAt.slice(11, 13)) + (60 - doc.updatedAt.slice(14, 16)) + (-60 - doc.updatedAt.slice(17, 19))}
+                    </div> */}
                   </div>
                 );
               })}
