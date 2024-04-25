@@ -32,6 +32,7 @@ export const Overview = () => {
         arrayToSort.push(x[i].getAttribute("last-updated"));
       }
       arrayToSort.sort();
+      arrayToSort.reverse();
 
       var x = document.getElementsByClassName("element-wrapper");
       var i;
@@ -103,7 +104,7 @@ export const Overview = () => {
                   <div
                     key={index}
                     className="element-wrapper"
-                    last-updated={(doc.updatedAt.slice(0, 4)) + (doc.updatedAt.slice(6, 7)) + (doc.updatedAt.slice(8, 10)) + (24 - doc.updatedAt.slice(11, 13)) + (60 - doc.updatedAt.slice(14, 16)) + (-60 - doc.updatedAt.slice(17, 19))}
+                    last-updated={(doc.updatedAt.slice(0, 4)) + (doc.updatedAt.slice(6, 7)) + (doc.updatedAt.slice(8, 10)) + (doc.updatedAt.slice(11, 13)) + (doc.updatedAt.slice(14, 16)) + (doc.updatedAt.slice(17, 19))}
                     // eslint-disable-next-line react/no-unknown-property
                     tooltip={doc.title}
                   >
@@ -131,7 +132,7 @@ export const Overview = () => {
                     <div>{doc.updatedAt.slice(14, 16)}</div>
                     <div>{doc.updatedAt.slice(17, 19)}</div>
                     <div>
-                      {(doc.updatedAt.slice(0, 4)) + (doc.updatedAt.slice(6, 7)) + (doc.updatedAt.slice(8, 10)) + (24 - doc.updatedAt.slice(11, 13)) + (60 - doc.updatedAt.slice(14, 16)) + (-60 - doc.updatedAt.slice(17, 19))}
+                      {(doc.updatedAt.slice(0, 4)) + (doc.updatedAt.slice(6, 7)) + (doc.updatedAt.slice(8, 10)) + (doc.updatedAt.slice(11, 13)) + (doc.updatedAt.slice(14, 16)) + (doc.updatedAt.slice(17, 19))}
                     </div> */}
                   </div>
                 );
