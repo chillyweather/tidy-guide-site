@@ -29,11 +29,8 @@ export const Overview = () => {
       var i;
       for (i = 0; i < x.length; i++) {
         arrayToSort.push(x[i].getAttribute("last-updated"));
-        console.log(x[i].getAttribute("last-updated"));
-        // x[i].style.order = Math.floor(x[i].getAttribute("last-updated") / 10000);
       }
       arrayToSort.sort();
-      console.log(arrayToSort);
 
       var x = document.getElementsByClassName("element-wrapper");
       var i;
@@ -80,28 +77,6 @@ export const Overview = () => {
             </h1>
           </div>
         </div>
-        {/* <button
-          onClick={() => {
-            var arrayToSort = new Array();
-            var x = document.getElementsByClassName("element-wrapper");
-            var i;
-            for (i = 0; i < x.length; i++) {
-              arrayToSort.push(x[i].getAttribute("last-updated"));
-              console.log(x[i].getAttribute("last-updated"));
-              // x[i].style.order = Math.floor(x[i].getAttribute("last-updated") / 10000);
-            }
-            arrayToSort.sort();
-            console.log(arrayToSort);
-
-            var x = document.getElementsByClassName("element-wrapper");
-            var i;
-            for (i = 0; i < x.length; i++) {
-              x[i].style.order = arrayToSort.indexOf(x[i].getAttribute("last-updated"));
-            }
-          }}
-        >
-          Reorder
-        </button> */}
         <input type="checkbox" name="" id="order-check"
           onClick={(event) => {
             toggleFunc(event);
