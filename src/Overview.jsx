@@ -54,7 +54,7 @@ export const Overview = () => {
             </h1>
           </div>
         </div>
-        <button
+        {/* <button
           onClick={() => {
             var arrayToSort = new Array();
             var x = document.getElementsByClassName("element-wrapper");
@@ -75,8 +75,15 @@ export const Overview = () => {
           }}
         >
           Reorder
-        </button>
-        <br /><br />
+        </button> */}
+        <input type="checkbox" name="" id="order-check" />
+        <label for="order-check">
+          <div className="reorder-toggle">
+            <button className="selected">Alphabetical</button>
+            <button>Recent</button>
+          </div>
+        </label>
+        <br />
         <section>
           <div className="overview-content">
             {currentDocumentations &&

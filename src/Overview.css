@@ -159,11 +159,51 @@ body {
   overflow-x: hidden;
 }
 
+#order-check {
+  display: none;
+}
+
+.reorder-toggle {
+  padding: 4px;
+  border: 1px solid #E3E3E3;
+  border-radius: 6px;
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#order-check+label {
+  display: flex;
+  width: 224px;
+}
+
+.reorder-toggle button {
+  font-size: calc(var(--text-size) / 7 * 6);
+  width: 50%;
+  padding: 12px;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+#order-check+label button:nth-of-type(1) {
+  background-color: black;
+}
+
+#order-check:checked+label button:nth-of-type(1) {
+  background-color: transparent;
+}
+
+#order-check:checked+label button:nth-of-type(2) {
+  background-color: black;
+}
+
 @media screen and (max-width: 1040px) {
   body {
     overflow: auto;
   }
-  .element .element-image{
+
+  .element .element-image {
     width: calc(24vw - 24px);
     height: 12.7vw;
   }
