@@ -22,6 +22,32 @@ export const Overview = () => {
   useEffect(() => {
     setIsBrowseGuidesOpen(true);
   }, []);
+  function toggleFunc(e) {
+    if (e.target.checked) {
+      var arrayToSort = new Array();
+      var x = document.getElementsByClassName("element-wrapper");
+      var i;
+      for (i = 0; i < x.length; i++) {
+        arrayToSort.push(x[i].getAttribute("last-updated"));
+        console.log(x[i].getAttribute("last-updated"));
+        // x[i].style.order = Math.floor(x[i].getAttribute("last-updated") / 10000);
+      }
+      arrayToSort.sort();
+      console.log(arrayToSort);
+
+      var x = document.getElementsByClassName("element-wrapper");
+      var i;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.order = arrayToSort.indexOf(x[i].getAttribute("last-updated"));
+      }
+    } else {
+      var x = document.getElementsByClassName("element-wrapper");
+      var i;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.order = 0;
+      }
+    }
+  }
 
   return (
     <div className="wrapper-flex">
@@ -76,7 +102,11 @@ export const Overview = () => {
         >
           Reorder
         </button> */}
-        <input type="checkbox" name="" id="order-check" />
+        <input type="checkbox" name="" id="order-check"
+          onClick={(event) => {
+            toggleFunc(event);
+          }}
+        />
         <label for="order-check">
           <div className="reorder-toggle">
             <button className="selected">Alphabetical</button>
