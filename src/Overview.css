@@ -240,10 +240,6 @@ body {
     overflow: auto;
   }
 
-  .overview-content {
-    /* width: 55vw; */
-  }
-
   .element-wrapper {
     width: calc(50% - 24px);
   }
