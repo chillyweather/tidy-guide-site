@@ -184,18 +184,24 @@ body {
   padding: 12px;
   pointer-events: none;
   background-color: transparent;
+  color: #8E8F94;
+  border-radius: 4px;
+  user-select: none;
 }
 
 #order-check+label button:nth-of-type(1) {
-  background-color: black;
+  background-color: #3B3B3B;
+  color: #ffffff;
 }
 
 #order-check:checked+label button:nth-of-type(1) {
   background-color: transparent;
+  color: #8E8F94;
 }
 
 #order-check:checked+label button:nth-of-type(2) {
-  background-color: black;
+  background-color: #3B3B3B;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1040px) {
