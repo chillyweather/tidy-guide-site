@@ -10,6 +10,7 @@ import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 import noImage from "./assets/no-image.png";
+import EmptyState from "./assets/empty-state.svg";
 
 import "./Overview.css";
 
@@ -22,6 +23,30 @@ export const Overview = () => {
   useEffect(() => {
     setIsBrowseGuidesOpen(true);
   }, []);
+  function toggleFunc(e) {
+    if (e.target.checked) {
+      var arrayToSort = new Array();
+      var x = document.getElementsByClassName("element-wrapper");
+      var i;
+      for (i = 0; i < x.length; i++) {
+        arrayToSort.push(x[i].getAttribute("last-updated"));
+      }
+      arrayToSort.sort();
+      arrayToSort.reverse();
+
+      var x = document.getElementsByClassName("element-wrapper");
+      var i;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.order = arrayToSort.indexOf(x[i].getAttribute("last-updated"));
+      }
+    } else {
+      var x = document.getElementsByClassName("element-wrapper");
+      var i;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.order = 0;
+      }
+    }
+  }
 
   return (
     <div className="wrapper-flex">
@@ -37,25 +62,38 @@ export const Overview = () => {
         </div>
         <div className={"section headerSection"}>
           <div className="title-wrapper">
-            <strong>
-              <h1 id={"sectionHeader"}>
-                Overview
-                <button
-                  className={"copyLink " + copied}
-                  onClick={() => {
-                    navigator.clipboard.writeText(location.href);
-                    setCopied("copied");
-                    setTimeout(function () {
-                      setCopied("");
-                    }, 2000);
-                  }}
-                >
-                  <IconLink />
-                </button>
-              </h1>
-            </strong>
+            <h1 id={"sectionHeader"}>
+              Overview
+              <button
+                className={"copyLink " + copied}
+                onClick={() => {
+                  navigator.clipboard.writeText(location.href);
+                  setCopied("copied");
+                  setTimeout(function () {
+                    setCopied("");
+                  }, 2000);
+                }}
+              >
+                <IconLink />
+              </button>
+            </h1>
           </div>
         </div>
+        {currentDocumentations.length > 0 &&
+          <div>
+            <input type="checkbox" name="" id="order-check"
+              onClick={(event) => {
+                toggleFunc(event);
+              }}
+            />
+            <label for="order-check">
+              <div className="reorder-toggle">
+                <button className="selected">Alphabetical</button>
+                <button>Recent</button>
+              </div>
+            </label>
+            <br />
+          </div>}
         <section>
           <div className="overview-content">
             {currentDocumentations &&
@@ -66,6 +104,7 @@ export const Overview = () => {
                   <div
                     key={index}
                     className="element-wrapper"
+                    last-updated={(doc.updatedAt.slice(0, 4)) + (doc.updatedAt.slice(6, 7)) + (doc.updatedAt.slice(8, 10)) + (doc.updatedAt.slice(11, 13)) + (doc.updatedAt.slice(14, 16)) + (doc.updatedAt.slice(17, 19))}
                     // eslint-disable-next-line react/no-unknown-property
                     tooltip={doc.title}
                   >
@@ -74,21 +113,40 @@ export const Overview = () => {
                       onClick={() => navigate(`/guide/${doc._id}`)}
                     >
                       {doc.componentPic &&
-                      doc.componentPic.split(".").pop() === "png" ? (
+                        doc.componentPic.split(".").pop() === "png" ? (
                         <img src={doc.componentPic} className="element-image" />
                       ) : (
-                        <div className="flex-image">
-                          <img src={noImage} alt="No image found" />
-                          <p>No image found</p>
+                        <div className="flex-image no-image">
+                          <img src={noImage} alt="No image found" className="element-image" />
+                          {/* <p>No image found</p> */}
                         </div>
                       )}
                       {doc.inProgress && <div className={"wip"}>WIP</div>}
                     </button>
                     <p className="element-text">{doc.title}</p>
+                    {/* <div>{doc.updatedAt}</div>
+                    <div>{doc.updatedAt.slice(0, 4)}</div>
+                    <div>{doc.updatedAt.slice(6, 7)}</div>
+                    <div>{doc.updatedAt.slice(8, 10)}</div>
+                    <div>{doc.updatedAt.slice(11, 13)}</div>
+                    <div>{doc.updatedAt.slice(14, 16)}</div>
+                    <div>{doc.updatedAt.slice(17, 19)}</div>
+                    <div>
+                      {(doc.updatedAt.slice(0, 4)) + (doc.updatedAt.slice(6, 7)) + (doc.updatedAt.slice(8, 10)) + (doc.updatedAt.slice(11, 13)) + (doc.updatedAt.slice(14, 16)) + (doc.updatedAt.slice(17, 19))}
+                    </div> */}
                   </div>
                 );
               })}
           </div>
+          {currentDocumentations.length == 0 &&
+            <div className="empty-index">
+              <img src={EmptyState} className={"empty-index-image"} />
+              <div className="empty-index-flex">
+                <h2>Looks like you don't have any Documentation</h2>
+                <p>Fortunately, it's easy to create documentation</p>
+              </div>
+            </div>
+          }
         </section>
       </div>
     </div>

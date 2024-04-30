@@ -1,9 +1,38 @@
+/* TODOS */
+/* [X] 348x162 (32x17) card proportions in Overview */
+/* [X] Card should break to lines of 2 in 1100px are less */
+/* [X] Overview leftbar buttons should have less gap between */
+/* [X] Hero image in component's details max-width and width */
+/* [X] link is in nowhere (in titles) */
+/* [X] Add recent/ ABC toggle */
+/* [X] Add more gap between logo and dropdown */
+/* [X] Dropdown text is too big, font should be regular */
+/* [X] Texts should be smaller, padding should be different (inside collection dropdown) */
+/* [X] Fixed width to collections dropdown */
+/* [ ] In plugin's component page, link to website comes to Overview, instead of to component */
+/* [X] Overview leftbar tooltips should be smaller fonts (12px) */
+/* [X] Search icon should be smaller (18px:18px) */
+/* [ ] Do's and don'ts - make it like in design (new layout + new icons) */
+/* [X] All fonts should be INTER */
+/* [X] Image padding are super weird */
+/* [X] Image max-width 700px */
+/* [X] Links should look different - like in design */
+/* [ ] Videos should have max-width to 600px */
+/* [ ] Change video "links" below, like in deisgn */
+/* [X] Less gap in rightbar (anchor buttons) */
+
+/* TODOS - for DIMA: */
+/* [ ] Check why there's no picture to components like "another one" (in dev team) */
+/* [ ] Component Details page - adding link to Figma + WIP */
+/* [ ] Sandra's QA for SVG in Pre-defined elements */
+
 .overview-content {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  max-width: 900px;
+  /* width: 60vw;
+  max-width: 900px; */
 }
 
 .element-wrapper {
@@ -12,7 +41,8 @@
   flex-direction: column;
   gap: 8px;
   justify-content: flex-start;
-  width: calc(100% / 3 - 40px);
+  /* width: calc(100% / 3 - 40px); */
+  width: calc(20vw - 24px);
   position: relative;
 }
 
@@ -41,8 +71,10 @@
   flex-direction: column;
   gap: 10px;
   justify-content: center;
-  width: 100%;
-  height: 162px;
+  width: calc(20vw - 24px);
+  /* aspect-ratio: 32 / 17; */
+  /* width: 100%; */
+  /* height: 162px; */
   padding: 10px;
   position: relative;
 }
@@ -73,11 +105,12 @@
   align-items: center;
   gap: 6px;
 }
-.flex-image img{
+
+.flex-image img {
   max-width: 70%;
 }
 
-.flex-image p{
+.flex-image p {
   margin: 0;
   color: #7F7C7C;
 }
@@ -87,13 +120,35 @@
   max-height: 148px;
   max-width: 80%;
 }
-.element .element-image{
-  width: 100%;
+
+.element .element-image {
+  width: 13.2vw;
+  height: 9vw;
+  margin: 0;
+  transform: none;
+  object-fit: scale-down;
+  transform: scale(0.8);
+  /* width: 100%;
   max-height: 162px;
   max-width: 100%;
   margin: 60px 0;
   object-fit: scale-down;
-  transform: scale(0.5);
+  transform: scale(0.5); */
+}
+
+.element .no-image {
+  transform: scale(0.6) translateY(-20%);
+}
+
+.element .no-image::after {
+  content: 'No image found';
+  position: absolute;
+  white-space: pre;
+  font-size: 1.3vw;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--tidy-32);
 }
 
 .element .svg-wrapper svg {
@@ -106,8 +161,95 @@ body {
   overflow-x: hidden;
 }
 
+.empty-index {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  color: var(--tidy-32);
+  font-size: var(--text-size);
+}
+
+.empty-index-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.empty-index-image {
+  width: 120px;
+  height: 120px;
+  margin-top: 80px;
+}
+
+.empty-index h2 {
+  max-width: 75%;
+  line-height: 120%;
+  text-align: center;
+  font-weight: 600;
+}
+
+#order-check {
+  display: none;
+}
+
+.reorder-toggle {
+  padding: 4px;
+  border: 1px solid #E3E3E3;
+  border-radius: 6px;
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#order-check+label {
+  display: flex;
+  width: 224px;
+}
+
+.reorder-toggle button {
+  font-size: calc(var(--text-size) / 7 * 6);
+  width: 50%;
+  padding: 12px;
+  pointer-events: none;
+  background-color: transparent;
+  color: #8E8F94;
+  border-radius: 4px;
+  user-select: none;
+}
+
+#order-check+label button:nth-of-type(1) {
+  background-color: #3B3B3B;
+  color: #ffffff;
+}
+
+#order-check:checked+label button:nth-of-type(1) {
+  background-color: transparent;
+  color: #8E8F94;
+}
+
+#order-check:checked+label button:nth-of-type(2) {
+  background-color: #3B3B3B;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1040px) {
   body {
     overflow: auto;
+  }
+
+  .element-wrapper {
+    width: calc(50% - 24px);
+  }
+
+  .element {
+    width: 100%;
+  }
+
+  .element .element-image {
+    width: 100%;
+    height: 12.7vw;
   }
 }

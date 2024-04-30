@@ -386,6 +386,11 @@ body:has(.home) .header .logo-div {
     margin-top: 1vw;
 }
 
+.home .icon-128 {
+    width: 80px;
+    height: 80px;
+}
+
 .home .emptyVideo {
     width: 100%;
     max-width: 800px;
@@ -395,10 +400,36 @@ body:has(.home) .header .logo-div {
     margin-top: 24px;
 }
 
-.home video {
+.home .videoSection {
     width: 100%;
-    max-width: 1000px;
-    border-radius: 8px;
+    max-width: 1438px;
+    border: none;
+    overflow: hidden;
+    cursor: none;
+}
+
+.home .videoSection .cursor {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 9;
+    transform: translate(-50%, -1000%);
+    background-image: url(assets/cursor-play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    display: none;
+}
+
+.home .videoSection .cursor.pause {
+    background-image: url(assets/cursor-pause.svg);
+}
+
+.home .videoSection video {
+    pointer-events: none;
+    width: 100%;
+    clip-path: polygon(1% 1%, 99% 1%, 99% 99%, 1% 99%);
 }
 
 h2 {
@@ -1100,6 +1131,14 @@ img.view {
     .home .hero-para {
         animation: none;
         opacity: 1;
+    }
+    .home .icon-128 {
+        max-width: 60px !important;
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .home .cursor{
+        display: none !important;
     }
 
     .home .toggle-section {

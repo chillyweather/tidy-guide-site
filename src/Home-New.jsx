@@ -1,11 +1,36 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
 import "./Home-New.css";
-import Earlybirds from "./assets/magic-hat.svg";
+import Earlybirds from "./assets/tidy-128.svg";
 import heroEdit from "./assets/hero-edit-min.png";
 import heroView from "./assets/hero-view-min.png";
+import ExplainerVideo from "./assets/Explainer.mp4";
+import VideoPoster from "./assets/video-poster.png";
+
+function start() {
+  document.getElementById("cursor-img").style.display = "block";
+}
+function drag(e) {
+  document.getElementById("cursor-img").style.left = e.clientX + document.getElementById("video-section").offsetLeft + "px";
+  document.getElementById("cursor-img").style.top = e.clientY + document.getElementById("video-section").offsetTop + window.scrollY + "px";
+}
+function stop() {
+  document.getElementById("cursor-img").style.display = "none";
+}
+function play(e) {
+  if (e.target.getElementsByTagName("video")[0].classList.contains('playing')) {
+    e.target.getElementsByTagName("video")[0].pause();
+    e.target.getElementsByTagName("video")[0].classList.remove('playing');
+    document.getElementById("cursor-img").classList.remove('pause');
+  } else {
+    e.target.getElementsByTagName("video")[0].play();
+    e.target.getElementsByTagName("video")[0].classList.add('playing');
+    document.getElementById("cursor-img").classList.add('pause');
+  }
+}
 
 export const Home = () => {
+
   return (
     <div className="home">
       <section>
@@ -29,6 +54,11 @@ export const Home = () => {
           Meet Tidy — the intuitive documentation builder you’ve been looking
           for.
         </p>
+        <div className="videoSection" id="video-section" onMouseOver={() => { start() }} onMouseMove={(event) => { drag(event) }} onMouseOut={() => { stop() }} onClick={(event) => { play(event) }}>
+          <div className="cursor" id="cursor-img"></div>
+          <video src={ExplainerVideo} poster={VideoPoster} playsInline></video>
+        </div>
+        <br /><br />
         <button
           onClick={() => {
             window.open(
@@ -81,7 +111,7 @@ export const Home = () => {
       <section className="colored">
         <div className="inner-colored">
           <footer>
-            <img src={Earlybirds} />
+            <img className="icon-128" src={Earlybirds} />
             <div className="inner-footer">
               <h1 className="size-54">
                 Your knowledge base across design teams

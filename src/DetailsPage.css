@@ -19,9 +19,12 @@
 
 .element-span {
   display: inline-block;
+  pointer-events: none;
 }
 
-.element-image {
+.element-span .element-image {
   margin-top: 60px;
-  width: 50%;
+  transform: scale(.5);
+  transform-origin: top left !important;
+  max-width: 1000px;
 }
