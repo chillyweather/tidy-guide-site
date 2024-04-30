@@ -705,7 +705,7 @@ li {
 
 .videoSection div:has(button) {
   width: 100%;
-  max-width: 784px;
+  max-width: 584px;
   display: list-item;
   padding-left: 16px;
   list-style-type: none;
@@ -764,6 +764,10 @@ li {
 
 .videoSection div {
   max-width: 776px;
+}
+
+.videoSection .videoDiv {
+  max-width: 576px;
 }
 
 .videoDiv p {
