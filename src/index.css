@@ -734,7 +734,7 @@ li {
 }
 
 .videoSection div:has(.videoSelected) {
-  background-color: #E9E6F9;
+  background-color: #F0F0F0;
 }
 
 .videoSection div {
@@ -742,11 +742,11 @@ li {
 }
 
 .videoSection div:has(button):hover {
-  background-color: #ffffff;
+  background-color: #F7F8F8;
 }
 
 .videoSection div:has(button):active {
-  background-color: #E9E6F9;
+  background-color: #F0F0F0;
 }
 
 .videoSection div:has(button):hover::before {
