@@ -13,14 +13,14 @@ export const TwoColumnsDocSection = ({ element, buildLists, index }) => (
     )}
     {Object.keys(element.content).length && (
       <div className={"two-columns"}>
-        <div>
+        <div className={"list-flex do"}>
           <strong>
             <h4>{element.content.subtitle1}</h4>
           </strong>
 
           {buildLists(element.content.text1.split("\n"), "unordered")}
         </div>
-        <div>
+        <div className={"list-flex dont"}>
           <strong>
             <h4>{element.content.subtitle2}</h4>
           </strong>
