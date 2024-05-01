@@ -3,7 +3,7 @@ import { ReactSVG } from "react-svg";
 
 export const AnatomyDocSection = ({ element, index }) => {
   return (
-    <div className={"section textSection"}>
+    <div className={"section textSection anatomySection"}>
       <div className={"anchorLink"} id={element.title + index}></div>
       {element.title && (
         <div className={"title-row"}>
