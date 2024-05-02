@@ -110,7 +110,6 @@ const NavBar = () => {
       )}
       {savedToken && (
         <button id="browse" className="browseBTN" onClick={handleGuidesClick}>
-          <img onError={handleGuidesClick} src="" />
           Browse Guides
         </button>
       )}

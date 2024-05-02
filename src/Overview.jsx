@@ -88,7 +88,7 @@ export const Overview = () => {
                 toggleFunc(event);
               }}
             />
-            <label for="order-check">
+            <label htmlFor="order-check">
               <div className="reorder-toggle">
                 <button className="selected">Alphabetical</button>
                 <button>Recent</button>

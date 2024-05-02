@@ -3,12 +3,12 @@ import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useAtom } from "jotai";
 import { selectedCollectionAtom, currentDocumentationsAtom } from "./atoms";
-// import fetchDocs from "./fetchDocs";
+
 import fetchCollections from "./fetchCollections";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./Header";
 import { Login } from "./Login";
-// import { Home } from "./Home";
+
 import { Home } from "./Home-New";
 import { DetailsPage } from "./DetailsPage";
 import { Overview } from "./Overview";
@@ -47,7 +47,7 @@ export default function DataFetchingComponent() {
     if (docsQuery.data) {
       setCurrentDocumentations(docsQuery.data);
     }
-  }, [docsQuery.data, setCurrentDocumentations]);
+  }, [docsQuery.data]);
 
   return (
     <div>
@@ -55,8 +55,8 @@ export default function DataFetchingComponent() {
         <Header />
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/guide/overview" element={<Overview />} />
           <Route path="/guide/:id" element={<DetailsPage />} />
+          <Route path="/guide/overview" element={<Overview />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
