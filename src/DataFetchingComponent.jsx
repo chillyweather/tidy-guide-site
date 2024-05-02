@@ -47,7 +47,7 @@ export default function DataFetchingComponent() {
     if (docsQuery.data) {
       setCurrentDocumentations(docsQuery.data);
     }
-  }, [docsQuery.data]);
+  }, [docsQuery.data, setCurrentDocumentations]);
 
   return (
     <div>
