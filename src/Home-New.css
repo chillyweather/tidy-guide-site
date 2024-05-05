@@ -1002,6 +1002,7 @@ img.view {
     position: absolute;
     top: 5vw;
     right: -4%;
+    letter-spacing: normal;
     /* transform: translate(-146%, 0); */
     padding: 5px 16px;
     line-height: normal;
