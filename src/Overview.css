@@ -222,7 +222,7 @@ body {
 .reorder-toggle button {
   font-size: calc(var(--text-size) / 7 * 6);
   width: 50%;
-  padding: 12px;
+  padding: 8px;
   pointer-events: none;
   background-color: transparent;
   color: #8E8F94;
