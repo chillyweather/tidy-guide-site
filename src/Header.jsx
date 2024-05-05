@@ -71,6 +71,9 @@ const NavBar = () => {
 
   return (
     <div className="navbar">
+      {(savedToken && !location.pathname.startsWith("/guide/")) && (
+        <div>{window.location.href="/guide/overview"}</div>
+      )}
       <div className="logo-div">
         <svg
           // onClick={handleHomeClick}
@@ -110,7 +113,6 @@ const NavBar = () => {
       )}
       {(savedToken && !location.pathname.startsWith("/guide/")) && (
         <button id="browse" className="browseBTN" onClick={handleGuidesClick}>
-          {window.location.href="/guide/overview"}
           Browse Guides
         </button>
       )}
