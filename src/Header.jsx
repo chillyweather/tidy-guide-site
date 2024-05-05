@@ -121,7 +121,11 @@ const NavBar = () => {
           Logout
         </button>
       ) : (
-        <button onClick={handleLoginClick}>Login</button>
+        
+        <button onClick={handleLoginClick}>
+          {location.pathname.startsWith("/guide/") && console.log('yseyes')}
+          Login
+        </button>
       )}
     </div>
   );
