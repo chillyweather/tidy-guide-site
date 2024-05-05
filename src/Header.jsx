@@ -72,7 +72,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       {(savedToken && !location.pathname.startsWith("/guide/")) && (
-        <div>{window.location.href="/guide/overview"}</div>
+        <div>{window.location.href = "/guide/overview"}</div>
       )}
       <div className="logo-div">
         <svg
@@ -121,9 +121,9 @@ const NavBar = () => {
           Logout
         </button>
       ) : (
-        
+
         <button onClick={handleLoginClick}>
-          {location.pathname.startsWith("/guide/") && console.log('yseyes')}
+          {location.pathname.startsWith("/guide/") && (window.location.href = window.location.origin)}
           Login
         </button>
       )}
