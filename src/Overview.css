@@ -22,7 +22,7 @@
 /* [X] Less gap in rightbar (anchor buttons) */
 
 /* [ ] Toggle - less height (like in design) */
-/* [ ] check TODO in this file */
+/* [X] check TODO in this file */
 /* [ ] Add gap between secitons */
 /* [ ] Two Columns should always be "Do's and Dont's" by default */
 /* [ ] Add another component seciton for Two Columns */
@@ -170,7 +170,6 @@ body {
 }
 .wrapper-flex:has(.empty-index), .section:has(.empty-index), .doc-wrapper:has(.empty-index){
   width: 99vw;
-  /* TODO */
 }
 .empty-index {
   display: flex;
