@@ -49,7 +49,9 @@
 #overview {
   margin-bottom: 8px;
 }
-
+.browseBTN{
+  display: none !important;
+}
 #overview::before {
   /* Divider */
   content: '';

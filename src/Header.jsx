@@ -108,8 +108,9 @@ const NavBar = () => {
       {location.pathname.startsWith("/guide/") && (
         <CollectionsDropdown options={data} onSelect={console.log} />
       )}
-      {savedToken && (
+      {(savedToken && !location.pathname.startsWith("/guide/")) && (
         <button id="browse" className="browseBTN" onClick={handleGuidesClick}>
+          {window.location.href="/guide/overview"}
           Browse Guides
         </button>
       )}
