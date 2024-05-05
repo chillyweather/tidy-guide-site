@@ -1119,6 +1119,7 @@ img.view {
 .home .anim-seperator::after {
     content: '24px';
     position: absolute;
+    letter-spacing: normal;
     top: -50%;
     left: -46px;
     font-size: 16px;
