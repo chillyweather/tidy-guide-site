@@ -169,7 +169,7 @@ body {
   overflow-x: hidden;
 }
 .wrapper-flex:has(.empty-index), .section:has(.empty-index), .doc-wrapper:has(.empty-index){
-  width: 100vw;
+  width: 99vw;
   /* TODO */
 }
 .empty-index {
