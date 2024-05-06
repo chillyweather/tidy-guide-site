@@ -130,9 +130,10 @@
   max-height: 148px;
   max-width: 80%;
 }
-.element .no-image .no-image-alert-wrapper{
+.element .no-image .no-image-alert-wrapper::before{
   white-space: pre;
-  width: fit-content;
+  width: fit-content !important;
+  max-width: fit-content !important;
 }
 .element .no-image .no-image-alert {
   position: absolute;
