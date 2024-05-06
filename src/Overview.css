@@ -128,7 +128,12 @@
   max-height: 148px;
   max-width: 80%;
 }
-
+.element .no-image .no-image-alert{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #828387;
+}
 .element .element-image {
   width: 13.2vw;
   height: 9vw;

@@ -8,7 +8,7 @@ import { currentDocumentationsAtom, isBrowseGuidesOpenAtom } from "./atoms";
 // import fetchCollections from "./fetchCollections";
 import PropTypes from "prop-types";
 import { Guides } from "./Guides";
-import { IconLink } from "@tabler/icons-react";
+import { IconLink, IconExclamationCircle } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 // import noImage from "./assets/no-image.png";
 import noImage from "./assets/no-empty-state.png";
@@ -128,12 +128,12 @@ export const Overview = () => {
                         <img src={doc.componentPic} className="element-image" />
                       ) : (
                         <div className="flex-image no-image">
+                          <IconExclamationCircle class="no-image-alert" />
                           <img
                             src={noImage}
                             alt="No image found"
                             className="element-image"
                           />
-                          {/* <p>No image found</p> */}
                         </div>
                       )}
                       {doc.inProgress && <div className={"wip"}>WIP</div>}
