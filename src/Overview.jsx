@@ -128,8 +128,8 @@ export const Overview = () => {
                         <img src={doc.componentPic} className="element-image" />
                       ) : (
                         <div className="flex-image no-image">
-                          <div tooltip="Image not found or type unknown">
-                            <IconExclamationCircle class="no-image-alert" />
+                          <div tooltip="Image not found or type unknown" className="no-image-alert-wrapper">
+                            <IconExclamationCircle className="no-image-alert" />
                           </div>
                           <img
                             src={noImage}
