@@ -124,11 +124,13 @@ export const Overview = () => {
                       onClick={() => navigate(`/guide/${doc._id}`)}
                     >
                       {doc.componentPic &&
-                      doc.componentPic.split(".").pop() === "png" ? (
+                        doc.componentPic.split(".").pop() === "png" ? (
                         <img src={doc.componentPic} className="element-image" />
                       ) : (
                         <div className="flex-image no-image">
-                          <IconExclamationCircle class="no-image-alert" tool-tip="Image not found or type unknown" />
+                          <div tooltip="Image not found or type unknown">
+                            <IconExclamationCircle class="no-image-alert" />
+                          </div>
                           <img
                             src={noImage}
                             alt="No image found"
