@@ -10,7 +10,8 @@ import PropTypes from "prop-types";
 import { Guides } from "./Guides";
 import { IconLink } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
-import noImage from "./assets/no-image.png";
+// import noImage from "./assets/no-image.png";
+import noImage from "./assets/no-empty-state.png";
 import EmptyState from "./assets/empty-state.svg";
 
 import "./Overview.css";

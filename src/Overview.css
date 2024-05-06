@@ -135,7 +135,7 @@
   margin: 0;
   transform: none;
   object-fit: scale-down;
-  transform: scale(0.8);
+  /* transform: scale(0.8); */
   /* width: 100%;
   max-height: 162px;
   max-width: 100%;
@@ -144,11 +144,11 @@
   transform: scale(0.5); */
 }
 
-.element .no-image {
+/* .element .no-image {
   transform: scale(0.6) translateY(-20%);
-}
+} */
 
-.element .no-image::after {
+/* .element .no-image::after {
   content: 'No image found';
   position: absolute;
   white-space: pre;
@@ -157,7 +157,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: var(--tidy-32);
-}
+} */
 
 .element .svg-wrapper svg {
   max-height: 166px;
