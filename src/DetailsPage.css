@@ -20,11 +20,11 @@
 .element-span {
   display: inline-block;
   pointer-events: none;
+  transform: scale(.5);
+  transform-origin: top left !important;
 }
 
 .element-span .element-image {
   margin-top: 60px;
-  transform: scale(.5);
-  transform-origin: top left !important;
   max-width: 1000px;
 }
