@@ -3,7 +3,9 @@ import { ReactSVG } from "react-svg";
 
 export const AnatomyDocSection = ({ element, index }) => {
   return (
-    <div className={"section textSection anatomySection"}>
+    <div className={"section textSection anatomySection"}
+      onMouseOver={(event) => { addToolTips(event) }}
+    >
       <div className={"anchorLink"} id={element.title + index}></div>
       {element.title && (
         <div className={"title-row"}>
@@ -21,7 +23,6 @@ export const AnatomyDocSection = ({ element, index }) => {
           src={element.content.remoteImageLink}
           style={{ width: "100%" }}
           className="svg-wrapper"
-          onMouseOver={(event) => { addToolTips(event) }}
         />
       )}
     </div>
