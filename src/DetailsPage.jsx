@@ -148,6 +148,16 @@ function buildNavigationLinks(arr) {
   });
 }
 
+function addToolTips() {
+  var x = document.getElementsByTagName("tspan");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'title');
+    newElement.innerHTML = x[i].innerHTML;
+    x[i].appendChild(newElement);
+  }
+}
+setTimeout(function () { addToolTips() }, 1000);
 DetailsPage.propTypes = {
   documentation: PropTypes.array,
   navigationLinks: PropTypes.array,
