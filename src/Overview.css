@@ -130,19 +130,22 @@
   max-height: 148px;
   max-width: 80%;
 }
-.element-wrapper[tooltip]:has(.no-image-alert-wrapper:hover):hover::before{
+
+.element-wrapper[tooltip]:has(.no-image-alert-wrapper:hover):hover::before {
   visibility: hidden !important;
   opacity: 0 !important;
   transform: translate(0, 16px) !important;
   transition: transform 300ms ease-in 0s, opacity 300ms linear 0s, visibility 300ms linear 0s allow-discrete !important;
 }
-.element .no-image .no-image-alert-wrapper::before{
+
+.element .no-image .no-image-alert-wrapper::before {
   left: unset;
   right: 8px;
   white-space: pre;
   width: fit-content !important;
   max-width: fit-content !important;
 }
+
 .element .no-image .no-image-alert {
   position: absolute;
   right: 10px;
