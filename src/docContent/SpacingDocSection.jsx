@@ -3,7 +3,9 @@ import { ReactSVG } from "react-svg";
 
 export const SpacingDocSection = ({ element, index }) => {
   return (
-    <div className={"section textSection"}>
+    <div className={"section textSection spacingsSection"}
+      onMouseOver={(event) => { addToolTips(event) }}
+    >
       <div className={"anchorLink"} id={element.title + index}></div>
       {element.title && (
         <div className={"title-row"}>
