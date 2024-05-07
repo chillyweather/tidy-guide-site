@@ -120,11 +120,6 @@ export const DetailsPage = () => {
           }
         })}
       </div>
-      <img src=""
-        onError={() =>
-          setTimeout(function () { addToolTips() }, 1000)
-        }
-      />
     </div>
   );
 };
@@ -151,16 +146,6 @@ function buildNavigationLinks(arr) {
       </a>
     );
   });
-}
-
-function addToolTips() {
-  var x = document.getElementsByTagName("tspan");
-  var i;
-  for (i = 0; i < x.length; i++) {
-    var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'title');
-    newElement.innerHTML = x[i].innerHTML;
-    x[i].appendChild(newElement);
-  }
 }
 
 DetailsPage.propTypes = {
