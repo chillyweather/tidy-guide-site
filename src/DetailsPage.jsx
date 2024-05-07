@@ -120,6 +120,11 @@ export const DetailsPage = () => {
           }
         })}
       </div>
+      <img src=""
+        onError={() =>
+          setTimeout(function () { addToolTips() }, 1000)
+        }
+      />
     </div>
   );
 };
@@ -157,7 +162,7 @@ function addToolTips() {
     x[i].appendChild(newElement);
   }
 }
-setTimeout(function () { addToolTips() }, 1000);
+
 DetailsPage.propTypes = {
   documentation: PropTypes.array,
   navigationLinks: PropTypes.array,
