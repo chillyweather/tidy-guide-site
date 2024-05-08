@@ -32,7 +32,7 @@
 }
 .element-span .element-image[src^="https"]{
   padding: 12px;
-  border: 2px solid var(--tidy-primary);
+  border: 1px solid var(--tidy-ec);
   border-radius: 8px;
   display: block;
 }
