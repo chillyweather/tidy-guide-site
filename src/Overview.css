@@ -32,6 +32,11 @@
 /* [ ] Component Details page - adding link to Figma + WIP */
 /* [ ] Sandra's QA for SVG in Pre-defined elements */
 
+
+/* NEW TODOS */
+/* [ ] missing image image is too large */
+/* [ ] missing image icon button is too large- also should work w click */
+/* [ ] Border in component image - too thick */
 .overview-content {
   align-items: center;
   display: flex;
@@ -91,11 +96,11 @@
 
 .element .wip {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 5px;
+  top: 5px;
 }
 .element:has(.no-image) .wip{
-  right: 36px;
+  right: 28px;
 }
 
 .element-text {
@@ -154,6 +159,8 @@
   right: 6px;
   top: 6px;
   color: #828387;
+  width: 18px;
+  height: 18px;
 }
 
 .element .element-image {
@@ -162,6 +169,7 @@
   margin: 0;
   transform: none;
   object-fit: scale-down;
+  transform: scale(0.8);
   /* transform: scale(0.8); */
   /* width: 100%;
   max-height: 162px;
