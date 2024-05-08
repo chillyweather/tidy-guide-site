@@ -101,7 +101,8 @@
   right: 5px;
   top: 5px;
 }
-.element:has(.no-image) .wip{
+
+.element:has(.no-image) .wip {
   right: 28px;
 }
 
@@ -154,6 +155,10 @@
   white-space: pre;
   width: fit-content !important;
   max-width: fit-content !important;
+}
+
+.element .no-image .no-image-alert-wrapper:hover::before {
+  transition: transform 300ms ease-in 0s, opacity 300ms linear 0s, visibility 300ms linear 0s allow-discrete;
 }
 
 .element .no-image .no-image-alert {
