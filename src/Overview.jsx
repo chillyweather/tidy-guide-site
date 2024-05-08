@@ -121,7 +121,7 @@ export const Overview = () => {
                   >
                     <button
                       className="element"
-                      onMouseOver={(event) => { overviewCard(event) }}
+                      onMouseOver={(event) => { decideTooltip(event) }}
                       onClick={() => navigate(`/guide/${doc._id}`)}
                     >
                       {doc.componentPic &&
@@ -170,7 +170,7 @@ export const Overview = () => {
     </div>
   );
 };
-function overviewCard(event) {
+function decideTooltip(event) {
   event.target.parentElement.setAttribute('og-width', event.target.parentElement.getElementsByClassName('element-text')[0].offsetWidth);
   event.target.parentElement.getElementsByClassName('element-text')[0].style.overflow = "visible";
   event.target.parentElement.getElementsByClassName('element-text')[0].style.width = "fit-content";
