@@ -467,7 +467,7 @@ li {
   transition: transform 300ms ease-in 0s, opacity 300ms linear 0s, visibility 300ms linear 0s allow-discrete;
 }
 
-*[tooltip]:hover::before {
+*[tooltip]:not([tooltip=""]):hover::before {
   visibility: visible;
   opacity: 1;
   transform: translate(0, 0);
@@ -595,6 +595,7 @@ li {
   height: 100%;
   max-width: 700px;
 }
+
 .anatomySection .svg-wrapper svg {
   max-width: 440px;
 }
@@ -1306,10 +1307,12 @@ li::before {
   display: flex;
   width: 100%;
 }
-.two-columns .list-flex > *{
+
+.two-columns .list-flex>* {
   width: 50%;
 }
-.two-columns .list-flex h4{
+
+.two-columns .list-flex h4 {
   margin-top: 14px;
 }
 
@@ -1323,7 +1326,7 @@ li::before {
   font-size: 1.5em;
   margin-left: -36px;
   padding-bottom: 6px;
-  
+
 }
 
 .two-columns .dont .list-item::before {
