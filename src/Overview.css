@@ -34,9 +34,11 @@
 
 
 /* NEW TODOS */
-/* [ ] missing image image is too large */
-/* [ ] missing image icon button is too large- also should work w click */
-/* [ ] Border in component image - too thick */
+/* [X] missing image image is too large */
+/* [X] missing image icon button is too large */
+/* [ ] missing image icon button tooltip should be immediate */
+/* [ ] Border in component image - too thick (1px gray) */
+
 .overview-content {
   align-items: center;
   display: flex;
