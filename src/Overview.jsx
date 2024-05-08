@@ -121,6 +121,7 @@ export const Overview = () => {
                   >
                     <button
                       className="element"
+                      onMouseOver={(event) => { overviewCard(event) }}
                       onClick={() => navigate(`/guide/${doc._id}`)}
                     >
                       {doc.componentPic &&
@@ -169,7 +170,18 @@ export const Overview = () => {
     </div>
   );
 };
+function overviewCard(event) {
+  event.target.parentElement.setAttribute('og-width', event.target.parentElement.getElementsByClassName('element-text')[0].offsetWidth);
+  event.target.parentElement.getElementsByClassName('element-text')[0].style.overflow = "visible";
+  event.target.parentElement.getElementsByClassName('element-text')[0].style.width = "fit-content";
+  event.target.parentElement.setAttribute('new-width', event.target.parentElement.getElementsByClassName('element-text')[0].offsetWidth);
+  event.target.parentElement.getElementsByClassName('element-text')[0].style.overflow = "hidden";
+  event.target.parentElement.getElementsByClassName('element-text')[0].style.width = "100%";
 
+  if (Number(event.target.parentElement.getAttribute('new-width')) < Number(event.target.parentElement.getAttribute('og-width'))) {
+    event.target.parentElement.setAttribute('tooltip', '');
+  }
+}
 Overview.propTypes = {
   documentation: PropTypes.array,
   navigationLinks: PropTypes.array,
