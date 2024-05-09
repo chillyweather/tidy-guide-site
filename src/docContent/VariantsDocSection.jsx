@@ -5,6 +5,7 @@ export const VariantsDocSection = ({ element, index }) => {
   return (
     <div className={"section textSection variantsSection"}
       onMouseOver={(event) => { addToolTips(event) }}
+      onClick={() => { window.open(window.location.origin + "/src/assets/image.html#" + element.content.remoteImageLink, "_blank") }}
     >
       <div className={"anchorLink"} id={element.title + index}></div>
       {element.title && (
