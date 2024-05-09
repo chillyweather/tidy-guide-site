@@ -5,10 +5,10 @@ import { ReactSVG } from "react-svg";
 const Image = () => {
     return (
         <div className='comp-image'>
+            <button onClick={() => { window.close() }}>Back</button>
             <ReactSVG
                 src={window.location.hash.slice(1, 99999999999)}
             />
-            {/* <img src={window.location.hash.slice(1, 99999999999)} /> */}
         </div>
     )
 };
