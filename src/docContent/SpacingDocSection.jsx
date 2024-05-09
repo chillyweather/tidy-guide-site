@@ -5,7 +5,6 @@ export const SpacingDocSection = ({ element, index }) => {
   return (
     <div className={"section textSection spacingsSection"}
       onMouseOver={(event) => { addToolTips(event) }}
-      onClick={() => { window.open(window.location.origin + "/image.html#" + element.content.remoteImageLink, "_blank") }}
     >
       <div className={"anchorLink"} id={element.title + index}></div>
       {element.title && (
