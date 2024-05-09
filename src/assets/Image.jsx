@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from "react-dom/client";
 import { ReactSVG } from "react-svg";
+import "../index.css";
 
 const Image = () => {
     return (
