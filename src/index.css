@@ -68,6 +68,10 @@ h1 {
   line-height: 1.1;
 }
 
+.comp-image button {
+  margin-top: 24px;
+}
+
 button {
   border-radius: 8px;
   padding: 0.6em 1.2em;
