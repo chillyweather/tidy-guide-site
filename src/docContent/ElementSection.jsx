@@ -5,6 +5,7 @@ import { ImageDocSection } from "./ImageDocSection";
 import { ListDocSection } from "./ListDocSection";
 import { LinkDocSection } from "./LinkDocSection";
 import { TwoColumnsDocSection } from "./TwoColumnsDocSection";
+import { DosDontsDocSection } from "./DosDontsDocSection";
 import { TextDocSection } from "./TextDocSection";
 import { AnatomyDocSection } from "./AnatomyDocSection";
 import { SpacingDocSection } from "./SpacingDocSection";
@@ -49,6 +50,16 @@ const ElementSection = ({ element, index, navigationLinks }) => {
     case "two-columns":
       return (
         <TwoColumnsDocSection
+          key={index}
+          element={element}
+          buildLists={renderList}
+          index={index}
+          headerData={navigationLinks}
+        />
+      );
+      case "dos-donts":
+      return (
+        <DosDontsDocSection
           key={index}
           element={element}
           buildLists={renderList}
