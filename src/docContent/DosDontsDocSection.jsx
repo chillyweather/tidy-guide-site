@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 export const DosDontsDocSection = ({ element, buildLists, index }) => (
-  <div className={"section twoColumnsSection"}>
+  <div className={"section twoColumnsSection dosDontsSection"}>
     <div className={"anchorLink"} id={element.title + index}></div>
     {element.title && (
       <div className={"title-row"}>
