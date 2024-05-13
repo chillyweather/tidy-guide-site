@@ -19,13 +19,15 @@ export const AnatomyDocSection = ({ element, index }) => {
       {/* <div className={"image-wrapper"}>
         <img className={"image"} src={element.content.remoteImageLink} />
       </div> */}
-      {element.content.remoteImageLink && (
-        <ReactSVG
-          src={element.content.remoteImageLink}
-          style={{ width: "100%" }}
-          className="svg-wrapper"
-        />
-      )}
+      <div className="image-placeholder">
+        {element.content.remoteImageLink && (
+          <ReactSVG
+            src={element.content.remoteImageLink}
+            style={{ width: "100%" }}
+            className="svg-wrapper"
+          />
+        )}
+      </div>
     </div>
   );
 };
