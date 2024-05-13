@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { ReactSVG } from "react-svg";
+import noImage from "../assets/no-empty-state.png";
 
 export const AnatomyDocSection = ({ element, index }) => {
   return (
@@ -19,15 +20,17 @@ export const AnatomyDocSection = ({ element, index }) => {
       {/* <div className={"image-wrapper"}>
         <img className={"image"} src={element.content.remoteImageLink} />
       </div> */}
-      <div className="image-placeholder">
-        {element.content.remoteImageLink && (
-          <ReactSVG
-            src={element.content.remoteImageLink}
-            style={{ width: "100%" }}
-            className="svg-wrapper"
-          />
-        )}
-      </div>
+      {element.content.remoteImageLink ? (
+        <ReactSVG
+          src={element.content.remoteImageLink}
+          style={{ width: "100%" }}
+          className="svg-wrapper"
+        />
+      ) : <div className="flex-no-image">
+        <img src={noImage} />
+        <h4>Invalid Image</h4>
+        <p>The link image you are trying to access does not exist.</p>
+      </div>}
     </div>
   );
 };
