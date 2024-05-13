@@ -6,6 +6,7 @@ import "../index.css";
 const Image = () => {
     return (
         <div className='comp-image'>
+            
             <button onClick={() => { window.close() }}>Back</button>
             <ReactSVG
                 src={window.location.hash.slice(1, 99999999999)}
