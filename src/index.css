@@ -182,6 +182,10 @@ body:has(.login) {
   max-width: 600px;
 }
 
+.textSection:has(.flex-no-image) {
+  pointer-events: none;
+}
+
 .imageSection::after,
 .videoSection::after {
   margin-top: 32px;
