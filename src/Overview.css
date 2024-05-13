@@ -119,6 +119,34 @@
   text-wrap: nowrap;
 }
 
+.flex-no-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: #F6F6FC;
+  border-radius: 6px;
+  border: 1px solid #E8E8F7;
+  width: 100%;
+}
+
+.flex-no-image h4 {
+  margin: 0;
+}
+
+.flex-no-image p {
+  font-size: var(--text-size);
+  color: #5C5C5C;
+  margin-bottom: 60px;
+}
+
+.flex-no-image img {
+  width: 200px;
+  height: auto;
+  margin: 32px 0;
+}
+
 .flex-image {
   display: flex;
   flex-direction: column;
