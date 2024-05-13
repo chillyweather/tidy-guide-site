@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { ReactSVG } from "react-svg";
+import noImage from "../assets/no-empty-state.png";
 
 export const VariantsDocSection = ({ element, index }) => {
   return (
@@ -16,13 +17,17 @@ export const VariantsDocSection = ({ element, index }) => {
           </a>
         </div>
       )}
-      {element.content.remoteImageLink && (
+      {element.content.remoteImageLink ? (
         <ReactSVG
           src={element.content.remoteImageLink}
           style={{ width: "100%" }}
           className="svg-wrapper"
         />
-      )}
+      ) : <div className="flex-no-image">
+        <img src={noImage} />
+        <h4>Invalid Image</h4>
+        <p>The link image you are trying to access does not exist.</p>
+      </div>}
     </div>
   );
 };
