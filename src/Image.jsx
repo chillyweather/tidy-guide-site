@@ -1,21 +1,29 @@
 // import { createRoot } from "react-dom/client";
 import { ReactSVG } from "react-svg";
 import "./index.css";
+import PropTypes from "prop-types";
 
-export const Image = () => {
+export const Image = ({ link, setIsImageOpen }) => {
   return (
     <div className="comp-image">
       <button
         onClick={() => {
-          window.close();
+          console.log("close");
+          setIsImageOpen(false);
         }}
       >
         Back
       </button>
-      <ReactSVG src={window.location.hash.slice(1, 99999999999)} />
+      <ReactSVG src={link} />
     </div>
   );
 };
+
+Image.propTypes = {
+  link: PropTypes.string,
+  setIsImageOpen: PropTypes.func,
+};
+
 //
 // const container = document.getElementById("root");
 // const root = createRoot(container);

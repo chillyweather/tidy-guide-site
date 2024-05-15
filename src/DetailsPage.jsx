@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useAtom } from "jotai";
+import { selectedImageLinkAtom } from "./atoms";
 import { useQuery } from "@tanstack/react-query";
 import fetchDoc from "./fetchDoc";
 import PropTypes from "prop-types";
@@ -18,6 +20,7 @@ export const DetailsPage = () => {
   const [updateDate, setUpdateDate] = useState("");
   const [componentPic, setComponentPic] = useState("");
   const [isImageOpen, setIsImageOpen] = useState(false);
+  const [selectedImageLink] = useAtom(selectedImageLinkAtom);
 
   const { id } = useParams();
   // if (id === "overview") return;
@@ -36,6 +39,12 @@ export const DetailsPage = () => {
       setUpdateDate(formatDate(data.updatedAt));
     }
   }, [data]);
+
+  useEffect(() => {
+    if (selectedImageLink) {
+      console.log("selectedImageLink", selectedImageLink);
+    }
+  }, [isImageOpen, selectedImageLink]);
 
   useEffect(() => {
     if (sectionData.length > 0) {
@@ -64,76 +73,78 @@ export const DetailsPage = () => {
       <div className={"leftbar"}>
         <Guides />
       </div>
-      <div className="doc-wrapper">
-        <div className={"nav-wrapper"}>
-          <div className={"nav-container"}>
-            <h1 className={"subtitle"}>{title}</h1>
-            <nav className={"navigation"}>
-              <a className="link hidden"></a>
-              {buildNavigationLinks(navigationLinks)}
-            </nav>
+      {!isImageOpen && (
+        <div className="doc-wrapper">
+          <div className={"nav-wrapper"}>
+            <div className={"nav-container"}>
+              <h1 className={"subtitle"}>{title}</h1>
+              <nav className={"navigation"}>
+                <a className="link hidden"></a>
+                {buildNavigationLinks(navigationLinks)}
+              </nav>
+            </div>
           </div>
-        </div>
-        <div className={"section headerSection"}>
-          <div className="title-wrapper">
-            <strong>
-              <h1 id={"sectionHeader"}>
-                {title}
-                <button
-                  className={"copyLink " + copied}
-                  onClick={() => {
-                    navigator.clipboard.writeText(location.href);
-                    setCopied("copied");
-                    setTimeout(function () {
-                      setCopied("");
-                    }, 2000);
-                  }}
-                >
-                  <IconLink />
-                </button>
-              </h1>
-            </strong>
-            {status && <div className={"wip"}>WIP</div>}
-            {updateDate && (
-              <div className="update-wrapper">
-                <IconClock size={18} color="#6C768E" />
-                <p className="last-update">Last update: {updateDate}</p>
-              </div>
-            )}
-            {/* {componentPic && (
+          <div className={"section headerSection"}>
+            <div className="title-wrapper">
+              <strong>
+                <h1 id={"sectionHeader"}>
+                  {title}
+                  <button
+                    className={"copyLink " + copied}
+                    onClick={() => {
+                      navigator.clipboard.writeText(location.href);
+                      setCopied("copied");
+                      setTimeout(function () {
+                        setCopied("");
+                      }, 2000);
+                    }}
+                  >
+                    <IconLink />
+                  </button>
+                </h1>
+              </strong>
+              {status && <div className={"wip"}>WIP</div>}
+              {updateDate && (
+                <div className="update-wrapper">
+                  <IconClock size={18} color="#6C768E" />
+                  <p className="last-update">Last update: {updateDate}</p>
+                </div>
+              )}
+              {/* {componentPic && (
             <ReactSVG
               src={componentPic}
               className="svg-wrapper"
             />
             )} */}
-            <span className="element-span">
-              <img src={componentPic} className="element-image" />
-            </span>
+              <span className="element-span">
+                <img src={componentPic} className="element-image" />
+              </span>
+            </div>
           </div>
+          {sectionData.map((element, index) => {
+            if (element.publish && !element.hidden) {
+              // return ElementSection({
+              //   key: index,
+              //   element,
+              //   index,
+              //   navigationLinks,
+              // });
+              return (
+                <ElementSection
+                  key={index}
+                  element={element}
+                  index={index}
+                  navigationLinks={navigationLinks}
+                  setIsImageOpen={setIsImageOpen}
+                />
+              );
+            }
+          })}
         </div>
-        {sectionData.map((element, index) => {
-          if (element.publish && !element.hidden) {
-            // return ElementSection({
-            //   key: index,
-            //   element,
-            //   index,
-            //   navigationLinks,
-            // });
-            return (
-              <ElementSection
-                key={index}
-                element={element}
-                index={index}
-                navigationLinks={navigationLinks}
-                onClick={(e) => {
-                  e.preventDefault();
-                  console.log("clicked");
-                }}
-              />
-            );
-          }
-        })}
-      </div>
+      )}
+      {isImageOpen && (
+        <Image link={selectedImageLink} setIsImageOpen={setIsImageOpen} />
+      )}
     </div>
   );
 };
