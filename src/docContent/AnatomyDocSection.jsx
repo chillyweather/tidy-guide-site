@@ -1,12 +1,32 @@
 import PropTypes from "prop-types";
 import { ReactSVG } from "react-svg";
 import noImage from "../assets/no-empty-state.png";
+import { useAtom } from "jotai";
+import { selectedImageLinkAtom } from "../atoms";
 
-export const AnatomyDocSection = ({ element, index }) => {
+export const AnatomyDocSection = ({ element, index, setIsImageOpen }) => {
+  const [, setSelectedImageLink] = useAtom(selectedImageLinkAtom);
   return (
-    <div className={"section textSection anatomySection"}
-      onMouseOver={(event) => { addToolTips(event) }}
-      onClick={() => { window.open(window.location.origin + "/src/image.html#" + element.content.remoteImageLink, "_blank") }}
+    <div
+      className={"section textSection anatomySection"}
+      onMouseOver={(event) => {
+        addToolTips(event);
+      }}
+      onClick={() => {
+        if (element.content.remoteImageLink) {
+          setSelectedImageLink(element.content.remoteImageLink);
+          setIsImageOpen(true);
+        }
+      }}
+      // onClick={() => {
+      //   window.open(
+      //     window.location.origin +
+      //       "/src/image.html#" +
+      //       element.content.remoteImageLink,
+      //     "_blank"
+      //   );
+      // }
+      // }
     >
       <div className={"anchorLink"} id={element.title + index}></div>
       {element.title && (
@@ -25,13 +45,17 @@ export const AnatomyDocSection = ({ element, index }) => {
           src={element.content.remoteImageLink}
           style={{ width: "100%" }}
           className="svg-wrapper"
-          onError={() => { element.content.remoteImageLink = "" }}
+          onError={() => {
+            element.content.remoteImageLink = "";
+          }}
         />
-      ) : <div className="flex-no-image">
-        <img src={noImage} />
-        <h4>Invalid Image</h4>
-        <p>The link image you are trying to access does not exist.</p>
-      </div>}
+      ) : (
+        <div className="flex-no-image">
+          <img src={noImage} />
+          <h4>Invalid Image</h4>
+          <p>The link image you are trying to access does not exist.</p>
+        </div>
+      )}
     </div>
   );
 };
@@ -41,7 +65,10 @@ function addToolTips(event) {
   var i;
   for (i = 0; i < x.length; i++) {
     if (!x[i].innerHTML.includes("title")) {
-      var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'title');
+      var newElement = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "title"
+      );
       newElement.innerHTML = x[i].innerHTML;
       x[i].appendChild(newElement);
     }
@@ -51,4 +78,5 @@ function addToolTips(event) {
 AnatomyDocSection.propTypes = {
   element: PropTypes.object,
   index: PropTypes.number,
+  setIsImageOpen: PropTypes.func,
 };

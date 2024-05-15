@@ -10,3 +10,5 @@ export const currentDocumentationsAtom = atom([]);
 export const filteredDocumentationAtom = atom([]);
 export const searchTextAtom = atom("");
 export const isBrowseGuidesOpenAtom = atom(false);
+
+export const selectedImageLinkAtom = atom("");
