@@ -12,7 +12,12 @@ import { SpacingDocSection } from "./SpacingDocSection";
 import { PropertyDocSection } from "./PropertyDocSection";
 import { VariantsDocSection } from "./VariantsDocSection";
 
-const ElementSection = ({ element, index, navigationLinks }) => {
+const ElementSection = ({
+  element,
+  index,
+  navigationLinks,
+  setIsImageOpen,
+}) => {
   const renderList = (arr) => {
     return (
       <ul className="list">
@@ -57,7 +62,7 @@ const ElementSection = ({ element, index, navigationLinks }) => {
           headerData={navigationLinks}
         />
       );
-      case "dos-donts":
+    case "dos-donts":
       return (
         <DosDontsDocSection
           key={index}
@@ -81,13 +86,41 @@ const ElementSection = ({ element, index, navigationLinks }) => {
     case "video":
       return <VideoDocSection element={element} index={index} key={index} />;
     case "anatomy":
-      return <AnatomyDocSection element={element} index={index} key={index} />;
+      return (
+        <AnatomyDocSection
+          element={element}
+          index={index}
+          key={index}
+          setIsImageOpen={setIsImageOpen}
+        />
+      );
     case "spacing":
-      return <SpacingDocSection element={element} index={index} key={index} />;
+      return (
+        <SpacingDocSection
+          element={element}
+          index={index}
+          key={index}
+          setIsImageOpen={setIsImageOpen}
+        />
+      );
     case "property":
-      return <PropertyDocSection element={element} index={index} key={index} />;
+      return (
+        <PropertyDocSection
+          element={element}
+          index={index}
+          key={index}
+          setIsImageOpen={setIsImageOpen}
+        />
+      );
     case "variants":
-      return <VariantsDocSection element={element} index={index} key={index} />;
+      return (
+        <VariantsDocSection
+          element={element}
+          index={index}
+          key={index}
+          setIsImageOpen={setIsImageOpen}
+        />
+      );
     default:
       return null;
   }
@@ -99,4 +132,5 @@ ElementSection.propTypes = {
   element: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
   navigationLinks: PropTypes.array.isRequired,
+  setIsImageOpen: PropTypes.func.isRequired,
 };

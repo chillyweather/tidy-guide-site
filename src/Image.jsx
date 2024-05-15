@@ -1,19 +1,30 @@
-import React from 'react';
-import { createRoot } from "react-dom/client";
+// import { createRoot } from "react-dom/client";
 import { ReactSVG } from "react-svg";
 import "./index.css";
+import PropTypes from "prop-types";
 
-const Image = () => {
-    return (
-        <div className='comp-image'>
-            <button onClick={() => { window.close() }}>Back</button>
-            <ReactSVG
-                src={window.location.hash.slice(1, 99999999999)}
-            />
-        </div>
-    )
+export const Image = ({ link, setIsImageOpen }) => {
+  return (
+    <div className="comp-image">
+      <button
+        onClick={() => {
+          console.log("close");
+          setIsImageOpen(false);
+        }}
+      >
+        Back
+      </button>
+      <ReactSVG src={link} />
+    </div>
+  );
 };
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(<Image />);
+Image.propTypes = {
+  link: PropTypes.string,
+  setIsImageOpen: PropTypes.func,
+};
+
+//
+// const container = document.getElementById("root");
+// const root = createRoot(container);
+// root.render(<Image />);
