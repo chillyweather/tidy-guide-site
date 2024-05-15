@@ -15,14 +15,14 @@ export const DosDontsDocSection = ({ element, buildLists, index }) => (
       <div className={"two-columns"}>
         <div className={"list-flex do"}>
           <strong>
-            <h4>{element.content.subtitle1}</h4>
+            <h4>Do's</h4>
           </strong>
 
           {buildLists(element.content.text1.split("\n"), "unordered")}
         </div>
         <div className={"list-flex dont"}>
           <strong>
-            <h4>{element.content.subtitle2}</h4>
+            <h4>Don'ts</h4>
           </strong>
           {buildLists(element.content.text2.split("\n"), "unordered")}
         </div>
