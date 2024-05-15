@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
-import { selectedImageLinkAtom } from "./atoms";
+import { selectedImageLinkAtom, isImageOpenAtom } from "./atoms";
 import { useQuery } from "@tanstack/react-query";
 import fetchDoc from "./fetchDoc";
 import PropTypes from "prop-types";
@@ -19,8 +19,8 @@ export const DetailsPage = () => {
   const [sectionData, setSectionData] = useState([]);
   const [updateDate, setUpdateDate] = useState("");
   const [componentPic, setComponentPic] = useState("");
-  const [isImageOpen, setIsImageOpen] = useState(false);
   const [selectedImageLink] = useAtom(selectedImageLinkAtom);
+  const [isImageOpen, setIsImageOpen] = useAtom(isImageOpenAtom);
 
   const { id } = useParams();
   // if (id === "overview") return;

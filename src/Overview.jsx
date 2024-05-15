@@ -3,7 +3,11 @@
 // import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
-import { currentDocumentationsAtom, isBrowseGuidesOpenAtom } from "./atoms";
+import {
+  currentDocumentationsAtom,
+  isBrowseGuidesOpenAtom,
+  isImageOpenAtom,
+} from "./atoms";
 // import fetchDocs from "./fetchDocs";
 // import fetchCollections from "./fetchCollections";
 import PropTypes from "prop-types";
@@ -20,6 +24,7 @@ export const Overview = () => {
   const [, setIsBrowseGuidesOpen] = useAtom(isBrowseGuidesOpenAtom);
   const [currentDocumentations] = useAtom(currentDocumentationsAtom);
   const navigate = useNavigate();
+  const [, setIsImageOpen] = useAtom(isImageOpenAtom);
   const [copied, setCopied] = useState("");
 
   useEffect(() => {
@@ -51,7 +56,7 @@ export const Overview = () => {
   return (
     <div className="wrapper-flex">
       <div className={"leftbar"}>
-        <Guides />
+        <Guides setIsImageOpen={setIsImageOpen} />
       </div>
       <div className="doc-wrapper">
         <div className={"nav-wrapper"}>
@@ -121,15 +126,20 @@ export const Overview = () => {
                   >
                     <button
                       className="element"
-                      onMouseOver={(event) => { decideTooltip(event) }}
+                      onMouseOver={(event) => {
+                        decideTooltip(event);
+                      }}
                       onClick={() => navigate(`/guide/${doc._id}`)}
                     >
                       {doc.componentPic &&
-                        doc.componentPic.split(".").pop() === "png" ? (
+                      doc.componentPic.split(".").pop() === "png" ? (
                         <img src={doc.componentPic} className="element-image" />
                       ) : (
                         <div className="flex-image no-image">
-                          <div tooltip="Image not found or type unknown" className="no-image-alert-wrapper">
+                          <div
+                            tooltip="Image not found or type unknown"
+                            className="no-image-alert-wrapper"
+                          >
                             <IconExclamationCircle className="no-image-alert" />
                           </div>
                           <img
@@ -171,15 +181,34 @@ export const Overview = () => {
   );
 };
 function decideTooltip(event) {
-  event.target.parentElement.setAttribute('og-width', event.target.parentElement.getElementsByClassName('element-text')[0].offsetWidth);
-  event.target.parentElement.getElementsByClassName('element-text')[0].style.overflow = "visible";
-  event.target.parentElement.getElementsByClassName('element-text')[0].style.width = "fit-content";
-  event.target.parentElement.setAttribute('new-width', event.target.parentElement.getElementsByClassName('element-text')[0].offsetWidth);
-  event.target.parentElement.getElementsByClassName('element-text')[0].style.overflow = "hidden";
-  event.target.parentElement.getElementsByClassName('element-text')[0].style.width = "100%";
+  event.target.parentElement.setAttribute(
+    "og-width",
+    event.target.parentElement.getElementsByClassName("element-text")[0]
+      .offsetWidth
+  );
+  event.target.parentElement.getElementsByClassName(
+    "element-text"
+  )[0].style.overflow = "visible";
+  event.target.parentElement.getElementsByClassName(
+    "element-text"
+  )[0].style.width = "fit-content";
+  event.target.parentElement.setAttribute(
+    "new-width",
+    event.target.parentElement.getElementsByClassName("element-text")[0]
+      .offsetWidth
+  );
+  event.target.parentElement.getElementsByClassName(
+    "element-text"
+  )[0].style.overflow = "hidden";
+  event.target.parentElement.getElementsByClassName(
+    "element-text"
+  )[0].style.width = "100%";
 
-  if (Number(event.target.parentElement.getAttribute('new-width')) < Number(event.target.parentElement.getAttribute('og-width'))) {
-    event.target.parentElement.setAttribute('tooltip', '');
+  if (
+    Number(event.target.parentElement.getAttribute("new-width")) <
+    Number(event.target.parentElement.getAttribute("og-width"))
+  ) {
+    event.target.parentElement.setAttribute("tooltip", "");
   }
 }
 Overview.propTypes = {

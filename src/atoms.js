@@ -12,3 +12,4 @@ export const searchTextAtom = atom("");
 export const isBrowseGuidesOpenAtom = atom(false);
 
 export const selectedImageLinkAtom = atom("");
+export const isImageOpenAtom = atom(false);
