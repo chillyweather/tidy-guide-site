@@ -81,6 +81,13 @@ body:has(.comp-image) .leftbar {
   border-radius: 6px;
   border: 1px solid lightgray;
   box-shadow: 0 0 0 100vmax #00000033;
+  width: 90vw;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+}
+.comp-image svg{
+  width: 100%;
+  height: auto;
 }
 
 .comp-image button {
