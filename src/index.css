@@ -67,7 +67,12 @@ h1 {
   font-size: 2em;
   line-height: 1.1;
 }
-.comp-image{
+
+body:has(.comp-image) .leftbar {
+  pointer-events: none;
+}
+
+.comp-image {
   position: absolute;
   z-index: 999;
   left: 50%;
@@ -77,6 +82,7 @@ h1 {
   border: 1px solid lightgray;
   box-shadow: 0 0 0 100vmax #00000033;
 }
+
 .comp-image button {
   margin-top: 24px;
   margin-left: 24px;
