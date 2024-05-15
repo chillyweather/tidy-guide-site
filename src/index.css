@@ -1284,13 +1284,32 @@ a:empty {
 
 .two-columns {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 4px;
   align-items: flex-start;
   width: 100%;
   max-width: 700px;
 }
 
+.dosDontsSection .two-columns {
+  flex-direction: column;
+}
+
+.list-flex {
+  flex-direction: column;
+}
+
+.dosDontsSection .list-flex {
+  flex-direction: row;
+}
+
+.two-columns .list-flex>* {
+  width: 100% !important;
+}
+
+.dosDontsSection .two-columns .list-flex>* {
+  width: 50% !important;
+}
 
 ol,
 ul {
