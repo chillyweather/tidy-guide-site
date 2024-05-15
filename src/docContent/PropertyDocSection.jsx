@@ -22,6 +22,7 @@ export const PropertyDocSection = ({ element, index }) => {
           src={element.content.remoteImageLink}
           style={{ width: "100%" }}
           className="svg-wrapper"
+          onError={() => { element.content.remoteImageLink = "" }}
         />
       ) : <div className="flex-no-image">
         <img src={noImage} />
