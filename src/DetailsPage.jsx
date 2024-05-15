@@ -71,7 +71,7 @@ export const DetailsPage = () => {
   return (
     <div className="wrapper-flex">
       <div className={"leftbar"}>
-        <Guides />
+        <Guides setIsImageOpen={setIsImageOpen} />
       </div>
       {!isImageOpen && (
         <div className="doc-wrapper">

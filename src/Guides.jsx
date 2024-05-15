@@ -12,7 +12,7 @@ import {
 // import fetchCollections from "./fetchCollections";
 import { IconSearch } from "@tabler/icons-react";
 
-export const Guides = () => {
+export const Guides = ({ setIsImageOpen }) => {
   const [currentDocumentations] = useAtom(currentDocumentationsAtom);
   const [filteredDocumentation, setFilteredDocumentation] = useAtom(
     filteredDocumentationAtom
@@ -52,12 +52,14 @@ export const Guides = () => {
   const navigate = useNavigate();
 
   function handleGuidesClick() {
+    setIsImageOpen(false);
     setSearchText("");
     navigate(`/guide/overview`);
     setSelectedMasterId("overview");
   }
 
   function handleDocClick(guide) {
+    setIsImageOpen(false);
     navigate(`/guide/${guide._id}`);
     setSelectedMasterId(guide._id);
   }
@@ -133,4 +135,5 @@ Guides.propTypes = {
   setDocumentation: PropTypes.func,
   selectedMasterId: PropTypes.string,
   setSelectedMasterId: PropTypes.func,
+  setIsImageOpen: PropTypes.func,
 };
