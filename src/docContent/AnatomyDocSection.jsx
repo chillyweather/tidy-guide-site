@@ -40,7 +40,7 @@ export const AnatomyDocSection = ({ element, index, setIsImageOpen }) => {
       {/* <div className={"image-wrapper"}>
         <img className={"image"} src={element.content.remoteImageLink} />
       </div> */}
-      {console.log("KLL", element.content.remoteImageLink)}
+      {/* {console.log("KLL", element.content.remoteImageLink)} */}
       {element.content.remoteImageLink ? (
         <ReactSVG
           src={element.content.remoteImageLink}
