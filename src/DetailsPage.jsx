@@ -73,7 +73,7 @@ export const DetailsPage = () => {
       <div className={"leftbar"}>
         <Guides setIsImageOpen={setIsImageOpen} />
       </div>
-      {!isImageOpen && (
+      {
         <div className="doc-wrapper">
           <div className={"nav-wrapper"}>
             <div className={"nav-container"}>
@@ -141,7 +141,7 @@ export const DetailsPage = () => {
             }
           })}
         </div>
-      )}
+      }
       {isImageOpen && (
         <Image link={selectedImageLink} setIsImageOpen={setIsImageOpen} />
       )}

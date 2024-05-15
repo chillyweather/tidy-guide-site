@@ -73,7 +73,7 @@ body:has(.comp-image) .leftbar {
 }
 
 .comp-image {
-  position: absolute;
+  position: fixed;
   z-index: 999;
   left: 50%;
   transform: translateX(-50%);
