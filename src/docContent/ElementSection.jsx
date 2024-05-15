@@ -57,7 +57,7 @@ const ElementSection = ({ element, index, navigationLinks }) => {
           headerData={navigationLinks}
         />
       );
-      case "dos-donts":
+    case "dos-donts":
       return (
         <DosDontsDocSection
           key={index}

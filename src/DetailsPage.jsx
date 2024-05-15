@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import fetchDoc from "./fetchDoc";
 import PropTypes from "prop-types";
 import { Guides } from "./Guides";
+import { Image } from "./Image";
 import { IconLink, IconClock } from "@tabler/icons-react";
 import ElementSection from "./docContent/ElementSection";
 import "./DetailsPage.css";
@@ -16,6 +17,7 @@ export const DetailsPage = () => {
   const [sectionData, setSectionData] = useState([]);
   const [updateDate, setUpdateDate] = useState("");
   const [componentPic, setComponentPic] = useState("");
+  const [isImageOpen, setIsImageOpen] = useState(false);
 
   const { id } = useParams();
   // if (id === "overview") return;
@@ -111,12 +113,24 @@ export const DetailsPage = () => {
         </div>
         {sectionData.map((element, index) => {
           if (element.publish && !element.hidden) {
-            return ElementSection({
-              key: index,
-              element,
-              index,
-              navigationLinks,
-            });
+            // return ElementSection({
+            //   key: index,
+            //   element,
+            //   index,
+            //   navigationLinks,
+            // });
+            return (
+              <ElementSection
+                key={index}
+                element={element}
+                index={index}
+                navigationLinks={navigationLinks}
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log("clicked");
+                }}
+              />
+            );
           }
         })}
       </div>
