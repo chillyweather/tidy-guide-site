@@ -129,6 +129,7 @@
   border-radius: 6px;
   border: 1px solid #E8E8F7;
   width: 100%;
+  max-width: 700px;
 }
 
 .flex-no-image h4 {
